@@ -43,11 +43,41 @@ class FirstViewController: UIViewController {
         // Thought here is to calculate the flying hours.
         let toComponents = Calendar.current.dateComponents([.hour, .minute], from: TakeOffTime.date)
         
-        takeOffTime = "\(toComponents.hour!) : \(toComponents.minute!)"
+        var toMinute: String = ""
+        var toHour: String = ""
+        var laMinute: String = ""
+        var laHour: String = ""
+        
+        if toComponents.minute! < 10{
+            toMinute = "0\(toComponents.minute!)"
+        }else{
+            toMinute = "\(toComponents.minute!)"
+        }
+        
+        
+        if toComponents.hour! < 10{
+            toHour = "0\(toComponents.hour!)"
+        }else{
+            toHour = "\(toComponents.hour!)"
+        }
+        
+        takeOffTime = "\(toHour)\(toMinute)"
         
         let laComponents = Calendar.current.dateComponents([.hour, .minute], from: LandTime.date)
         
-        landingTime = "\(laComponents.hour!) : \(laComponents.minute!)"
+        if laComponents.minute! < 10{
+            laMinute = "0\(laComponents.minute!)"
+        }else{
+            laMinute = "\(laComponents.minute!)"
+        }
+        
+        if laComponents.hour! < 10{
+            laHour = "0\(laComponents.hour!)"
+        }else{
+            laHour = "\(laComponents.hour!)"
+        }
+        
+        landingTime = "\(laHour)\(laMinute)"
         
         var diffHrs: Int = 0
         var diffMin: Int = 0
