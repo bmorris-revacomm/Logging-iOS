@@ -13,6 +13,9 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // Generate a filename
+        let fileURL = WriteToDisk().generateFileName()
+        WriteToDisk().createFile(fileURL: fileURL)
     }
     
 
@@ -139,19 +142,23 @@ class FirstViewController: UIViewController {
     var line6e: [String] = []
     var line6f: [String] = []
     
+    @IBAction func addToJSON(_sender: Any) {
+        print("JSON HERE")
+    }
+    
     
 
     
     @IBAction func calculateTotalLanding(_sender: Any) {
         //Here's where we do the math for filling in the total field
         
-        totalLanding.text = vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
+        totalLanding.text = FVCVM().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
         
     }
     
 
     @IBAction func updateForm(_ sender: Any) {
-        let txtDecTime = vmUpdateForm(takeOffTime: takeOffTime, landingTime: landingTime)
+        let txtDecTime = FVCVM().vmUpdateForm(takeOffTime: takeOffTime, landingTime: landingTime)
         totalTime.text = txtDecTime
     }
     
@@ -505,7 +512,7 @@ class FirstViewController: UIViewController {
     
     @IBAction func print_func(_ sender: Any) {
         
-        vmPrint_func(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTimeText: takeOffTime, landTimeText: landingTime, txtDecTime: totalTime)
+        FVCVM().vmPrint_func(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTimeText: takeOffTime, landTimeText: landingTime, txtDecTime: totalTime)
     }
 }
 
