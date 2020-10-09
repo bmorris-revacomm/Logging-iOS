@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class PagePageViewController: UIPageViewController {
+    
+    //MARK: - Properties
 
     weak var tutorialDelegate: PagePageViewControllerDelegate?
 
@@ -19,26 +21,30 @@ class PagePageViewController: UIPageViewController {
                 self.newPageViewController("2"),
                 self.newPageViewController("3")]
     }()
+    
+    //MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    dataSource = self
-    delegate = self
+        dataSource = self
+        delegate = self
 
-    if let initialViewController = orderedViewControllers.first {
-    scrollToViewController(viewController: initialViewController)
+        if let initialViewController = orderedViewControllers.first {
+            scrollToViewController(viewController: initialViewController)
+        }
+
+        tutorialDelegate?.pagePageViewController(pagePageViewController: self, didUpdatePageCount: orderedViewControllers.count)
     }
+    
+    //MARK: - Methods
 
-    tutorialDelegate?.pagePageViewController(pagePageViewController: self, didUpdatePageCount: orderedViewControllers.count)
-}
-
-/**
-Scrolls to the next view controller.
-*/
-func scrollToNextViewController() {
-    if let visibleViewController = viewControllers?.first,
-        let nextViewController = pageViewController(self, viewControllerAfter: visibleViewController) {
+    /**
+     Scrolls to the next view controller.
+     */
+    func scrollToNextViewController() {
+        if let visibleViewController = viewControllers?.first,
+           let nextViewController = pageViewController(self, viewControllerAfter: visibleViewController) {
                 scrollToViewController(viewController: nextViewController)
         }
     }
@@ -91,9 +97,9 @@ func scrollToNextViewController() {
         }
     }
 
-}
+} //End
 
-// MARK: UIPageViewControllerDataSource
+// MARK: - UIPageViewControllerDataSource
 
 extension PagePageViewController: UIPageViewControllerDataSource {
 

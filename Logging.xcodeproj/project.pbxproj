@@ -129,6 +129,62 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7F83BBAB252F6E8800D13482 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13A9901D252CDE02008D7374 /* Writable.swift */,
+				13A9900E252788C9008D7374 /* FlightDataModel.swift */,
+				13A990132527C4F2008D7374 /* FirstVCViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7F83BBAC252F6E9100D13482 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F83BBAE252F6F3200D13482 /* Model Controllers */,
+				7F83BBAF252F6F3C00D13482 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7F83BBAD252F6EA000D13482 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83D8408224D3402A00F336E3 /* Main.storyboard */,
+				83D8408724D3402D00F336E3 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7F83BBAE252F6F3200D13482 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		7F83BBAF252F6F3C00D13482 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83D8407E24D3402A00F336E3 /* FirstViewController.swift */,
+				83D8408024D3402A00F336E3 /* SecondViewController.swift */,
+				136F3A20251D0D3900E72AAE /* PageViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7F83BBB3252F6F8700D13482 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				83D8407A24D3402A00F336E3 /* AppDelegate.swift */,
+				83D8407C24D3402A00F336E3 /* SceneDelegate.swift */,
+				83D8408524D3402D00F336E3 /* Assets.xcassets */,
+				83D8408A24D3402D00F336E3 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		83D8406E24D3402A00F336E3 = {
 			isa = PBXGroup;
 			children = (
@@ -154,20 +210,12 @@
 		83D8407924D3402A00F336E3 /* Logging */ = {
 			isa = PBXGroup;
 			children = (
+				7F83BBAB252F6E8800D13482 /* Models */,
+				7F83BBAC252F6E9100D13482 /* Controllers */,
+				7F83BBAD252F6EA000D13482 /* Views */,
+				7F83BBB3252F6F8700D13482 /* Resources */,
 				131239A22518EFCF00F3B636 /* afto781.pdf */,
 				131239AC2518FA7400F3B636 /* res */,
-				83D8407A24D3402A00F336E3 /* AppDelegate.swift */,
-				83D8407C24D3402A00F336E3 /* SceneDelegate.swift */,
-				83D8407E24D3402A00F336E3 /* FirstViewController.swift */,
-				83D8408024D3402A00F336E3 /* SecondViewController.swift */,
-				83D8408224D3402A00F336E3 /* Main.storyboard */,
-				136F3A20251D0D3900E72AAE /* PageViewController.swift */,
-				83D8408524D3402D00F336E3 /* Assets.xcassets */,
-				83D8408724D3402D00F336E3 /* LaunchScreen.storyboard */,
-				83D8408A24D3402D00F336E3 /* Info.plist */,
-				13A9900E252788C9008D7374 /* FlightDataModel.swift */,
-				13A990132527C4F2008D7374 /* FirstVCViewModel.swift */,
-				13A9901D252CDE02008D7374 /* Writable.swift */,
 			);
 			path = Logging;
 			sourceTree = "<group>";
@@ -595,7 +643,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQ9T47YT3S;
-				INFOPLIST_FILE = Logging/Info.plist;
+				INFOPLIST_FILE = Logging/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -615,7 +663,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQ9T47YT3S;
-				INFOPLIST_FILE = Logging/Info.plist;
+				INFOPLIST_FILE = Logging/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

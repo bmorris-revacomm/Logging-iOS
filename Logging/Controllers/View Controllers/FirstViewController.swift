@@ -10,6 +10,8 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,7 +20,7 @@ class FirstViewController: UIViewController {
         WriteToDisk().createFile(fileURL: fileURL)
     }
     
-
+    // MARK: - Outlets
     
     @IBOutlet weak var missionNumber: UITextField!
     @IBOutlet weak var missionSymbol: UITextField!
@@ -119,6 +121,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var grandTotalFullStop: UITextField!
     @IBOutlet weak var grandTotalLanding: UITextField!
     @IBOutlet weak var grandTotalSorties: UITextField!
+        
+    //MARK: - Properties
     
     var txtMissionNumber: String = "XX-XXXXX"
     var missionSymbolText: String = ""
@@ -142,6 +146,8 @@ class FirstViewController: UIViewController {
     var line6e: [String] = []
     var line6f: [String] = []
     
+    //MARK: - Actions
+    
     @IBAction func addToJSON(_sender: Any) {
         print("JSON HERE")
     }
@@ -153,7 +159,6 @@ class FirstViewController: UIViewController {
         //Here's where we do the math for filling in the total field
         
         totalLanding.text = FVCVM().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
-        
     }
     
 
@@ -514,5 +519,97 @@ class FirstViewController: UIViewController {
         
         FVCVM().vmPrint_func(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTimeText: takeOffTime, landTimeText: landingTime, txtDecTime: totalTime)
     }
-}
+    
+    
+    @IBAction func line6aTapped(_ sender: UITapGestureRecognizer) {
+        missionNumber.text = line6a01.text
+        missionSymbol.text = line6a02.text
+        fromICAO.text = line6a03.text
+        toICAO.text = line6a04.text
+        takeOffTime.text = line6a05.text
+        landingTime.text = line6a06.text
+        totalTime.text = line6a07.text
+        touchAndGo.text = line6a08.text
+        fullStop.text = line6a09.text
+        totalLanding.text = line6a10.text
+        sorties.text = line6a11.text
+        specialUse.text = line6a12.text
+    }
+    
+    @IBAction func line6bTapped(_ sender: UITapGestureRecognizer) {
+        missionNumber.text = line6b01.text
+        missionSymbol.text = line6b02.text
+        fromICAO.text = line6b03.text
+        toICAO.text = line6b04.text
+        takeOffTime.text = line6b05.text
+        landingTime.text = line6b06.text
+        totalTime.text = line6b07.text
+        touchAndGo.text = line6b08.text
+        fullStop.text = line6b09.text
+        totalLanding.text = line6b10.text
+        sorties.text = line6b11.text
+        specialUse.text = line6b12.text
+    }
+    
+    @IBAction func line6cTapped(_ sender: UITapGestureRecognizer) {
+        missionNumber.text = line6c01.text
+        missionSymbol.text = line6c02.text
+        fromICAO.text = line6c03.text
+        toICAO.text = line6c04.text
+        takeOffTime.text = line6c05.text
+        landingTime.text = line6c06.text
+        totalTime.text = line6c07.text
+        touchAndGo.text = line6c08.text
+        fullStop.text = line6c09.text
+        totalLanding.text = line6c10.text
+        sorties.text = line6c11.text
+        specialUse.text = line6c12.text
+    }
+    
+    @IBAction func line6dTapped(_ sender: UITapGestureRecognizer) {
+        missionNumber.text = line6d01.text
+        missionSymbol.text = line6d02.text
+        fromICAO.text = line6d03.text
+        toICAO.text = line6d04.text
+        takeOffTime.text = line6d05.text
+        landingTime.text = line6d06.text
+        totalTime.text = line6d07.text
+        touchAndGo.text = line6d08.text
+        fullStop.text = line6d09.text
+        totalLanding.text = line6d10.text
+        sorties.text = line6d11.text
+        specialUse.text = line6d12.text
+    }
+    
+    @IBAction func line6eTapped(_ sender: UITapGestureRecognizer) {
+        missionNumber.text = line6e01.text
+        missionSymbol.text = line6e02.text
+        fromICAO.text = line6e03.text
+        toICAO.text = line6e04.text
+        takeOffTime.text = line6e05.text
+        landingTime.text = line6e06.text
+        totalTime.text = line6e07.text
+        touchAndGo.text = line6e08.text
+        fullStop.text = line6e09.text
+        totalLanding.text = line6e10.text
+        sorties.text = line6e11.text
+        specialUse.text = line6e12.text
+    }
+    
+    @IBAction func line6fTapped(_ sender: UITapGestureRecognizer) {
+        missionNumber.text = line6f01.text
+        missionSymbol.text = line6f02.text
+        fromICAO.text = line6f03.text
+        toICAO.text = line6f04.text
+        takeOffTime.text = line6f05.text
+        landingTime.text = line6f06.text
+        totalTime.text = line6f07.text
+        touchAndGo.text = line6f08.text
+        fullStop.text = line6f09.text
+        totalLanding.text = line6f10.text
+        sorties.text = line6f11.text
+        specialUse.text = line6f12.text
+    }
+    
+} //End
 
