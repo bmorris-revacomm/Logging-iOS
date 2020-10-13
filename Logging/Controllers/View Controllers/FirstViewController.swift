@@ -121,7 +121,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var grandTotalFullStop: UITextField!
     @IBOutlet weak var grandTotalLanding: UITextField!
     @IBOutlet weak var grandTotalSorties: UITextField!
-        
+            
     //MARK: - Properties
     
     var txtMissionNumber: String = "XX-XXXXX"
