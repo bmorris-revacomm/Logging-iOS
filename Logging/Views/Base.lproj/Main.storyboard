@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVr-jP-1wO">
-                                <rect key="frame" x="890" y="-206" width="370" height="50"/>
+                                <rect key="frame" x="890" y="49.5" width="114" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="ePv-Th-o5i"/>
                                 </constraints>
@@ -63,7 +63,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Klt-Dd-4qZ">
-                                        <rect key="frame" x="0.0" y="29" width="320" height="216"/>
+                                        <rect key="frame" x="0.0" y="28.5" width="320" height="216"/>
                                     </datePicker>
                                 </subviews>
                             </stackView>
@@ -1064,12 +1064,6 @@
                                 <color key="pageIndicatorTintColor" systemColor="systemGrayColor"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="systemGray6Color"/>
                             </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wxM-Kp-I9F">
-                                <rect key="frame" x="730" y="233" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="4OL-WU-6ev"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="7Rt-rY-bt0"/>
-                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dxP-v8-4HA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1275,7 +1269,7 @@
                                 <rect key="frame" x="20" y="101.5" width="984" height="5"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXy-Nn-n5f">
-                                <rect key="frame" x="890" y="-208" width="370" height="50"/>
+                                <rect key="frame" x="890" y="47.5" width="114" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="wQO-TZ-FIj"/>
                                 </constraints>
