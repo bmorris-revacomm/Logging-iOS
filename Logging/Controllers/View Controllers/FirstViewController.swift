@@ -703,26 +703,6 @@ class FirstViewController: UIViewController {
         FVCVM().vmPrint_func(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landingTime: landingTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLanding: totalLanding, sorties: sorties, specialUse: specialUse)
     }
     
-    @IBAction func print_func(_ sender: Any) {
-        
-        guard let missionNumber = missionNumber.text,
-              let missionSymbol = missionSymbol.text,
-              let fromICAO = fromICAO.text,
-              let toICAO = toICAO.text,
-              let takeOffTime = takeOffTime.text,
-              let landingTime = landingTime.text,
-              let totalTime = totalTime.text,
-              let touchAndGo = touchAndGo.text,
-              let fullStop = fullStop.text,
-              let totalLanding = totalLanding.text,
-              let sorties = sorties.text,
-              let specialUse = specialUse.text
-            else { return }
-        
-        FVCVM().vmPrint_func(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landingTime: landingTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLanding: totalLanding, sorties: sorties, specialUse: specialUse)
-    }
-    
-    
     @IBAction func line6aTapped(_ sender: UITapGestureRecognizer) {
         missionNumber.text = line6a01.text
         missionSymbol.text = line6a02.text

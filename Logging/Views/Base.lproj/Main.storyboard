@@ -251,6 +251,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNZ-Cd-QsK" userLabel="printForm">
                                 <rect key="frame" x="715" y="59" width="23" height="22"/>
                                 <state key="normal" image="printer" catalog="system"/>
+                                <connections>
+                                    <action selector="printFormTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="Ywp-U7-jvf"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXY-8S-I5n" userLabel="Divider line">
                                 <rect key="frame" x="0.0" y="86.5" width="768" height="1"/>
@@ -1397,6 +1400,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-qw-PXe" userLabel="printForm">
                                 <rect key="frame" x="715" y="59" width="23" height="22"/>
                                 <state key="normal" image="printer" catalog="system"/>
+                                <connections>
+                                    <action selector="printFormTapped:" destination="PjM-lN-wNj" eventType="touchUpInside" id="fpK-Po-lyR"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cir-cs-2rG" userLabel="19">
                                 <rect key="frame" x="30" y="117.5" width="108.5" height="62.5"/>
@@ -1929,9 +1935,12 @@
                                     <constraint firstAttribute="height" constant="1" id="yhF-jz-TI9"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UED-Oy-4rC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UED-Oy-4rC" userLabel="printForm">
                                 <rect key="frame" x="715" y="59" width="23" height="22"/>
                                 <state key="normal" image="printer" catalog="system"/>
+                                <connections>
+                                    <action selector="printFormTapped:" destination="Nal-Je-88Q" eventType="touchUpInside" id="dVL-lj-f4K"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V0S-7Z-aQD"/>
