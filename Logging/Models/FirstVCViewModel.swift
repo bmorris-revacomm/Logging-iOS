@@ -6,9 +6,7 @@
 //  Copyright © 2020 Christian Brechbuhl. All rights reserved.
 //
 
-import Foundation
 import UIKit
-
 
 class FVCVM {
     
@@ -188,7 +186,6 @@ class FVCVM {
             // return statement here
         
             return "\(diffHrs).\(decMin)"
-        
         }
 
     func vmPrint_func(missionNumber: String, missionSymbol: String, fromICAO: String, toICAO: String, takeOffTime: String, landingTime: String, totalTime: String, touchAndGo: String, fullStop: String, totalLanding: String, sorties: String, specialUse: String) {
@@ -290,4 +287,5 @@ class FVCVM {
         
         return img
     }
-}
+    
+} //End

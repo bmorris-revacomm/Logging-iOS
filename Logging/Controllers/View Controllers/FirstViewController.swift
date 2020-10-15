@@ -124,6 +124,8 @@ class FirstViewController: UIViewController {
             
     //MARK: - Properties
     
+    var line6 = [false, false, false, false, false, false]
+    
 //    var txtMissionNumber: String = "XX-XXXXX"
 //    var missionSymbolText: String = ""
 //    var fromICAOText: String = ""
@@ -165,14 +167,9 @@ class FirstViewController: UIViewController {
         totalTime.text = txtDecTime
     }
     
-    
-    
-    
-    var myLines = [false, false, false, false, false, false]
-    
     func addRow() {
         
-        for (index, isPopulated) in myLines.enumerated() {
+        for (index, isPopulated) in line6.enumerated() {
             if !isPopulated {
                 switch index {
                 case 0:
@@ -190,7 +187,7 @@ class FirstViewController: UIViewController {
                     line6a11.text = sorties.text
                     line6a12.text = specialUse.text
                     clearRow()
-                    myLines[0] = true
+                    line6[0] = true
                     print("Populated line A")
                 case 1:
                     //line = b
@@ -207,7 +204,7 @@ class FirstViewController: UIViewController {
                     line6b11.text = sorties.text
                     line6b12.text = specialUse.text
                     clearRow()
-                    myLines[1] = true
+                    line6[1] = true
                     print("Populated line B")
                 case 2:
                     //line = c
@@ -224,7 +221,7 @@ class FirstViewController: UIViewController {
                     line6c11.text = sorties.text
                     line6c12.text = specialUse.text
                     clearRow()
-                    myLines[2] = true
+                    line6[2] = true
                     print("Populated line C")
                 case 3:
                     //line = d
@@ -241,7 +238,7 @@ class FirstViewController: UIViewController {
                     line6d11.text = sorties.text
                     line6d12.text = specialUse.text
                     clearRow()
-                    myLines[3] = true
+                    line6[3] = true
                     print("Populated line D")
                 case 4:
                     //line = e
@@ -258,7 +255,7 @@ class FirstViewController: UIViewController {
                     line6e11.text = sorties.text
                     line6e12.text = specialUse.text
                     clearRow()
-                    myLines[4] = true
+                    line6[4] = true
                     print("Populated line E")
                 case 5:
                     //line = f
@@ -275,7 +272,7 @@ class FirstViewController: UIViewController {
                     line6f11.text = sorties.text
                     line6f12.text = specialUse.text
                     clearRow()
-                    myLines[5] = true
+                    line6[5] = true
                     print("Populated line F")
                 default:
                     break
@@ -284,8 +281,6 @@ class FirstViewController: UIViewController {
             }
         }
     }
-    
-    
     
     
     
@@ -656,7 +651,7 @@ class FirstViewController: UIViewController {
               let specialUse = specialUse.text
             else { return }
         
-        FVCVM().vmPrint_func(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landingTime: landingTime, totalTime: totalTime)
+        FVCVM().vmPrint_func(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landingTime: landingTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLanding: totalLanding, sorties: sorties, specialUse: specialUse)
     }
     
     

@@ -13,8 +13,8 @@ class PBLButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.addCornerRadius(self.frame.size.height/2)
-        self.backgroundColor = .PBLGray
-        self.setTitleColor(.notBlack, for: .normal)
+        self.backgroundColor = .fog
+        self.setTitleColor(.slate, for: .normal)
     }
     
 }
