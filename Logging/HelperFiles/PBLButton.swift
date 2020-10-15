@@ -18,3 +18,13 @@ class PBLButton: UIButton {
     }
     
 }
+
+class PBLButtonDark: PBLButton {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = .slate
+        self.setTitleColor(.white, for: .normal)
+    }
+    
+}

@@ -12,7 +12,8 @@ class PBLTextField: UITextField {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.addCornerRadius(0)
+        self.frame.size.height = 60
+        self.borderStyle = .none
         self.backgroundColor = .mist
         self.textColor = .fog
         self.textAlignment = .center
