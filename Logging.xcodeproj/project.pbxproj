@@ -16,6 +16,11 @@
 		13F08EA125221F7D00CDAEE4 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F08EA025221F7D00CDAEE4 /* header.png */; };
 		13F08EAE252222A800CDAEE4 /* separator line.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13F08EAD252222A800CDAEE4 /* separator line.jpg */; };
 		7C3790BDC466879F81B1B28B /* Pods_Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2B17BC9BB310463EA2A32E /* Pods_Logging.framework */; };
+		7F7E0DD22530FC350041C4E9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7E0DD12530FC350041C4E9 /* Colors.xcassets */; };
+		7F7E0DDB25310ED80041C4E9 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7E0DDA25310ED80041C4E9 /* StyleGuide.swift */; };
+		7F7E0DE0253110330041C4E9 /* PBLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7E0DDF253110330041C4E9 /* PBLButton.swift */; };
+		7F7E0E3D2538B4560041C4E9 /* PBLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7E0E3C2538B4560041C4E9 /* PBLView.swift */; };
+		7F7E0E422538BCCC0041C4E9 /* PBLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7E0E412538BCCC0041C4E9 /* PBLTextField.swift */; };
 		83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407A24D3402A00F336E3 /* AppDelegate.swift */; };
 		83D8407D24D3402A00F336E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407C24D3402A00F336E3 /* SceneDelegate.swift */; };
 		83D8407F24D3402A00F336E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407E24D3402A00F336E3 /* FirstViewController.swift */; };
@@ -63,6 +68,11 @@
 		56785B42F81CEB0155B65640 /* Pods-Logging-LoggingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logging-LoggingUITests.release.xcconfig"; path = "Target Support Files/Pods-Logging-LoggingUITests/Pods-Logging-LoggingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6FEF2540CD77AC4D9725058A /* Pods-LoggingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoggingTests.debug.xcconfig"; path = "Target Support Files/Pods-LoggingTests/Pods-LoggingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7192C4E0628E4E7D0C02BFBC /* Pods_Logging_LoggingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logging_LoggingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F7E0DD12530FC350041C4E9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7F7E0DDA25310ED80041C4E9 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
+		7F7E0DDF253110330041C4E9 /* PBLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBLButton.swift; sourceTree = "<group>"; };
+		7F7E0E3C2538B4560041C4E9 /* PBLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBLView.swift; sourceTree = "<group>"; };
+		7F7E0E412538BCCC0041C4E9 /* PBLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBLTextField.swift; sourceTree = "<group>"; };
 		83D8407724D3402A00F336E3 /* Logging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D8407A24D3402A00F336E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D8407C24D3402A00F336E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +139,74 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7F7E0DD925310EC50041C4E9 /* HelperFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7F7E0DDA25310ED80041C4E9 /* StyleGuide.swift */,
+				7F7E0DDF253110330041C4E9 /* PBLButton.swift */,
+				7F7E0E3C2538B4560041C4E9 /* PBLView.swift */,
+				7F7E0E412538BCCC0041C4E9 /* PBLTextField.swift */,
+			);
+			path = HelperFiles;
+			sourceTree = "<group>";
+		};
+		7F83BBAB252F6E8800D13482 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13A9901D252CDE02008D7374 /* Writable.swift */,
+				13A9900E252788C9008D7374 /* FlightDataModel.swift */,
+				13A990132527C4F2008D7374 /* FirstVCViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7F83BBAC252F6E9100D13482 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7F83BBAE252F6F3200D13482 /* Model Controllers */,
+				7F83BBAF252F6F3C00D13482 /* View Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7F83BBAD252F6EA000D13482 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				83D8408224D3402A00F336E3 /* Main.storyboard */,
+				83D8408724D3402D00F336E3 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7F83BBAE252F6F3200D13482 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		7F83BBAF252F6F3C00D13482 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83D8407E24D3402A00F336E3 /* FirstViewController.swift */,
+				83D8408024D3402A00F336E3 /* SecondViewController.swift */,
+				136F3A20251D0D3900E72AAE /* PageViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7F83BBB3252F6F8700D13482 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				83D8407A24D3402A00F336E3 /* AppDelegate.swift */,
+				83D8407C24D3402A00F336E3 /* SceneDelegate.swift */,
+				83D8408524D3402D00F336E3 /* Assets.xcassets */,
+				7F7E0DD12530FC350041C4E9 /* Colors.xcassets */,
+				83D8408A24D3402D00F336E3 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		83D8406E24D3402A00F336E3 = {
 			isa = PBXGroup;
 			children = (
@@ -154,20 +232,13 @@
 		83D8407924D3402A00F336E3 /* Logging */ = {
 			isa = PBXGroup;
 			children = (
+				7F7E0DD925310EC50041C4E9 /* HelperFiles */,
+				7F83BBAB252F6E8800D13482 /* Models */,
+				7F83BBAC252F6E9100D13482 /* Controllers */,
+				7F83BBAD252F6EA000D13482 /* Views */,
+				7F83BBB3252F6F8700D13482 /* Resources */,
 				131239A22518EFCF00F3B636 /* afto781.pdf */,
 				131239AC2518FA7400F3B636 /* res */,
-				83D8407A24D3402A00F336E3 /* AppDelegate.swift */,
-				83D8407C24D3402A00F336E3 /* SceneDelegate.swift */,
-				83D8407E24D3402A00F336E3 /* FirstViewController.swift */,
-				83D8408024D3402A00F336E3 /* SecondViewController.swift */,
-				83D8408224D3402A00F336E3 /* Main.storyboard */,
-				136F3A20251D0D3900E72AAE /* PageViewController.swift */,
-				83D8408524D3402D00F336E3 /* Assets.xcassets */,
-				83D8408724D3402D00F336E3 /* LaunchScreen.storyboard */,
-				83D8408A24D3402D00F336E3 /* Info.plist */,
-				13A9900E252788C9008D7374 /* FlightDataModel.swift */,
-				13A990132527C4F2008D7374 /* FirstVCViewModel.swift */,
-				13A9901D252CDE02008D7374 /* Writable.swift */,
 			);
 			path = Logging;
 			sourceTree = "<group>";
@@ -315,6 +386,7 @@
 				83D8408924D3402D00F336E3 /* LaunchScreen.storyboard in Resources */,
 				131239A82518F98100F3B636 /* afto781.jpg in Resources */,
 				131239A32518EFCF00F3B636 /* afto781.pdf in Resources */,
+				7F7E0DD22530FC350041C4E9 /* Colors.xcassets in Resources */,
 				83D8408624D3402D00F336E3 /* Assets.xcassets in Resources */,
 				83D8408424D3402A00F336E3 /* Main.storyboard in Resources */,
 			);
@@ -410,14 +482,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F7E0E422538BCCC0041C4E9 /* PBLTextField.swift in Sources */,
 				13A9901E252CDE02008D7374 /* Writable.swift in Sources */,
 				83D8408124D3402A00F336E3 /* SecondViewController.swift in Sources */,
 				136F3A21251D0D3900E72AAE /* PageViewController.swift in Sources */,
+				7F7E0E3D2538B4560041C4E9 /* PBLView.swift in Sources */,
 				83D8407F24D3402A00F336E3 /* FirstViewController.swift in Sources */,
 				83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */,
 				83D8407D24D3402A00F336E3 /* SceneDelegate.swift in Sources */,
 				13A990142527C4F2008D7374 /* FirstVCViewModel.swift in Sources */,
 				13A9900F252788C9008D7374 /* FlightDataModel.swift in Sources */,
+				7F7E0DE0253110330041C4E9 /* PBLButton.swift in Sources */,
+				7F7E0DDB25310ED80041C4E9 /* StyleGuide.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQ9T47YT3S;
-				INFOPLIST_FILE = Logging/Info.plist;
+				INFOPLIST_FILE = Logging/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -615,7 +691,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RQ9T47YT3S;
-				INFOPLIST_FILE = Logging/Info.plist;
+				INFOPLIST_FILE = Logging/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
