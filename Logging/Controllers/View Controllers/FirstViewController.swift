@@ -124,27 +124,27 @@ class FirstViewController: UIViewController {
             
     //MARK: - Properties
     
-    var txtMissionNumber: String = "XX-XXXXX"
-    var missionSymbolText: String = ""
-    var fromICAOText: String = ""
-    var toICAOText: String = ""
-    var takeOffTimeText: String = ""
-    var landTimeText: String = ""
-    var TotalTime: Int = 0
-    var txtTakeOffTime: String = ""
-    var txtLandingTime: String = ""
-    var txtDecTime: String = ""
-    var line1: String = ""
-    var line2: String = ""
-    var line3: String = ""
+//    var txtMissionNumber: String = "XX-XXXXX"
+//    var missionSymbolText: String = ""
+//    var fromICAOText: String = ""
+//    var toICAOText: String = ""
+//    var takeOffTimeText: String = ""
+//    var landTimeText: String = ""
+//    var TotalTime: Int = 0
+//    var txtTakeOffTime: String = ""
+//    var txtLandingTime: String = ""
+//    var txtDecTime: String = ""
+//    var line1: String = ""
+//    var line2: String = ""
+//    var line3: String = ""
     
-    var linePointer: String = "a"
-    var line6a: [String] = []
-    var line6b: [String] = []
-    var line6c: [String] = []
-    var line6d: [String] = []
-    var line6e: [String] = []
-    var line6f: [String] = []
+//    var linePointer: String = "a"
+//    var line6a: [String] = []
+//    var line6b: [String] = []
+//    var line6c: [String] = []
+//    var line6d: [String] = []
+//    var line6e: [String] = []
+//    var line6f: [String] = []
     
     //MARK: - Actions
     
@@ -173,9 +173,6 @@ class FirstViewController: UIViewController {
     func addRow() {
         
         for (index, isPopulated) in myLines.enumerated() {
-            print(index)
-            print(isPopulated)
-            
             if !isPopulated {
                 switch index {
                 case 0:
@@ -194,6 +191,7 @@ class FirstViewController: UIViewController {
                     line6a12.text = specialUse.text
                     clearRow()
                     myLines[0] = true
+                    print("Populated line A")
                 case 1:
                     //line = b
                     line6b01.text = missionNumber.text
@@ -210,6 +208,7 @@ class FirstViewController: UIViewController {
                     line6b12.text = specialUse.text
                     clearRow()
                     myLines[1] = true
+                    print("Populated line B")
                 case 2:
                     //line = c
                     line6c01.text = missionNumber.text
@@ -226,6 +225,7 @@ class FirstViewController: UIViewController {
                     line6c12.text = specialUse.text
                     clearRow()
                     myLines[2] = true
+                    print("Populated line C")
                 case 3:
                     //line = d
                     line6d01.text = missionNumber.text
@@ -242,6 +242,7 @@ class FirstViewController: UIViewController {
                     line6d12.text = specialUse.text
                     clearRow()
                     myLines[3] = true
+                    print("Populated line D")
                 case 4:
                     //line = e
                     line6e01.text = missionNumber.text
@@ -258,6 +259,7 @@ class FirstViewController: UIViewController {
                     line6e12.text = specialUse.text
                     clearRow()
                     myLines[4] = true
+                    print("Populated line E")
                 case 5:
                     //line = f
                     line6f01.text = missionNumber.text
@@ -274,6 +276,7 @@ class FirstViewController: UIViewController {
                     line6f12.text = specialUse.text
                     clearRow()
                     myLines[5] = true
+                    print("Populated line F")
                 default:
                     break
                 }
@@ -645,7 +648,12 @@ class FirstViewController: UIViewController {
               let toICAO = toICAO.text,
               let takeOffTime = takeOffTime.text,
               let landingTime = landingTime.text,
-              let totalTime = totalTime.text
+              let totalTime = totalTime.text,
+              let touchAndGo = touchAndGo.text,
+              let fullStop = fullStop.text,
+              let totalLanding = totalLanding.text,
+              let sorties = sorties.text,
+              let specialUse = specialUse.text
             else { return }
         
         FVCVM().vmPrint_func(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landingTime: landingTime, totalTime: totalTime)

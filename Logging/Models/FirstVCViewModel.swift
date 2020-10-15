@@ -191,10 +191,10 @@ class FVCVM {
         
         }
 
-    func vmPrint_func(missionNumber: String, missionSymbol: String, fromICAO: String, toICAO: String, takeOffTime: String, landingTime: String, totalTime: String) {
+    func vmPrint_func(missionNumber: String, missionSymbol: String, fromICAO: String, toICAO: String, takeOffTime: String, landingTime: String, totalTime: String, touchAndGo: String, fullStop: String, totalLanding: String, sorties: String, specialUse: String) {
         
         let formImage = UIImage(named: "afto781.jpg")
-        let dataImage = generateImage(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landingTime: landingTime, totalTime: totalTime)
+        let dataImage = generateImage(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landingTime: landingTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLanding: totalLanding, sorties: sorties, specialUse: specialUse)
         
         let size = CGSize(width: WIDTH, height: HEIGHT)
         UIGraphicsBeginImageContext(size)
@@ -221,7 +221,7 @@ class FVCVM {
     }
 
 
-    func generateImage(missionNumber: String, missionSymbol: String, fromICAO: String, toICAO: String, takeOffTime: String, landingTime: String, totalTime: String) -> UIImage? {
+    func generateImage(missionNumber: String, missionSymbol: String, fromICAO: String, toICAO: String, takeOffTime: String, landingTime: String, totalTime: String, touchAndGo: String, fullStop: String, totalLanding: String, sorties: String, specialUse: String) -> UIImage? {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: WIDTH, height: HEIGHT))
         
         let img = renderer.image { ctx in
@@ -234,8 +234,8 @@ class FVCVM {
             let tailString = NSAttributedString(string: strTail, attributes: attrs)
             tailString.draw(with: CGRect(x: 1035, y: 330, width: 300, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            //let msnNumberString = NSAttributedString(string: missionNumber, attributes: attrs)
-            missionNumber.draw(with: CGRect(x: 445, y: 545, width: 300, height: 50), options: .usesLineFragmentOrigin, context: nil)
+            let msnNumberString = NSAttributedString(string: missionNumber, attributes: attrs)
+            msnNumberString.draw(with: CGRect(x: 445, y: 545, width: 300, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
             let msnSymbolString = NSAttributedString(string: missionSymbol, attributes: attrs)
             msnSymbolString.draw(with: CGRect(x: 915, y: 545, width: 300, height: 50), options: .usesLineFragmentOrigin, context: nil)
@@ -254,6 +254,24 @@ class FVCVM {
             
             let totalTime = NSAttributedString(string: totalTime, attributes: attrs)
             totalTime.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
+            
+            
+            // fix x
+            let touchAndGo = NSAttributedString(string: touchAndGo, attributes: attrs)
+            touchAndGo.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
+            
+            let fullStop = NSAttributedString(string: fullStop, attributes: attrs)
+            fullStop.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
+            
+            let totalLanding = NSAttributedString(string: totalLanding, attributes: attrs)
+            totalLanding.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
+            
+            let sorties = NSAttributedString(string: sorties, attributes: attrs)
+            sorties.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
+            
+            let specialUse = NSAttributedString(string: specialUse, attributes: attrs)
+            specialUse.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
+            
             
 
             // Section 2
