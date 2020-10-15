@@ -8,8 +8,9 @@
 
 import Foundation
 
-class WriteToDisk {
+class DiskOperations {
     func generateFileName() -> URL {
+        // Get a timestamp and use that for that for the filename
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMddyyyyHHmm"
@@ -17,26 +18,16 @@ class WriteToDisk {
         // Set our filename
         let filename = "AFTO781-\(dateFormatter.string(from: date))"
         let dir = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        let fileURL = dir.appendingPathComponent(filename).appendingPathExtension("txt")
+        let fileURL = dir.appendingPathComponent(filename).appendingPathExtension("json")
         
         return fileURL
     }
+
     
-    func createFile(fileURL: URL) {
-        FileManager.default.createFile(atPath: fileURL.absoluteString, contents: Data("New line".utf8), attributes: nil)
-    }
-    
-    
-    func updateFile(fileURL: URL, line: String) {
-        // Get a timestamp and use that for that for the filename
+    func updateFile(line: String, fileURL: URL) {
         
         // Read the file
-        var fileData: String = ""
-        do {
-            try  fileData = readFile(fileURL: fileURL)
-        } catch {
-            self.createFile(fileURL: fileURL)
-        }
+        var fileData: String = readFile(fileURL: fileURL)
         // append to the bottom
         fileData += line
         writeFile(fileURL: fileURL, fileData: fileData)
@@ -52,18 +43,20 @@ class WriteToDisk {
         }
     }
     
-    func readFile(fileURL: URL) throws -> String {
+    func readFile(fileURL: URL) -> String {
         //Create variable to dump data to
         var fileData: String = ""
-        //Check to see if file exists
-        if FileManager.default.fileExists(atPath: fileURL.absoluteString){
-            do {
-                fileData = try String(contentsOf: fileURL, encoding: .utf8)
-                
-            }catch {
-                print("File read error")
-            }
+        // Check to see if file exists
+        // if FileManager.default.fileExists(atPath: fileURL.absoluteString){
+        do {
+            print("File found")
+            fileData = try String(contentsOf: fileURL, encoding: .utf8)
+            
+        }catch {
+            print("File read error")
         }
+        // print("--> \(fileData)")
         return fileData
     }
 }
+

@@ -12,6 +12,56 @@ class FVCVM {
     
     let WIDTH: Int = 3300
     let HEIGHT: Int = 2550
+    
+    func populateDateField() -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        let date = dateFormatter.string(from: Date())
+        
+        return date
+    }
+
+    var json = ""
+    
+    func checkForFile(filePath: URL) -> Bool {
+        print("\(filePath.absoluteString)")
+        if FileManager.default.fileExists(atPath: filePath.absoluteString) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func checkForOpeningBrace(input: String) -> Bool {
+        print("\(input)")
+        if input.contains("[") {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func appendToJSON(jsonFile: URL, key: String, value: String, anotherValue: Bool) {
+        json = DiskOperations().readFile(fileURL: jsonFile)
+        if (checkForOpeningBrace(input: json)) {
+            print("**TRUE**")
+            if anotherValue{
+                json += JSONBuilder().startOfObject(level: 1)
+                json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: anotherValue)
+            } else {
+                json += JSONBuilder().startOfObject(level: 1)
+                json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: anotherValue)
+                json += JSONBuilder().endOfObject(level: 1)
+                json += JSONBuilder().endOfFile()
+                DiskOperations().updateFile(line: json, fileURL: jsonFile) }
+        }else{
+            print("!!FALSE!!")
+            json += JSONBuilder().startOfFile()
+            json += JSONBuilder().startOfObject(level: 1)
+            json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: anotherValue) }
+
+        DiskOperations().updateFile(line: json, fileURL: jsonFile)
+    }
 
     func separateHoursAndMins(strInput: String, pointer: String) -> String {
 
