@@ -43,12 +43,19 @@ class JSONBuilder {
         }
     }
 
-    func endOfObject(level: Int) -> String {
+    func endOfObject(level: Int, anotherObject: Bool) -> String {
         if level > 1 {
             for _ in 1...level {
                 spacer += spacer
             }
-            return spacer + "}\n"
+            if anotherObject{
+                return spacer + "},\n"
+            }
+            else {
+                return spacer + "}\n"
+            }
+        } else if anotherObject{
+            return spacer + "},\n"
         } else {
             return spacer + "}\n"
         }
