@@ -32,6 +32,31 @@ class FVCVM {
         }
     }
     
+    func addRowToJSON(jsonFile: URL,
+                      rowID: String,
+                      missionNumber: String,
+                      missionSymbol: String,
+                      fromICAO: String,
+                      toICAO: String,
+                      takeOffTime: String,
+                      landingTime: String,
+                      totalTime: String,
+                      touchAndGo: String,
+                      fullStop: String,
+                      totalLanding: String,
+                      sorties: String,
+                      specialUse: String) {
+        // Function to add a row to JSON when it's added with addRow function
+        // We need to write to the json file when we're done.
+        let indent1 = "     "
+        let indent2 = "          "
+        //String has been set here for demonstration purposes.  Will need to modify before push to production.
+        let row: String = "\(indent1){\"6\(rowID)\": [\n\(indent2){\"7. Mission Number\" : \"\(missionNumber)\"},\n\(indent2){\"8. Mission Symbol\" : \"\(missionSymbol)\"},\n\(indent2){\"9. From ICAO\" : \"\(fromICAO)\"},\n\(indent2){\"10. To ICAO\" : \"\(toICAO)\",\n\(indent2){\"11. Take Off (Z)\" : \"\(takeOffTime)\"},\n\(indent2){\"12. Landing (Z)\" : \"\(landingTime)\"},\n\(indent2){\"13. Total Time\" : \"\(totalTime)\"},\n\(indent2){\"14. Landing Touch & Go\" : \"\(touchAndGo)\"},\n\(indent2){\"14. Landing Full Stop\" : \"\(fullStop)\"},\n\(indent2){\"14. Total\" : \"\(totalLanding)\"},\n\(indent2){\"15. Sorties\" : \"\(sorties)\"},\n\(indent2){\"16. Special Use\" : \"\(specialUse)\"}\n\(indent2)]\n\(indent1)}\n]"
+        json = DiskOperations().readFile(fileURL: jsonFile)
+        json += row
+        DiskOperations().updateFile(line: json, fileURL: jsonFile)
+    }
+    
     func checkForOpeningBrace(input: String) -> Bool {
         print("\(input)")
         if input.contains("[") {
@@ -43,22 +68,28 @@ class FVCVM {
     
     func appendToJSON(jsonFile: URL, key: String, value: String, anotherValue: Bool) {
         json = DiskOperations().readFile(fileURL: jsonFile)
+        print("\(jsonFile)")
         if (checkForOpeningBrace(input: json)) {
-            print("**TRUE**")
+            
             if anotherValue{
                 json += JSONBuilder().startOfObject(level: 1)
-                json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: anotherValue)
+                json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: false)
+                json += JSONBuilder().endOfObject(level: 1, anotherObject: anotherValue)
             } else {
                 json += JSONBuilder().startOfObject(level: 1)
-                json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: anotherValue)
-                json += JSONBuilder().endOfObject(level: 1)
+                json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: false)
+                json += JSONBuilder().endOfObject(level: 1, anotherObject: anotherValue)
                 json += JSONBuilder().endOfFile()
-                DiskOperations().updateFile(line: json, fileURL: jsonFile) }
+                DiskOperations().updateFile(line: json, fileURL: jsonFile)
+                
+            }
         }else{
-            print("!!FALSE!!")
+            
             json += JSONBuilder().startOfFile()
             json += JSONBuilder().startOfObject(level: 1)
-            json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: anotherValue) }
+            json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: false)
+            json += JSONBuilder().endOfObject(level: 1, anotherObject: anotherValue)
+        }
 
         DiskOperations().updateFile(line: json, fileURL: jsonFile)
     }
