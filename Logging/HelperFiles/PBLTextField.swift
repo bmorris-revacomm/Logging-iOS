@@ -15,10 +15,19 @@ class PBLTextField: UITextField {
         self.frame.size.height = 60
         self.borderStyle = .none
         self.backgroundColor = .mist
-        self.textColor = .fog
+        self.textColor = .slate
         self.textAlignment = .center
         self.autocapitalizationType = .allCharacters
         self.font = .boldSystemFont(ofSize: 17)
     }
     
+}
+
+class gridTextField: PBLTextField {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.borderStyle = .roundedRect
+        self.font = .boldSystemFont(ofSize: 10)
+    }
 }
