@@ -688,8 +688,7 @@ class FirstViewController: UIViewController {
         specialUse.text = ""
     }
     
-    
-    @IBAction func print_func(_ sender: Any) {
+    @IBAction func printFormTapped(_ sender: UIButton) {
         
         guard let missionNumber = missionNumber.text,
               let missionSymbol = missionSymbol.text,
@@ -707,7 +706,6 @@ class FirstViewController: UIViewController {
         
         FVCVM().vmPrint_func(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landingTime: landingTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLanding: totalLanding, sorties: sorties, specialUse: specialUse)
     }
-    
     
     @IBAction func line6aTapped(_ sender: UITapGestureRecognizer) {
         missionNumber.text = line6a01.text
