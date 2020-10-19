@@ -143,7 +143,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var instructor: UITextField!
     @IBOutlet weak var evaluator: UITextField!
     @IBOutlet weak var other: UITextField!
-    
     @IBOutlet weak var time: UITextField!
     @IBOutlet weak var ac_sortie: UITextField!
     @IBOutlet weak var night: UITextField!
@@ -155,7 +154,6 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var combatSptTime: UITextField!
     @IBOutlet weak var combatSptSorite: UITextField!
     @IBOutlet weak var resvStatus: UITextField!
-    
     @IBOutlet weak var maintReview: UITextField!
     @IBOutlet weak var pilotReview: UITextField!
     
