@@ -12,7 +12,7 @@ class PBLTextField: UITextField {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.frame.size.height = 70
+        self.frame.size.height = 60
         self.borderStyle = .none
         self.backgroundColor = .mist
         self.textColor = .fog

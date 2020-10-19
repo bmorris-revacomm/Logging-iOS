@@ -20,27 +20,36 @@ class FirstViewController: UIViewController {
     
     // MARK: - Outlets
     
+    //Page 1
     @IBOutlet weak var Date: UITextField!
     @IBOutlet weak var MDS: UITextField!
     @IBOutlet weak var serialNmber: UITextField!
     @IBOutlet weak var unitChargedForFlyingHours: UITextField!
     @IBOutlet weak var harmLocation: UITextField!
     
+    //Page 2
     @IBOutlet weak var missionNumber: UITextField!
     @IBOutlet weak var missionSymbol: UITextField!
     @IBOutlet weak var fromICAO: UITextField!
     @IBOutlet weak var toICAO: UITextField!
+    
+    //Page 3
+    @IBOutlet weak var takeOffTime: UITextField!
+    @IBOutlet weak var landingTime: UITextField!
     @IBOutlet weak var totalTime: UITextField!
     
     @IBOutlet weak var touchAndGo: UITextField!
     @IBOutlet weak var fullStop: UITextField!
     @IBOutlet weak var totalLanding: UITextField!
     @IBOutlet weak var sorties:UITextField!
-    
-    @IBOutlet weak var takeOffTime: UITextField!
-    @IBOutlet weak var landingTime: UITextField!
-    
     @IBOutlet weak var specialUse: UITextField!
+    
+    @IBOutlet weak var grandTotalTime: UITextField!
+    @IBOutlet weak var grandTotalTouchAndGo: UITextField!
+    @IBOutlet weak var grandTotalFullStop: UITextField!
+    @IBOutlet weak var grandTotalLanding: UITextField!
+    @IBOutlet weak var grandTotalSorties: UITextField!
+    @IBOutlet weak var grandTotalSpecialUse: UITextField!
     
     @IBOutlet weak var line6a01: UITextField!
     @IBOutlet weak var line6a02: UITextField!
@@ -120,15 +129,38 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var line6f11: UITextField!
     @IBOutlet weak var line6f12: UITextField!
     
-    @IBOutlet weak var grandTotalTime: UITextField!
-    @IBOutlet weak var grandTotalTouchAndGo: UITextField!
-    @IBOutlet weak var grandTotalFullStop: UITextField!
-    @IBOutlet weak var grandTotalLanding: UITextField!
-    @IBOutlet weak var grandTotalSorties: UITextField!
+    //Page 4
+    @IBOutlet weak var lastName: UILabel!
+    @IBOutlet weak var SSN: UILabel!
+    @IBOutlet weak var flyingOrigin: UILabel!
+    @IBOutlet weak var flightAuthDutyCode: UILabel!
+    
+    @IBOutlet weak var primary: UITextField!
+    @IBOutlet weak var secondary: UITextField!
+    @IBOutlet weak var instructor: UITextField!
+    @IBOutlet weak var evaluator: UITextField!
+    @IBOutlet weak var other: UITextField!
+    
+    @IBOutlet weak var time: UITextField!
+    @IBOutlet weak var acSortie: UITextField!
+    
+    @IBOutlet weak var night: UITextField!
+    @IBOutlet weak var ins: UITextField!
+    @IBOutlet weak var simIns: UITextField!
+    @IBOutlet weak var nav: UITextField!
+    
+    @IBOutlet weak var combatTime: UITextField!
+    @IBOutlet weak var combatSortie: UITextField!
+    @IBOutlet weak var combatSptTime: UITextField!
+    @IBOutlet weak var combatSptSortie: UITextField!
+    @IBOutlet weak var resvStatus: UITextField!
+    
+    @IBOutlet weak var maintReview: UITextField!
+    @IBOutlet weak var pilotReview: UITextField!
             
     //MARK: - Properties
-    let fileURL = DiskOperations().generateFileName()
     
+    let fileURL = DiskOperations().generateFileName()
     var line6 = [false, false, false, false, false, false]
     
 //    var txtMissionNumber: String = "XX-XXXXX"
@@ -144,14 +176,6 @@ class FirstViewController: UIViewController {
 //    var line1: String = ""
 //    var line2: String = ""
 //    var line3: String = ""
-    
-//    var linePointer: String = "a"
-//    var line6a: [String] = []
-//    var line6b: [String] = []
-//    var line6c: [String] = []
-//    var line6d: [String] = []
-//    var line6e: [String] = []
-//    var line6f: [String] = []
     
     let tags: [String] = [
         "MDS", "Serial #", "Unit Charged", "HARM Location",
@@ -182,7 +206,6 @@ class FirstViewController: UIViewController {
         "GrandTotalFullStop", "GrandTotalStops", "GrandTotalSorties"
     ]
     
-    
     //MARK: - Actions
         
     @IBAction func addToJSON(_ sender: UITextField) {
@@ -205,20 +228,17 @@ class FirstViewController: UIViewController {
             }
     }
     
-    
     @IBAction func calculateTotalLanding(_sender: Any) {
         //Here's where we do the math for filling in the total field
-        
         totalLanding.text = FVCVM().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
     }
-    
 
     @IBAction func updateForm(_ sender: Any) {
         let txtDecTime = FVCVM().vmUpdateForm(takeOffTime: takeOffTime, landingTime: landingTime)
         totalTime.text = txtDecTime
     }
     
-    func addRow() {
+    @IBAction func add_row(_ sender: Any) {
         
         for (index, isPopulated) in line6.enumerated() {
             if !isPopulated {
@@ -238,9 +258,9 @@ class FirstViewController: UIViewController {
                     line6a11.text = sorties.text
                     line6a12.text = specialUse.text
                     // Add row to JSON
-                    FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "a", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
+                    //FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "a", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
                     
-                    clearRow()
+                    clearFields()
                     line6[0] = true
                     print("Populated line A")
                 case 1:
@@ -257,7 +277,7 @@ class FirstViewController: UIViewController {
                     line6b10.text = totalLanding.text
                     line6b11.text = sorties.text
                     line6b12.text = specialUse.text
-                    clearRow()
+                    clearFields()
                     line6[1] = true
                     print("Populated line B")
                 case 2:
@@ -274,7 +294,7 @@ class FirstViewController: UIViewController {
                     line6c10.text = totalLanding.text
                     line6c11.text = sorties.text
                     line6c12.text = specialUse.text
-                    clearRow()
+                    clearFields()
                     line6[2] = true
                     print("Populated line C")
                 case 3:
@@ -291,7 +311,7 @@ class FirstViewController: UIViewController {
                     line6d10.text = totalLanding.text
                     line6d11.text = sorties.text
                     line6d12.text = specialUse.text
-                    clearRow()
+                    clearFields()
                     line6[3] = true
                     print("Populated line D")
                 case 4:
@@ -308,7 +328,7 @@ class FirstViewController: UIViewController {
                     line6e10.text = totalLanding.text
                     line6e11.text = sorties.text
                     line6e12.text = specialUse.text
-                    clearRow()
+                    clearFields()
                     line6[4] = true
                     print("Populated line E")
                 case 5:
@@ -325,7 +345,7 @@ class FirstViewController: UIViewController {
                     line6f10.text = totalLanding.text
                     line6f11.text = sorties.text
                     line6f12.text = specialUse.text
-                    clearRow()
+                    clearFields()
                     line6[5] = true
                     print("Populated line F")
                 default:
@@ -336,344 +356,7 @@ class FirstViewController: UIViewController {
         }
     }
     
-    
-    
-    @IBAction func add_row(_ sender: Any) {
-        
-        addRow()
-        
-        // 9-30-20 PMM - Here's the thought, we can take all of the text in the boxes and drop it in to an array.  We need to track some way of what line we're looking at.
-        // So let's swing for the fences.
-        
-        // So that didn't work.  The variable isn't persistent
-//        print("A = \(line6a.count)")
-//        print("B = \(line6b.count)")
-//        print("C = \(line6c.count)")
-//        print("D = \(line6d.count)")
-//        print("E = \(line6e.count)")
-//        print("F = \(line6f.count)")
-//
-//
-//        if line6a.count == 12 {
-//            linePointer = "b"
-//            if line6b.count == 12 {
-//                linePointer = "c"
-//                if line6c.count == 12 {
-//                    linePointer = "d"
-//                    if line6d.count == 12 {
-//                        linePointer = "e"
-//                        if line6e.count == 12 {
-//                            linePointer = "f"
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//
-//        if linePointer == "a"{
-//            linePointer = "b"
-//            //Populate the array
-//            line6a.append(missionNumber.text!)
-//            line6a.append(missionSymbol.text!)
-//            line6a.append(fromICAO.text!)
-//            line6a.append(toICAO.text!)
-//            line6a.append(takeOffTime.text!)
-//            line6a.append(landingTime.text!)
-//            line6a.append(totalTime.text!)
-//            line6a.append(touchAndGo.text!)
-//            line6a.append(fullStop.text!)
-//            line6a.append(totalLanding.text!)
-//            line6a.append(sorties.text!)
-//            line6a.append(specialUse.text!)
-//            // Clear the input boxes
-//            clearRow()
-//            // set the appropriate line with the values from the array
-//            let size = line6a.count
-//            for x in 0...size{
-//                switch(x){
-//                case 0:
-//                    line6a01.text = line6a[x]
-//                case 1:
-//                    line6a02.text = line6a[x]
-//                case 2:
-//                    line6a03.text = line6a[x]
-//                case 3:
-//                    line6a04.text = line6a[x]
-//                case 4:
-//                    line6a05.text = line6a[x]
-//                case 5:
-//                    line6a06.text = line6a[x]
-//                case 6:
-//                    line6a07.text = line6a[x]
-//                case 7:
-//                    line6a08.text = line6a[x]
-//                case 8:
-//                    line6a09.text = line6a[x]
-//                case 9:
-//                    line6a10.text = line6a[x]
-//                case 10:
-//                    line6a11.text = line6a[x]
-//                case 11:
-//                    line6a12.text = line6a[x]
-//                default:
-//                    break
-//                }
-//            }
-//        }
-//        else if linePointer == "b"{
-//            linePointer = "c"
-//            //Populate the array
-//            line6b.append(missionNumber.text!)
-//            line6b.append(missionSymbol.text!)
-//            line6b.append(fromICAO.text!)
-//            line6b.append(toICAO.text!)
-//            line6b.append(takeOffTime.text!)
-//            line6b.append(landingTime.text!)
-//            line6b.append(totalTime.text!)
-//            line6b.append(touchAndGo.text!)
-//            line6b.append(fullStop.text!)
-//            line6b.append(totalLanding.text!)
-//            line6b.append(sorties.text!)
-//            line6b.append(specialUse.text!)
-//            // Clear the input boxes
-//            clearRow()
-//            // set the appropriate line with the values from the array
-//            let size = line6a.count
-//            for x in 0...size{
-//                switch(x){
-//                case 0:
-//                    line6b01.text = line6b[x]
-//                case 1:
-//                    line6b02.text = line6b[x]
-//                case 2:
-//                    line6b03.text = line6b[x]
-//                case 3:
-//                    line6b04.text = line6b[x]
-//                case 4:
-//                    line6b05.text = line6b[x]
-//                case 5:
-//                    line6b06.text = line6b[x]
-//                case 6:
-//                    line6b07.text = line6b[x]
-//                case 7:
-//                    line6b08.text = line6b[x]
-//                case 8:
-//                    line6b09.text = line6b[x]
-//                case 9:
-//                    line6b10.text = line6b[x]
-//                case 10:
-//                    line6b11.text = line6b[x]
-//                case 11:
-//                    line6b12.text = line6b[x]
-//                default:
-//                    break
-//                }
-//            }
-//        }
-//
-//        else if linePointer == "c"{
-//            linePointer = "d"
-//            //Populate the array
-//            line6c.append(missionNumber.text!)
-//            line6c.append(missionSymbol.text!)
-//            line6c.append(fromICAO.text!)
-//            line6c.append(toICAO.text!)
-//            line6c.append(takeOffTime.text!)
-//            line6c.append(landingTime.text!)
-//            line6c.append(totalTime.text!)
-//            line6c.append(touchAndGo.text!)
-//            line6c.append(fullStop.text!)
-//            line6c.append(totalLanding.text!)
-//            line6c.append(sorties.text!)
-//            line6c.append(specialUse.text!)
-//            // Clear the input boxes
-//            clearRow()
-//            // set the appropriate line with the values from the array
-//            let size = line6a.count
-//            for x in 0...size{
-//                switch(x){
-//                case 0:
-//                    line6c01.text = line6c[x]
-//                case 1:
-//                    line6c02.text = line6c[x]
-//                case 2:
-//                    line6c03.text = line6c[x]
-//                case 3:
-//                    line6c04.text = line6c[x]
-//                case 4:
-//                    line6c05.text = line6c[x]
-//                case 5:
-//                    line6c06.text = line6c[x]
-//                case 6:
-//                    line6c07.text = line6c[x]
-//                case 7:
-//                    line6c08.text = line6c[x]
-//                case 8:
-//                    line6c09.text = line6c[x]
-//                case 9:
-//                    line6c10.text = line6c[x]
-//                case 10:
-//                    line6c11.text = line6c[x]
-//                case 11:
-//                    line6c12.text = line6c[x]
-//                default:
-//                    break
-//                }
-//            }
-//        }
-//        else if linePointer == "d"{
-//            linePointer = "e"
-//            //Populate the array
-//            line6d.append(missionNumber.text!)
-//            line6d.append(missionSymbol.text!)
-//            line6d.append(fromICAO.text!)
-//            line6d.append(toICAO.text!)
-//            line6d.append(takeOffTime.text!)
-//            line6d.append(landingTime.text!)
-//            line6d.append(totalTime.text!)
-//            line6d.append(touchAndGo.text!)
-//            line6d.append(fullStop.text!)
-//            line6d.append(totalLanding.text!)
-//            line6d.append(sorties.text!)
-//            line6d.append(specialUse.text!)
-//            // Clear the input boxes
-//            clearRow()
-//            // set the appropriate line with the values from the array
-//            let size = line6a.count
-//            for x in 0...size{
-//                switch(x){
-//                case 0:
-//                    line6d01.text = line6d[x]
-//                case 1:
-//                    line6d02.text = line6d[x]
-//                case 2:
-//                    line6d03.text = line6d[x]
-//                case 3:
-//                    line6d04.text = line6d[x]
-//                case 4:
-//                    line6d05.text = line6d[x]
-//                case 5:
-//                    line6d06.text = line6d[x]
-//                case 6:
-//                    line6d07.text = line6d[x]
-//                case 7:
-//                    line6d08.text = line6d[x]
-//                case 8:
-//                    line6d09.text = line6d[x]
-//                case 9:
-//                    line6d10.text = line6d[x]
-//                case 10:
-//                    line6d11.text = line6d[x]
-//                case 11:
-//                    line6d12.text = line6d[x]
-//                default:
-//                    break
-//                }
-//            }
-//        }
-//        else if linePointer == "e"{
-//            linePointer = "f"
-//            //Populate the array
-//            line6e.append(missionNumber.text!)
-//            line6e.append(missionSymbol.text!)
-//            line6e.append(fromICAO.text!)
-//            line6e.append(toICAO.text!)
-//            line6e.append(takeOffTime.text!)
-//            line6e.append(landingTime.text!)
-//            line6e.append(totalTime.text!)
-//            line6e.append(touchAndGo.text!)
-//            line6e.append(fullStop.text!)
-//            line6e.append(totalLanding.text!)
-//            line6e.append(sorties.text!)
-//            line6e.append(specialUse.text!)
-//            // Clear the input boxes
-//            clearRow()
-//            // set the appropriate line with the values from the array
-//            let size = line6a.count
-//            for x in 0...size{
-//                switch(x){
-//                case 0:
-//                    line6e01.text = line6e[x]
-//                case 1:
-//                    line6e02.text = line6e[x]
-//                case 2:
-//                    line6e03.text = line6e[x]
-//                case 3:
-//                    line6e04.text = line6e[x]
-//                case 4:
-//                    line6e05.text = line6e[x]
-//                case 5:
-//                    line6e06.text = line6e[x]
-//                case 6:
-//                    line6e07.text = line6e[x]
-//                case 7:
-//                    line6e08.text = line6e[x]
-//                case 8:
-//                    line6e09.text = line6e[x]
-//                case 9:
-//                    line6e10.text = line6e[x]
-//                case 10:
-//                    line6e11.text = line6e[x]
-//                case 11:
-//                    line6e12.text = line6e[x]
-//                default:
-//                    break
-//                }
-//            }
-//        }
-//        else if linePointer == "f"{
-//            linePointer = "a"
-//            //Populate the array
-//            line6f.append(missionNumber.text!)
-//            line6f.append(missionSymbol.text!)
-//            line6f.append(fromICAO.text!)
-//            line6f.append(toICAO.text!)
-//            line6f.append(takeOffTime.text!)
-//            line6f.append(landingTime.text!)
-//            line6f.append(totalTime.text!)
-//            line6f.append(touchAndGo.text!)
-//            line6f.append(fullStop.text!)
-//            line6f.append(totalLanding.text!)
-//            line6f.append(sorties.text!)
-//            line6f.append(specialUse.text!)
-//            // Clear the input boxes
-//            clearRow()
-//            // set the appropriate line with the values from the array
-//            let size = line6a.count
-//            for x in 0...size{
-//                switch(x){
-//                case 0:
-//                    line6f01.text = line6f[x]
-//                case 1:
-//                    line6f02.text = line6f[x]
-//                case 2:
-//                    line6f03.text = line6f[x]
-//                case 3:
-//                    line6f04.text = line6f[x]
-//                case 4:
-//                    line6f05.text = line6f[x]
-//                case 5:
-//                    line6f06.text = line6f[x]
-//                case 6:
-//                    line6f07.text = line6f[x]
-//                case 7:
-//                    line6f08.text = line6f[x]
-//                case 8:
-//                    line6f09.text = line6f[x]
-//                case 9:
-//                    line6f10.text = line6f[x]
-//                case 10:
-//                    line6f11.text = line6f[x]
-//                case 11:
-//                    line6f12.text = line6f[x]
-//                default:
-//                    break
-//                }
-//            }
-//        }
-    }
-    
-    func clearRow(){
+    func clearFields(){
         missionNumber.text = ""
         missionSymbol.text = ""
         fromICAO.text = ""
@@ -688,7 +371,7 @@ class FirstViewController: UIViewController {
         specialUse.text = ""
     }
     
-    @IBAction func printFormTapped(_ sender: UIButton) {
+    @IBAction func printButtonTapped(_ sender: UIButton) {
         
         guard let missionNumber = missionNumber.text,
               let missionSymbol = missionSymbol.text,
@@ -795,6 +478,26 @@ class FirstViewController: UIViewController {
         totalLanding.text = line6f10.text
         sorties.text = line6f11.text
         specialUse.text = line6f12.text
+    }
+    
+    @IBAction func page1Tapped(_ sender: UITapGestureRecognizer) {
+        Date.resignFirstResponder()
+        MDS.resignFirstResponder()
+        serialNmber.resignFirstResponder()
+        unitChargedForFlyingHours.resignFirstResponder()
+        harmLocation.resignFirstResponder()
+    }
+    
+    @IBAction func page2Tapped(_ sender: UITapGestureRecognizer) {
+        
+    }
+    
+    @IBAction func page3Tapped(_ sender: UITapGestureRecognizer) {
+        
+    }
+    
+    @IBAction func page4Tapped(_ sender: UITapGestureRecognizer) {
+        
     }
     
 } //End

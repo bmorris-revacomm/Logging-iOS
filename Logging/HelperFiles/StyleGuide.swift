@@ -14,7 +14,7 @@ extension UIView {
         self.layer.cornerRadius = radius
     }
     
-    func addAccentBorder(width: CGFloat = 1, color: UIColor = .lightGray) {
+    func addAccentBorder(width: CGFloat = 1, color: UIColor = .fog) {
         self.layer.borderWidth = width
         self.layer.borderColor = color.cgColor
     }

@@ -17,3 +17,12 @@ class PBLView: UIView {
     }
     
 }
+
+class borderView: PBLView {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = .none
+        self.addAccentBorder()
+    }
+}

@@ -19,7 +19,8 @@ class PagePageViewController: UIPageViewController {
         // The view controllers will be shown in this order
         return [self.newPageViewController("1"),
                 self.newPageViewController("2"),
-                self.newPageViewController("3")]
+                self.newPageViewController("3"),
+                self.newPageViewController("4")]
     }()
     
     //MARK: - Lifecycle
