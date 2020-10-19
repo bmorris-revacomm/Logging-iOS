@@ -65,7 +65,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oBY-m8-FdL" userLabel="1">
-                                <rect key="frame" x="30" y="107.5" width="320" height="238.5"/>
+                                <rect key="frame" x="50" y="126.5" width="41" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Cl4-va-NUh">
                                         <rect key="frame" x="0.0" y="0.0" width="30.5" height="14.5"/>
@@ -73,13 +73,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Klt-Dd-4qZ">
-                                        <rect key="frame" x="0.0" y="22.5" width="320" height="216"/>
-                                    </datePicker>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6uc-fP-OZQ" userLabel="Date">
+                                        <rect key="frame" x="0.0" y="28.5" width="32" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JMm-EK-Vra" userLabel="2">
-                                <rect key="frame" x="410" y="107.5" width="150" height="82.5"/>
+                                <rect key="frame" x="151" y="126.5" width="203.5" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION DESIGN SYSTEM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="xeB-r3-IH9">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="14.5"/>
@@ -94,11 +96,14 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="cqh-Xg-5mh"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bUH-ZS-yG7" userLabel="3">
-                                <rect key="frame" x="620" y="107.5" width="95.5" height="82.5"/>
+                                <rect key="frame" x="414.5" y="126.5" width="129.5" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SERIAL NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="KAm-Cy-N8p">
                                         <rect key="frame" x="0.0" y="0.0" width="95.5" height="14.5"/>
@@ -106,18 +111,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="zeS-W3-NlD" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="95.5" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="ixC-cS-m62"/>
-                                        </constraints>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="zeS-W3-NlD">
+                                        <rect key="frame" x="0.0" y="28.5" width="129.5" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="Nw8-Qj-BCU"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ACx-nU-qgk" userLabel="4">
-                                <rect key="frame" x="30" y="386" width="307" height="84.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fzx-BN-niq" userLabel="4">
+                                <rect key="frame" x="50" y="209" width="283" height="60.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNIT CHARGED FOR FLYING HOURS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDq-zG-zPl">
                                         <rect key="frame" x="0.0" y="0.0" width="208.5" height="14.5"/>
@@ -125,19 +130,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="3C4-Of-Na3" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="307" height="60"/>
-                                        <color key="backgroundColor" name="mist"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="jmz-V9-mZz"/>
-                                        </constraints>
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="3C4-Of-Na3" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28.5" width="283" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="9Co-7D-TW1"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HGM-ho-Eeu" userLabel="5">
-                                <rect key="frame" x="30" y="510.5" width="461" height="82.5"/>
+                                <rect key="frame" x="50" y="289.5" width="134.5" height="62.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HARM LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Clp-EW-ddP">
                                         <rect key="frame" x="0.0" y="0.0" width="461" height="14.5"/>
@@ -145,13 +149,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="D8q-NM-XVJ" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="461" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="W2n-FY-mgf"/>
-                                        </constraints>
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="D8q-NM-XVJ">
+                                        <rect key="frame" x="0.0" y="28.5" width="134.5" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="PSl-3s-Iqq"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -213,6 +217,13 @@
                             <constraint firstItem="1r1-uW-hET" firstAttribute="top" secondItem="6et-G8-hMu" secondAttribute="bottom" constant="5" id="yc1-mE-68f"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Date" destination="6uc-fP-OZQ" id="HMs-Oq-gj2"/>
+                        <outlet property="MDS" destination="gjr-0y-vh0" id="44G-Xf-djJ"/>
+                        <outlet property="harmLocation" destination="D8q-NM-XVJ" id="8sr-Da-Hnz"/>
+                        <outlet property="serialNmber" destination="zeS-W3-NlD" id="Qs0-bG-usv"/>
+                        <outlet property="unitChargedForFlyingHours" destination="3C4-Of-Na3" id="7Pl-9g-S2D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyL-kO-ELH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -615,77 +626,113 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LH5-fO-r5x">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LH5-fO-r5x">
                                                         <rect key="frame" x="53.5" y="0.0" width="53.5" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="Vbf-yO-Iba"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RwO-fZ-ePG">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RwO-fZ-ePG">
                                                         <rect key="frame" x="107" y="0.0" width="53" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="oWh-Tq-jtE"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qda-1C-Y7a">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qda-1C-Y7a">
                                                         <rect key="frame" x="160" y="0.0" width="53.5" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="iR9-VW-Q35"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfL-P2-LAD">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfL-P2-LAD">
                                                         <rect key="frame" x="213.5" y="0.0" width="53.5" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="qUh-r8-RxU"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOv-6D-zqB">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOv-6D-zqB">
                                                         <rect key="frame" x="267" y="0.0" width="53" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="W4u-mW-tm0"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="txV-h5-4rw">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="txV-h5-4rw">
                                                         <rect key="frame" x="320" y="0.0" width="53.5" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="cvW-PR-OeJ"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJd-gX-ItI">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJd-gX-ItI">
                                                         <rect key="frame" x="373.5" y="0.0" width="53.5" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="IZw-Rv-ats"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-6Z-nmb">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-6Z-nmb">
                                                         <rect key="frame" x="427" y="0.0" width="53" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="tRX-dD-iKy"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uyz-TN-tte">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uyz-TN-tte">
                                                         <rect key="frame" x="480" y="0.0" width="53.5" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="EYL-8W-Wqc"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocs-GF-aJC">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocs-GF-aJC">
                                                         <rect key="frame" x="533.5" y="0.0" width="53" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="hJ3-lo-NMS"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Unf-oO-6hA">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Unf-oO-6hA">
                                                         <rect key="frame" x="586.5" y="0.0" width="53.5" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="Zbt-bz-OP8"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jE-bi-ye0">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jE-bi-ye0">
                                                         <rect key="frame" x="640" y="0.0" width="53.5" height="56"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="yS0-lg-gaw"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <gestureRecognizers/>
@@ -703,77 +750,113 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4u7-D4-bes">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4u7-D4-bes">
                                                         <rect key="frame" x="53.5" y="0.0" width="53.5" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="YLT-Q1-gJM"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tp7-iG-SeF">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tp7-iG-SeF">
                                                         <rect key="frame" x="107" y="0.0" width="53" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="Mbo-bb-i6L"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irv-dW-laX">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irv-dW-laX">
                                                         <rect key="frame" x="160" y="0.0" width="53.5" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="b7K-KX-eR5"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q7z-jI-TAS">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q7z-jI-TAS">
                                                         <rect key="frame" x="213.5" y="0.0" width="53.5" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="sck-VF-HBH"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWO-a4-eLA">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWO-a4-eLA">
                                                         <rect key="frame" x="267" y="0.0" width="53" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="3gH-5J-k9Z"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mk-Az-eUi">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mk-Az-eUi">
                                                         <rect key="frame" x="320" y="0.0" width="53.5" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="uZ6-4M-Gxo"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YG4-ZY-ivn">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YG4-ZY-ivn">
                                                         <rect key="frame" x="373.5" y="0.0" width="53.5" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="IKy-2K-5us"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amK-2C-j6m">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amK-2C-j6m">
                                                         <rect key="frame" x="427" y="0.0" width="53" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="u4D-sY-h2I"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-sU-lOX">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-sU-lOX">
                                                         <rect key="frame" x="480" y="0.0" width="53.5" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="a8G-ZH-sao"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-Hb-dlK">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-Hb-dlK">
                                                         <rect key="frame" x="533.5" y="0.0" width="53" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="3rm-f3-4Hs"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="js2-Oy-r8K">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="js2-Oy-r8K">
                                                         <rect key="frame" x="586.5" y="0.0" width="53.5" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="Wei-py-ba2"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6N-bG-O43">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6N-bG-O43">
                                                         <rect key="frame" x="640" y="0.0" width="53.5" height="55.5"/>
                                                         <color key="backgroundColor" name="mist"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="ws5-3D-Pgp"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                                 <gestureRecognizers/>

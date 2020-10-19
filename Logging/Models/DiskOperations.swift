@@ -26,11 +26,7 @@ class DiskOperations {
     
     func updateFile(line: String, fileURL: URL) {
         
-        // Read the file
-        var fileData: String = readFile(fileURL: fileURL)
-        // append to the bottom
-        fileData += line
-        writeFile(fileURL: fileURL, fileData: fileData)
+        writeFile(fileURL: fileURL, fileData: line)
         
     }
     func writeFile(fileURL: URL, fileData: String) {

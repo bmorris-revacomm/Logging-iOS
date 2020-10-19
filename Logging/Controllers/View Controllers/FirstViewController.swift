@@ -189,6 +189,7 @@ class FirstViewController: UIViewController {
         if (Date.text == "") {
             print("date")
             Date.text = FVCVM().populateDateField()
+            FVCVM().appendToJSON(jsonFile: fileURL, key: "Date", value: Date.text ?? "date", anotherValue: true)
         }
             if(sender.tag == tags.count) {
                 FVCVM().appendToJSON(jsonFile: fileURL,
@@ -236,6 +237,9 @@ class FirstViewController: UIViewController {
                     line6a10.text = totalLanding.text
                     line6a11.text = sorties.text
                     line6a12.text = specialUse.text
+                    // Add row to JSON
+                    FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "a", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
+                    
                     clearRow()
                     line6[0] = true
                     print("Populated line A")
