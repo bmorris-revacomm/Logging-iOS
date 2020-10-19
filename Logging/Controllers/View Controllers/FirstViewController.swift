@@ -128,12 +128,16 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var line6f11: UITextField!
     @IBOutlet weak var line6f12: UITextField!
     
-    //Page 4
-    @IBOutlet weak var lastName: UILabel!
-    @IBOutlet weak var SSN: UILabel!
-    @IBOutlet weak var flyingOrigin: UILabel!
-    @IBOutlet weak var flightAuthDutyCode: UILabel!
+    @IBOutlet weak var grandTotalTime: UITextField!
+    @IBOutlet weak var grandTotalTouchAndGo: UITextField!
+    @IBOutlet weak var grandTotalFullStop: UITextField!
+    @IBOutlet weak var grandTotalLanding: UITextField!
+    @IBOutlet weak var grandTotalSorties: UITextField!
     
+    @IBOutlet weak var flyingOrgn: UITextField!
+    @IBOutlet weak var SSN: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var flightAuthDutyCode: UITextField!
     @IBOutlet weak var primary: UITextField!
     @IBOutlet weak var secondary: UITextField!
     @IBOutlet weak var instructor: UITextField!
@@ -141,26 +145,31 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var other: UITextField!
     
     @IBOutlet weak var time: UITextField!
-    @IBOutlet weak var acSortie: UITextField!
-    
+    @IBOutlet weak var ac_sortie: UITextField!
     @IBOutlet weak var night: UITextField!
     @IBOutlet weak var ins: UITextField!
     @IBOutlet weak var simIns: UITextField!
-    @IBOutlet weak var nav: UITextField!
-    
+    @IBOutlet weak var nvg: UITextField!
     @IBOutlet weak var combatTime: UITextField!
     @IBOutlet weak var combatSortie: UITextField!
     @IBOutlet weak var combatSptTime: UITextField!
-    @IBOutlet weak var combatSptSortie: UITextField!
+    @IBOutlet weak var combatSptSorite: UITextField!
     @IBOutlet weak var resvStatus: UITextField!
     
     @IBOutlet weak var maintReview: UITextField!
     @IBOutlet weak var pilotReview: UITextField!
-            
+    
     //MARK: - Properties
     
     let fileURL = DiskOperations().generateFileName()
     var line6 = [false, false, false, false, false, false]
+    var crewMember = [false, false, false, false, false,
+                      false, false, false, false, false,
+                      false, false, false, false, false,
+                      false, false, false, false, false,
+                      false, false, false, false, false,
+                      false, false, false, false, false,
+                      false, false, false, false, false]
     
 //    var txtMissionNumber: String = "XX-XXXXX"
 //    var missionSymbolText: String = ""
@@ -276,7 +285,10 @@ class FirstViewController: UIViewController {
                     line6b10.text = totalLanding.text
                     line6b11.text = sorties.text
                     line6b12.text = specialUse.text
-                    clearFields()
+                    // Add row to JSON
+                    FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "b", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
+                    
+                    clearRow()
                     line6[1] = true
                     print("Populated line B")
                 case 2:
@@ -293,7 +305,10 @@ class FirstViewController: UIViewController {
                     line6c10.text = totalLanding.text
                     line6c11.text = sorties.text
                     line6c12.text = specialUse.text
-                    clearFields()
+                    // Add row to JSON
+                    FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "c", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
+                    
+                    clearRow()
                     line6[2] = true
                     print("Populated line C")
                 case 3:
@@ -310,7 +325,10 @@ class FirstViewController: UIViewController {
                     line6d10.text = totalLanding.text
                     line6d11.text = sorties.text
                     line6d12.text = specialUse.text
-                    clearFields()
+                    // Add row to JSON
+                    FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "d", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
+                    
+                    clearRow()
                     line6[3] = true
                     print("Populated line D")
                 case 4:
@@ -327,7 +345,10 @@ class FirstViewController: UIViewController {
                     line6e10.text = totalLanding.text
                     line6e11.text = sorties.text
                     line6e12.text = specialUse.text
-                    clearFields()
+                    // Add row to JSON
+                    FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "e", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
+                    
+                    clearRow()
                     line6[4] = true
                     print("Populated line E")
                 case 5:
@@ -344,7 +365,10 @@ class FirstViewController: UIViewController {
                     line6f10.text = totalLanding.text
                     line6f11.text = sorties.text
                     line6f12.text = specialUse.text
-                    clearFields()
+                    // Add row to JSON
+                    FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "f", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
+                    
+                    clearRow()
                     line6[5] = true
                     print("Populated line F")
                 default:
