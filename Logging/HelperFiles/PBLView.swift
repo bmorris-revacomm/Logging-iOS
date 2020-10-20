@@ -25,3 +25,12 @@ class borderView: PBLView {
         self.addAccentBorder()
     }
 }
+
+class circleView: UIView {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.addCornerRadius(self.frame.size.height/2)
+    }
+    
+}
