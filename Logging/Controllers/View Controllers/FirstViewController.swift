@@ -15,7 +15,6 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
     }
     
     // MARK: - Outlets
@@ -489,15 +488,42 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func page2Tapped(_ sender: UITapGestureRecognizer) {
-        
+        missionNumber.resignFirstResponder()
+        missionSymbol.resignFirstResponder()
+        toICAO.resignFirstResponder()
+        fromICAO.resignFirstResponder()
     }
     
     @IBAction func page3Tapped(_ sender: UITapGestureRecognizer) {
-        
+        takeOffTime.resignFirstResponder()
+        landingTime.resignFirstResponder()
+        totalTime.resignFirstResponder()
+        touchAndGo.resignFirstResponder()
+        fullStop.resignFirstResponder()
+        totalLanding.resignFirstResponder()
+        sorties.resignFirstResponder()
+        specialUse.resignFirstResponder()
     }
     
     @IBAction func page4Tapped(_ sender: UITapGestureRecognizer) {
-        
+        primary.resignFirstResponder()
+        secondary.resignFirstResponder()
+        instructor.resignFirstResponder()
+        evaluator.resignFirstResponder()
+        other.resignFirstResponder()
+        time.resignFirstResponder()
+        acSortie.resignFirstResponder()
+        night.resignFirstResponder()
+        ins.resignFirstResponder()
+        simIns.resignFirstResponder()
+        nav.resignFirstResponder()
+        combatTime.resignFirstResponder()
+        combatSortie.resignFirstResponder()
+        combatSptTime.resignFirstResponder()
+        combatSptSortie.resignFirstResponder()
+        resvStatus.resignFirstResponder()
+        maintReview.resignFirstResponder()
+        pilotReview.resignFirstResponder()
     }
     
 } //End
