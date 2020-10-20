@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     // MARK: - Outlets
@@ -526,5 +526,20 @@ class FirstViewController: UIViewController {
         pilotReview.resignFirstResponder()
     }
     
+    @IBAction func page1BackButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func page2BackButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func page3BackButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func page4BackButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 } //End
-
