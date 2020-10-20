@@ -13,7 +13,6 @@ class PBLView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.addCornerRadius(10)
-        self.backgroundColor = .haze
     }
     
 }

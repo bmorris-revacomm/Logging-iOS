@@ -1964,6 +1964,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="VIEW CREW"/>
+                                        <connections>
+                                            <segue destination="8ms-fV-ZIz" kind="presentation" id="270-7e-ZK9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -2066,6 +2069,71 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3344.53125" y="-411.328125"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ZTB-e2-pYP">
+            <objects>
+                <tableViewController id="8ms-fV-ZIz" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uUD-Rb-gOG">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="haze"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search..." translucent="NO" id="ead-Mb-iZa">
+                            <rect key="frame" x="0.0" y="0.0" width="704" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="haze"/>
+                            <color key="tintColor" name="haze"/>
+                            <color key="barTintColor" name="haze"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="ik9-DM-8tI">
+                                <rect key="frame" x="0.0" y="72" width="704" height="84"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ik9-DM-8tI" id="itk-jW-Kbn">
+                                    <rect key="frame" x="0.0" y="0.0" width="704" height="84"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2B-EG-pH3" customClass="PBLView" customModule="Logging" customModuleProvider="target">
+                                            <rect key="frame" x="35" y="4" width="634" height="76"/>
+                                            <color key="backgroundColor" name="mist"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREWMEMBER SSN #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkk-ds-me9">
+                                            <rect key="frame" x="73" y="30" width="206" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" name="slate"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vs9-wC-dU7">
+                                            <rect key="frame" x="623.5" y="31" width="20" height="22"/>
+                                            <color key="tintColor" name="slate"/>
+                                            <state key="normal" image="minus.circle" catalog="system"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="X2B-EG-pH3" firstAttribute="centerY" secondItem="itk-jW-Kbn" secondAttribute="centerY" id="1J7-wq-4Nz"/>
+                                        <constraint firstItem="Vs9-wC-dU7" firstAttribute="centerY" secondItem="X2B-EG-pH3" secondAttribute="centerY" id="37z-Iv-j5j"/>
+                                        <constraint firstItem="X2B-EG-pH3" firstAttribute="height" secondItem="itk-jW-Kbn" secondAttribute="height" multiplier="0.9" id="Bup-u9-o0h"/>
+                                        <constraint firstItem="zkk-ds-me9" firstAttribute="centerY" secondItem="X2B-EG-pH3" secondAttribute="centerY" id="DcO-67-UcP"/>
+                                        <constraint firstItem="X2B-EG-pH3" firstAttribute="width" secondItem="itk-jW-Kbn" secondAttribute="width" multiplier="0.9" id="PGh-U0-eGj"/>
+                                        <constraint firstItem="zkk-ds-me9" firstAttribute="centerX" secondItem="X2B-EG-pH3" secondAttribute="centerX" multiplier="0.5" id="Sxq-z3-ofC"/>
+                                        <constraint firstItem="Vs9-wC-dU7" firstAttribute="centerX" secondItem="X2B-EG-pH3" secondAttribute="centerX" multiplier="1.8" id="TAS-gc-Lxm"/>
+                                        <constraint firstItem="X2B-EG-pH3" firstAttribute="centerX" secondItem="itk-jW-Kbn" secondAttribute="centerX" id="aDf-i5-BsC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="haze"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8ms-fV-ZIz" id="7jN-pw-Hqn"/>
+                            <outlet property="delegate" destination="8ms-fV-ZIz" id="9os-5m-faK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2tb-Zl-AaK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnW-Ph-6a6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4034.375" y="-411.328125"/>
         </scene>
         <!--Place Holder-->
         <scene sceneID="wg7-f3-ORb">
@@ -2369,6 +2437,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="minus.circle" catalog="system" width="128" height="121"/>
         <image name="printer" catalog="system" width="128" height="111"/>
         <image name="second" width="30" height="30"/>
         <namedColor name="fog">
