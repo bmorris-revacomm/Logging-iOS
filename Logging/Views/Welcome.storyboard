@@ -121,12 +121,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvG-xM-D2m" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="934" width="70" height="40"/>
+                                <rect key="frame" x="50" y="944" width="41" height="30"/>
                                 <color key="backgroundColor" name="haze"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="2Ex-jy-7oe"/>
-                                    <constraint firstAttribute="height" constant="40" id="Vbj-26-eHd"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="BACK"/>
                             </button>
