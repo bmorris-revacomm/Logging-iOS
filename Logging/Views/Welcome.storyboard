@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MHR-m1-9at">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tHS-fE-WPU">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,73 +19,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xd-JZ-crL">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="41"/>
+                                <rect key="frame" x="0.0" y="50" width="768" height="41"/>
                                 <color key="backgroundColor" name="slate"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xY7-yD-dtb">
-                                <rect key="frame" x="242" y="214" width="284.5" height="84"/>
+                                <rect key="frame" x="242" y="226.5" width="284.5" height="84"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="70"/>
                                 <color key="textColor" name="slate"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What forms do you need for this mission?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asn-d0-gOc">
-                                <rect key="frame" x="170.5" y="313" width="427" height="95.5"/>
+                                <rect key="frame" x="170.5" y="325.5" width="427" height="95.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                                 <color key="textColor" name="fog"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select all that apply." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGJ-1F-7OX">
-                                <rect key="frame" x="303.5" y="501.5" width="161" height="21.5"/>
+                                <rect key="frame" x="303.5" y="526.5" width="161" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" name="slate"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MDT-ar-LJq" userLabel="Buttons">
-                                <rect key="frame" x="202" y="558" width="364" height="130"/>
+                                <rect key="frame" x="197" y="583" width="374" height="130"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Ax-tz-MFZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="113" height="130"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="130"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRU-Ug-X5v" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="113" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="AFTO FORM 781"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjx-Ub-5jy" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="5" y="50" width="103" height="30"/>
+                                                <rect key="frame" x="5" y="50" width="106" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="DD FORM 2131"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAx-t8-qbk" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="6.5" y="100" width="100" height="30"/>
+                                                <rect key="frame" x="6.5" y="100" width="103" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="ORM MISSION"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="w6U-gt-8gM">
-                                        <rect key="frame" x="133" y="0.0" width="107" height="130"/>
+                                        <rect key="frame" x="136" y="0.0" width="111" height="130"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4L-Dl-X9N" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="107" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="111" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="FUEL TRACKER"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1l-Lp-d3p" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="3" y="50" width="101" height="30"/>
+                                                <rect key="frame" x="3.5" y="50" width="104" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="AMC FORM 97"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4K-T8-sGu" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="10.5" y="100" width="86" height="30"/>
+                                                <rect key="frame" x="11.5" y="100" width="88" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="ORM LOCAL"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6ir-It-kQl">
-                                        <rect key="frame" x="260" y="0.0" width="104" height="80"/>
+                                        <rect key="frame" x="267" y="0.0" width="107" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibn-ed-Bxw" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="1.5" y="0.0" width="101" height="30"/>
+                                                <rect key="frame" x="1.5" y="0.0" width="104" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="AF FORM 1881"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Dm-ou-b4M" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="50" width="104" height="30"/>
+                                                <rect key="frame" x="0.0" y="50" width="107" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="DD FORM 1081"/>
                                             </button>
                                         </subviews>
@@ -93,7 +101,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSG-7K-hXG">
-                                <rect key="frame" x="308.5" y="758" width="151" height="34"/>
+                                <rect key="frame" x="308.5" y="783" width="151" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="View more forms +">
                                     <color key="titleColor" name="slate"/>
@@ -109,7 +117,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
                                 <connections>
-                                    <segue destination="2WJ-rw-LP8" kind="show" id="ThM-BH-CvV"/>
+                                    <action selector="continueButtonTapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="R5R-PE-kBR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvG-xM-D2m" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
@@ -146,20 +154,29 @@
                             <constraint firstItem="xY7-yD-dtb" firstAttribute="centerY" secondItem="UvH-Cn-V9j" secondAttribute="centerY" multiplier="0.5" id="xtX-BQ-K2R"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="F9a-Bc-L7U"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItF-LX-Cq2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="217" y="115"/>
+            <point key="canvasLocation" x="982.03125" y="114.84374999999999"/>
         </scene>
-        <!--Main-->
-        <scene sceneID="dcI-cS-Sdq">
+        <!--Navigation Controller-->
+        <scene sceneID="GQb-qL-3P7">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="2WJ-rw-LP8" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="YcF-ps-XqY"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KHX-xH-N7z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tHS-fE-WPU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T8y-70-91k">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MHR-m1-9at" kind="relationship" relationship="rootViewController" id="jsm-lg-wzH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUr-FH-MQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="-19"/>
+            <point key="canvasLocation" x="216.40625" y="114.84374999999999"/>
         </scene>
     </scenes>
     <resources>

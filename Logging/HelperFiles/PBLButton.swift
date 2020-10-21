@@ -12,11 +12,12 @@ class PBLButton: UIButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
         self.addCornerRadius(self.frame.size.height/2)
         self.backgroundColor = .fog
         self.setTitleColor(.slate, for: .normal)
     }
-    
+        
 }
 
 class PBLButtonDark: PBLButton {
