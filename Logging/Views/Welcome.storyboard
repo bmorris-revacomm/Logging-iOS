@@ -108,12 +108,8 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgb-C1-VgZ" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="538" y="934" width="180" height="40"/>
+                                <rect key="frame" x="582" y="944" width="136" height="30"/>
                                 <color key="backgroundColor" name="slate"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="7hD-pq-wYc"/>
-                                    <constraint firstAttribute="height" constant="40" id="t51-dQ-5RY"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
                                 <connections>

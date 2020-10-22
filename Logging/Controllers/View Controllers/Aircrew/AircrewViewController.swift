@@ -1,22 +1,21 @@
 //
-//  ContainerViewController.swift
+//  AircrewViewController.swift
 //  Logging
 //
-//  Created by Bethany Morris on 10/21/20.
+//  Created by Bethany Morris on 10/22/20.
 //  Copyright © 2020 Christian Brechbuhl. All rights reserved.
 //
 
 import UIKit
 
-class ContainerViewController: UIViewController {
-    
-    @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
-    
-    var sideMenuIsOpen = false
-        
+class AircrewViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
+    
 
     /*
     // MARK: - Navigation
@@ -28,16 +27,4 @@ class ContainerViewController: UIViewController {
     }
     */
 
-} //End
-
-extension ContainerViewController: SideMenuDelegate {
-    
-    func toggleSideMenu() {
-        if sideMenuIsOpen {
-            sideMenuConstraint.constant = -200
-        } else {
-            sideMenuConstraint.constant = 0
-        }
-    }
-    
-} //End
+}

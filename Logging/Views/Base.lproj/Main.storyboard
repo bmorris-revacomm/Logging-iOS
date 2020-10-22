@@ -20,10 +20,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-411"/>
         </scene>
-        <!--First View Controller-->
+        <!--Container View Controller-->
         <scene sceneID="TJm-q6-BKt">
             <objects>
-                <viewController storyboardIdentifier="Page1" id="U4v-TO-zaq" customClass="FirstViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Page1" id="U4v-TO-zaq" customClass="ContainerViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Zx-oh-wlw">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,25 +78,27 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5Q-fi-gAO" customClass="circleView" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="15" y="8" width="23.5" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAg-0S-Vkv">
+                                                <rect key="frame" x="4" y="6.5" width="15.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" name="fog"/>
                                         <constraints>
+                                            <constraint firstItem="yAg-0S-Vkv" firstAttribute="centerX" secondItem="n5Q-fi-gAO" secondAttribute="centerX" id="0i3-Fy-nMt"/>
+                                            <constraint firstItem="yAg-0S-Vkv" firstAttribute="centerY" secondItem="n5Q-fi-gAO" secondAttribute="centerY" id="4c5-vT-DaP"/>
                                             <constraint firstAttribute="width" secondItem="n5Q-fi-gAO" secondAttribute="height" multiplier="1:1" id="bD4-1x-j52"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAg-0S-Vkv">
-                                        <rect key="frame" x="19" y="14.5" width="15.5" height="10"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" name="notBlack"/>
                                 <constraints>
-                                    <constraint firstItem="yAg-0S-Vkv" firstAttribute="centerX" secondItem="n5Q-fi-gAO" secondAttribute="centerX" id="01i-Jo-84P"/>
                                     <constraint firstItem="n5Q-fi-gAO" firstAttribute="height" secondItem="bgi-sM-wcK" secondAttribute="height" multiplier="0.6" id="5Xt-zr-ECf"/>
                                     <constraint firstItem="n5Q-fi-gAO" firstAttribute="centerY" secondItem="bgi-sM-wcK" secondAttribute="centerY" id="8P2-ub-nc0"/>
                                     <constraint firstItem="n5Q-fi-gAO" firstAttribute="leading" secondItem="bgi-sM-wcK" secondAttribute="leading" constant="15" id="YfW-JL-n40"/>
-                                    <constraint firstItem="yAg-0S-Vkv" firstAttribute="centerY" secondItem="n5Q-fi-gAO" secondAttribute="centerY" id="pWJ-40-kPs"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCT-Fj-IrU" userLabel="Header">
@@ -243,12 +245,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ud-rq-5rG" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="498" y="884" width="180" height="40"/>
+                                <rect key="frame" x="542" y="894" width="136" height="30"/>
                                 <color key="backgroundColor" name="slate"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="GkB-5q-IuJ"/>
-                                    <constraint firstAttribute="height" constant="40" id="g93-ZF-fqM"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
                                 <connections>
@@ -256,12 +254,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvC-5K-d9W" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="884" width="70" height="40"/>
+                                <rect key="frame" x="50" y="894" width="41" height="30"/>
                                 <color key="backgroundColor" name="haze"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7QC-CH-qes"/>
-                                    <constraint firstAttribute="width" constant="70" id="YdT-Un-prF"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="BACK"/>
                                 <connections>
@@ -553,12 +547,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHy-12-yfo" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="536" y="298" width="170" height="40"/>
+                                <rect key="frame" x="536" y="303" width="140" height="30"/>
                                 <color key="backgroundColor" name="fog"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="FYu-zn-Ccv"/>
-                                    <constraint firstAttribute="width" constant="170" id="lA5-2X-dcM"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="NEW FLIGHT SEQ +">
                                     <color key="titleColor" name="slate"/>
@@ -677,12 +667,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiU-ux-0sg" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="508" y="864" width="170" height="40"/>
+                                <rect key="frame" x="542" y="874" width="136" height="30"/>
                                 <color key="backgroundColor" name="slate"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="q9K-v8-lFS"/>
-                                    <constraint firstAttribute="width" constant="170" id="rzA-mG-9or"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
                                 <connections>
@@ -690,12 +676,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jj-9d-XIe" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="864" width="70" height="40"/>
+                                <rect key="frame" x="50" y="874" width="41" height="30"/>
                                 <color key="backgroundColor" name="haze"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="4Zu-cC-6W5"/>
-                                    <constraint firstAttribute="width" constant="70" id="PSN-sV-dCn"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="BACK"/>
                                 <connections>
@@ -2059,25 +2041,20 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qyV-qF-cvD" userLabel="Crew buttons">
-                                <rect key="frame" x="558" y="643.5" width="120" height="100"/>
+                                <rect key="frame" x="584" y="643.5" width="94" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGr-Hb-QKq" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="30"/>
                                         <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="mJu-ze-kQ3"/>
-                                            <constraint firstAttribute="width" constant="120" id="muF-uF-TUL"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="ADD CREW +"/>
+                                        <connections>
+                                            <action selector="addAircrewButtonTapped:" destination="PjM-lN-wNj" eventType="touchUpInside" id="bxO-m3-JLu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-Yf-mdl" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="5" y="60" width="110" height="40"/>
+                                        <rect key="frame" x="3.5" y="50" width="87" height="30"/>
                                         <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="QRf-rl-9Pq"/>
-                                            <constraint firstAttribute="width" constant="110" id="aQB-rH-AHb"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="VIEW CREW"/>
                                         <connections>
@@ -2087,22 +2064,14 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uec-af-c4C" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="498" y="864" width="180" height="40"/>
+                                <rect key="frame" x="542" y="874" width="136" height="30"/>
                                 <color key="backgroundColor" name="slate"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="a0M-Wx-aJN"/>
-                                    <constraint firstAttribute="height" constant="40" id="ySs-v6-cXQ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwW-eX-PxP" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="864" width="70" height="40"/>
+                                <rect key="frame" x="50" y="874" width="41" height="30"/>
                                 <color key="backgroundColor" name="haze"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Eb8-N0-kap"/>
-                                    <constraint firstAttribute="width" constant="70" id="fIb-J4-1E1"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="BACK"/>
                                 <connections>
@@ -2451,12 +2420,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2F-Gc-ouf" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="864" width="70" height="40"/>
+                                <rect key="frame" x="50" y="874" width="41" height="30"/>
                                 <color key="backgroundColor" name="haze"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="8w8-oq-VAb"/>
-                                    <constraint firstAttribute="height" constant="40" id="ScN-q1-knj"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="BACK"/>
                                 <connections>
@@ -2464,12 +2429,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8b-iR-tHm" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="498" y="864" width="180" height="40"/>
+                                <rect key="frame" x="542" y="874" width="136" height="30"/>
                                 <color key="backgroundColor" name="slate"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="im8-rf-itc"/>
-                                    <constraint firstAttribute="width" constant="180" id="mMc-jN-XWn"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
                                 <connections>

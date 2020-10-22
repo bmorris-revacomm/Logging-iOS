@@ -21,6 +21,7 @@ class SideMenuTableViewController: UITableViewController {
     }
 
     @IBAction func menuButtonTapped(_ sender: UIButton) {
+        print("tapped")
         delegate?.toggleSideMenu()
     }
 

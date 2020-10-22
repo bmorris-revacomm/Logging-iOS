@@ -39,6 +39,17 @@ class PBLTextField: UITextField {
     
 }
 
+class PBLTextFieldBordered: PBLTextField {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = .white
+        self.addAccentBorder()
+        self.textAlignment = .left
+    }
+    
+}
+
 class gridTextField: PBLTextField {
     
     override func awakeFromNib() {
