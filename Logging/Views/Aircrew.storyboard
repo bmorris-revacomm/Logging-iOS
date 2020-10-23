@@ -20,7 +20,51 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qw-R9-fgO">
                                 <rect key="frame" x="0.0" y="50" width="768" height="41"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXh-7S-9Z2" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="8" width="24.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-ej-Fc0">
+                                                <rect key="frame" x="4.5" y="7.5" width="15.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstItem="1gN-ej-Fc0" firstAttribute="centerX" secondItem="qXh-7S-9Z2" secondAttribute="centerX" id="aSW-1b-Z1a"/>
+                                            <constraint firstAttribute="width" secondItem="qXh-7S-9Z2" secondAttribute="height" multiplier="1:1" id="cCh-C7-IHV"/>
+                                            <constraint firstItem="1gN-ej-Fc0" firstAttribute="centerY" secondItem="qXh-7S-9Z2" secondAttribute="centerY" id="h4O-Y8-1kl"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLS-dN-lyS" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="728.5" y="8" width="24.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flp-SA-Mnb">
+                                                <rect key="frame" x="5.5" y="7.5" width="13.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstItem="flp-SA-Mnb" firstAttribute="centerX" secondItem="hLS-dN-lyS" secondAttribute="centerX" id="A9M-ei-yLN"/>
+                                            <constraint firstItem="flp-SA-Mnb" firstAttribute="centerY" secondItem="hLS-dN-lyS" secondAttribute="centerY" id="WlV-h3-bx6"/>
+                                            <constraint firstAttribute="width" secondItem="hLS-dN-lyS" secondAttribute="height" multiplier="1:1" id="qd7-gL-ewx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" name="slate"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hLS-dN-lyS" secondAttribute="trailing" constant="15" id="3aY-0q-cKz"/>
+                                    <constraint firstItem="qXh-7S-9Z2" firstAttribute="height" secondItem="0Qw-R9-fgO" secondAttribute="height" multiplier="0.6" id="Nfj-Bf-4UA"/>
+                                    <constraint firstItem="qXh-7S-9Z2" firstAttribute="leading" secondItem="0Qw-R9-fgO" secondAttribute="leading" constant="15" id="Udz-jz-IuL"/>
+                                    <constraint firstItem="hLS-dN-lyS" firstAttribute="height" secondItem="0Qw-R9-fgO" secondAttribute="height" multiplier="0.6" id="d7N-wS-mSC"/>
+                                    <constraint firstItem="qXh-7S-9Z2" firstAttribute="centerY" secondItem="0Qw-R9-fgO" secondAttribute="centerY" id="vPC-lw-rxt"/>
+                                    <constraint firstItem="hLS-dN-lyS" firstAttribute="centerY" secondItem="0Qw-R9-fgO" secondAttribute="centerY" id="zkR-7z-LOX"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aircrew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOd-gh-O99">
                                 <rect key="frame" x="269" y="280" width="230.5" height="84"/>
@@ -587,7 +631,51 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiI-Ye-q17">
                                 <rect key="frame" x="0.0" y="50" width="768" height="41"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1K-z2-Hfd" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="8" width="24.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-i3-FIG">
+                                                <rect key="frame" x="4.5" y="7.5" width="15.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstItem="sMR-i3-FIG" firstAttribute="centerX" secondItem="s1K-z2-Hfd" secondAttribute="centerX" id="Xnk-3y-efn"/>
+                                            <constraint firstItem="sMR-i3-FIG" firstAttribute="centerY" secondItem="s1K-z2-Hfd" secondAttribute="centerY" id="jxf-jQ-wY4"/>
+                                            <constraint firstAttribute="width" secondItem="s1K-z2-Hfd" secondAttribute="height" multiplier="1:1" id="yfR-bI-zqm"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGc-hQ-YTJ" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="728.5" y="8" width="24.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAo-V9-mAq">
+                                                <rect key="frame" x="5.5" y="7.5" width="13.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstItem="zAo-V9-mAq" firstAttribute="centerY" secondItem="iGc-hQ-YTJ" secondAttribute="centerY" id="8GE-u4-Pjf"/>
+                                            <constraint firstAttribute="width" secondItem="iGc-hQ-YTJ" secondAttribute="height" multiplier="1:1" id="MnN-vg-kA8"/>
+                                            <constraint firstItem="zAo-V9-mAq" firstAttribute="centerX" secondItem="iGc-hQ-YTJ" secondAttribute="centerX" id="w0I-Ua-sDf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" name="slate"/>
+                                <constraints>
+                                    <constraint firstItem="s1K-z2-Hfd" firstAttribute="leading" secondItem="SiI-Ye-q17" secondAttribute="leading" constant="15" id="6B6-On-G5C"/>
+                                    <constraint firstItem="iGc-hQ-YTJ" firstAttribute="centerY" secondItem="SiI-Ye-q17" secondAttribute="centerY" id="9c9-Cl-G2Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="iGc-hQ-YTJ" secondAttribute="trailing" constant="15" id="QO2-SG-5cA"/>
+                                    <constraint firstItem="s1K-z2-Hfd" firstAttribute="centerY" secondItem="SiI-Ye-q17" secondAttribute="centerY" id="b2G-fP-kjn"/>
+                                    <constraint firstItem="iGc-hQ-YTJ" firstAttribute="height" secondItem="SiI-Ye-q17" secondAttribute="height" multiplier="0.6" id="g0K-HY-P01"/>
+                                    <constraint firstItem="s1K-z2-Hfd" firstAttribute="height" secondItem="SiI-Ye-q17" secondAttribute="height" multiplier="0.6" id="uJ9-JK-ENI"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splitting Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x94-ZF-VQh">
                                 <rect key="frame" x="176" y="280" width="416.5" height="84"/>

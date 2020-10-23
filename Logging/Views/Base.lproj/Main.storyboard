@@ -76,7 +76,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgi-sM-wcK">
                                 <rect key="frame" x="0.0" y="0.0" width="728" height="39"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5Q-fi-gAO" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5Q-fi-gAO" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="15" y="8" width="23.5" height="23"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAg-0S-Vkv">
@@ -93,11 +93,31 @@
                                             <constraint firstAttribute="width" secondItem="n5Q-fi-gAO" secondAttribute="height" multiplier="1:1" id="bD4-1x-j52"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UZ-oP-teC" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="689.5" y="8" width="23.5" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqG-rh-4Lx">
+                                                <rect key="frame" x="5" y="6.5" width="13.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstItem="WqG-rh-4Lx" firstAttribute="centerY" secondItem="9UZ-oP-teC" secondAttribute="centerY" id="AOq-hX-B05"/>
+                                            <constraint firstAttribute="width" secondItem="9UZ-oP-teC" secondAttribute="height" multiplier="1:1" id="GM0-wp-o9f"/>
+                                            <constraint firstItem="WqG-rh-4Lx" firstAttribute="centerX" secondItem="9UZ-oP-teC" secondAttribute="centerX" id="h3g-VA-Gss"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" name="notBlack"/>
                                 <constraints>
                                     <constraint firstItem="n5Q-fi-gAO" firstAttribute="height" secondItem="bgi-sM-wcK" secondAttribute="height" multiplier="0.6" id="5Xt-zr-ECf"/>
                                     <constraint firstItem="n5Q-fi-gAO" firstAttribute="centerY" secondItem="bgi-sM-wcK" secondAttribute="centerY" id="8P2-ub-nc0"/>
+                                    <constraint firstAttribute="trailing" secondItem="9UZ-oP-teC" secondAttribute="trailing" constant="15" id="Fgt-mf-gaJ"/>
+                                    <constraint firstItem="9UZ-oP-teC" firstAttribute="centerY" secondItem="bgi-sM-wcK" secondAttribute="centerY" id="Ra6-Hh-hp4"/>
+                                    <constraint firstItem="9UZ-oP-teC" firstAttribute="height" secondItem="bgi-sM-wcK" secondAttribute="height" multiplier="0.6" id="YcP-DW-7br"/>
                                     <constraint firstItem="n5Q-fi-gAO" firstAttribute="leading" secondItem="bgi-sM-wcK" secondAttribute="leading" constant="15" id="YfW-JL-n40"/>
                                 </constraints>
                             </view>
@@ -334,7 +354,51 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0o-do-T4u">
                                 <rect key="frame" x="0.0" y="0.0" width="728" height="38"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWT-q8-czw" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="7.5" width="23" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VZ-p8-zeW">
+                                                <rect key="frame" x="3.5" y="6.5" width="15.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstItem="5VZ-p8-zeW" firstAttribute="centerX" secondItem="VWT-q8-czw" secondAttribute="centerX" id="1Xx-Tt-RfQ"/>
+                                            <constraint firstItem="5VZ-p8-zeW" firstAttribute="centerY" secondItem="VWT-q8-czw" secondAttribute="centerY" id="ibK-zv-Wdu"/>
+                                            <constraint firstAttribute="width" secondItem="VWT-q8-czw" secondAttribute="height" multiplier="1:1" id="xZ9-Uf-ceA"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPG-tf-2xL" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="690" y="7.5" width="23" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7q-gD-APM">
+                                                <rect key="frame" x="5" y="6.5" width="13.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstItem="S7q-gD-APM" firstAttribute="centerY" secondItem="uPG-tf-2xL" secondAttribute="centerY" id="1D7-qj-kdq"/>
+                                            <constraint firstAttribute="width" secondItem="uPG-tf-2xL" secondAttribute="height" multiplier="1:1" id="8IR-cK-qWc"/>
+                                            <constraint firstItem="S7q-gD-APM" firstAttribute="centerX" secondItem="uPG-tf-2xL" secondAttribute="centerX" id="o3h-HO-rRB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" name="notBlack"/>
+                                <constraints>
+                                    <constraint firstItem="uPG-tf-2xL" firstAttribute="centerY" secondItem="U0o-do-T4u" secondAttribute="centerY" id="JAO-2X-D4x"/>
+                                    <constraint firstItem="VWT-q8-czw" firstAttribute="leading" secondItem="U0o-do-T4u" secondAttribute="leading" constant="15" id="Off-o1-lkZ"/>
+                                    <constraint firstItem="VWT-q8-czw" firstAttribute="centerY" secondItem="U0o-do-T4u" secondAttribute="centerY" id="Rn7-Cp-l4f"/>
+                                    <constraint firstItem="uPG-tf-2xL" firstAttribute="height" secondItem="U0o-do-T4u" secondAttribute="height" multiplier="0.6" id="idT-Gq-vZq"/>
+                                    <constraint firstItem="VWT-q8-czw" firstAttribute="height" secondItem="U0o-do-T4u" secondAttribute="height" multiplier="0.6" id="mnM-VV-b7t"/>
+                                    <constraint firstAttribute="trailing" secondItem="uPG-tf-2xL" secondAttribute="trailing" constant="15" id="qyH-Tr-bue"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBI-2f-KEM" userLabel="Header">
                                 <rect key="frame" x="0.0" y="38" width="728" height="48"/>
@@ -1629,7 +1693,51 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opQ-4s-3IL">
                                 <rect key="frame" x="0.0" y="0.0" width="728" height="38"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqF-Ya-ZaC" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="7.5" width="23" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C65-4g-LoV">
+                                                <rect key="frame" x="3.5" y="6.5" width="15.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstItem="C65-4g-LoV" firstAttribute="centerX" secondItem="DqF-Ya-ZaC" secondAttribute="centerX" id="FL3-UD-t7E"/>
+                                            <constraint firstItem="C65-4g-LoV" firstAttribute="centerY" secondItem="DqF-Ya-ZaC" secondAttribute="centerY" id="VkR-y2-gPV"/>
+                                            <constraint firstAttribute="width" secondItem="DqF-Ya-ZaC" secondAttribute="height" multiplier="1:1" id="oLL-Su-9Sb"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rof-Vh-GyW" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="690" y="7.5" width="23" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfe-Yl-o0W">
+                                                <rect key="frame" x="5" y="6.5" width="13.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Rof-Vh-GyW" secondAttribute="height" multiplier="1:1" id="aVK-Oj-DR7"/>
+                                            <constraint firstItem="Xfe-Yl-o0W" firstAttribute="centerY" secondItem="Rof-Vh-GyW" secondAttribute="centerY" id="j5C-I2-9lW"/>
+                                            <constraint firstItem="Xfe-Yl-o0W" firstAttribute="centerX" secondItem="Rof-Vh-GyW" secondAttribute="centerX" id="o7D-d0-9K8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" name="notBlack"/>
+                                <constraints>
+                                    <constraint firstItem="DqF-Ya-ZaC" firstAttribute="height" secondItem="opQ-4s-3IL" secondAttribute="height" multiplier="0.6" id="KWb-fg-lYS"/>
+                                    <constraint firstItem="DqF-Ya-ZaC" firstAttribute="leading" secondItem="opQ-4s-3IL" secondAttribute="leading" constant="15" id="Mpp-HC-Ies"/>
+                                    <constraint firstItem="DqF-Ya-ZaC" firstAttribute="centerY" secondItem="opQ-4s-3IL" secondAttribute="centerY" id="add-r7-6Yb"/>
+                                    <constraint firstItem="Rof-Vh-GyW" firstAttribute="height" secondItem="opQ-4s-3IL" secondAttribute="height" multiplier="0.6" id="dRu-hX-6hi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rof-Vh-GyW" secondAttribute="trailing" constant="15" id="nXb-IH-Z2Y"/>
+                                    <constraint firstItem="Rof-Vh-GyW" firstAttribute="centerY" secondItem="opQ-4s-3IL" secondAttribute="centerY" id="qxX-5h-Vbp"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Llo-pc-qIf" userLabel="Header">
                                 <rect key="frame" x="0.0" y="38" width="728" height="48"/>
@@ -2450,7 +2558,51 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBB-U8-YSN">
                                 <rect key="frame" x="0.0" y="0.0" width="728" height="38"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FC-0y-NQ4" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="7.5" width="23" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjN-HW-YUk">
+                                                <rect key="frame" x="3.5" y="6.5" width="15.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstItem="SjN-HW-YUk" firstAttribute="centerY" secondItem="4FC-0y-NQ4" secondAttribute="centerY" id="4ab-ph-zEa"/>
+                                            <constraint firstAttribute="width" secondItem="4FC-0y-NQ4" secondAttribute="height" multiplier="1:1" id="GMv-55-0ct"/>
+                                            <constraint firstItem="SjN-HW-YUk" firstAttribute="centerX" secondItem="4FC-0y-NQ4" secondAttribute="centerX" id="Ok1-OR-tmL"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1w-Hs-Ele" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="690" y="7.5" width="23" height="23"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ko-Jb-OMG">
+                                                <rect key="frame" x="5" y="6.5" width="13.5" height="10"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="fog"/>
+                                        <constraints>
+                                            <constraint firstItem="4Ko-Jb-OMG" firstAttribute="centerX" secondItem="h1w-Hs-Ele" secondAttribute="centerX" id="8xl-op-rQa"/>
+                                            <constraint firstItem="4Ko-Jb-OMG" firstAttribute="centerY" secondItem="h1w-Hs-Ele" secondAttribute="centerY" id="KDu-te-d2d"/>
+                                            <constraint firstAttribute="width" secondItem="h1w-Hs-Ele" secondAttribute="height" multiplier="1:1" id="yxV-RL-lSQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" name="notBlack"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="h1w-Hs-Ele" secondAttribute="trailing" constant="15" id="7aU-EE-rap"/>
+                                    <constraint firstItem="h1w-Hs-Ele" firstAttribute="height" secondItem="IBB-U8-YSN" secondAttribute="height" multiplier="0.6" id="GdH-KG-Rnc"/>
+                                    <constraint firstItem="4FC-0y-NQ4" firstAttribute="centerY" secondItem="IBB-U8-YSN" secondAttribute="centerY" id="L4u-BK-lUA"/>
+                                    <constraint firstItem="h1w-Hs-Ele" firstAttribute="centerY" secondItem="IBB-U8-YSN" secondAttribute="centerY" id="cHp-aH-PWA"/>
+                                    <constraint firstItem="4FC-0y-NQ4" firstAttribute="height" secondItem="IBB-U8-YSN" secondAttribute="height" multiplier="0.6" id="elX-Jc-lKh"/>
+                                    <constraint firstItem="4FC-0y-NQ4" firstAttribute="leading" secondItem="IBB-U8-YSN" secondAttribute="leading" constant="15" id="rUe-bz-9Ya"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P87-3d-HaO" userLabel="Header">
                                 <rect key="frame" x="0.0" y="38" width="728" height="48"/>
