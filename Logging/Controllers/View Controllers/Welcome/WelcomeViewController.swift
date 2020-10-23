@@ -10,9 +10,49 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func form781Tapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func fuelTrackerTapped(_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func form1881Tapped(_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func form2131Tapped(_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func form97Tapped(_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func form1081Tapped(_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func ormMissionTapped(_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func ormLocalTapped(_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func moreFormsButtonTapped(_ sender: UIButton) {
+    
     }
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
@@ -22,15 +62,5 @@ class WelcomeViewController: UIViewController {
             }
         }
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 } //End

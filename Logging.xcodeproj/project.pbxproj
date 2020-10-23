@@ -49,6 +49,12 @@
 		7FAB8C5725422E1000868215 /* AircrewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8C5625422E1000868215 /* AircrewTableViewCell.swift */; };
 		7FAB8C5825422E1000868215 /* AircrewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8C5625422E1000868215 /* AircrewTableViewCell.swift */; };
 		7FAB8C5925422E1000868215 /* AircrewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8C5625422E1000868215 /* AircrewTableViewCell.swift */; };
+		7FAB8C5E254337F700868215 /* SplitTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8C5D254337F700868215 /* SplitTimeViewController.swift */; };
+		7FAB8C5F254337F700868215 /* SplitTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8C5D254337F700868215 /* SplitTimeViewController.swift */; };
+		7FAB8C60254337F700868215 /* SplitTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8C5D254337F700868215 /* SplitTimeViewController.swift */; };
+		7FAB8C6825433B2000868215 /* AddAircrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8C6725433B2000868215 /* AddAircrewViewController.swift */; };
+		7FAB8C6925433B2000868215 /* AddAircrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8C6725433B2000868215 /* AddAircrewViewController.swift */; };
+		7FAB8C6A25433B2000868215 /* AddAircrewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8C6725433B2000868215 /* AddAircrewViewController.swift */; };
 		83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407A24D3402A00F336E3 /* AppDelegate.swift */; };
 		83D8407D24D3402A00F336E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407C24D3402A00F336E3 /* SceneDelegate.swift */; };
 		83D8407F24D3402A00F336E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407E24D3402A00F336E3 /* FirstViewController.swift */; };
@@ -111,6 +117,8 @@
 		7FAB8C482541FD9100868215 /* AircrewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircrewViewController.swift; sourceTree = "<group>"; };
 		7FAB8C4F2541FDA000868215 /* AircrewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircrewListViewController.swift; sourceTree = "<group>"; };
 		7FAB8C5625422E1000868215 /* AircrewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircrewTableViewCell.swift; sourceTree = "<group>"; };
+		7FAB8C5D254337F700868215 /* SplitTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTimeViewController.swift; sourceTree = "<group>"; };
+		7FAB8C6725433B2000868215 /* AddAircrewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAircrewViewController.swift; sourceTree = "<group>"; };
 		83D8407724D3402A00F336E3 /* Logging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D8407A24D3402A00F336E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D8407C24D3402A00F336E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -274,6 +282,8 @@
 			children = (
 				7FAB8C482541FD9100868215 /* AircrewViewController.swift */,
 				7FAB8C4F2541FDA000868215 /* AircrewListViewController.swift */,
+				7FAB8C6725433B2000868215 /* AddAircrewViewController.swift */,
+				7FAB8C5D254337F700868215 /* SplitTimeViewController.swift */,
 				7FAB8C5625422E1000868215 /* AircrewTableViewCell.swift */,
 			);
 			path = Aircrew;
@@ -573,6 +583,8 @@
 				83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */,
 				7FAB8C492541FD9100868215 /* AircrewViewController.swift in Sources */,
 				83D8407D24D3402A00F336E3 /* SceneDelegate.swift in Sources */,
+				7FAB8C5E254337F700868215 /* SplitTimeViewController.swift in Sources */,
+				7FAB8C6825433B2000868215 /* AddAircrewViewController.swift in Sources */,
 				7FAB8C5725422E1000868215 /* AircrewTableViewCell.swift in Sources */,
 				7F0086EF2540B5FD00564A52 /* ContainerViewController.swift in Sources */,
 				13A990142527C4F2008D7374 /* FirstVCViewModel.swift in Sources */,
@@ -589,11 +601,13 @@
 			files = (
 				83D8409424D3402D00F336E3 /* LoggingTests.swift in Sources */,
 				7FAB8C512541FDA000868215 /* AircrewListViewController.swift in Sources */,
+				7FAB8C6925433B2000868215 /* AddAircrewViewController.swift in Sources */,
 				7F0086E92540AC6800564A52 /* SideMenuTableViewController.swift in Sources */,
 				7F0086F92541DDFD00564A52 /* CrewMemberTableViewController.swift in Sources */,
 				7F0086F02540B5FD00564A52 /* ContainerViewController.swift in Sources */,
 				7FAB8C5825422E1000868215 /* AircrewTableViewCell.swift in Sources */,
 				7FAB8C4A2541FD9100868215 /* AircrewViewController.swift in Sources */,
+				7FAB8C5F254337F700868215 /* SplitTimeViewController.swift in Sources */,
 				7F97DFF7253F9A80005B0892 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,11 +618,13 @@
 			files = (
 				83D8409F24D3402D00F336E3 /* LoggingUITests.swift in Sources */,
 				7FAB8C522541FDA000868215 /* AircrewListViewController.swift in Sources */,
+				7FAB8C6A25433B2000868215 /* AddAircrewViewController.swift in Sources */,
 				7F0086EA2540AC6800564A52 /* SideMenuTableViewController.swift in Sources */,
 				7F0086FA2541DDFD00564A52 /* CrewMemberTableViewController.swift in Sources */,
 				7F0086F12540B5FD00564A52 /* ContainerViewController.swift in Sources */,
 				7FAB8C5925422E1000868215 /* AircrewTableViewCell.swift in Sources */,
 				7FAB8C4B2541FD9100868215 /* AircrewViewController.swift in Sources */,
+				7FAB8C60254337F700868215 /* SplitTimeViewController.swift in Sources */,
 				7F97DFF8253F9A80005B0892 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

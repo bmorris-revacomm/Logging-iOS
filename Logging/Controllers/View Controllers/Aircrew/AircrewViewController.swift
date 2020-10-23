@@ -12,11 +12,20 @@ class AircrewViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func addAircrewButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func skipButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -27,4 +36,4 @@ class AircrewViewController: UIViewController {
     }
     */
 
-}
+} //End

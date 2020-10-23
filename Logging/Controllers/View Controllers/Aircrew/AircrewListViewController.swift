@@ -10,7 +10,12 @@ import UIKit
 
 class AircrewListViewController: UIViewController {
     
+    // MARK: - Outlets
+    
+    @IBOutlet weak var headerTitleLabel: UILabel!
     @IBOutlet weak var aircrewTableView: UITableView!
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,18 +23,15 @@ class AircrewListViewController: UIViewController {
         aircrewTableView.dataSource = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Actions
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
-    */
 
 } //End
+
+// MARK: - TableViewDelegate
 
 extension AircrewListViewController: UITableViewDelegate, UITableViewDataSource {
     
