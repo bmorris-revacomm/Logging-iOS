@@ -153,6 +153,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="8uW-8k-2je"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -173,7 +176,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="cqh-Xg-5mh"/>
+                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="plo-mh-2Y4"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -388,6 +391,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="azj-UO-har"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -408,6 +414,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
+                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="0Vp-1M-G7k"/>
                                                     <action selector="updateForm:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="puA-RX-o9N"/>
                                                 </connections>
                                             </textField>
@@ -422,7 +429,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20.8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Ss-Y3p" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20.8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Ss-Y3p" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="22.5" width="69.5" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="dct-K2-lde"/>
@@ -460,6 +467,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
+                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="8GB-u4-3HL"/>
                                                     <action selector="calculateTotalLandingWith_sender:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="F1M-Eo-jmR"/>
                                                 </connections>
                                             </textField>
@@ -482,6 +490,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
+                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="4xw-f1-E4D"/>
                                                     <action selector="calculateTotalLandingWith_sender:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="f0q-ML-Qbz"/>
                                                 </connections>
                                             </textField>
@@ -496,7 +505,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDX-lg-wNK" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDX-lg-wNK" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="22.5" width="38" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="UXU-0U-dch"/>
@@ -522,6 +531,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="RX6-K0-45A"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -541,6 +553,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="qZk-tA-8QK"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1707,6 +1722,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="zkb-zE-wPv"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1723,6 +1741,9 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="73.5" height="57"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="lnC-bW-pow"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1739,6 +1760,9 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="77" height="57"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="bO7-2J-GDQ"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1755,6 +1779,9 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="69.5" height="57"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="Nf1-IO-at1"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1771,6 +1798,9 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="48.5" height="57"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="MHA-SD-N5Y"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1795,6 +1825,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="fxI-Td-ptj"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1811,6 +1844,9 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="34.5" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="bkx-aJ-dPR"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1835,6 +1871,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="e4m-WX-001"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1851,6 +1890,9 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="41" height="56.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="xMQ-fw-ymE"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1870,6 +1912,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="gdj-Bx-vLm"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1889,6 +1934,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="Zfu-7a-Ffp"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1916,6 +1964,9 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="57" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="wzk-mw-6Bu"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1932,6 +1983,9 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="34.5" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="Hqc-pg-5Uu"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1951,6 +2005,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="XZv-4Y-Msm"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1967,6 +2024,9 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="34.5" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="8Cb-vh-PTQ"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1986,6 +2046,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="hS5-ps-hbv"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2016,6 +2079,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="yUb-eS-Vpb"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2035,6 +2101,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="Dc3-vi-96q"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2453,6 +2522,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="xJF-PR-Egu"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -2472,6 +2544,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="spw-4J-XEh"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -2491,6 +2566,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="9F0-m1-HWu"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -2510,6 +2588,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="gQS-nx-FlD"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -2529,6 +2610,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="JF5-7l-8NK"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -2548,6 +2632,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="mmb-8w-zlV"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -2567,6 +2654,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="gdt-q2-Z04"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -2615,6 +2705,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="zS1-3V-Pvn"/>
+                    <connections>
+                        <outlet property="flightAuthNum" destination="if6-zc-u6L" id="RQm-ti-cXZ"/>
+                        <outlet property="flightSeq" destination="LxM-jS-NTc" id="fVh-5C-447"/>
+                        <outlet property="issuingUnit" destination="Sbg-r9-TOx" id="BDb-vq-2eZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Stz-7n-6Qz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="yPv-un-RQH">
