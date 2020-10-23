@@ -17,46 +17,57 @@ class WelcomeViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    // MARK: - Actions
+    // MARK: - Methods & Actions
+    
+    func toggleButton(sender: UIButton) {
+        sender.isSelected.toggle()
+        if sender.isSelected {
+            sender.backgroundColor = .slate
+            sender.setTitleColor(.white, for: .normal)
+        } else {
+            sender.backgroundColor = .mist
+            sender.setTitleColor(.slate, for: .normal)
+        }
+    }
     
     @IBAction func form781Tapped(_ sender: UIButton) {
-        
+        toggleButton(sender: sender)
     }
     
     @IBAction func fuelTrackerTapped(_ sender: UIButton) {
-    
+        toggleButton(sender: sender)
     }
     
     @IBAction func form1881Tapped(_ sender: UIButton) {
-    
+        toggleButton(sender: sender)
     }
     
     @IBAction func form2131Tapped(_ sender: UIButton) {
-    
+        toggleButton(sender: sender)
     }
     
     @IBAction func form97Tapped(_ sender: UIButton) {
-    
+        toggleButton(sender: sender)
     }
     
     @IBAction func form1081Tapped(_ sender: UIButton) {
-    
+        toggleButton(sender: sender)
     }
     
     @IBAction func ormMissionTapped(_ sender: UIButton) {
-    
+        toggleButton(sender: sender)
     }
     
     @IBAction func ormLocalTapped(_ sender: UIButton) {
-    
+        toggleButton(sender: sender)
     }
     
     @IBAction func moreFormsButtonTapped(_ sender: UIButton) {
-    
+        toggleButton(sender: sender)
     }
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
-        if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Page1") as? ContainerViewController {
+        if let viewController = UIStoryboard(name: "Form781", bundle: nil).instantiateViewController(withIdentifier: "Page1") as? ContainerViewController {
             if let navigator = navigationController {
                 navigator.pushViewController(viewController, animated: true)
             }

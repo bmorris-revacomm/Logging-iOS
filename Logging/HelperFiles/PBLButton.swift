@@ -17,6 +17,7 @@ class PBLButton: UIButton {
         self.addCornerRadius(self.frame.size.height/1.6)
         self.backgroundColor = .fog
         self.setTitleColor(.slate, for: .normal)
+        self.tintColor = .clear
     }
         
 }

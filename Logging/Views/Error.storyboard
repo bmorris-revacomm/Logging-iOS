@@ -93,22 +93,47 @@
                                     <action selector="backButtonTapped:" destination="EnQ-a5-Nn6" eventType="touchUpInside" id="o3N-cr-jEH"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSE-k1-yqx" customClass="PBLView" customModule="Logging" customModuleProvider="target">
+                                <rect key="frame" x="77" y="448.5" width="614" height="153.5"/>
+                                <color key="backgroundColor" name="haze"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HIY-R3-xiW">
+                                <rect key="frame" x="315" y="642" width="138" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGc-Rb-t9B" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="30"/>
+                                        <color key="backgroundColor" name="slate"/>
+                                        <state key="normal" title="GO BACK AND EDIT"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Yz-RG-jky" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="40" width="122" height="30"/>
+                                        <color key="backgroundColor" name="haze"/>
+                                        <state key="normal" title="SUBMIT ANYWAY"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7eA-a4-pPT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HIY-R3-xiW" firstAttribute="centerX" secondItem="7eA-a4-pPT" secondAttribute="centerX" id="0TH-Fj-DBr"/>
+                            <constraint firstItem="aSE-k1-yqx" firstAttribute="top" secondItem="Wzq-xb-f5K" secondAttribute="bottom" constant="40" id="318-k1-Uye"/>
                             <constraint firstItem="7eA-a4-pPT" firstAttribute="trailing" secondItem="Tzc-Id-bBk" secondAttribute="trailing" id="Bjk-ap-85V"/>
+                            <constraint firstItem="aSE-k1-yqx" firstAttribute="centerX" secondItem="7eA-a4-pPT" secondAttribute="centerX" id="Der-TT-Ep3"/>
                             <constraint firstItem="nOu-Ai-acr" firstAttribute="centerY" secondItem="7eA-a4-pPT" secondAttribute="centerY" multiplier="0.5" id="FMO-if-chy"/>
                             <constraint firstItem="Wzq-xb-f5K" firstAttribute="centerX" secondItem="7eA-a4-pPT" secondAttribute="centerX" id="HdE-8C-RN6"/>
                             <constraint firstItem="Kro-9m-A4Z" firstAttribute="leading" secondItem="7eA-a4-pPT" secondAttribute="leading" constant="50" id="K0D-Eq-vy9"/>
                             <constraint firstItem="7eA-a4-pPT" firstAttribute="bottom" secondItem="Kro-9m-A4Z" secondAttribute="bottom" constant="50" id="SIi-io-plz"/>
                             <constraint firstItem="Tzc-Id-bBk" firstAttribute="top" secondItem="7eA-a4-pPT" secondAttribute="top" id="Sy9-AD-Gk1"/>
+                            <constraint firstItem="HIY-R3-xiW" firstAttribute="top" secondItem="aSE-k1-yqx" secondAttribute="bottom" constant="40" id="aob-fN-daj"/>
                             <constraint firstItem="7eA-a4-pPT" firstAttribute="bottom" secondItem="efG-SZ-gA3" secondAttribute="bottom" constant="50" id="b7l-dw-kZg"/>
                             <constraint firstItem="Tzc-Id-bBk" firstAttribute="height" secondItem="b4i-Zx-7V6" secondAttribute="height" multiplier="0.04" id="gRm-T9-zaX"/>
                             <constraint firstItem="7eA-a4-pPT" firstAttribute="trailing" secondItem="efG-SZ-gA3" secondAttribute="trailing" constant="50" id="i5t-5e-97T"/>
                             <constraint firstItem="nOu-Ai-acr" firstAttribute="centerX" secondItem="7eA-a4-pPT" secondAttribute="centerX" id="jG0-aB-cOS"/>
                             <constraint firstItem="Wzq-xb-f5K" firstAttribute="top" secondItem="nOu-Ai-acr" secondAttribute="bottom" constant="15" id="lhG-OD-xh3"/>
+                            <constraint firstItem="aSE-k1-yqx" firstAttribute="width" secondItem="b4i-Zx-7V6" secondAttribute="width" multiplier="0.8" id="qyR-Ja-K4j"/>
                             <constraint firstItem="Tzc-Id-bBk" firstAttribute="leading" secondItem="7eA-a4-pPT" secondAttribute="leading" id="syR-wZ-i46"/>
+                            <constraint firstItem="aSE-k1-yqx" firstAttribute="height" secondItem="b4i-Zx-7V6" secondAttribute="height" multiplier="0.15" id="x6z-LJ-wgr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g59-AK-a88"/>

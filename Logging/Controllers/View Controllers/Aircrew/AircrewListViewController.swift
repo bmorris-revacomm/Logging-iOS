@@ -14,6 +14,13 @@ class AircrewListViewController: UIViewController {
     
     @IBOutlet weak var headerTitleLabel: UILabel!
     @IBOutlet weak var aircrewTableView: UITableView!
+    @IBOutlet weak var popUpView: UIView!
+    
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var ssnTextField: UITextField!
+    @IBOutlet weak var flightAuthDutyCodeTextField: UITextField!
+    @IBOutlet weak var flyingOriginTextField: UITextField!
     
     // MARK: - Lifecycle
     
@@ -25,10 +32,30 @@ class AircrewListViewController: UIViewController {
     
     // MARK: - Actions
     
+    @IBAction func addButtonTapped(_ sender: UIButton) {
+        popUpView.isHidden = false
+    }
+    
+    @IBAction func exitButtonTapped(_ sender: UIButton) {
+        popUpView.isHidden = true
+    }
+    
+    @IBAction func addNewAircrewButtonTapped(_ sender: UIButton) {
+        
+    }
+    
     @IBAction func backButtonTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-
+    
+    @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
+        lastNameTextField.resignFirstResponder()
+        firstNameTextField.resignFirstResponder()
+        ssnTextField.resignFirstResponder()
+        flightAuthDutyCodeTextField.resignFirstResponder()
+        flyingOriginTextField.resignFirstResponder()
+    }
+    
 } //End
 
 // MARK: - TableViewDelegate
