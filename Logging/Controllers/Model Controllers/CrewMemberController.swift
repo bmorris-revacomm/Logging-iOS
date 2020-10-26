@@ -14,9 +14,15 @@ class CrewMemberController {
     
     var members = [CrewMember]()
     
+    //MARK: - CRUD
+    
     func create(lastName: String, firstName: String, ssn: String, flightAuthDutyCode: String, flyingOrigin: String) {
-        let member = CrewMember(lastName: lastName, firstName: firstName, ssn: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin)
+        let member = CrewMember(flyingOrgn: flyingOrigin, ssnLast4: ssn, lastName: lastName, firstName: firstName, flightAuthDutyCode: flightAuthDutyCode, prim: nil, sec: nil, instr: nil, eval: nil, other: nil, time: nil, srty: nil, nightpsie: nil, inspie: nil, siminspie: nil, nvg: nil, combatTime: nil, combatSrty: nil, combatSptTime: nil, combatSptSrty: nil, resvStatus: nil)
         members.append(member)
     }
     
-}
+    func delete() {
+        
+    }
+    
+} //End

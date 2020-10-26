@@ -1,15 +1,14 @@
 //
-//  FlightDataModel.swift
+//  FlightData.swift
 //  Logging
 //
-//  Created by Pete Misik on 10/2/20.
+//  Created by Bethany Morris on 10/26/20.
 //  Copyright © 2020 Christian Brechbuhl. All rights reserved.
 //
 
 import Foundation
 
-
-struct FlightDataModel: Codable {
+class FlightData: Codable {
     
     var missionNumber: String
     var missionSymbol: String
@@ -24,18 +23,24 @@ struct FlightDataModel: Codable {
     var sorties: String
     var specialUse: String
     
-    public init(missionNumber: String,
-              missionSymbol: String,
-              fromICAO: String,
-              toICAO: String,
-              takeOffTime: String,
-              landingTime: String,
-              totalFlightTime: String,
-              touchAndGo: String,
-              fullStop: String,
-              totalLanding: String,
-              sorties: String,
-              specialUse: String) {
+    var grandTotalFlightTime: String?
+    var grandTotalTouchAndGo: String?
+    var grandTotalFullStop: String?
+    var grandTotalStops: String?
+    var grandTotalSorties: String?
+    
+    init(missionNumber: String,
+         missionSymbol: String,
+         fromICAO: String,
+         toICAO: String,
+         takeOffTime: String,
+         landingTime: String,
+         totalFlightTime: String,
+         touchAndGo: String,
+         fullStop: String,
+         totalLanding: String,
+         sorties: String,
+         specialUse: String) {
         
         self.missionNumber = missionNumber
         self.missionSymbol = missionSymbol
@@ -51,4 +56,4 @@ struct FlightDataModel: Codable {
         self.specialUse = specialUse
     }
     
-}
+} //End
