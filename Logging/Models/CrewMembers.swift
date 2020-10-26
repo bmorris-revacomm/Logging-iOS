@@ -55,6 +55,7 @@ struct CrewMember: Codable {
         self.flyingOrgn = flyingOrgn
         self.ssnLast4 = ssnLast4
         self.lastName = lastName
+        self.firstName = firstName
         self.flightAuthDutyCode = flightAuthDutyCode
         self.prim = prim
         self.sec = sec

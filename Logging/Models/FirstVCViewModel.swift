@@ -51,6 +51,9 @@ class FVCVM {
     
 
     func appendToJSON(jsonFile: URL, key: String, value: String) {
+        if !checkForFile(filePath: jsonFile){
+            DiskOperations().readFile(fileURL: jsonFile)
+        }
         
         var jsonData: Data
         var formData = FormData()
