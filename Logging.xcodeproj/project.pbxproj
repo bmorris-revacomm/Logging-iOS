@@ -608,12 +608,9 @@
 				83D8407F24D3402A00F336E3 /* FirstViewController.swift in Sources */,
 				13D52D062538E19D0022B228 /* JSONBuilder.swift in Sources */,
 				83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */,
-<<<<<<< HEAD
+				7FAB8C492541FD9100868215 /* AircrewViewController.swift in Sources */,
 				136A646E25470733006B9003 /* CrewMembers.swift in Sources */,
 				136A64692546FB25006B9003 /* FormData.swift in Sources */,
-=======
-				7FAB8C492541FD9100868215 /* AircrewViewController.swift in Sources */,
->>>>>>> 049d7544b9a22ae46137cafc01b813f795590e1d
 				83D8407D24D3402A00F336E3 /* SceneDelegate.swift in Sources */,
 				7FAB8C8D25434E2300868215 /* ErrorViewController.swift in Sources */,
 				7FAB8C5E254337F700868215 /* SplitTimeViewController.swift in Sources */,
