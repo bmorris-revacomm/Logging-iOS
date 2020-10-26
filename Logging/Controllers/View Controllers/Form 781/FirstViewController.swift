@@ -214,18 +214,18 @@ class FirstViewController: UIViewController {
         if (Date.text == "") {
             print("date")
             Date.text = FVCVM().populateDateField()
-            FVCVM().appendToJSON(jsonFile: fileURL, key: "Date", value: Date.text ?? "date", anotherValue: true)
+
+            FVCVM().appendToJSON(jsonFile: fileURL, key: "Date", value: Date.text ?? "date")
         }
             if(sender.tag == tags.count) {
                 FVCVM().appendToJSON(jsonFile: fileURL,
                                      key: "\(tags[sender.tag])",
-                                     value: "\(sender.text ?? " ")",
-                                     anotherValue: false)
+
+                                     value: "\(sender.text ?? " ")")
             }else {
                 FVCVM().appendToJSON(jsonFile: fileURL,
                                      key: "\(tags[sender.tag])",
-                                     value: "\(sender.text ?? " ")",
-                                     anotherValue: true)
+                                     value: "\(sender.text ?? " ")")
             
             }
     }
