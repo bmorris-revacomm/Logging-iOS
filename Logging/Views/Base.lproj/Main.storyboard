@@ -1680,6 +1680,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="P41-UN-Dd6"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1696,6 +1699,9 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="73.5" height="61.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="Fcz-He-0a6"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
