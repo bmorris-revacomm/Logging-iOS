@@ -18,8 +18,13 @@ class SplitTimeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpViews()
+    }
+    
+    // MARK: - Methods
+    
+    func setUpViews() {
+        descriptionLabel.text = "You've added \(CrewMemberController.shared.members.count) crew members to this mission. Would you like to split their time equally?"
     }
     
     // MARK: - Actions

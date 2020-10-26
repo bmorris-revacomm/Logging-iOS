@@ -41,7 +41,17 @@ class AircrewListViewController: UIViewController {
     }
     
     @IBAction func addNewAircrewButtonTapped(_ sender: UIButton) {
+        guard let lastName = lastNameTextField.text, !lastName.isEmpty,
+              let firstName = firstNameTextField.text, !firstName.isEmpty,
+              let ssn = ssnTextField.text, !ssn.isEmpty,
+              let flightAuthDutyCode = flightAuthDutyCodeTextField.text, !flightAuthDutyCode.isEmpty,
+              let flyingOrigin = flyingOriginTextField.text, !flyingOrigin.isEmpty
+        else { return }
         
+        CrewMemberController.shared.create(lastName: lastName, firstName: firstName, ssn: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin)
+        
+        aircrewTableView.reloadData()
+        popUpView.isHidden = true
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
@@ -63,14 +73,14 @@ class AircrewListViewController: UIViewController {
 extension AircrewListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        CrewMemberController.shared.members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.aircrewTableView.dequeueReusableCell(withIdentifier: "AircrewCell", for: indexPath) as? AircrewTableViewCell else { return UITableViewCell() }
         
-        //let member = members[indexPath.row]
-        //cell.setUpViews(member: member)
+        let member = CrewMemberController.shared.members[indexPath.row]
+        cell.setUpViews(member: member)
         
         return cell
     }

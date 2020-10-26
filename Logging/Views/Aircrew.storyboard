@@ -351,28 +351,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="691" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST,FIRST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27W-Zv-TID">
-                                                    <rect key="frame" x="15" y="17.5" width="82.5" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST, FIRST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27W-Zv-TID">
+                                                    <rect key="frame" x="15" y="17.5" width="86" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    <color key="textColor" name="fog"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6b-ij-4YN">
                                                     <rect key="frame" x="258.5" y="17.5" width="35.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    <color key="textColor" name="fog"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mt8-sO-r0z">
                                                     <rect key="frame" x="361" y="17.5" width="38.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    <color key="textColor" name="fog"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdh-U0-suJ">
                                                     <rect key="frame" x="508" y="17.5" width="20.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    <color key="textColor" name="fog"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RES-Ys-sM4">
@@ -418,7 +418,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="flyingAuthDutyCodeLabel" destination="Rdh-U0-suJ" id="gVb-TE-fVc"/>
+                                            <outlet property="flightAuthDutyCodeLabel" destination="Rdh-U0-suJ" id="gVb-TE-fVc"/>
                                             <outlet property="flyingOriginLabel" destination="mt8-sO-r0z" id="hHc-KT-XnC"/>
                                             <outlet property="nameLabel" destination="27W-Zv-TID" id="ghn-dC-dru"/>
                                             <outlet property="ssnLabel" destination="T6b-ij-4YN" id="Bi0-E5-lsF"/>
@@ -426,7 +426,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdC-pQ-rJc" customClass="PBLView" customModule="Logging" customModuleProvider="target">
+                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdC-pQ-rJc" customClass="shadowView" customModule="Logging" customModuleProvider="target">
                                 <rect key="frame" x="115" y="122.5" width="538" height="614.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9s-45-yBf" userLabel="Exit">
@@ -550,11 +550,6 @@
                                     <constraint firstItem="m5Z-po-uoq" firstAttribute="centerY" secondItem="JdC-pQ-rJc" secondAttribute="centerY" multiplier="0.7" id="erR-Tp-yJu"/>
                                     <constraint firstItem="Ug1-0U-wAN" firstAttribute="centerX" secondItem="JdC-pQ-rJc" secondAttribute="centerX" id="kCv-Ld-6eP"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" name="mist"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s4z-4H-J5U"/>
@@ -780,9 +775,6 @@
         </namedColor>
         <namedColor name="haze">
             <color red="0.83529411764705885" green="0.84705882352941175" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="mist">
-            <color red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="notBlack">
             <color red="0.17254901960784313" green="0.17647058823529413" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

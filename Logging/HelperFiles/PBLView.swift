@@ -26,6 +26,19 @@ class borderView: PBLView {
     }
 }
 
+class shadowView: PBLView {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = .mist
+        self.layer.shadowColor = UIColor.notBlack.cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowOffset = .zero
+        self.layer.shadowRadius = 5
+    }
+    
+}
+
 class circleView: UIView {
     
     override func awakeFromNib() {

@@ -9,6 +9,7 @@
 import Foundation
 
 struct CrewMember: Codable {
+    
     let flyingOrgn: String?
     let ssnLast4: String?
     let lastName: String?
@@ -32,29 +33,31 @@ struct CrewMember: Codable {
     let resvStatus: String?
     
     init(flyingOrgn: String? = nil,
-            ssnLast4: String? = nil,
-            lastName: String? = nil,
-            firstName: String? = nil,
-            flightAuthDutyCode: String? = nil,
-            prim: String? = nil,
-            sec: String? = nil,
-            instr: String? = nil,
-            eval: String? = nil,
-            other: String? = nil,
-            time: String? = nil,
-            srty: String? = nil,
-            nightpsie: String? = nil,
-            inspie: String? = nil,
-            siminspie: String? = nil,
-            nvg: String? = nil,
-            combatTime: String? = nil,
-            combatSrty: String? = nil,
-            combatSptTime: String? = nil,
-            combatSptSrty: String? = nil,
-            resvStatus: String? = nil) {
+         ssnLast4: String? = nil,
+         lastName: String? = nil,
+         firstName: String? = nil,
+         flightAuthDutyCode: String? = nil,
+         prim: String? = nil,
+         sec: String? = nil,
+         instr: String? = nil,
+         eval: String? = nil,
+         other: String? = nil,
+         time: String? = nil,
+         srty: String? = nil,
+         nightpsie: String? = nil,
+         inspie: String? = nil,
+         siminspie: String? = nil,
+         nvg: String? = nil,
+         combatTime: String? = nil,
+         combatSrty: String? = nil,
+         combatSptTime: String? = nil,
+         combatSptSrty: String? = nil,
+         resvStatus: String? = nil) {
+        
         self.flyingOrgn = flyingOrgn
         self.ssnLast4 = ssnLast4
         self.lastName = lastName
+        self.firstName = firstName
         self.flightAuthDutyCode = flightAuthDutyCode
         self.prim = prim
         self.sec = sec
@@ -73,4 +76,5 @@ struct CrewMember: Codable {
         self.combatSptSrty = combatSptSrty
         self.resvStatus = resvStatus
     }
-}
+    
+} //End

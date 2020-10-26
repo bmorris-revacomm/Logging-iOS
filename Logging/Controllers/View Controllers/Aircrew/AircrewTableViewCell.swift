@@ -13,7 +13,7 @@ class AircrewTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ssnLabel: UILabel!
     @IBOutlet weak var flyingOriginLabel: UILabel!
-    @IBOutlet weak var flyingAuthDutyCodeLabel: UILabel!
+    @IBOutlet weak var flightAuthDutyCodeLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +23,13 @@ class AircrewTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
+    }
+    
+    func setUpViews(member: CrewMember) {
+        nameLabel.text = "\(member.lastName), \(member.firstName)"
+        ssnLabel.text = member.ssnLast4
+        flyingOriginLabel.text = member.flyingOrgn
+        flightAuthDutyCodeLabel.text = member.flightAuthDutyCode
     }
 
     @IBAction func editButtonTapped(_ sender: UIButton) {
