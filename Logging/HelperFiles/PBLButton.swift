@@ -14,9 +14,10 @@ class PBLButton: UIButton {
         super.awakeFromNib()
         //self.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
         self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
-        self.addCornerRadius(self.frame.size.height/2)
+        self.addCornerRadius(self.frame.size.height/1.6)
         self.backgroundColor = .fog
         self.setTitleColor(.slate, for: .normal)
+        self.tintColor = .clear
     }
         
 }
@@ -35,7 +36,7 @@ class PBLButtonLight: PBLButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.backgroundColor = .fog
+        self.backgroundColor = .mist
         self.setTitleColor(.slate, for: .normal)
     }
     

@@ -27,8 +27,11 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var harmLocation: UITextField!
     
     //Page 2
+    @IBOutlet weak var flightSeq: UITextField!
     @IBOutlet weak var missionNumber: UITextField!
     @IBOutlet weak var missionSymbol: UITextField!
+    @IBOutlet weak var flightAuthNum: UITextField!
+    @IBOutlet weak var issuingUnit: UITextField!
     @IBOutlet weak var fromICAO: UITextField!
     @IBOutlet weak var toICAO: UITextField!
     
@@ -255,7 +258,7 @@ class FirstViewController: UIViewController {
                     line6a11.text = sorties.text
                     line6a12.text = specialUse.text
                     // Add row to JSON
-                    //FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "a", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
+                    FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "a", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
                     
                     clearFields()
                     line6[0] = true
@@ -539,5 +542,14 @@ class FirstViewController: UIViewController {
     @IBAction func page4BackButtonTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func addAircrewButtonTapped(_ sender: UIButton) {
+        if let viewController = UIStoryboard(name: "Aircrew", bundle: nil).instantiateViewController(withIdentifier: "Page1") as? AircrewViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(viewController, animated: true)
+            }
+        }
+    }
+    
     
 } //End
