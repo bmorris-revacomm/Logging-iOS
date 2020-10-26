@@ -25,7 +25,6 @@ struct FormData: Codable {
     
     var crewMember: CrewMember?
     
-    
     init(date: String? = nil,
         mds: String? = nil,
         serialNo: String? = nil,
@@ -52,4 +51,5 @@ struct FormData: Codable {
         self.grandTotalSorties = grandTotalSorties
         self.crewMember = crewMember
     }
+    
 }
