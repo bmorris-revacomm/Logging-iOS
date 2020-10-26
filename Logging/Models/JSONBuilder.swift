@@ -27,6 +27,24 @@ class JSONBuilder {
             return spacer + "{\n"
         }
     }
+    func startOfArray(level: Int, key: String) -> String {
+        let lclLevel: Int = level + 1
+        let lclKey = self.encapsulate(item: key)
+        var lclSpacer = ""
+        for _ in 1...lclLevel {
+            lclSpacer += spacer
+        }
+        return "\(lclSpacer)\(lclKey)[\n"
+    }
+    
+    func endOfArray(level: Int) -> String {
+        let lclLevel: Int = level + 1
+        var lclSpacer = ""
+        for _ in 1...lclLevel {
+            lclSpacer += spacer
+        }
+        return "\(lclSpacer)]\n"
+    }
 
     func addObject(level: Int, key: String, value: String, anotherValue: Bool) -> String {
         let lclLevel: Int = level + 1

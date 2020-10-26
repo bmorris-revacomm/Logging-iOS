@@ -20,8 +20,6 @@ class FVCVM {
         
         return date
     }
-
-    var json = ""
     
     func checkForFile(filePath: URL) -> Bool {
         print("\(filePath.absoluteString)")
@@ -48,50 +46,76 @@ class FVCVM {
                       specialUse: String) {
         // Function to add a row to JSON when it's added with addRow function
         // We need to write to the json file when we're done.
-        let indent1 = "     "
-        let indent2 = "          "
-        //String has been set here for demonstration purposes.  Will need to modify before push to production.
-        let row: String = "\(indent1){\"6\(rowID)\": [\n\(indent2){\"7. Mission Number\" : \"\(missionNumber)\"},\n\(indent2){\"8. Mission Symbol\" : \"\(missionSymbol)\"},\n\(indent2){\"9. From ICAO\" : \"\(fromICAO)\"},\n\(indent2){\"10. To ICAO\" : \"\(toICAO)\",\n\(indent2){\"11. Take Off (Z)\" : \"\(takeOffTime)\"},\n\(indent2){\"12. Landing (Z)\" : \"\(landingTime)\"},\n\(indent2){\"13. Total Time\" : \"\(totalTime)\"},\n\(indent2){\"14. Landing Touch & Go\" : \"\(touchAndGo)\"},\n\(indent2){\"14. Landing Full Stop\" : \"\(fullStop)\"},\n\(indent2){\"14. Total\" : \"\(totalLanding)\"},\n\(indent2){\"15. Sorties\" : \"\(sorties)\"},\n\(indent2){\"16. Special Use\" : \"\(specialUse)\"}\n\(indent2)]\n\(indent1)}\n]"
-        json = DiskOperations().readFile(fileURL: jsonFile)
-        json += row
-        DiskOperations().updateFile(line: json, fileURL: jsonFile)
+        print(":(")
     }
     
-    func checkForOpeningBrace(input: String) -> Bool {
-        print("\(input)")
-        if input.contains("[") {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    func appendToJSON(jsonFile: URL, key: String, value: String, anotherValue: Bool) {
-        json = DiskOperations().readFile(fileURL: jsonFile)
-        print("\(jsonFile)")
-        if (checkForOpeningBrace(input: json)) {
-            
-            if anotherValue{
-                json += JSONBuilder().startOfObject(level: 1)
-                json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: false)
-                json += JSONBuilder().endOfObject(level: 1, anotherObject: anotherValue)
-            } else {
-                json += JSONBuilder().startOfObject(level: 1)
-                json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: false)
-                json += JSONBuilder().endOfObject(level: 1, anotherObject: anotherValue)
-                json += JSONBuilder().endOfFile()
-                DiskOperations().updateFile(line: json, fileURL: jsonFile)
-                
-            }
-        }else{
-            
-            json += JSONBuilder().startOfFile()
-            json += JSONBuilder().startOfObject(level: 1)
-            json += JSONBuilder().addObject(level: 1, key: key, value: value, anotherValue: false)
-            json += JSONBuilder().endOfObject(level: 1, anotherObject: anotherValue)
-        }
 
-        DiskOperations().updateFile(line: json, fileURL: jsonFile)
+    func appendToJSON(jsonFile: URL, key: String, value: String) {
+        
+        var jsonData: Data
+        var formData = FormData()
+        
+        do{
+            // Read the file
+            jsonData = try Data(contentsOf: jsonFile)
+        
+            do {
+                // Set up our object
+                formData = try JSONDecoder().decode(FormData.self, from: jsonData)
+            }catch{
+                print ("JSON decoder error")
+            }
+        }catch {
+            print("Couldn't read json")
+        }
+           
+            switch(key){
+            case "date":
+                formData.date = value
+                break
+            case "mds":
+                formData.mds = value
+                break
+            case "serialNo":
+                formData.serialNo = value
+                break
+            case "unitCharged":
+                formData.unitCharged = value
+                break
+            case "harmLocation":
+                formData.harmLocation = value
+                break
+            
+            case "grandTotalFlightTime":
+                formData.grandTotalFlightTime = value
+                break
+            case "grandTotalTouchAndGo":
+                formData.grandTotalTouchAndGo = value
+                break
+            case "grandTotalFullStop":
+                formData.grandTotalFullStop = value
+                break
+            case "grandTotalStops":
+                formData.grandTotalStops = value
+                break
+            case "grandTotalSorties":
+                formData.grandTotalSorties = value
+                break
+            default:
+                print("key not found")
+                break
+            
+            }
+        // Now we need to encode our new object
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        do {
+            let jsonEncoded = try encoder.encode(formData)
+            
+            DiskOperations().updateFile(line: String(data: jsonEncoded, encoding: .utf8)!, fileURL: jsonFile)
+        }catch {
+            print("JSON encoding problem")
+        }
     }
 
     func separateHoursAndMins(strInput: String, pointer: String) -> String {
@@ -367,6 +391,14 @@ class FVCVM {
         }
         
         return img
+    }
+    
+    
+    func getPage1Info(date: String) {
+        let filepath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let file = "swift/jsonHandler/Sources/jsonHandler/Resources/file.json"
+        // let fullpath = "\(filepath)\(file)"
+        let fileURL = filepath!.appendingPathComponent("test.json")
     }
     
 } //End

@@ -9,7 +9,9 @@
 import Foundation
 
 
-struct FlightDataModel {
+struct FlightData: Codable {
+    
+    
     var missionNumber: String
     var missionSymbol: String
     var fromICAO: String
