@@ -46,7 +46,7 @@ class PBLTextFieldBordered: PBLTextField {
         self.frame.size.height = 60
         self.backgroundColor = .white
         self.addAccentBorder()
-        self.textAlignment = .left
+        self.textAlignment = .center
     }
     
 }

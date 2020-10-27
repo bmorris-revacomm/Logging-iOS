@@ -40,7 +40,12 @@ class FlightData: Codable {
          fullStop: String,
          totalLanding: String,
          sorties: String,
-         specialUse: String) {
+         specialUse: String,
+         grandTotalFlightTime: String,
+         grandTotalTouchAndGo: String,
+         grandTotalFullStop: String,
+         grandTotalStops: String,
+         grandTotalSorties: String) {
         
         self.missionNumber = missionNumber
         self.missionSymbol = missionSymbol
@@ -54,6 +59,11 @@ class FlightData: Codable {
         self.totalLanding = totalLanding
         self.sorties = sorties
         self.specialUse = specialUse
+        self.grandTotalFlightTime = grandTotalFlightTime
+        self.grandTotalTouchAndGo = grandTotalTouchAndGo
+        self.grandTotalFullStop = grandTotalFullStop
+        self.grandTotalStops = grandTotalStops
+        self.grandTotalSorties = grandTotalSorties
     }
     
 } //End
