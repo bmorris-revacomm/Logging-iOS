@@ -245,6 +245,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
                                 <connections>
+                                    <action selector="saveButtonTapped:" destination="jfo-wv-GSR" eventType="touchUpInside" id="MS7-Y9-QDe"/>
                                     <segue destination="uHw-GN-qXJ" kind="show" id="0BT-SC-kkN"/>
                                 </connections>
                             </button>
@@ -257,6 +258,44 @@
                                     <action selector="backButtonTapped:" destination="jfo-wv-GSR" eventType="touchUpInside" id="ISU-Xa-g8k"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N22-ht-NdM" userLabel="17">
+                                <rect key="frame" x="30" y="484" width="169.5" height="77.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT AUTHORITY NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okW-cn-lKw">
+                                        <rect key="frame" x="0.0" y="0.0" width="169.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY-T777" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="if6-zc-u6L" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22.5" width="169.5" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="CTa-pm-S9f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SEV-nf-Mnh" userLabel="18">
+                                <rect key="frame" x="249.5" y="484" width="83.5" height="77.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISSUING UNIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7Q-au-jmZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY-T777" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-r9-TOx" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22.5" width="83.5" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="jft-Rb-jGX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bAN-Wv-vTt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -281,6 +320,7 @@
                             <constraint firstItem="bAN-Wv-vTt" firstAttribute="trailing" secondItem="IZG-AV-HIA" secondAttribute="trailing" constant="30" id="gRG-h9-UTJ"/>
                             <constraint firstItem="1r1-uW-hET" firstAttribute="trailing" secondItem="bAN-Wv-vTt" secondAttribute="trailing" id="gu9-tp-lcl"/>
                             <constraint firstItem="bAN-Wv-vTt" firstAttribute="trailing" secondItem="tCT-Fj-IrU" secondAttribute="trailing" id="hFM-RE-IUj"/>
+                            <constraint firstItem="N22-ht-NdM" firstAttribute="leading" secondItem="oBY-m8-FdL" secondAttribute="leading" id="hXC-di-udI"/>
                             <constraint firstItem="bAN-Wv-vTt" firstAttribute="bottom" secondItem="1ud-rq-5rG" secondAttribute="bottom" constant="50" id="irZ-DZ-8px"/>
                             <constraint firstItem="HGM-ho-Eeu" firstAttribute="leading" secondItem="oBY-m8-FdL" secondAttribute="leading" id="j7d-I7-yuk"/>
                             <constraint firstItem="xvC-5K-d9W" firstAttribute="leading" secondItem="bAN-Wv-vTt" secondAttribute="leading" constant="50" id="nrf-iY-bTD"/>
@@ -288,9 +328,12 @@
                             <constraint firstItem="tCT-Fj-IrU" firstAttribute="height" secondItem="583-rb-G6q" secondAttribute="height" multiplier="0.05" id="qW1-0H-Cat"/>
                             <constraint firstItem="1r1-uW-hET" firstAttribute="leading" secondItem="bAN-Wv-vTt" secondAttribute="leading" id="rbM-is-Cd1"/>
                             <constraint firstItem="bAN-Wv-vTt" firstAttribute="bottom" secondItem="xvC-5K-d9W" secondAttribute="bottom" constant="50" id="rdL-Vf-v7p"/>
+                            <constraint firstItem="N22-ht-NdM" firstAttribute="top" secondItem="HGM-ho-Eeu" secondAttribute="bottom" constant="30" id="sQZ-dL-i4h"/>
                             <constraint firstItem="bgi-sM-wcK" firstAttribute="top" secondItem="bAN-Wv-vTt" secondAttribute="top" id="udK-DS-X7b"/>
+                            <constraint firstItem="SEV-nf-Mnh" firstAttribute="leading" secondItem="N22-ht-NdM" secondAttribute="trailing" constant="50" id="wCr-Ch-qTo"/>
                             <constraint firstItem="tCT-Fj-IrU" firstAttribute="leading" secondItem="bAN-Wv-vTt" secondAttribute="leading" id="wEp-nq-9HL"/>
                             <constraint firstItem="tCT-Fj-IrU" firstAttribute="top" secondItem="bgi-sM-wcK" secondAttribute="bottom" id="wh4-Lu-Yrn"/>
+                            <constraint firstItem="SEV-nf-Mnh" firstAttribute="top" secondItem="N22-ht-NdM" secondAttribute="top" id="yPC-69-joI"/>
                             <constraint firstItem="bAN-Wv-vTt" firstAttribute="trailing" secondItem="1ud-rq-5rG" secondAttribute="trailing" constant="50" id="yTR-7A-p9w"/>
                             <constraint firstItem="1r1-uW-hET" firstAttribute="top" secondItem="6et-G8-hMu" secondAttribute="bottom" constant="5" id="yc1-mE-68f"/>
                         </constraints>
@@ -302,7 +345,9 @@
                     <connections>
                         <outlet property="MDS" destination="gjr-0y-vh0" id="44G-Xf-djJ"/>
                         <outlet property="dateTextField" destination="6uc-fP-OZQ" id="mSY-Oo-hUg"/>
+                        <outlet property="flightAuthNum" destination="if6-zc-u6L" id="5dK-YX-45q"/>
                         <outlet property="harmLocation" destination="D8q-NM-XVJ" id="8sr-Da-Hnz"/>
+                        <outlet property="issuingUnit" destination="Sbg-r9-TOx" id="Wcx-L1-bQj"/>
                         <outlet property="serialNumber" destination="zeS-W3-NlD" id="Qs0-bG-usv"/>
                         <outlet property="unitCharged" destination="3C4-Of-Na3" id="7Pl-9g-S2D"/>
                     </connections>
@@ -408,9 +453,8 @@
                                     <constraint firstAttribute="height" constant="1" id="f0i-s2-sRo"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHy-12-yfo" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="536" y="303" width="140" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHy-12-yfo" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
+                                <rect key="frame" x="294" y="199.5" width="140" height="30"/>
                                 <color key="backgroundColor" name="fog"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="NEW FLIGHT SEQ +">
@@ -421,12 +465,12 @@
                                     <action selector="newFlightButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="N27-dR-wiB"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-Oi-qZw" userLabel="Grand Totals Box" customClass="borderView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="18" y="387" width="692" height="114.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-Oi-qZw" userLabel="Grand Totals Box" customClass="borderView" customModule="Logging" customModuleProvider="target">
+                                <rect key="frame" x="18" y="324.5" width="692" height="114.5"/>
                                 <color key="backgroundColor" name="haze"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TT3-qi-dhc" userLabel="Grand Totals">
-                                <rect key="frame" x="53" y="405.5" width="622" height="77.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TT3-qi-dhc" userLabel="Grand Totals">
+                                <rect key="frame" x="53" y="343" width="622" height="77.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FmI-qZ-Nzi">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="77.5"/>
@@ -547,8 +591,8 @@
                                     <action selector="backButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="jxc-aQ-JMm"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIx-Vc-qNu" userLabel="Grid box" customClass="PBLView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="18" y="531.5" width="692" height="286"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIx-Vc-qNu" userLabel="Grid box" customClass="PBLView" customModule="Logging" customModuleProvider="target">
+                                <rect key="frame" x="18" y="469" width="692" height="286"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqb-Dr-nVa">
                                         <rect key="frame" x="59.5" y="20" width="35.5" height="19.5"/>
@@ -883,85 +927,85 @@
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9.5" translatesAutoresizingMaskIntoConstraints="NO" id="XWR-5M-e1e" userLabel="Line 6c">
-                                                <rect key="frame" x="0.0" y="72" width="657" height="36.5"/>
+                                                <rect key="frame" x="0.0" y="72" width="657" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qao-5R-Ymx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="36.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zTR-PH-xOD">
-                                                        <rect key="frame" x="20" y="0.0" width="637" height="36.5"/>
+                                                        <rect key="frame" x="20" y="0.0" width="637" height="36"/>
                                                         <subviews>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Pb-a5-pLc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGr-jc-DCw">
-                                                                <rect key="frame" x="53" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="53" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDi-yr-KHl">
-                                                                <rect key="frame" x="106" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="106" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81f-90-uvo">
-                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36.5"/>
+                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIV-Gb-Is4">
-                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Guw-U6-XXM">
-                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DsM-xt-Txp">
-                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6PY-r2-VJA">
-                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygg-qy-txW">
-                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36.5"/>
+                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NMW-o7-Q2i">
-                                                                <rect key="frame" x="478" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="478" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8q5-uG-bBw">
-                                                                <rect key="frame" x="531" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="531" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7JD-Tj-5iH">
-                                                                <rect key="frame" x="584" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="584" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -975,85 +1019,85 @@
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9.5" translatesAutoresizingMaskIntoConstraints="NO" id="tDY-g0-5mO" userLabel="Line 6d">
-                                                <rect key="frame" x="0.0" y="108.5" width="657" height="36"/>
+                                                <rect key="frame" x="0.0" y="108" width="657" height="36.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fYk-6B-hZe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="36.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="D3a-VN-Vzz">
-                                                        <rect key="frame" x="20" y="0.0" width="637" height="36"/>
+                                                        <rect key="frame" x="20" y="0.0" width="637" height="36.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pU1-Ja-7CZ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVj-JG-coQ">
-                                                                <rect key="frame" x="53" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="53" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-DL-jpR">
-                                                                <rect key="frame" x="106" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="106" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0p-fP-BAf">
-                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pM1-BN-8q7">
-                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-OG-e1e">
-                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dv5-np-gD1">
-                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWx-pY-HjR">
-                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9aO-RM-Gja">
-                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dpf-8j-wfG">
-                                                                <rect key="frame" x="478" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="478" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pa-iH-XTH">
-                                                                <rect key="frame" x="531" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="531" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOr-tO-aHW">
-                                                                <rect key="frame" x="584" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="584" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1287,10 +1331,10 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo8-HS-bP7" customClass="shadowView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="36.5" y="95.5" width="655" height="763"/>
+                                <rect key="frame" x="36.5" y="143" width="655" height="668"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bvv-FB-ind" userLabel="6">
-                                        <rect key="frame" x="40" y="75.5" width="70" height="77.5"/>
+                                        <rect key="frame" x="40" y="61.5" width="70" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT SEQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3H-fm-vpQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="14.5"/>
@@ -1298,7 +1342,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LxM-jS-NTc" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LxM-jS-NTc" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="22.5" width="70" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="iTc-VZ-slL"/>
@@ -1309,7 +1353,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N2w-L7-og0" userLabel="7">
-                                        <rect key="frame" x="160" y="75.5" width="203.5" height="77.5"/>
+                                        <rect key="frame" x="160" y="61.5" width="203.5" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFB-KG-Fkb">
                                                 <rect key="frame" x="0.0" y="0.0" width="203.5" height="14.5"/>
@@ -1317,7 +1361,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ABCDEFGHIJ-1234567890" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yW5-Gj-Mig" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ABCDEFGHIJ-1234567890" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yW5-Gj-Mig" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="22.5" width="203.5" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="fyb-hC-9Yl"/>
@@ -1328,7 +1372,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JCt-hy-UAT" userLabel="8">
-                                        <rect key="frame" x="413.5" y="75.5" width="104" height="77.5"/>
+                                        <rect key="frame" x="413.5" y="61.5" width="104" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf2-8K-8rx">
                                                 <rect key="frame" x="0.0" y="0.0" width="104" height="14.5"/>
@@ -1336,7 +1380,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AB-12" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R33-cQ-VOp" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AB-12" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R33-cQ-VOp" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="22.5" width="104" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="2XZ-2c-ZuW"/>
@@ -1347,7 +1391,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ipe-g8-s8F" userLabel="9">
-                                        <rect key="frame" x="40" y="290.5" width="75.5" height="77.5"/>
+                                        <rect key="frame" x="40" y="169" width="75.5" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOq-zU-QQU">
                                                 <rect key="frame" x="0.0" y="0.0" width="75.5" height="14.5"/>
@@ -1355,7 +1399,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AUAB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxO-Ib-J84" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AUAB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxO-Ib-J84" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="22.5" width="75.5" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="TUC-da-z4B"/>
@@ -1366,7 +1410,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HFV-JT-hai" userLabel="10">
-                                        <rect key="frame" x="165.5" y="290.5" width="66" height="77.5"/>
+                                        <rect key="frame" x="165.5" y="169" width="66" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nC-Kp-wRy">
                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="14.5"/>
@@ -1374,7 +1418,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XCHS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bx-92-O1K" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XCHS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bx-92-O1K" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="22.5" width="66" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="y15-tt-ZkZ"/>
@@ -1384,46 +1428,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N22-ht-NdM" userLabel="17">
-                                        <rect key="frame" x="40" y="183" width="169.5" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT AUTHORITY NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okW-cn-lKw">
-                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY-T777" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="if6-zc-u6L" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="169.5" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="CTa-pm-S9f"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SEV-nf-Mnh" userLabel="18">
-                                        <rect key="frame" x="259.5" y="183" width="83.5" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISSUING UNIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7Q-au-jmZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY-T777" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-r9-TOx" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="83.5" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="jft-Rb-jGX"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ufj-4J-VEk">
-                                        <rect key="frame" x="40" y="398" width="343" height="77.5"/>
+                                        <rect key="frame" x="40" y="276.5" width="343" height="77.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WzU-Xs-Pb7" userLabel="11">
                                                 <rect key="frame" x="0.0" y="0.0" width="108.5" height="77.5"/>
@@ -1434,7 +1440,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1230" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9QX-fA-RLT" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1230" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9QX-fA-RLT" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="22.5" width="108.5" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="Pqq-uC-VWj"/>
@@ -1453,7 +1459,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2120" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsA-ZG-NKg" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2120" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsA-ZG-NKg" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="22.5" width="85" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="Sk1-he-k38"/>
@@ -1475,7 +1481,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20.8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Ss-Y3p" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20.8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Ss-Y3p" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="22.5" width="69.5" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="dct-K2-lde"/>
@@ -1488,13 +1494,13 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LANDINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN8-Lu-2kC">
-                                        <rect key="frame" x="40" y="505.5" width="61.5" height="14.5"/>
+                                        <rect key="frame" x="40" y="384" width="61.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="RFp-ER-1Ab">
-                                        <rect key="frame" x="40" y="525" width="466" height="77.5"/>
+                                        <rect key="frame" x="40" y="403.5" width="466" height="77.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="spw-OR-lR6" userLabel="Touch &amp; Go">
                                                 <rect key="frame" x="0.0" y="0.0" width="76.5" height="77.5"/>
@@ -1505,7 +1511,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tlc-MD-uYM" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tlc-MD-uYM" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="22.5" width="76.5" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="vF8-rW-hU1"/>
@@ -1527,7 +1533,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R64-Pp-JU9" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R64-Pp-JU9" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="22.5" width="64.5" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="bYn-86-E3Y"/>
@@ -1549,7 +1555,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDX-lg-wNK" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDX-lg-wNK" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="22.5" width="38" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="UXU-0U-dch"/>
@@ -1568,7 +1574,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="st4-NB-9tT" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="st4-NB-9tT" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="22.5" width="50.5" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="pQD-TW-htn"/>
@@ -1587,7 +1593,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lIj-0G-LZd" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lIj-0G-LZd" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="22.5" width="76.5" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="55" id="tN5-ug-zmJ"/>
@@ -1601,14 +1607,15 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIe-se-kcu">
                                         <rect key="frame" x="617.5" y="20" width="17.5" height="22"/>
+                                        <color key="tintColor" name="slate"/>
                                         <state key="normal" image="xmark" catalog="system"/>
                                         <connections>
                                             <action selector="exitButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="qgt-98-cxe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-6A-fYj" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="512" y="689" width="100" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-6A-fYj" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="502" y="588" width="103" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="ADD FLIGHT +"/>
                                         <connections>
                                             <action selector="addFlightButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="5wy-3G-QoW"/>
@@ -1622,14 +1629,11 @@
                                     <constraint firstItem="AIe-se-kcu" firstAttribute="top" secondItem="uo8-HS-bP7" secondAttribute="top" constant="20" id="1ly-aS-vjP"/>
                                     <constraint firstItem="HFV-JT-hai" firstAttribute="top" secondItem="ipe-g8-s8F" secondAttribute="top" id="3qY-Vi-exc"/>
                                     <constraint firstItem="N2w-L7-og0" firstAttribute="leading" secondItem="bvv-FB-ind" secondAttribute="trailing" constant="50" id="56G-JU-XY1"/>
-                                    <constraint firstItem="N22-ht-NdM" firstAttribute="top" secondItem="bvv-FB-ind" secondAttribute="bottom" constant="30" id="Bkb-wx-GVk"/>
                                     <constraint firstAttribute="trailing" secondItem="AIe-se-kcu" secondAttribute="trailing" constant="20" id="C7B-bc-9FS"/>
+                                    <constraint firstItem="ipe-g8-s8F" firstAttribute="top" secondItem="bvv-FB-ind" secondAttribute="bottom" constant="30" id="CFE-3g-oX1"/>
                                     <constraint firstItem="JCt-hy-UAT" firstAttribute="top" secondItem="bvv-FB-ind" secondAttribute="top" id="Fe4-oW-cBe"/>
-                                    <constraint firstItem="N22-ht-NdM" firstAttribute="leading" secondItem="bvv-FB-ind" secondAttribute="leading" id="FfB-if-Xq4"/>
-                                    <constraint firstItem="ipe-g8-s8F" firstAttribute="top" secondItem="N22-ht-NdM" secondAttribute="bottom" constant="30" id="Iwr-ba-xBD"/>
                                     <constraint firstItem="bvv-FB-ind" firstAttribute="leading" secondItem="uo8-HS-bP7" secondAttribute="leading" constant="40" id="Le1-Yq-VuA"/>
                                     <constraint firstItem="HFV-JT-hai" firstAttribute="leading" secondItem="ipe-g8-s8F" secondAttribute="trailing" constant="50" id="Mtr-ud-wPE"/>
-                                    <constraint firstItem="SEV-nf-Mnh" firstAttribute="leading" secondItem="N22-ht-NdM" secondAttribute="trailing" constant="50" id="QSG-dH-q1p"/>
                                     <constraint firstItem="RFp-ER-1Ab" firstAttribute="leading" secondItem="WN8-Lu-2kC" secondAttribute="leading" id="V7Y-aw-rcB"/>
                                     <constraint firstItem="WN8-Lu-2kC" firstAttribute="top" secondItem="Ufj-4J-VEk" secondAttribute="bottom" constant="30" id="XeQ-TQ-YVN"/>
                                     <constraint firstItem="ipe-g8-s8F" firstAttribute="leading" secondItem="bvv-FB-ind" secondAttribute="leading" id="dGM-Vg-Yij"/>
@@ -1637,7 +1641,8 @@
                                     <constraint firstItem="Ufj-4J-VEk" firstAttribute="top" secondItem="ipe-g8-s8F" secondAttribute="bottom" constant="30" id="ice-8Z-N50"/>
                                     <constraint firstItem="bvv-FB-ind" firstAttribute="centerY" secondItem="uo8-HS-bP7" secondAttribute="centerY" multiplier="0.3" id="lAp-yK-UB8"/>
                                     <constraint firstItem="JCt-hy-UAT" firstAttribute="leading" secondItem="N2w-L7-og0" secondAttribute="trailing" constant="50" id="o4F-dq-Vaw"/>
-                                    <constraint firstItem="SEV-nf-Mnh" firstAttribute="top" secondItem="N22-ht-NdM" secondAttribute="top" id="v0h-MA-bFe"/>
+                                    <constraint firstAttribute="bottom" secondItem="t8L-6A-fYj" secondAttribute="bottom" constant="50" id="q3R-Q0-yCs"/>
+                                    <constraint firstAttribute="trailing" secondItem="t8L-6A-fYj" secondAttribute="trailing" constant="50" id="tA6-UV-co0"/>
                                     <constraint firstItem="WN8-Lu-2kC" firstAttribute="leading" secondItem="Ufj-4J-VEk" secondAttribute="leading" id="yUp-ZB-y9o"/>
                                 </constraints>
                             </view>
@@ -1646,7 +1651,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="uo8-HS-bP7" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.8" id="1sU-MG-dbt"/>
+                            <constraint firstItem="uo8-HS-bP7" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.7" id="1sU-MG-dbt"/>
                             <constraint firstAttribute="trailing" secondItem="jXY-8S-I5n" secondAttribute="trailing" id="1wU-vf-cyJ"/>
                             <constraint firstItem="Pbj-Oi-qZw" firstAttribute="centerX" secondItem="dxP-v8-4HA" secondAttribute="centerX" id="299-gB-KdD"/>
                             <constraint firstItem="cBI-2f-KEM" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.05" id="2n7-Lb-2Jg"/>
@@ -1661,9 +1666,12 @@
                             <constraint firstItem="Pbj-Oi-qZw" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.12" id="LA6-Bf-hfB"/>
                             <constraint firstItem="cBI-2f-KEM" firstAttribute="trailing" secondItem="dxP-v8-4HA" secondAttribute="trailing" id="OnX-Id-Uq2"/>
                             <constraint firstItem="5sW-z9-JHm" firstAttribute="top" secondItem="cBI-2f-KEM" secondAttribute="bottom" constant="10" id="PI0-s2-8Sg"/>
+                            <constraint firstItem="JHy-12-yfo" firstAttribute="centerY" secondItem="dxP-v8-4HA" secondAttribute="centerY" multiplier="0.45" id="Pze-Vd-fdQ"/>
                             <constraint firstItem="cBI-2f-KEM" firstAttribute="leading" secondItem="dxP-v8-4HA" secondAttribute="leading" id="WLj-k7-xCH"/>
+                            <constraint firstItem="Pbj-Oi-qZw" firstAttribute="centerY" secondItem="dxP-v8-4HA" secondAttribute="centerY" multiplier="0.8" id="YNM-0S-7tk"/>
                             <constraint firstItem="uo8-HS-bP7" firstAttribute="centerY" secondItem="dxP-v8-4HA" secondAttribute="centerY" id="ZoK-Te-W03"/>
                             <constraint firstItem="jXY-8S-I5n" firstAttribute="top" secondItem="5sW-z9-JHm" secondAttribute="bottom" constant="5" id="Zrl-d2-s4r"/>
+                            <constraint firstItem="JHy-12-yfo" firstAttribute="centerX" secondItem="dxP-v8-4HA" secondAttribute="centerX" id="dSO-TH-9Tg"/>
                             <constraint firstItem="dxP-v8-4HA" firstAttribute="bottom" secondItem="JiU-ux-0sg" secondAttribute="bottom" constant="50" id="eVe-GS-oje"/>
                             <constraint firstItem="kIx-Vc-qNu" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.3" id="ftM-q7-dS7"/>
                             <constraint firstItem="pNZ-Cd-QsK" firstAttribute="top" secondItem="cBI-2f-KEM" secondAttribute="bottom" constant="8" id="g4S-ze-Qcz"/>
@@ -1686,7 +1694,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="VEE-JX-5RO"/>
                     <connections>
-                        <outlet property="flightAuthNum" destination="if6-zc-u6L" id="F3N-Nd-spy"/>
                         <outlet property="flightSeq" destination="LxM-jS-NTc" id="yqd-oy-dkN"/>
                         <outlet property="fromICAO" destination="qxO-Ib-J84" id="peo-hC-z4l"/>
                         <outlet property="fullStop" destination="R64-Pp-JU9" id="f93-GK-our"/>
@@ -1696,7 +1703,6 @@
                         <outlet property="grandTotalSpecialUse" destination="kDR-Zl-whU" id="1Iz-Ic-kUX"/>
                         <outlet property="grandTotalTime" destination="J8Q-1e-HBD" id="ccU-m6-Y5e"/>
                         <outlet property="grandTotalTouchAndGo" destination="0vn-7E-cTP" id="EqZ-YE-3kM"/>
-                        <outlet property="issuingUnit" destination="Sbg-r9-TOx" id="PmN-tu-d0x"/>
                         <outlet property="landingTime" destination="hsA-ZG-NKg" id="Ndz-lA-ads"/>
                         <outlet property="line6a01" destination="LH5-fO-r5x" id="LLE-NT-KrF"/>
                         <outlet property="line6a02" destination="RwO-fZ-ePG" id="MT0-Tf-Q4p"/>

@@ -21,8 +21,6 @@ class FlightDataViewController: UIViewController {
     @IBOutlet weak var flightSeq: UITextField!
     @IBOutlet weak var missionNumber: UITextField!
     @IBOutlet weak var missionSymbol: UITextField!
-    @IBOutlet weak var flightAuthNum: UITextField!
-    @IBOutlet weak var issuingUnit: UITextField!
     @IBOutlet weak var fromICAO: UITextField!
     @IBOutlet weak var toICAO: UITextField!
     
@@ -153,6 +151,7 @@ class FlightDataViewController: UIViewController {
     }
     
     @IBAction func line6aTapped(_ sender: UITapGestureRecognizer) {
+        flightSeq.text = "A"
         missionNumber.text = line6a01.text
         missionSymbol.text = line6a02.text
         fromICAO.text = line6a03.text
@@ -165,9 +164,11 @@ class FlightDataViewController: UIViewController {
         totalLanding.text = line6a10.text
         sorties.text = line6a11.text
         specialUse.text = line6a12.text
+        popUpView.isHidden = false
     }
     
     @IBAction func line6bTapped(_ sender: UITapGestureRecognizer) {
+        flightSeq.text = "B"
         missionNumber.text = line6b01.text
         missionSymbol.text = line6b02.text
         fromICAO.text = line6b03.text
@@ -180,9 +181,11 @@ class FlightDataViewController: UIViewController {
         totalLanding.text = line6b10.text
         sorties.text = line6b11.text
         specialUse.text = line6b12.text
+        popUpView.isHidden = false
     }
     
     @IBAction func line6cTapped(_ sender: UITapGestureRecognizer) {
+        flightSeq.text = "C"
         missionNumber.text = line6c01.text
         missionSymbol.text = line6c02.text
         fromICAO.text = line6c03.text
@@ -195,9 +198,11 @@ class FlightDataViewController: UIViewController {
         totalLanding.text = line6c10.text
         sorties.text = line6c11.text
         specialUse.text = line6c12.text
+        popUpView.isHidden = false
     }
     
     @IBAction func line6dTapped(_ sender: UITapGestureRecognizer) {
+        flightSeq.text = "D"
         missionNumber.text = line6d01.text
         missionSymbol.text = line6d02.text
         fromICAO.text = line6d03.text
@@ -210,9 +215,11 @@ class FlightDataViewController: UIViewController {
         totalLanding.text = line6d10.text
         sorties.text = line6d11.text
         specialUse.text = line6d12.text
+        popUpView.isHidden = false
     }
     
     @IBAction func line6eTapped(_ sender: UITapGestureRecognizer) {
+        flightSeq.text = "E"
         missionNumber.text = line6e01.text
         missionSymbol.text = line6e02.text
         fromICAO.text = line6e03.text
@@ -225,9 +232,11 @@ class FlightDataViewController: UIViewController {
         totalLanding.text = line6e10.text
         sorties.text = line6e11.text
         specialUse.text = line6e12.text
+        popUpView.isHidden = false
     }
     
     @IBAction func line6fTapped(_ sender: UITapGestureRecognizer) {
+        flightSeq.text = "F"
         missionNumber.text = line6f01.text
         missionSymbol.text = line6f02.text
         fromICAO.text = line6f03.text
@@ -240,6 +249,7 @@ class FlightDataViewController: UIViewController {
         totalLanding.text = line6f10.text
         sorties.text = line6f11.text
         specialUse.text = line6f12.text
+        popUpView.isHidden = false
     }
 
     @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
@@ -281,6 +291,7 @@ class FlightDataViewController: UIViewController {
                     
                     clearFields()
                     line6[0] = true
+                    popUpView.isHidden = true
                     print("Populated line A")
                 case 1:
                     //line = b
@@ -298,6 +309,7 @@ class FlightDataViewController: UIViewController {
                     line6b12.text = specialUse.text
                     clearFields()
                     line6[1] = true
+                    popUpView.isHidden = true
                     print("Populated line B")
                 case 2:
                     //line = c
@@ -315,6 +327,7 @@ class FlightDataViewController: UIViewController {
                     line6c12.text = specialUse.text
                     clearFields()
                     line6[2] = true
+                    popUpView.isHidden = true
                     print("Populated line C")
                 case 3:
                     //line = d
@@ -332,6 +345,7 @@ class FlightDataViewController: UIViewController {
                     line6d12.text = specialUse.text
                     clearFields()
                     line6[3] = true
+                    popUpView.isHidden = true
                     print("Populated line D")
                 case 4:
                     //line = e
@@ -349,6 +363,7 @@ class FlightDataViewController: UIViewController {
                     line6e12.text = specialUse.text
                     clearFields()
                     line6[4] = true
+                    popUpView.isHidden = true
                     print("Populated line E")
                 case 5:
                     //line = f
@@ -366,6 +381,7 @@ class FlightDataViewController: UIViewController {
                     line6f12.text = specialUse.text
                     clearFields()
                     line6[5] = true
+                    popUpView.isHidden = true
                     print("Populated line F")
                 default:
                     break
@@ -376,6 +392,7 @@ class FlightDataViewController: UIViewController {
     }
     
     func clearFields(){
+        flightSeq.text = ""
         missionNumber.text = ""
         missionSymbol.text = ""
         fromICAO.text = ""

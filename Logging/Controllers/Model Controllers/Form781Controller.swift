@@ -18,8 +18,8 @@ class Form781Controller {
     
     // MARK: - CRUD
     
-    func create(date: String, mds: String, serialNo: String, unitCharged: String, harmLocation: String, flightData: [FlightData], crewMembers: [CrewMember]) {
-        let form = Form781(date: date, mds: mds, serialNo: serialNo, unitCharged: unitCharged, harmLocation: harmLocation, flightData: flightData, crewMembers: crewMembers)
+    func create(date: String, mds: String, serialNumber: String, unitCharged: String, harmLocation: String, flightAuthNum: String, issuingUnit: String) {
+        let form = Form781(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
         forms.append(form)
         save()
     }
