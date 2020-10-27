@@ -35,7 +35,8 @@ class FlightListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        flightDataTableView.delegate = self
+        flightDataTableView.dataSource = self
     }
     
     // MARK: - Actions
@@ -52,8 +53,19 @@ class FlightListViewController: UIViewController {
         popUpView.isHidden = true
     }
     
+    @IBAction func calculateTotalTime(_ sender: Any) {
+        let decimalTime = FVCVM().vmCalculateTotalTime(takeOffTime: takeOffTime, landTime: landTime)
+        totalTime.text = decimalTime
+    }
+    
+    @IBAction func calculateTotalLandings(_sender: Any) {
+        //Here's where we do the math for filling in the total field
+        totalLandings.text = FVCVM().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
+    }
+
     @IBAction func addFlightButtonTapped(_ sender: UIButton) {
-        guard let flightSeq = flightSeq.text,
+        guard let form = Form781Controller.shared.forms.last,
+              let flightSeq = flightSeq.text,
               let missionNumber = missionNumber.text,
               let missionSymbol = missionSymbol.text,
               let fromICAO = fromICAO.text,
@@ -68,20 +80,29 @@ class FlightListViewController: UIViewController {
               let specialUse = specialUse.text
         else { return }
         
-        FlightDataController.create(form: Form781Controller.shared.forms.last?, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
+        FlightDataController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
+        
+        flightDataTableView.reloadData()
         popUpView.isHidden = true
+        print("Saved flight")
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
+        flightSeq.resignFirstResponder()
+        missionNumber.resignFirstResponder()
+        missionSymbol.resignFirstResponder()
+        fromICAO.resignFirstResponder()
+        toICAO.resignFirstResponder()
+        takeOffTime.resignFirstResponder()
+        landTime.resignFirstResponder()
+        totalTime.resignFirstResponder()
+        touchAndGo.resignFirstResponder()
+        fullStop.resignFirstResponder()
+        totalLandings.resignFirstResponder()
+        sorties.resignFirstResponder()
+        specialUse.resignFirstResponder()
     }
-    */
-
+    
 } //End
 
 // MARK: - TableView Delegate
@@ -95,7 +116,7 @@ extension FlightListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.flightDataTableView.dequeueReusableCell(withIdentifier: "FlightCell", for: indexPath) as? FlightDataTableViewCell else { return UITableViewCell() }
         
-        if let flight =  {
+        if let flight = Form781Controller.shared.forms.last?.flights[indexPath.row] {
             cell.setUpViews(flight: flight)
         }
         

@@ -140,15 +140,7 @@ class FlightDataViewController: UIViewController {
         popUpView.isHidden = true
     }
     
-    @IBAction func calculateTotalLanding(_sender: Any) {
-        //Here's where we do the math for filling in the total field
-        totalLanding.text = FVCVM().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
-    }
-
-    @IBAction func updateForm(_ sender: Any) {
-        let txtDecTime = FVCVM().vmUpdateForm(takeOffTime: takeOffTime, landingTime: landingTime)
-        totalTime.text = txtDecTime
-    }
+   
     
     @IBAction func line6aTapped(_ sender: UITapGestureRecognizer) {
         flightSeq.text = "A"

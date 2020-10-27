@@ -284,7 +284,7 @@
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="jfo-wv-GSR" eventType="touchUpInside" id="MS7-Y9-QDe"/>
-                                    <segue destination="uHw-GN-qXJ" kind="show" id="0BT-SC-kkN"/>
+                                    <segue destination="gFV-3G-E5E" kind="show" id="gnA-Tc-I5A"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvC-5K-d9W" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
@@ -366,17 +366,17 @@
             <objects>
                 <viewController storyboardIdentifier="Page2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uHw-GN-qXJ" customClass="FlightDataViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="73Z-dg-KRm">
-                        <rect key="frame" x="0.0" y="0.0" width="728" height="954"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0o-do-T4u">
-                                <rect key="frame" x="0.0" y="0.0" width="728" height="38"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="41"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWT-q8-czw" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="7.5" width="23" height="23"/>
+                                        <rect key="frame" x="15" y="8" width="24.5" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VZ-p8-zeW">
-                                                <rect key="frame" x="3.5" y="6.5" width="15.5" height="10"/>
+                                                <rect key="frame" x="4.5" y="7.5" width="15.5" height="10"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -390,10 +390,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPG-tf-2xL" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="690" y="7.5" width="23" height="23"/>
+                                        <rect key="frame" x="728.5" y="8" width="24.5" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7q-gD-APM">
-                                                <rect key="frame" x="5" y="6.5" width="13.5" height="10"/>
+                                                <rect key="frame" x="5.5" y="7.5" width="13.5" height="10"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -418,10 +418,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBI-2f-KEM" userLabel="Header">
-                                <rect key="frame" x="0.0" y="38" width="728" height="48"/>
+                                <rect key="frame" x="0.0" y="41" width="768" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AFTO Form 781" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwO-m4-UxZ">
-                                        <rect key="frame" x="30" y="14" width="122.5" height="20.5"/>
+                                        <rect key="frame" x="30" y="15.5" width="122.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -434,27 +434,27 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Mission Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sW-z9-JHm">
-                                <rect key="frame" x="30" y="96" width="111" height="20.5"/>
+                                <rect key="frame" x="30" y="102" width="111" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" name="slate"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNZ-Cd-QsK" userLabel="printForm">
-                                <rect key="frame" x="675" y="94" width="23" height="22"/>
+                                <rect key="frame" x="715" y="100" width="23" height="22"/>
                                 <state key="normal" image="printer" catalog="system"/>
                                 <connections>
                                     <action selector="printButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="Ywp-U7-jvf"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXY-8S-I5n" userLabel="Divider line">
-                                <rect key="frame" x="0.0" y="121.5" width="728" height="1"/>
+                                <rect key="frame" x="0.0" y="127.5" width="768" height="1"/>
                                 <color key="backgroundColor" name="fog"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="f0i-s2-sRo"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHy-12-yfo" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="294" y="199.5" width="140" height="30"/>
+                                <rect key="frame" x="314" y="215.5" width="140" height="30"/>
                                 <color key="backgroundColor" name="fog"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="NEW FLIGHT SEQ +">
@@ -466,23 +466,23 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-Oi-qZw" userLabel="Grand Totals Box" customClass="borderView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="18" y="324.5" width="692" height="114.5"/>
+                                <rect key="frame" x="19" y="348" width="730" height="123"/>
                                 <color key="backgroundColor" name="haze"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TT3-qi-dhc" userLabel="Grand Totals">
-                                <rect key="frame" x="53" y="343" width="622" height="77.5"/>
+                                <rect key="frame" x="55.5" y="371" width="657" height="77.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FmI-qZ-Nzi">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="77.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="93" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRAND TOTALS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x68-eE-vJP">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J8Q-1e-HBD" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="87" height="55"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="93" height="55"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="z3Q-Un-Fdy"/>
                                                 </constraints>
@@ -492,80 +492,80 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fza-89-GPc">
-                                        <rect key="frame" x="107" y="0.0" width="87" height="77.5"/>
+                                        <rect key="frame" x="113" y="0.0" width="92.5" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH &amp; GO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nz-ha-zUt">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vn-7E-cTP" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="87" height="55"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="92.5" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DOv-h7-BQU">
-                                        <rect key="frame" x="214" y="0.0" width="87" height="77.5"/>
+                                        <rect key="frame" x="225.5" y="0.0" width="93" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL STOP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJX-kO-V9R">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OCo-2h-xLG" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="87" height="55"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="93" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dJH-yG-Lrc">
-                                        <rect key="frame" x="321" y="0.0" width="87" height="77.5"/>
+                                        <rect key="frame" x="338.5" y="0.0" width="93" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSv-rs-uoY">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHB-49-Gt5" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="87" height="55"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="93" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KZy-4F-kps">
-                                        <rect key="frame" x="428" y="0.0" width="87" height="77.5"/>
+                                        <rect key="frame" x="451.5" y="0.0" width="92.5" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPT-Mg-rwD">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIr-tC-CTe" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="87" height="55"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="92.5" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Hp-2Z-fQ5">
-                                        <rect key="frame" x="535" y="0.0" width="87" height="77.5"/>
+                                        <rect key="frame" x="564" y="0.0" width="93" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL USE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifr-ew-orj">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="14.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="14.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDR-Zl-whU" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="87" height="55"/>
+                                                <rect key="frame" x="0.0" y="22.5" width="93" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -574,16 +574,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiU-ux-0sg" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="542" y="874" width="136" height="30"/>
+                                <rect key="frame" x="582" y="944" width="136" height="30"/>
                                 <color key="backgroundColor" name="slate"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
-                                <connections>
-                                    <segue destination="PjM-lN-wNj" kind="show" id="KuA-bs-bW1"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jj-9d-XIe" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="874" width="41" height="30"/>
+                                <rect key="frame" x="50" y="944" width="41" height="30"/>
                                 <color key="backgroundColor" name="haze"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="BACK"/>
@@ -592,97 +589,97 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIx-Vc-qNu" userLabel="Grid box" customClass="PBLView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="18" y="469" width="692" height="286"/>
+                                <rect key="frame" x="19" y="501" width="730" height="307"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqb-Dr-nVa">
-                                        <rect key="frame" x="59.5" y="20" width="35.5" height="19.5"/>
+                                        <rect key="frame" x="62.5" y="20" width="35.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-PE-udJ">
-                                        <rect key="frame" x="125.5" y="20" width="35" height="19.5"/>
+                                        <rect key="frame" x="132" y="20" width="35" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6l-9F-XRi">
-                                        <rect key="frame" x="185" y="20" width="26.5" height="19.5"/>
+                                        <rect key="frame" x="195" y="20" width="26.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B82-aD-Cct">
-                                        <rect key="frame" x="243" y="20" width="26.5" height="19.5"/>
+                                        <rect key="frame" x="256" y="20" width="26.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAKE OFF TIME (Z)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-Ag-0R3">
-                                        <rect key="frame" x="299" y="20" width="39.5" height="19.5"/>
+                                        <rect key="frame" x="316" y="20" width="39.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAND TIME (Z)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwC-Gf-fwy">
-                                        <rect key="frame" x="363" y="20" width="34.5" height="19.5"/>
+                                        <rect key="frame" x="383.5" y="20" width="34.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL TIME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sj-Is-ZQm">
-                                        <rect key="frame" x="421.5" y="20" width="26.5" height="19.5"/>
+                                        <rect key="frame" x="445" y="20" width="26.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH &amp; GO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B97-gK-uwO">
-                                        <rect key="frame" x="466.5" y="20" width="30" height="19.5"/>
+                                        <rect key="frame" x="492.5" y="20" width="30" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL STOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWP-9f-FnC">
-                                        <rect key="frame" x="510.5" y="20" width="22" height="19.5"/>
+                                        <rect key="frame" x="539" y="20" width="22" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6a-MT-KaT">
-                                        <rect key="frame" x="549" y="24.5" width="26.5" height="10"/>
+                                        <rect key="frame" x="579.5" y="25" width="26.5" height="10"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ek-4W-3qI">
-                                        <rect key="frame" x="585" y="24.5" width="35" height="10"/>
+                                        <rect key="frame" x="618" y="25" width="35" height="10"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL USE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-7G-jQF">
-                                        <rect key="frame" x="631.5" y="20" width="34.5" height="19.5"/>
+                                        <rect key="frame" x="667" y="20" width="34.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qRH-Ak-sJE" userLabel="Line 6 Grid">
-                                        <rect key="frame" x="17.5" y="49.5" width="657" height="216.5"/>
+                                        <rect key="frame" x="18.5" y="49.5" width="693" height="237.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lmy-2v-VNI" userLabel="Line 6a">
-                                                <rect key="frame" x="0.0" y="0.0" width="657" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="693" height="39.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nW1-zh-QwZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="39.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ygV-83-caz">
-                                                        <rect key="frame" x="20" y="0.0" width="637" height="36"/>
+                                                        <rect key="frame" x="20" y="0.0" width="673" height="39.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TC0221" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LH5-fO-r5x" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="79" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -691,7 +688,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ABB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RwO-fZ-ePG" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="79" y="0.0" width="52.5" height="36"/>
+                                                                <rect key="frame" x="83.5" y="0.0" width="55.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -700,7 +697,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XCHS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qda-1C-Y7a" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="131.5" y="0.0" width="58" height="36"/>
+                                                                <rect key="frame" x="139" y="0.0" width="61.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -709,7 +706,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AUAB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfL-P2-LAD" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="189.5" y="0.0" width="58" height="36"/>
+                                                                <rect key="frame" x="200.5" y="0.0" width="61" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -718,7 +715,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0100" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOv-6D-zqB" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="247.5" y="0.0" width="67" height="36"/>
+                                                                <rect key="frame" x="261.5" y="0.0" width="71" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -727,7 +724,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2300" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="txV-h5-4rw" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="314.5" y="0.0" width="56.5" height="36"/>
+                                                                <rect key="frame" x="332.5" y="0.0" width="59.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -736,7 +733,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="22.6" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJd-gX-ItI" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="371" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="392" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -745,7 +742,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-6Z-nmb" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="424" y="0.0" width="40" height="36"/>
+                                                                <rect key="frame" x="448" y="0.0" width="42.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -754,7 +751,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uyz-TN-tte" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="464" y="0.0" width="40" height="36"/>
+                                                                <rect key="frame" x="490.5" y="0.0" width="42.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -763,7 +760,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocs-GF-aJC" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="504" y="0.0" width="41" height="36"/>
+                                                                <rect key="frame" x="533" y="0.0" width="43" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -772,7 +769,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Unf-oO-6hA" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="545" y="0.0" width="40.5" height="36"/>
+                                                                <rect key="frame" x="576" y="0.0" width="42.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -781,7 +778,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="----" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jE-bi-ye0" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="585.5" y="0.0" width="51.5" height="36"/>
+                                                                <rect key="frame" x="618.5" y="0.0" width="54.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -798,20 +795,20 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xhJ-3V-ETX" userLabel="Line 6b">
-                                                <rect key="frame" x="0.0" y="36" width="657" height="36"/>
+                                                <rect key="frame" x="0.0" y="39.5" width="693" height="40"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TAS-hC-w5F">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="40"/>
                                                         <gestureRecognizers/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ZZy-Pw-cqp">
-                                                        <rect key="frame" x="20" y="0.0" width="637" height="36"/>
+                                                        <rect key="frame" x="20" y="0.0" width="673" height="40"/>
                                                         <subviews>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4u7-D4-bes">
-                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -820,7 +817,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tp7-iG-SeF">
-                                                                <rect key="frame" x="53" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="56" y="0.0" width="56" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -829,7 +826,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irv-dW-laX">
-                                                                <rect key="frame" x="106" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="112" y="0.0" width="56" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -838,7 +835,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q7z-jI-TAS">
-                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="168" y="0.0" width="56.5" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -847,7 +844,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWO-a4-eLA">
-                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="224.5" y="0.0" width="56" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -856,7 +853,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mk-Az-eUi">
-                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="56" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -865,7 +862,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YG4-ZY-ivn">
-                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="336.5" y="0.0" width="56" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -874,7 +871,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amK-2C-j6m">
-                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="392.5" y="0.0" width="56" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -883,7 +880,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-sU-lOX">
-                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="448.5" y="0.0" width="56.5" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -892,7 +889,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-Hb-dlK">
-                                                                <rect key="frame" x="478" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="505" y="0.0" width="56" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -901,7 +898,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="js2-Oy-r8K">
-                                                                <rect key="frame" x="531" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="561" y="0.0" width="56" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -910,7 +907,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6N-bG-O43">
-                                                                <rect key="frame" x="584" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="617" y="0.0" width="56" height="40"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -927,85 +924,85 @@
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9.5" translatesAutoresizingMaskIntoConstraints="NO" id="XWR-5M-e1e" userLabel="Line 6c">
-                                                <rect key="frame" x="0.0" y="72" width="657" height="36"/>
+                                                <rect key="frame" x="0.0" y="79.5" width="693" height="39.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qao-5R-Ymx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="39.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zTR-PH-xOD">
-                                                        <rect key="frame" x="20" y="0.0" width="637" height="36"/>
+                                                        <rect key="frame" x="20" y="0.0" width="673" height="39.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Pb-a5-pLc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGr-jc-DCw">
-                                                                <rect key="frame" x="53" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="56" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDi-yr-KHl">
-                                                                <rect key="frame" x="106" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="112" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81f-90-uvo">
-                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="168" y="0.0" width="56.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIV-Gb-Is4">
-                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="224.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Guw-U6-XXM">
-                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DsM-xt-Txp">
-                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="336.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6PY-r2-VJA">
-                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="392.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygg-qy-txW">
-                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="448.5" y="0.0" width="56.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NMW-o7-Q2i">
-                                                                <rect key="frame" x="478" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="505" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8q5-uG-bBw">
-                                                                <rect key="frame" x="531" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="561" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7JD-Tj-5iH">
-                                                                <rect key="frame" x="584" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="617" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1019,85 +1016,85 @@
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9.5" translatesAutoresizingMaskIntoConstraints="NO" id="tDY-g0-5mO" userLabel="Line 6d">
-                                                <rect key="frame" x="0.0" y="108" width="657" height="36.5"/>
+                                                <rect key="frame" x="0.0" y="119" width="693" height="39.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fYk-6B-hZe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="36.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="39.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="D3a-VN-Vzz">
-                                                        <rect key="frame" x="20" y="0.0" width="637" height="36.5"/>
+                                                        <rect key="frame" x="20" y="0.0" width="673" height="39.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pU1-Ja-7CZ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVj-JG-coQ">
-                                                                <rect key="frame" x="53" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="56" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-DL-jpR">
-                                                                <rect key="frame" x="106" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="112" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0p-fP-BAf">
-                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36.5"/>
+                                                                <rect key="frame" x="168" y="0.0" width="56.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pM1-BN-8q7">
-                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="224.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-OG-e1e">
-                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dv5-np-gD1">
-                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="336.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWx-pY-HjR">
-                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="392.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9aO-RM-Gja">
-                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36.5"/>
+                                                                <rect key="frame" x="448.5" y="0.0" width="56.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dpf-8j-wfG">
-                                                                <rect key="frame" x="478" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="505" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pa-iH-XTH">
-                                                                <rect key="frame" x="531" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="561" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOr-tO-aHW">
-                                                                <rect key="frame" x="584" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="617" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1111,85 +1108,85 @@
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10.5" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-F3-gf0" userLabel="Line 6e">
-                                                <rect key="frame" x="0.0" y="144.5" width="657" height="36"/>
+                                                <rect key="frame" x="0.0" y="158.5" width="693" height="39.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9aj-TN-cU6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="9.5" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="9.5" height="39.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="AjL-L7-l7g">
-                                                        <rect key="frame" x="20" y="0.0" width="637" height="36"/>
+                                                        <rect key="frame" x="20" y="0.0" width="673" height="39.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPZ-ib-bHt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WVn-vo-NQw">
-                                                                <rect key="frame" x="53" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="56" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mmJ-X9-Byb">
-                                                                <rect key="frame" x="106" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="112" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWv-fc-g9B">
-                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="168" y="0.0" width="56.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-tc-r1r">
-                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="224.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fud-JP-RV3">
-                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C45-sO-PkT">
-                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="336.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gd3-FG-7DV">
-                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="392.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-nT-QYg">
-                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="448.5" y="0.0" width="56.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBm-fU-ebI">
-                                                                <rect key="frame" x="478" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="505" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="knS-i8-rxn">
-                                                                <rect key="frame" x="531" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="561" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QP7-We-Qsg">
-                                                                <rect key="frame" x="584" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="617" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1203,85 +1200,85 @@
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="11.5" translatesAutoresizingMaskIntoConstraints="NO" id="fRd-Dk-cLI" userLabel="Line 6f">
-                                                <rect key="frame" x="0.0" y="180.5" width="657" height="36"/>
+                                                <rect key="frame" x="0.0" y="198" width="693" height="39.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NxM-iM-6tv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="8.5" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="8.5" height="39.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PlU-13-eag">
-                                                        <rect key="frame" x="20" y="0.0" width="637" height="36"/>
+                                                        <rect key="frame" x="20" y="0.0" width="673" height="39.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7yX-MI-DhP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFI-Qr-Sqf">
-                                                                <rect key="frame" x="53" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="56" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7wL-W7-4F2">
-                                                                <rect key="frame" x="106" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="112" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIZ-uB-FVN">
-                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="168" y="0.0" width="56.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0AS-tn-Sw1">
-                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="224.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-zM-b7k">
-                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="280.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrS-3Y-Otq">
-                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="336.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4H-bK-fBp">
-                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="392.5" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rvc-kz-sCI">
-                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="448.5" y="0.0" width="56.5" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6U-QB-vuC">
-                                                                <rect key="frame" x="478" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="505" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VFv-gN-kSu">
-                                                                <rect key="frame" x="531" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="561" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-fN-Jt8">
-                                                                <rect key="frame" x="584" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="617" y="0.0" width="56" height="39.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1331,10 +1328,10 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo8-HS-bP7" customClass="shadowView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="36.5" y="143" width="655" height="668"/>
+                                <rect key="frame" x="38.5" y="153.5" width="691" height="717"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bvv-FB-ind" userLabel="6">
-                                        <rect key="frame" x="40" y="61.5" width="70" height="77.5"/>
+                                        <rect key="frame" x="40" y="69" width="70" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT SEQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3H-fm-vpQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="14.5"/>
@@ -1353,7 +1350,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N2w-L7-og0" userLabel="7">
-                                        <rect key="frame" x="160" y="61.5" width="203.5" height="77.5"/>
+                                        <rect key="frame" x="160" y="69" width="203.5" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFB-KG-Fkb">
                                                 <rect key="frame" x="0.0" y="0.0" width="203.5" height="14.5"/>
@@ -1372,7 +1369,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JCt-hy-UAT" userLabel="8">
-                                        <rect key="frame" x="413.5" y="61.5" width="104" height="77.5"/>
+                                        <rect key="frame" x="413.5" y="69" width="104" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf2-8K-8rx">
                                                 <rect key="frame" x="0.0" y="0.0" width="104" height="14.5"/>
@@ -1391,7 +1388,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ipe-g8-s8F" userLabel="9">
-                                        <rect key="frame" x="40" y="169" width="75.5" height="77.5"/>
+                                        <rect key="frame" x="40" y="176.5" width="75.5" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOq-zU-QQU">
                                                 <rect key="frame" x="0.0" y="0.0" width="75.5" height="14.5"/>
@@ -1410,7 +1407,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HFV-JT-hai" userLabel="10">
-                                        <rect key="frame" x="165.5" y="169" width="66" height="77.5"/>
+                                        <rect key="frame" x="165.5" y="176.5" width="66" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nC-Kp-wRy">
                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="14.5"/>
@@ -1429,7 +1426,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ufj-4J-VEk">
-                                        <rect key="frame" x="40" y="276.5" width="343" height="77.5"/>
+                                        <rect key="frame" x="40" y="284" width="343" height="77.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WzU-Xs-Pb7" userLabel="11">
                                                 <rect key="frame" x="0.0" y="0.0" width="108.5" height="77.5"/>
@@ -1494,13 +1491,13 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LANDINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN8-Lu-2kC">
-                                        <rect key="frame" x="40" y="384" width="61.5" height="14.5"/>
+                                        <rect key="frame" x="40" y="391.5" width="61.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="RFp-ER-1Ab">
-                                        <rect key="frame" x="40" y="403.5" width="466" height="77.5"/>
+                                        <rect key="frame" x="40" y="411" width="466" height="77.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="spw-OR-lR6" userLabel="Touch &amp; Go">
                                                 <rect key="frame" x="0.0" y="0.0" width="76.5" height="77.5"/>
@@ -1606,7 +1603,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIe-se-kcu">
-                                        <rect key="frame" x="617.5" y="20" width="17.5" height="22"/>
+                                        <rect key="frame" x="653.5" y="20" width="17.5" height="22"/>
                                         <color key="tintColor" name="slate"/>
                                         <state key="normal" image="xmark" catalog="system"/>
                                         <connections>
@@ -1614,7 +1611,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-6A-fYj" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="502" y="588" width="103" height="30"/>
+                                        <rect key="frame" x="538" y="637" width="103" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="ADD FLIGHT +"/>
                                         <connections>
@@ -1825,7 +1822,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2788" y="-411"/>
+            <point key="canvasLocation" x="2798" y="258"/>
         </scene>
         <!--Aircrew Data View Controller-->
         <scene sceneID="nuI-Rc-zWE">
@@ -2704,17 +2701,17 @@
             <objects>
                 <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="gFV-3G-E5E" customClass="FlightListViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xUH-4b-EGE">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="728" height="954"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9K-2n-qpg">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="41"/>
+                                <rect key="frame" x="0.0" y="0.0" width="728" height="38"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNK-Tp-j7G" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="8" width="24.5" height="25"/>
+                                        <rect key="frame" x="15" y="7.5" width="23" height="23"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apL-4A-sPI">
-                                                <rect key="frame" x="4.5" y="7.5" width="15.5" height="10"/>
+                                                <rect key="frame" x="3.5" y="6.5" width="15.5" height="10"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -2728,10 +2725,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9MB-Ad-gXn" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="728.5" y="8" width="24.5" height="25"/>
+                                        <rect key="frame" x="690" y="7.5" width="23" height="23"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGr-uj-YG4">
-                                                <rect key="frame" x="5.5" y="7.5" width="13.5" height="10"/>
+                                                <rect key="frame" x="5" y="6.5" width="13.5" height="10"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -2756,10 +2753,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkU-Hp-kPG" userLabel="Header">
-                                <rect key="frame" x="0.0" y="41" width="768" height="51"/>
+                                <rect key="frame" x="0.0" y="38" width="728" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AFTO Form 781" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIP-we-FoW">
-                                        <rect key="frame" x="30" y="15.5" width="122.5" height="20.5"/>
+                                        <rect key="frame" x="30" y="14" width="122.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2772,30 +2769,33 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Mission Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="wJ7-7N-1G3">
-                                <rect key="frame" x="30" y="102" width="111" height="20.5"/>
+                                <rect key="frame" x="30" y="96" width="111" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" name="slate"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kt-uY-5Th" userLabel="printForm">
-                                <rect key="frame" x="715" y="100" width="23" height="22"/>
+                                <rect key="frame" x="675" y="94" width="23" height="22"/>
                                 <state key="normal" image="printer" catalog="system"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVp-XJ-FR7" userLabel="Divider line">
-                                <rect key="frame" x="0.0" y="127.5" width="768" height="1"/>
+                                <rect key="frame" x="0.0" y="121.5" width="728" height="1"/>
                                 <color key="backgroundColor" name="fog"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Kjd-81-atc"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xei-Ao-Yqc" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="582" y="944" width="136" height="30"/>
+                                <rect key="frame" x="542" y="874" width="136" height="30"/>
                                 <color key="backgroundColor" name="slate"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
+                                <connections>
+                                    <segue destination="PjM-lN-wNj" kind="show" id="VtX-zp-QnY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qld-re-4cl" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="944" width="41" height="30"/>
+                                <rect key="frame" x="50" y="874" width="41" height="30"/>
                                 <color key="backgroundColor" name="haze"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="BACK"/>
@@ -2804,83 +2804,83 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="89Q-Op-sJj">
-                                <rect key="frame" x="38.5" y="153.5" width="691" height="717"/>
+                                <rect key="frame" x="36.5" y="143" width="655" height="668"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="XU0-ri-CLn">
-                                    <rect key="frame" x="0.0" y="0.0" width="691" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="655" height="50"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2f9-hy-6cT">
-                                            <rect key="frame" x="27.5" y="14.5" width="622" height="21.5"/>
+                                            <rect key="frame" x="26" y="14.5" width="589.5" height="21.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idc-8I-T7t">
-                                                    <rect key="frame" x="0.0" y="0.0" width="47.5" height="21.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CId-6p-ubb">
-                                                    <rect key="frame" x="52.5" y="0.0" width="47" height="21.5"/>
+                                                    <rect key="frame" x="49.5" y="0.0" width="45" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zx-ci-pkS">
-                                                    <rect key="frame" x="104.5" y="0.0" width="47.5" height="21.5"/>
+                                                    <rect key="frame" x="99.5" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEp-qu-uWm">
-                                                    <rect key="frame" x="157" y="0.0" width="47" height="21.5"/>
+                                                    <rect key="frame" x="149" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAKE OFF TIME (Z)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoH-hN-Wbc">
-                                                    <rect key="frame" x="209" y="0.0" width="47.5" height="21.5"/>
+                                                    <rect key="frame" x="198.5" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAND TIME (Z)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rz-Pp-WCs">
-                                                    <rect key="frame" x="261.5" y="0.0" width="47" height="21.5"/>
+                                                    <rect key="frame" x="248" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL TIME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDl-My-5da">
-                                                    <rect key="frame" x="313.5" y="0.0" width="47.5" height="21.5"/>
+                                                    <rect key="frame" x="297.5" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH &amp; GO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viD-4p-f76">
-                                                    <rect key="frame" x="366" y="0.0" width="47" height="21.5"/>
+                                                    <rect key="frame" x="347" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL STOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTc-eH-1Nm">
-                                                    <rect key="frame" x="418" y="0.0" width="47.5" height="21.5"/>
+                                                    <rect key="frame" x="396.5" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rij-Ba-S9J">
-                                                    <rect key="frame" x="470.5" y="0.0" width="47" height="21.5"/>
+                                                    <rect key="frame" x="446" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-7u-Xw7">
-                                                    <rect key="frame" x="522.5" y="0.0" width="47.5" height="21.5"/>
+                                                    <rect key="frame" x="495.5" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL USE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80j-rB-oFb">
-                                                    <rect key="frame" x="575" y="0.0" width="47" height="21.5"/>
+                                                    <rect key="frame" x="545" y="0.0" width="44.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2888,7 +2888,7 @@
                                             </subviews>
                                         </stackView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fcW-yQ-55z" userLabel="Divider line">
-                                            <rect key="frame" x="0.0" y="49" width="691" height="1"/>
+                                            <rect key="frame" x="0.0" y="49" width="655" height="1"/>
                                             <color key="backgroundColor" name="fog"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="w6V-ZL-yT7"/>
@@ -2906,18 +2906,18 @@
                                     </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="ECa-EN-aKU">
-                                    <rect key="frame" x="0.0" y="156" width="691" height="49"/>
+                                    <rect key="frame" x="0.0" y="156" width="655" height="49"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBO-fX-j2m" userLabel="Divider line">
-                                            <rect key="frame" x="0.0" y="48" width="691" height="1"/>
+                                            <rect key="frame" x="0.0" y="48" width="655" height="1"/>
                                             <color key="backgroundColor" name="fog"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="peo-8P-xPT"/>
                                             </constraints>
                                         </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QG-4E-Hee">
-                                            <rect key="frame" x="661" y="13.5" width="20" height="22"/>
+                                            <rect key="frame" x="625" y="13.5" width="20" height="22"/>
                                             <color key="tintColor" name="slate"/>
                                             <state key="normal" image="plus.circle" catalog="system"/>
                                             <connections>
@@ -2936,83 +2936,83 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FlightCell" rowHeight="50" id="h1W-H9-AWJ" customClass="FlightDataTableViewCell" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="78" width="691" height="50"/>
+                                        <rect key="frame" x="0.0" y="78" width="655" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h1W-H9-AWJ" id="Bcw-S7-hn8">
-                                            <rect key="frame" x="0.0" y="0.0" width="691" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="655" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yvu-2U-uwb">
-                                                    <rect key="frame" x="27.5" y="19" width="622" height="12"/>
+                                                    <rect key="frame" x="26" y="19" width="589.5" height="12"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TCO221" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulc-96-V58">
-                                                            <rect key="frame" x="0.0" y="0.0" width="47.5" height="12"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpH-9Q-gyA">
-                                                            <rect key="frame" x="52.5" y="0.0" width="47" height="12"/>
+                                                            <rect key="frame" x="49.5" y="0.0" width="45" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XCHS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgF-Gu-2ZH">
-                                                            <rect key="frame" x="104.5" y="0.0" width="47.5" height="12"/>
+                                                            <rect key="frame" x="99.5" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUAB" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97P-H5-ltt">
-                                                            <rect key="frame" x="157" y="0.0" width="47" height="12"/>
+                                                            <rect key="frame" x="149" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2345" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6h-QF-epG">
-                                                            <rect key="frame" x="209" y="0.0" width="47.5" height="12"/>
+                                                            <rect key="frame" x="198.5" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0200" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-rw-JC1">
-                                                            <rect key="frame" x="261.5" y="0.0" width="47" height="12"/>
+                                                            <rect key="frame" x="248" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM1-RK-aDX">
-                                                            <rect key="frame" x="313.5" y="0.0" width="47.5" height="12"/>
+                                                            <rect key="frame" x="297.5" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgF-Ot-qTd">
-                                                            <rect key="frame" x="366" y="0.0" width="47" height="12"/>
+                                                            <rect key="frame" x="347" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSo-tH-RaM">
-                                                            <rect key="frame" x="418" y="0.0" width="47.5" height="12"/>
+                                                            <rect key="frame" x="396.5" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7b-GB-0Pq">
-                                                            <rect key="frame" x="470.5" y="0.0" width="47" height="12"/>
+                                                            <rect key="frame" x="446" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2y-FZ-4Lc">
-                                                            <rect key="frame" x="522.5" y="0.0" width="47.5" height="12"/>
+                                                            <rect key="frame" x="495.5" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pa-g2-3Ah">
-                                                            <rect key="frame" x="575" y="0.0" width="47" height="12"/>
+                                                            <rect key="frame" x="545" y="0.0" width="44.5" height="12"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -3020,7 +3020,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nn-Qq-3ha" userLabel="Divider line">
-                                                    <rect key="frame" x="0.0" y="49" width="691" height="1"/>
+                                                    <rect key="frame" x="0.0" y="49" width="655" height="1"/>
                                                     <color key="backgroundColor" name="fog"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="5Ff-jP-74x"/>
@@ -3033,7 +3033,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBO-h2-Jy8">
-                                                    <rect key="frame" x="661" y="14" width="20" height="22"/>
+                                                    <rect key="frame" x="625" y="14" width="20" height="22"/>
                                                     <color key="tintColor" name="slate"/>
                                                     <state key="normal" image="minus.circle" catalog="system"/>
                                                     <connections>
@@ -3073,10 +3073,10 @@
                                 </prototypes>
                             </tableView>
                             <view hidden="YES" alpha="0.94999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzq-4X-6Gf" customClass="shadowView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="38.5" y="205" width="691" height="614"/>
+                                <rect key="frame" x="36.5" y="191" width="655" height="572"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="soP-2C-MOV" userLabel="6">
-                                        <rect key="frame" x="40" y="53" width="70" height="77.5"/>
+                                        <rect key="frame" x="40" y="47" width="70" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT SEQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0b-Ne-5uw">
                                                 <rect key="frame" x="0.0" y="0.0" width="70" height="14.5"/>
@@ -3095,7 +3095,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7zv-RI-Omg" userLabel="7">
-                                        <rect key="frame" x="160" y="53" width="203.5" height="77.5"/>
+                                        <rect key="frame" x="160" y="47" width="203.5" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXc-EO-M7P">
                                                 <rect key="frame" x="0.0" y="0.0" width="203.5" height="14.5"/>
@@ -3114,7 +3114,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6cB-7W-kiJ" userLabel="8">
-                                        <rect key="frame" x="413.5" y="53" width="104" height="77.5"/>
+                                        <rect key="frame" x="413.5" y="47" width="104" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWG-Ni-X3n">
                                                 <rect key="frame" x="0.0" y="0.0" width="104" height="14.5"/>
@@ -3133,7 +3133,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EeZ-Vg-cBG" userLabel="9">
-                                        <rect key="frame" x="40" y="160.5" width="75.5" height="77.5"/>
+                                        <rect key="frame" x="40" y="154.5" width="75.5" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc1-nY-5aZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="75.5" height="14.5"/>
@@ -3152,7 +3152,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lfK-cE-Eq8" userLabel="10">
-                                        <rect key="frame" x="165.5" y="160.5" width="66" height="77.5"/>
+                                        <rect key="frame" x="165.5" y="154.5" width="66" height="77.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpM-po-3UV">
                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="14.5"/>
@@ -3171,7 +3171,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="nDM-CA-zIg">
-                                        <rect key="frame" x="40" y="268" width="343" height="77.5"/>
+                                        <rect key="frame" x="40" y="262" width="343" height="77.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fAW-2R-R3I" userLabel="11">
                                                 <rect key="frame" x="0.0" y="0.0" width="108.5" height="77.5"/>
@@ -3209,7 +3209,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="updateForm:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="S55-JP-ABW"/>
+                                                            <action selector="calculateTotalTime:" destination="gFV-3G-E5E" eventType="editingDidEnd" id="1qh-yy-7lr"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
@@ -3236,13 +3236,13 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LANDINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqL-jA-Vbx">
-                                        <rect key="frame" x="40" y="375.5" width="61.5" height="14.5"/>
+                                        <rect key="frame" x="40" y="369.5" width="61.5" height="14.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="b6b-y6-nsn">
-                                        <rect key="frame" x="40" y="395" width="466" height="77.5"/>
+                                        <rect key="frame" x="40" y="389" width="466" height="77.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="58Z-JL-P5u" userLabel="Touch &amp; Go">
                                                 <rect key="frame" x="0.0" y="0.0" width="76.5" height="77.5"/>
@@ -3283,7 +3283,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="calculateTotalLandingWith_sender:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="siz-AH-BC8"/>
+                                                            <action selector="calculateTotalLandingsWith_sender:" destination="gFV-3G-E5E" eventType="editingDidEnd" id="avK-fm-Iwf"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
@@ -3348,7 +3348,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCB-ll-Lb1" userLabel="Exit">
-                                        <rect key="frame" x="653.5" y="20" width="17.5" height="22"/>
+                                        <rect key="frame" x="617.5" y="20" width="17.5" height="22"/>
                                         <color key="tintColor" name="slate"/>
                                         <state key="normal" image="xmark" catalog="system"/>
                                         <connections>
@@ -3356,7 +3356,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy2-xl-Sta" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="538" y="534" width="103" height="30"/>
+                                        <rect key="frame" x="502" y="492" width="103" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="ADD FLIGHT +"/>
                                         <connections>
@@ -3422,7 +3422,7 @@
                             <constraint firstItem="wGp-gN-Abo" firstAttribute="trailing" secondItem="HkU-Hp-kPG" secondAttribute="trailing" id="zwx-eD-AFB"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="p4y-7z-gKj" appends="YES" id="Vyh-XI-ayv"/>
+                            <outletCollection property="gestureRecognizers" destination="lqw-nt-Hap" appends="YES" id="MNd-Bu-KM1"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="l7d-v2-2M8"/>
@@ -3445,13 +3445,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7I-Iu-C7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="p4y-7z-gKj">
+                <tapGestureRecognizer id="lqw-nt-Hap">
                     <connections>
-                        <action selector="viewTapped:" destination="gFV-3G-E5E" id="xrO-1M-jTk"/>
+                        <action selector="viewTapped:" destination="gFV-3G-E5E" id="i1S-oV-Ugz"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2476.5625" y="268.9453125"/>
+            <point key="canvasLocation" x="2783" y="-411"/>
         </scene>
     </scenes>
     <resources>
