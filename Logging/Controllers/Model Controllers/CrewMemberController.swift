@@ -10,15 +10,12 @@ import Foundation
 
 class CrewMemberController {
     
-    static let shared = CrewMemberController()
-    
-    var members = [CrewMember]()
-    
     //MARK: - CRUD
     
-    func create(lastName: String, firstName: String, ssn: String, flightAuthDutyCode: String, flyingOrigin: String) {
-        let member = CrewMember(flyingOrgn: flyingOrigin, ssnLast4: ssn, lastName: lastName, firstName: firstName, flightAuthDutyCode: flightAuthDutyCode, prim: nil, sec: nil, instr: nil, eval: nil, other: nil, time: nil, srty: nil, nightpsie: nil, inspie: nil, siminspie: nil, nvg: nil, combatTime: nil, combatSrty: nil, combatSptTime: nil, combatSptSrty: nil, resvStatus: nil)
-        members.append(member)
+    static func create(form: Form781, lastName: String, firstName: String, ssn: String, flightAuthDutyCode: String, flyingOrigin: String) {
+        let crewMember = CrewMember(flyingOrgn: flyingOrigin, ssnLast4: ssn, lastName: lastName, firstName: firstName, flightAuthDutyCode: flightAuthDutyCode, prim: nil, sec: nil, instr: nil, eval: nil, other: nil, time: nil, srty: nil, nightpsie: nil, inspie: nil, siminspie: nil, nvg: nil, combatTime: nil, combatSrty: nil, combatSptTime: nil, combatSptSrty: nil, resvStatus: nil)
+        
+        Form781Controller.shared.updateFormwith(crewMember: crewMember, to: form)
     }
     
     func delete() {

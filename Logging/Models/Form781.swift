@@ -10,22 +10,22 @@ import Foundation
 
 class Form781: Codable {
     
-    var date: String?
-    var mds: String?
-    var serialNo: String?
-    var unitCharged: String?
-    var harmLocation: String?
+    var date: String
+    var mds: String
+    var serialNo: String
+    var unitCharged: String
+    var harmLocation: String
     
-    var flightData: FlightData?    
-    var crewMembers: [CrewMember]?
+    var flightData: [FlightData]
+    var crewMembers: [CrewMember]
     
-    init(date: String? = nil,
-        mds: String? = nil,
-        serialNo: String? = nil,
-        unitCharged: String? = nil,
-        harmLocation: String? = nil,
-        flightData: FlightData? = nil,
-        crewMembers: [CrewMember]? = nil
+    init(date: String,
+        mds: String,
+        serialNo: String,
+        unitCharged: String,
+        harmLocation: String,
+        flightData: [FlightData],
+        crewMembers: [CrewMember]
     ) {
         self.date = date
         self.mds = mds

@@ -48,7 +48,7 @@ class AircrewListViewController: UIViewController {
               let flyingOrigin = flyingOriginTextField.text, !flyingOrigin.isEmpty
         else { return }
         
-        CrewMemberController.shared.create(lastName: lastName, firstName: firstName, ssn: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin)
+        CrewMemberController.create(form: <#Form781#>, lastName: lastName, firstName: firstName, ssn: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin)
         
         aircrewTableView.reloadData()
         popUpView.isHidden = true
@@ -79,8 +79,8 @@ extension AircrewListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.aircrewTableView.dequeueReusableCell(withIdentifier: "AircrewCell", for: indexPath) as? AircrewTableViewCell else { return UITableViewCell() }
         
-        let member = CrewMemberController.shared.members[indexPath.row]
-        cell.setUpViews(member: member)
+        let crewMember = CrewMemberController.shared.members[indexPath.row]
+        cell.setUpViews(crewMember: crewMember)
         
         return cell
     }

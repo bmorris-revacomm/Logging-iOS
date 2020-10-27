@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IHi-vS-ejK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0HV-IY-Gyq">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,16 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--AFTO 781-->
-        <scene sceneID="rcO-ma-ahF">
-            <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="k1e-Lb-OAb" customClass="PagePageViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="AFTO 781" id="Jd5-xP-oB4"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gmT-fe-cNz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="-411"/>
-        </scene>
         <!--Container View Controller-->
         <scene sceneID="TJm-q6-BKt">
             <objects>
@@ -63,12 +53,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4G-Yr-fLF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2100" y="-1103"/>
+            <point key="canvasLocation" x="2116" y="-1105"/>
         </scene>
-        <!--First View Controller-->
+        <!--Mission Data View Controller-->
         <scene sceneID="dsV-EI-5wO">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="jfo-wv-GSR" customClass="FirstViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="jfo-wv-GSR" customClass="MissionDataViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="583-rb-G6q">
                         <rect key="frame" x="0.0" y="0.0" width="728" height="974"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,9 +136,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IZG-AV-HIA" userLabel="printForm">
                                 <rect key="frame" x="675" y="95.5" width="23" height="22"/>
                                 <state key="normal" image="printer" catalog="system"/>
-                                <connections>
-                                    <action selector="printButtonTapped:" destination="jfo-wv-GSR" eventType="touchUpInside" id="xyf-Pa-awn"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1r1-uW-hET" userLabel="Divider line">
                                 <rect key="frame" x="0.0" y="123" width="728" height="1"/>
@@ -173,9 +160,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="8uW-8k-2je"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -195,9 +179,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="plo-mh-2Y4"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -217,9 +198,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="Nw8-Qj-BCU"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -239,9 +217,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="9Co-7D-TW1"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -261,9 +236,6 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="jfo-wv-GSR" eventType="editingDidEnd" id="PSl-3s-Iqq"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -273,7 +245,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
                                 <connections>
-                                    <segue destination="Nal-Je-88Q" kind="show" id="GIu-bC-MB0"/>
+                                    <segue destination="uHw-GN-qXJ" kind="show" id="0BT-SC-kkN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvC-5K-d9W" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
@@ -282,7 +254,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="BACK"/>
                                 <connections>
-                                    <action selector="page1BackButtonTapped:" destination="jfo-wv-GSR" eventType="touchUpInside" id="ISU-Xa-g8k"/>
+                                    <action selector="backButtonTapped:" destination="jfo-wv-GSR" eventType="touchUpInside" id="ISU-Xa-g8k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -328,26 +300,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="dMg-WP-STT"/>
                     <connections>
-                        <outlet property="Date" destination="6uc-fP-OZQ" id="HMs-Oq-gj2"/>
                         <outlet property="MDS" destination="gjr-0y-vh0" id="44G-Xf-djJ"/>
+                        <outlet property="dateTextField" destination="6uc-fP-OZQ" id="mSY-Oo-hUg"/>
                         <outlet property="harmLocation" destination="D8q-NM-XVJ" id="8sr-Da-Hnz"/>
-                        <outlet property="serialNmber" destination="zeS-W3-NlD" id="Qs0-bG-usv"/>
-                        <outlet property="unitChargedForFlyingHours" destination="3C4-Of-Na3" id="7Pl-9g-S2D"/>
+                        <outlet property="serialNumber" destination="zeS-W3-NlD" id="Qs0-bG-usv"/>
+                        <outlet property="unitCharged" destination="3C4-Of-Na3" id="7Pl-9g-S2D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyL-kO-ELH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="xE4-nZ-Wzt">
                     <connections>
-                        <action selector="page1Tapped:" destination="jfo-wv-GSR" id="2T6-IJ-l19"/>
+                        <action selector="viewTapped:" destination="jfo-wv-GSR" id="2T6-IJ-l19"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2100" y="-411.328125"/>
+            <point key="canvasLocation" x="2116" y="-411"/>
         </scene>
-        <!--First View Controller-->
+        <!--Flight Data View Controller-->
         <scene sceneID="l3W-Am-vhq">
             <objects>
-                <viewController storyboardIdentifier="Page3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uHw-GN-qXJ" customClass="FirstViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Page2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uHw-GN-qXJ" customClass="FlightDataViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="73Z-dg-KRm">
                         <rect key="frame" x="0.0" y="0.0" width="728" height="954"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -436,197 +408,9 @@
                                     <constraint firstAttribute="height" constant="1" id="f0i-s2-sRo"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ufj-4J-VEk">
-                                <rect key="frame" x="30" y="152.5" width="343" height="77.5"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WzU-Xs-Pb7" userLabel="11">
-                                        <rect key="frame" x="0.0" y="0.0" width="108.5" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAKE OFF TIME (Z)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aob-cV-rSP">
-                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1230" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9QX-fA-RLT" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="108.5" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="Pqq-uC-VWj"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="azj-UO-har"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l42-LJ-NT1" userLabel="12">
-                                        <rect key="frame" x="148.5" y="0.0" width="85" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAND TIME (Z)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxW-OJ-BTG">
-                                                <rect key="frame" x="0.0" y="0.0" width="85" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2120" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsA-ZG-NKg" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="85" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="Sk1-he-k38"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="0Vp-1M-G7k"/>
-                                                    <action selector="updateForm:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="puA-RX-o9N"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rlh-uO-FQw" userLabel="13">
-                                        <rect key="frame" x="273.5" y="0.0" width="69.5" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeT-uF-UhY">
-                                                <rect key="frame" x="0.0" y="0.0" width="69.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20.8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Ss-Y3p" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="69.5" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="dct-K2-lde"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LANDINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN8-Lu-2kC">
-                                <rect key="frame" x="30" y="260" width="61.5" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="RFp-ER-1Ab">
-                                <rect key="frame" x="30" y="279.5" width="466" height="77.5"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="spw-OR-lR6" userLabel="Touch &amp; Go">
-                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH &amp; GO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zl-Jr-U4h">
-                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tlc-MD-uYM" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="76.5" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="vF8-rW-hU1"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="8GB-u4-3HL"/>
-                                                    <action selector="calculateTotalLandingWith_sender:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="F1M-Eo-jmR"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jkr-Mj-uDl" userLabel="Full Stop">
-                                        <rect key="frame" x="116.5" y="0.0" width="64.5" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL STOP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ei-Wm-iMP">
-                                                <rect key="frame" x="0.0" y="0.0" width="64.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R64-Pp-JU9" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="64.5" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="bYn-86-E3Y"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="4xw-f1-E4D"/>
-                                                    <action selector="calculateTotalLandingWith_sender:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="f0q-ML-Qbz"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zqa-P0-NYN" userLabel="Total">
-                                        <rect key="frame" x="221" y="0.0" width="38" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56X-u2-TEw">
-                                                <rect key="frame" x="0.0" y="0.0" width="38" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDX-lg-wNK" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="38" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="UXU-0U-dch"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wg5-c2-1Tn" userLabel="15">
-                                        <rect key="frame" x="299" y="0.0" width="50.5" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQq-fS-Yva">
-                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="st4-NB-9tT" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="50.5" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="pQD-TW-htn"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="RX6-K0-45A"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iif-ro-ubU" userLabel="16">
-                                        <rect key="frame" x="389.5" y="0.0" width="76.5" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL USE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bf-nI-07B">
-                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lIj-0G-LZd" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="76.5" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="tN5-ug-zmJ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="qZk-tA-8QK"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHy-12-yfo" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHy-12-yfo" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
                                 <rect key="frame" x="536" y="303" width="140" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="fog"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="NEW FLIGHT SEQ +">
@@ -634,14 +418,14 @@
                                     <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="add_row:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="vvZ-an-qzr"/>
+                                    <action selector="newFlightButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="N27-dR-wiB"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-Oi-qZw" userLabel="Grand Totals Box" customClass="borderView" customModule="Logging" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-Oi-qZw" userLabel="Grand Totals Box" customClass="borderView" customModule="Logging" customModuleProvider="target">
                                 <rect key="frame" x="18" y="387" width="692" height="114.5"/>
                                 <color key="backgroundColor" name="haze"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TT3-qi-dhc" userLabel="Grand Totals">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TT3-qi-dhc" userLabel="Grand Totals">
                                 <rect key="frame" x="53" y="405.5" width="622" height="77.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FmI-qZ-Nzi">
@@ -760,10 +544,10 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="BACK"/>
                                 <connections>
-                                    <action selector="page3BackButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="jxc-aQ-JMm"/>
+                                    <action selector="backButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="jxc-aQ-JMm"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIx-Vc-qNu" userLabel="Grid box" customClass="PBLView" customModule="Logging" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIx-Vc-qNu" userLabel="Grid box" customClass="PBLView" customModule="Logging" customModuleProvider="target">
                                 <rect key="frame" x="18" y="531.5" width="692" height="286"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqb-Dr-nVa">
@@ -1099,85 +883,85 @@
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9.5" translatesAutoresizingMaskIntoConstraints="NO" id="XWR-5M-e1e" userLabel="Line 6c">
-                                                <rect key="frame" x="0.0" y="72" width="657" height="36"/>
+                                                <rect key="frame" x="0.0" y="72" width="657" height="36.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qao-5R-Ymx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="36.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zTR-PH-xOD">
-                                                        <rect key="frame" x="20" y="0.0" width="637" height="36"/>
+                                                        <rect key="frame" x="20" y="0.0" width="637" height="36.5"/>
                                                         <subviews>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Pb-a5-pLc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGr-jc-DCw">
-                                                                <rect key="frame" x="53" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="53" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDi-yr-KHl">
-                                                                <rect key="frame" x="106" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="106" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81f-90-uvo">
-                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIV-Gb-Is4">
-                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Guw-U6-XXM">
-                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DsM-xt-Txp">
-                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6PY-r2-VJA">
-                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygg-qy-txW">
-                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36"/>
+                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NMW-o7-Q2i">
-                                                                <rect key="frame" x="478" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="478" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8q5-uG-bBw">
-                                                                <rect key="frame" x="531" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="531" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7JD-Tj-5iH">
-                                                                <rect key="frame" x="584" y="0.0" width="53" height="36"/>
+                                                                <rect key="frame" x="584" y="0.0" width="53" height="36.5"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1191,85 +975,85 @@
                                                 </connections>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="9.5" translatesAutoresizingMaskIntoConstraints="NO" id="tDY-g0-5mO" userLabel="Line 6d">
-                                                <rect key="frame" x="0.0" y="108" width="657" height="36.5"/>
+                                                <rect key="frame" x="0.0" y="108.5" width="657" height="36"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fYk-6B-hZe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="36.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="D3a-VN-Vzz">
-                                                        <rect key="frame" x="20" y="0.0" width="637" height="36.5"/>
+                                                        <rect key="frame" x="20" y="0.0" width="637" height="36"/>
                                                         <subviews>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pU1-Ja-7CZ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVj-JG-coQ">
-                                                                <rect key="frame" x="53" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="53" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-DL-jpR">
-                                                                <rect key="frame" x="106" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="106" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0p-fP-BAf">
-                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36.5"/>
+                                                                <rect key="frame" x="159" y="0.0" width="53.5" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pM1-BN-8q7">
-                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="212.5" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-OG-e1e">
-                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="265.5" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dv5-np-gD1">
-                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="318.5" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWx-pY-HjR">
-                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="371.5" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9aO-RM-Gja">
-                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36.5"/>
+                                                                <rect key="frame" x="424.5" y="0.0" width="53.5" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dpf-8j-wfG">
-                                                                <rect key="frame" x="478" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="478" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pa-iH-XTH">
-                                                                <rect key="frame" x="531" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="531" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOr-tO-aHW">
-                                                                <rect key="frame" x="584" y="0.0" width="53" height="36.5"/>
+                                                                <rect key="frame" x="584" y="0.0" width="53" height="36"/>
                                                                 <color key="backgroundColor" name="mist"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="6"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1502,11 +1286,367 @@
                                     <constraint firstItem="B82-aD-Cct" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="zhX-FL-5Ud"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo8-HS-bP7" customClass="shadowView" customModule="Logging" customModuleProvider="target">
+                                <rect key="frame" x="36.5" y="95.5" width="655" height="763"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bvv-FB-ind" userLabel="6">
+                                        <rect key="frame" x="40" y="75.5" width="70" height="77.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT SEQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3H-fm-vpQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LxM-jS-NTc" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="22.5" width="70" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="iTc-VZ-slL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N2w-L7-og0" userLabel="7">
+                                        <rect key="frame" x="160" y="75.5" width="203.5" height="77.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFB-KG-Fkb">
+                                                <rect key="frame" x="0.0" y="0.0" width="203.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ABCDEFGHIJ-1234567890" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yW5-Gj-Mig" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="22.5" width="203.5" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="fyb-hC-9Yl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JCt-hy-UAT" userLabel="8">
+                                        <rect key="frame" x="413.5" y="75.5" width="104" height="77.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf2-8K-8rx">
+                                                <rect key="frame" x="0.0" y="0.0" width="104" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AB-12" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R33-cQ-VOp" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="22.5" width="104" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="2XZ-2c-ZuW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ipe-g8-s8F" userLabel="9">
+                                        <rect key="frame" x="40" y="290.5" width="75.5" height="77.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOq-zU-QQU">
+                                                <rect key="frame" x="0.0" y="0.0" width="75.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AUAB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxO-Ib-J84" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="22.5" width="75.5" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="TUC-da-z4B"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HFV-JT-hai" userLabel="10">
+                                        <rect key="frame" x="165.5" y="290.5" width="66" height="77.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nC-Kp-wRy">
+                                                <rect key="frame" x="0.0" y="0.0" width="66" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XCHS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bx-92-O1K" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="22.5" width="66" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="y15-tt-ZkZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N22-ht-NdM" userLabel="17">
+                                        <rect key="frame" x="40" y="183" width="169.5" height="77.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT AUTHORITY NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okW-cn-lKw">
+                                                <rect key="frame" x="0.0" y="0.0" width="169.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY-T777" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="if6-zc-u6L" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="22.5" width="169.5" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="CTa-pm-S9f"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SEV-nf-Mnh" userLabel="18">
+                                        <rect key="frame" x="259.5" y="183" width="83.5" height="77.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISSUING UNIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7Q-au-jmZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY-T777" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-r9-TOx" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="22.5" width="83.5" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="jft-Rb-jGX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ufj-4J-VEk">
+                                        <rect key="frame" x="40" y="398" width="343" height="77.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WzU-Xs-Pb7" userLabel="11">
+                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="77.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAKE OFF TIME (Z)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aob-cV-rSP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="108.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1230" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9QX-fA-RLT" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="22.5" width="108.5" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="Pqq-uC-VWj"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="l42-LJ-NT1" userLabel="12">
+                                                <rect key="frame" x="148.5" y="0.0" width="85" height="77.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAND TIME (Z)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxW-OJ-BTG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2120" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsA-ZG-NKg" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="22.5" width="85" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="Sk1-he-k38"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="updateForm:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="puA-RX-o9N"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rlh-uO-FQw" userLabel="13">
+                                                <rect key="frame" x="273.5" y="0.0" width="69.5" height="77.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeT-uF-UhY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20.8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iKX-Ss-Y3p" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="22.5" width="69.5" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="dct-K2-lde"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LANDINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN8-Lu-2kC">
+                                        <rect key="frame" x="40" y="505.5" width="61.5" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="RFp-ER-1Ab">
+                                        <rect key="frame" x="40" y="525" width="466" height="77.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="spw-OR-lR6" userLabel="Touch &amp; Go">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="77.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH &amp; GO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zl-Jr-U4h">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tlc-MD-uYM" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="22.5" width="76.5" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="vF8-rW-hU1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="calculateTotalLandingWith_sender:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="F1M-Eo-jmR"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jkr-Mj-uDl" userLabel="Full Stop">
+                                                <rect key="frame" x="116.5" y="0.0" width="64.5" height="77.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL STOP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ei-Wm-iMP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R64-Pp-JU9" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="22.5" width="64.5" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="bYn-86-E3Y"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="calculateTotalLandingWith_sender:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="f0q-ML-Qbz"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zqa-P0-NYN" userLabel="Total">
+                                                <rect key="frame" x="221" y="0.0" width="38" height="77.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56X-u2-TEw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qDX-lg-wNK" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="22.5" width="38" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="UXU-0U-dch"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wg5-c2-1Tn" userLabel="15">
+                                                <rect key="frame" x="299" y="0.0" width="50.5" height="77.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQq-fS-Yva">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="st4-NB-9tT" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="22.5" width="50.5" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="pQD-TW-htn"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iif-ro-ubU" userLabel="16">
+                                                <rect key="frame" x="389.5" y="0.0" width="76.5" height="77.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL USE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bf-nI-07B">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lIj-0G-LZd" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="22.5" width="76.5" height="55"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="55" id="tN5-ug-zmJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIe-se-kcu">
+                                        <rect key="frame" x="617.5" y="20" width="17.5" height="22"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="exitButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="qgt-98-cxe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-6A-fYj" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="512" y="689" width="100" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="ADD FLIGHT +"/>
+                                        <connections>
+                                            <action selector="addFlightButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="5wy-3G-QoW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstItem="RFp-ER-1Ab" firstAttribute="top" secondItem="WN8-Lu-2kC" secondAttribute="bottom" constant="5" id="0J8-lH-8c1"/>
+                                    <constraint firstItem="N2w-L7-og0" firstAttribute="top" secondItem="bvv-FB-ind" secondAttribute="top" id="0nq-oZ-P3D"/>
+                                    <constraint firstItem="AIe-se-kcu" firstAttribute="top" secondItem="uo8-HS-bP7" secondAttribute="top" constant="20" id="1ly-aS-vjP"/>
+                                    <constraint firstItem="HFV-JT-hai" firstAttribute="top" secondItem="ipe-g8-s8F" secondAttribute="top" id="3qY-Vi-exc"/>
+                                    <constraint firstItem="N2w-L7-og0" firstAttribute="leading" secondItem="bvv-FB-ind" secondAttribute="trailing" constant="50" id="56G-JU-XY1"/>
+                                    <constraint firstItem="N22-ht-NdM" firstAttribute="top" secondItem="bvv-FB-ind" secondAttribute="bottom" constant="30" id="Bkb-wx-GVk"/>
+                                    <constraint firstAttribute="trailing" secondItem="AIe-se-kcu" secondAttribute="trailing" constant="20" id="C7B-bc-9FS"/>
+                                    <constraint firstItem="JCt-hy-UAT" firstAttribute="top" secondItem="bvv-FB-ind" secondAttribute="top" id="Fe4-oW-cBe"/>
+                                    <constraint firstItem="N22-ht-NdM" firstAttribute="leading" secondItem="bvv-FB-ind" secondAttribute="leading" id="FfB-if-Xq4"/>
+                                    <constraint firstItem="ipe-g8-s8F" firstAttribute="top" secondItem="N22-ht-NdM" secondAttribute="bottom" constant="30" id="Iwr-ba-xBD"/>
+                                    <constraint firstItem="bvv-FB-ind" firstAttribute="leading" secondItem="uo8-HS-bP7" secondAttribute="leading" constant="40" id="Le1-Yq-VuA"/>
+                                    <constraint firstItem="HFV-JT-hai" firstAttribute="leading" secondItem="ipe-g8-s8F" secondAttribute="trailing" constant="50" id="Mtr-ud-wPE"/>
+                                    <constraint firstItem="SEV-nf-Mnh" firstAttribute="leading" secondItem="N22-ht-NdM" secondAttribute="trailing" constant="50" id="QSG-dH-q1p"/>
+                                    <constraint firstItem="RFp-ER-1Ab" firstAttribute="leading" secondItem="WN8-Lu-2kC" secondAttribute="leading" id="V7Y-aw-rcB"/>
+                                    <constraint firstItem="WN8-Lu-2kC" firstAttribute="top" secondItem="Ufj-4J-VEk" secondAttribute="bottom" constant="30" id="XeQ-TQ-YVN"/>
+                                    <constraint firstItem="ipe-g8-s8F" firstAttribute="leading" secondItem="bvv-FB-ind" secondAttribute="leading" id="dGM-Vg-Yij"/>
+                                    <constraint firstItem="Ufj-4J-VEk" firstAttribute="leading" secondItem="bvv-FB-ind" secondAttribute="leading" id="eAL-eS-RmO"/>
+                                    <constraint firstItem="Ufj-4J-VEk" firstAttribute="top" secondItem="ipe-g8-s8F" secondAttribute="bottom" constant="30" id="ice-8Z-N50"/>
+                                    <constraint firstItem="bvv-FB-ind" firstAttribute="centerY" secondItem="uo8-HS-bP7" secondAttribute="centerY" multiplier="0.3" id="lAp-yK-UB8"/>
+                                    <constraint firstItem="JCt-hy-UAT" firstAttribute="leading" secondItem="N2w-L7-og0" secondAttribute="trailing" constant="50" id="o4F-dq-Vaw"/>
+                                    <constraint firstItem="SEV-nf-Mnh" firstAttribute="top" secondItem="N22-ht-NdM" secondAttribute="top" id="v0h-MA-bFe"/>
+                                    <constraint firstItem="WN8-Lu-2kC" firstAttribute="leading" secondItem="Ufj-4J-VEk" secondAttribute="leading" id="yUp-ZB-y9o"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dxP-v8-4HA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="uo8-HS-bP7" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.8" id="1sU-MG-dbt"/>
                             <constraint firstAttribute="trailing" secondItem="jXY-8S-I5n" secondAttribute="trailing" id="1wU-vf-cyJ"/>
                             <constraint firstItem="Pbj-Oi-qZw" firstAttribute="centerX" secondItem="dxP-v8-4HA" secondAttribute="centerX" id="299-gB-KdD"/>
                             <constraint firstItem="cBI-2f-KEM" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.05" id="2n7-Lb-2Jg"/>
@@ -1515,34 +1655,28 @@
                             <constraint firstItem="U0o-do-T4u" firstAttribute="top" secondItem="dxP-v8-4HA" secondAttribute="top" id="4Fs-Ie-0QZ"/>
                             <constraint firstItem="5sW-z9-JHm" firstAttribute="leading" secondItem="dxP-v8-4HA" secondAttribute="leading" constant="30" id="55o-yr-LPQ"/>
                             <constraint firstItem="jXY-8S-I5n" firstAttribute="leading" secondItem="73Z-dg-KRm" secondAttribute="leading" id="6xf-K8-NkY"/>
-                            <constraint firstItem="RFp-ER-1Ab" firstAttribute="top" secondItem="WN8-Lu-2kC" secondAttribute="bottom" constant="5" id="A8S-Q3-mkw"/>
                             <constraint firstItem="dxP-v8-4HA" firstAttribute="trailing" secondItem="U0o-do-T4u" secondAttribute="trailing" id="Bpa-1T-Jfs"/>
                             <constraint firstItem="kIx-Vc-qNu" firstAttribute="top" secondItem="Pbj-Oi-qZw" secondAttribute="bottom" constant="30" id="GV0-t4-HSp"/>
-                            <constraint firstItem="Ufj-4J-VEk" firstAttribute="leading" secondItem="5sW-z9-JHm" secondAttribute="leading" id="GhH-gc-twQ"/>
-                            <constraint firstItem="Pbj-Oi-qZw" firstAttribute="top" secondItem="RFp-ER-1Ab" secondAttribute="bottom" constant="30" id="H2C-pi-okj"/>
                             <constraint firstItem="dxP-v8-4HA" firstAttribute="trailing" secondItem="pNZ-Cd-QsK" secondAttribute="trailing" constant="30" id="KQ2-tH-wfO"/>
                             <constraint firstItem="Pbj-Oi-qZw" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.12" id="LA6-Bf-hfB"/>
-                            <constraint firstItem="JHy-12-yfo" firstAttribute="leading" secondItem="RFp-ER-1Ab" secondAttribute="trailing" constant="40" id="Ml7-1y-chS"/>
                             <constraint firstItem="cBI-2f-KEM" firstAttribute="trailing" secondItem="dxP-v8-4HA" secondAttribute="trailing" id="OnX-Id-Uq2"/>
-                            <constraint firstItem="JHy-12-yfo" firstAttribute="centerY" secondItem="RFp-ER-1Ab" secondAttribute="centerY" id="P3o-9e-F6r"/>
                             <constraint firstItem="5sW-z9-JHm" firstAttribute="top" secondItem="cBI-2f-KEM" secondAttribute="bottom" constant="10" id="PI0-s2-8Sg"/>
                             <constraint firstItem="cBI-2f-KEM" firstAttribute="leading" secondItem="dxP-v8-4HA" secondAttribute="leading" id="WLj-k7-xCH"/>
+                            <constraint firstItem="uo8-HS-bP7" firstAttribute="centerY" secondItem="dxP-v8-4HA" secondAttribute="centerY" id="ZoK-Te-W03"/>
                             <constraint firstItem="jXY-8S-I5n" firstAttribute="top" secondItem="5sW-z9-JHm" secondAttribute="bottom" constant="5" id="Zrl-d2-s4r"/>
-                            <constraint firstItem="RFp-ER-1Ab" firstAttribute="leading" secondItem="WN8-Lu-2kC" secondAttribute="leading" id="aLT-5p-TFs"/>
-                            <constraint firstItem="WN8-Lu-2kC" firstAttribute="leading" secondItem="Ufj-4J-VEk" secondAttribute="leading" id="cSL-WT-ko3"/>
                             <constraint firstItem="dxP-v8-4HA" firstAttribute="bottom" secondItem="JiU-ux-0sg" secondAttribute="bottom" constant="50" id="eVe-GS-oje"/>
                             <constraint firstItem="kIx-Vc-qNu" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.3" id="ftM-q7-dS7"/>
                             <constraint firstItem="pNZ-Cd-QsK" firstAttribute="top" secondItem="cBI-2f-KEM" secondAttribute="bottom" constant="8" id="g4S-ze-Qcz"/>
                             <constraint firstItem="U0o-do-T4u" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.04" id="gxu-7e-p7S"/>
+                            <constraint firstItem="uo8-HS-bP7" firstAttribute="centerX" secondItem="dxP-v8-4HA" secondAttribute="centerX" id="hAR-PO-IiO"/>
                             <constraint firstItem="cBI-2f-KEM" firstAttribute="top" secondItem="U0o-do-T4u" secondAttribute="bottom" id="hE3-DE-HPL"/>
                             <constraint firstItem="TT3-qi-dhc" firstAttribute="centerX" secondItem="Pbj-Oi-qZw" secondAttribute="centerX" id="jA2-5n-jOG"/>
                             <constraint firstItem="Pbj-Oi-qZw" firstAttribute="width" secondItem="73Z-dg-KRm" secondAttribute="width" multiplier="0.95" id="l0A-u9-3YN"/>
                             <constraint firstItem="kIx-Vc-qNu" firstAttribute="width" secondItem="73Z-dg-KRm" secondAttribute="width" multiplier="0.95" id="l6c-Ev-kuW"/>
                             <constraint firstItem="TT3-qi-dhc" firstAttribute="width" secondItem="Pbj-Oi-qZw" secondAttribute="width" multiplier="0.9" id="ndK-jl-4dK"/>
                             <constraint firstItem="1Jj-9d-XIe" firstAttribute="leading" secondItem="dxP-v8-4HA" secondAttribute="leading" constant="50" id="qrj-td-ZXM"/>
-                            <constraint firstItem="WN8-Lu-2kC" firstAttribute="top" secondItem="Ufj-4J-VEk" secondAttribute="bottom" constant="30" id="sds-6Y-l3x"/>
                             <constraint firstItem="U0o-do-T4u" firstAttribute="leading" secondItem="73Z-dg-KRm" secondAttribute="leading" id="tQ8-r7-4nh"/>
-                            <constraint firstItem="Ufj-4J-VEk" firstAttribute="top" secondItem="jXY-8S-I5n" secondAttribute="bottom" constant="30" id="tTO-yr-Hue"/>
+                            <constraint firstItem="uo8-HS-bP7" firstAttribute="width" secondItem="73Z-dg-KRm" secondAttribute="width" multiplier="0.9" id="vQ7-5J-NJF"/>
                             <constraint firstItem="TT3-qi-dhc" firstAttribute="centerY" secondItem="Pbj-Oi-qZw" secondAttribute="centerY" id="wYd-g4-e6E"/>
                             <constraint firstItem="kIx-Vc-qNu" firstAttribute="centerX" secondItem="dxP-v8-4HA" secondAttribute="centerX" id="xOU-2d-K0N"/>
                         </constraints>
@@ -1552,6 +1686,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="VEE-JX-5RO"/>
                     <connections>
+                        <outlet property="flightAuthNum" destination="if6-zc-u6L" id="F3N-Nd-spy"/>
+                        <outlet property="flightSeq" destination="LxM-jS-NTc" id="yqd-oy-dkN"/>
                         <outlet property="fromICAO" destination="qxO-Ib-J84" id="peo-hC-z4l"/>
                         <outlet property="fullStop" destination="R64-Pp-JU9" id="f93-GK-our"/>
                         <outlet property="grandTotalFullStop" destination="OCo-2h-xLG" id="Ivm-vG-qYp"/>
@@ -1560,6 +1696,7 @@
                         <outlet property="grandTotalSpecialUse" destination="kDR-Zl-whU" id="1Iz-Ic-kUX"/>
                         <outlet property="grandTotalTime" destination="J8Q-1e-HBD" id="ccU-m6-Y5e"/>
                         <outlet property="grandTotalTouchAndGo" destination="0vn-7E-cTP" id="EqZ-YE-3kM"/>
+                        <outlet property="issuingUnit" destination="Sbg-r9-TOx" id="PmN-tu-d0x"/>
                         <outlet property="landingTime" destination="hsA-ZG-NKg" id="Ndz-lA-ads"/>
                         <outlet property="line6a01" destination="LH5-fO-r5x" id="LLE-NT-KrF"/>
                         <outlet property="line6a02" destination="RwO-fZ-ePG" id="MT0-Tf-Q4p"/>
@@ -1635,6 +1772,7 @@
                         <outlet property="line6f12" destination="fkk-fN-Jt8" id="CMr-ai-kkD"/>
                         <outlet property="missionNumber" destination="yW5-Gj-Mig" id="EkN-IR-WVd"/>
                         <outlet property="missionSymbol" destination="R33-cQ-VOp" id="y41-uU-nf9"/>
+                        <outlet property="popUpView" destination="uo8-HS-bP7" id="vLk-hX-NiQ"/>
                         <outlet property="sorties" destination="st4-NB-9tT" id="YgS-NF-kTX"/>
                         <outlet property="specialUse" destination="lIj-0G-LZd" id="PZA-Mg-Egh"/>
                         <outlet property="takeOffTime" destination="9QX-fA-RLT" id="Wgs-Ja-v7s"/>
@@ -1677,16 +1815,16 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="6MJ-U2-JDn">
                     <connections>
-                        <action selector="page3Tapped:" destination="uHw-GN-qXJ" id="LUd-Co-sGg"/>
+                        <action selector="viewTapped:" destination="uHw-GN-qXJ" id="LUd-Co-sGg"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3455.46875" y="-411.328125"/>
+            <point key="canvasLocation" x="2788" y="-411"/>
         </scene>
-        <!--First View Controller-->
+        <!--Aircrew Data View Controller-->
         <scene sceneID="nuI-Rc-zWE">
             <objects>
-                <viewController storyboardIdentifier="Page4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PjM-lN-wNj" customClass="FirstViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Page3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PjM-lN-wNj" customClass="AircrewDataViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f88-FV-5Qa">
                         <rect key="frame" x="0.0" y="0.0" width="728" height="954"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1830,9 +1968,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="zkb-zE-wPv"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1849,9 +1984,6 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="73.5" height="57"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="lnC-bW-pow"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1868,9 +2000,6 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="77" height="57"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="bO7-2J-GDQ"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1887,9 +2016,6 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="69.5" height="57"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="Nf1-IO-at1"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1906,9 +2032,6 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="48.5" height="57"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="MHA-SD-N5Y"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1933,9 +2056,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="fxI-Td-ptj"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1952,9 +2072,6 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="34.5" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="bkx-aJ-dPR"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1979,9 +2096,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="e4m-WX-001"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -1998,9 +2112,6 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="41" height="56.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="xMQ-fw-ymE"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2020,9 +2131,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="gdj-Bx-vLm"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2042,9 +2150,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="Zfu-7a-Ffp"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2072,9 +2177,6 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="57" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="wzk-mw-6Bu"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2091,9 +2193,6 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="34.5" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="Hqc-pg-5Uu"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2113,9 +2212,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="XZv-4Y-Msm"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2132,9 +2228,6 @@
                                                 <rect key="frame" x="0.0" y="22.5" width="34.5" height="55"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="8Cb-vh-PTQ"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2154,9 +2247,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="hS5-ps-hbv"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2187,9 +2277,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="yUb-eS-Vpb"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2209,9 +2296,6 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <action selector="addToJSON:" destination="PjM-lN-wNj" eventType="editingDidEnd" id="Dc3-vi-96q"/>
-                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -2255,6 +2339,17 @@
                                     <action selector="page4BackButtonTapped:" destination="PjM-lN-wNj" eventType="touchUpInside" id="5bC-RF-rGx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFm-4N-Eae">
+                                <rect key="frame" x="310" y="870" width="108" height="34"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SAVE STUFF">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveStuffTapped:" destination="PjM-lN-wNj" eventType="touchUpInside" id="nEp-2X-scC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4oh-sD-DDy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2284,9 +2379,11 @@
                             <constraint firstItem="4oh-sD-DDy" firstAttribute="bottom" secondItem="pwW-eX-PxP" secondAttribute="bottom" constant="50" id="Ssz-sh-m1Q"/>
                             <constraint firstItem="Llo-pc-qIf" firstAttribute="leading" secondItem="4oh-sD-DDy" secondAttribute="leading" id="WqS-zT-RFS"/>
                             <constraint firstItem="opQ-4s-3IL" firstAttribute="top" secondItem="4oh-sD-DDy" secondAttribute="top" id="X7L-ED-kHF"/>
+                            <constraint firstItem="iFm-4N-Eae" firstAttribute="centerX" secondItem="4oh-sD-DDy" secondAttribute="centerX" id="aDo-oi-GYn"/>
                             <constraint firstItem="lOs-rb-a9c" firstAttribute="top" secondItem="O8v-F1-ZqR" secondAttribute="bottom" constant="30" id="aeC-yV-743"/>
                             <constraint firstItem="anl-yP-9pp" firstAttribute="leading" secondItem="B1s-iL-Kyd" secondAttribute="leading" id="apH-5Z-rRY"/>
                             <constraint firstItem="ujV-OG-Kg5" firstAttribute="top" secondItem="Llo-pc-qIf" secondAttribute="bottom" constant="10" id="axD-yZ-WqG"/>
+                            <constraint firstItem="4oh-sD-DDy" firstAttribute="bottom" secondItem="iFm-4N-Eae" secondAttribute="bottom" constant="50" id="cLl-cI-bGA"/>
                             <constraint firstItem="ujV-OG-Kg5" firstAttribute="leading" secondItem="4oh-sD-DDy" secondAttribute="leading" constant="30" id="dhM-ew-5hJ"/>
                             <constraint firstItem="pwW-eX-PxP" firstAttribute="leading" secondItem="4oh-sD-DDy" secondAttribute="leading" constant="50" id="gDX-rW-8yy"/>
                             <constraint firstItem="WWz-cC-6gs" firstAttribute="top" secondItem="BjI-dd-Jjo" secondAttribute="bottom" constant="10" id="h7R-sa-f4c"/>
@@ -2335,11 +2432,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vdn-TE-s0P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="kZN-Rt-Pqx">
                     <connections>
-                        <action selector="page4Tapped:" destination="PjM-lN-wNj" id="wgu-5C-2Qn"/>
+                        <action selector="viewTapped:" destination="PjM-lN-wNj" id="wgu-5C-2Qn"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4110.15625" y="-411.328125"/>
+            <point key="canvasLocation" x="3461" y="-411"/>
         </scene>
         <!--Crew Member Table View Controller-->
         <scene sceneID="ZTB-e2-pYP">
@@ -2493,399 +2590,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnW-Ph-6a6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4800" y="-411.328125"/>
-        </scene>
-        <!--Place Holder-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="283" y="490.5" width="202" height="43"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="276.5" y="541.5" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Place Holder" image="second" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="243"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="k1e-Lb-OAb" kind="relationship" relationship="viewControllers" id="xJO-h8-lMv"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="d7k-tw-IkK"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-33" y="-21"/>
-        </scene>
-        <!--First View Controller-->
-        <scene sceneID="2gO-80-Vbz">
-            <objects>
-                <viewController storyboardIdentifier="Page2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nal-Je-88Q" customClass="FirstViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xve-KF-Z6b">
-                        <rect key="frame" x="0.0" y="0.0" width="728" height="954"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBB-U8-YSN">
-                                <rect key="frame" x="0.0" y="0.0" width="728" height="38"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FC-0y-NQ4" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="7.5" width="23" height="23"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjN-HW-YUk">
-                                                <rect key="frame" x="3.5" y="6.5" width="15.5" height="10"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstItem="SjN-HW-YUk" firstAttribute="centerY" secondItem="4FC-0y-NQ4" secondAttribute="centerY" id="4ab-ph-zEa"/>
-                                            <constraint firstAttribute="width" secondItem="4FC-0y-NQ4" secondAttribute="height" multiplier="1:1" id="GMv-55-0ct"/>
-                                            <constraint firstItem="SjN-HW-YUk" firstAttribute="centerX" secondItem="4FC-0y-NQ4" secondAttribute="centerX" id="Ok1-OR-tmL"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1w-Hs-Ele" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="690" y="7.5" width="23" height="23"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ko-Jb-OMG">
-                                                <rect key="frame" x="5" y="6.5" width="13.5" height="10"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstItem="4Ko-Jb-OMG" firstAttribute="centerX" secondItem="h1w-Hs-Ele" secondAttribute="centerX" id="8xl-op-rQa"/>
-                                            <constraint firstItem="4Ko-Jb-OMG" firstAttribute="centerY" secondItem="h1w-Hs-Ele" secondAttribute="centerY" id="KDu-te-d2d"/>
-                                            <constraint firstAttribute="width" secondItem="h1w-Hs-Ele" secondAttribute="height" multiplier="1:1" id="yxV-RL-lSQ"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" name="notBlack"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="h1w-Hs-Ele" secondAttribute="trailing" constant="15" id="7aU-EE-rap"/>
-                                    <constraint firstItem="h1w-Hs-Ele" firstAttribute="height" secondItem="IBB-U8-YSN" secondAttribute="height" multiplier="0.6" id="GdH-KG-Rnc"/>
-                                    <constraint firstItem="4FC-0y-NQ4" firstAttribute="centerY" secondItem="IBB-U8-YSN" secondAttribute="centerY" id="L4u-BK-lUA"/>
-                                    <constraint firstItem="h1w-Hs-Ele" firstAttribute="centerY" secondItem="IBB-U8-YSN" secondAttribute="centerY" id="cHp-aH-PWA"/>
-                                    <constraint firstItem="4FC-0y-NQ4" firstAttribute="height" secondItem="IBB-U8-YSN" secondAttribute="height" multiplier="0.6" id="elX-Jc-lKh"/>
-                                    <constraint firstItem="4FC-0y-NQ4" firstAttribute="leading" secondItem="IBB-U8-YSN" secondAttribute="leading" constant="15" id="rUe-bz-9Ya"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P87-3d-HaO" userLabel="Header">
-                                <rect key="frame" x="0.0" y="38" width="728" height="48"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AFTO Form 781" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdX-wk-fLi">
-                                        <rect key="frame" x="30" y="14" width="122.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="slate"/>
-                                <constraints>
-                                    <constraint firstItem="RdX-wk-fLi" firstAttribute="leading" secondItem="P87-3d-HaO" secondAttribute="leading" constant="30" id="4S1-HL-pYI"/>
-                                    <constraint firstItem="RdX-wk-fLi" firstAttribute="centerY" secondItem="P87-3d-HaO" secondAttribute="centerY" id="7Lb-gH-GlA"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Mission Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-M9-D6i">
-                                <rect key="frame" x="30" y="96" width="111" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" name="slate"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SN0-uy-CP2" userLabel="Divider line">
-                                <rect key="frame" x="0.0" y="121.5" width="728" height="1"/>
-                                <color key="backgroundColor" name="fog"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="yhF-jz-TI9"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UED-Oy-4rC" userLabel="printForm">
-                                <rect key="frame" x="675" y="94" width="23" height="22"/>
-                                <state key="normal" image="printer" catalog="system"/>
-                                <connections>
-                                    <action selector="printButtonTapped:" destination="Nal-Je-88Q" eventType="touchUpInside" id="dVL-lj-f4K"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2F-Gc-ouf" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="874" width="41" height="30"/>
-                                <color key="backgroundColor" name="haze"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="BACK"/>
-                                <connections>
-                                    <action selector="page2BackButtonTapped:" destination="Nal-Je-88Q" eventType="touchUpInside" id="lI0-z4-TDJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8b-iR-tHm" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="542" y="874" width="136" height="30"/>
-                                <color key="backgroundColor" name="slate"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="SAVE &amp; CONTINUE"/>
-                                <connections>
-                                    <segue destination="uHw-GN-qXJ" kind="show" id="HWi-oN-cHA"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bvv-FB-ind" userLabel="6">
-                                <rect key="frame" x="30" y="152.5" width="70" height="77.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT SEQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3H-fm-vpQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LxM-jS-NTc" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="70" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="iTc-VZ-slL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="xJF-PR-Egu"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N2w-L7-og0" userLabel="7">
-                                <rect key="frame" x="150" y="152.5" width="255" height="77.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFB-KG-Fkb">
-                                        <rect key="frame" x="0.0" y="0.0" width="255" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ABCDEFGHIJ-1234567890" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yW5-Gj-Mig" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="255" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="fyb-hC-9Yl"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="spw-4J-XEh"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JCt-hy-UAT" userLabel="8">
-                                <rect key="frame" x="455" y="152.5" width="104" height="77.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xf2-8K-8rx">
-                                        <rect key="frame" x="0.0" y="0.0" width="104" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AB-12" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R33-cQ-VOp" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="104" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="2XZ-2c-ZuW"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="9F0-m1-HWu"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ipe-g8-s8F" userLabel="9">
-                                <rect key="frame" x="30" y="367.5" width="75.5" height="77.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOq-zU-QQU">
-                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AUAB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qxO-Ib-J84" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="75.5" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="TUC-da-z4B"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="gQS-nx-FlD"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HFV-JT-hai" userLabel="10">
-                                <rect key="frame" x="155.5" y="367.5" width="66" height="77.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nC-Kp-wRy">
-                                        <rect key="frame" x="0.0" y="0.0" width="66" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XCHS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Bx-92-O1K" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="66" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="y15-tt-ZkZ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="JF5-7l-8NK"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N22-ht-NdM" userLabel="17">
-                                <rect key="frame" x="30" y="260" width="169.5" height="77.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT AUTHORITY NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okW-cn-lKw">
-                                        <rect key="frame" x="0.0" y="0.0" width="169.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY-T777" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="if6-zc-u6L" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="169.5" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="CTa-pm-S9f"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="mmb-8w-zlV"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SEV-nf-Mnh" userLabel="18">
-                                <rect key="frame" x="249.5" y="260" width="83.5" height="77.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISSUING UNIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7Q-au-jmZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY-T777" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sbg-r9-TOx" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="22.5" width="83.5" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="jft-Rb-jGX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="addToJSON:" destination="Nal-Je-88Q" eventType="editingDidEnd" id="gdt-q2-Z04"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="V0S-7Z-aQD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="HFV-JT-hai" firstAttribute="leading" secondItem="ipe-g8-s8F" secondAttribute="trailing" constant="50" id="1Td-2a-Edw"/>
-                            <constraint firstItem="V0S-7Z-aQD" firstAttribute="trailing" secondItem="N8b-iR-tHm" secondAttribute="trailing" constant="50" id="1YG-Nd-aoO"/>
-                            <constraint firstItem="JCt-hy-UAT" firstAttribute="leading" secondItem="N2w-L7-og0" secondAttribute="trailing" constant="50" id="6JC-HT-3O4"/>
-                            <constraint firstItem="N22-ht-NdM" firstAttribute="leading" secondItem="bvv-FB-ind" secondAttribute="leading" id="8FT-c9-akP"/>
-                            <constraint firstItem="P87-3d-HaO" firstAttribute="leading" secondItem="V0S-7Z-aQD" secondAttribute="leading" id="9mp-fZ-wh7"/>
-                            <constraint firstItem="1oA-M9-D6i" firstAttribute="top" secondItem="P87-3d-HaO" secondAttribute="bottom" constant="10" id="ANM-0L-0g5"/>
-                            <constraint firstItem="N2w-L7-og0" firstAttribute="leading" secondItem="bvv-FB-ind" secondAttribute="trailing" constant="50" id="DIl-XM-ZFy"/>
-                            <constraint firstItem="g2F-Gc-ouf" firstAttribute="leading" secondItem="V0S-7Z-aQD" secondAttribute="leading" constant="50" id="FK2-e7-fAC"/>
-                            <constraint firstItem="SN0-uy-CP2" firstAttribute="top" secondItem="1oA-M9-D6i" secondAttribute="bottom" constant="5" id="FgR-5j-nsm"/>
-                            <constraint firstItem="P87-3d-HaO" firstAttribute="top" secondItem="IBB-U8-YSN" secondAttribute="bottom" id="G4d-7I-IFk"/>
-                            <constraint firstItem="yW5-Gj-Mig" firstAttribute="width" secondItem="xve-KF-Z6b" secondAttribute="width" multiplier="0.35" id="GK0-BG-Esn"/>
-                            <constraint firstItem="N2w-L7-og0" firstAttribute="top" secondItem="bvv-FB-ind" secondAttribute="top" id="Hof-LX-plm"/>
-                            <constraint firstItem="V0S-7Z-aQD" firstAttribute="bottom" secondItem="g2F-Gc-ouf" secondAttribute="bottom" constant="50" id="IED-yd-c45"/>
-                            <constraint firstItem="SN0-uy-CP2" firstAttribute="leading" secondItem="xve-KF-Z6b" secondAttribute="leading" id="JOB-d8-9NL"/>
-                            <constraint firstItem="V0S-7Z-aQD" firstAttribute="bottom" secondItem="N8b-iR-tHm" secondAttribute="bottom" constant="50" id="M4v-YZ-ol7"/>
-                            <constraint firstItem="ipe-g8-s8F" firstAttribute="leading" secondItem="bvv-FB-ind" secondAttribute="leading" id="Ntq-v1-VJs"/>
-                            <constraint firstAttribute="trailing" secondItem="SN0-uy-CP2" secondAttribute="trailing" id="PBj-NU-9wG"/>
-                            <constraint firstItem="1oA-M9-D6i" firstAttribute="leading" secondItem="V0S-7Z-aQD" secondAttribute="leading" constant="30" id="PIq-9U-kgH"/>
-                            <constraint firstItem="V0S-7Z-aQD" firstAttribute="trailing" secondItem="UED-Oy-4rC" secondAttribute="trailing" constant="30" id="RcN-Rw-p8s"/>
-                            <constraint firstItem="IBB-U8-YSN" firstAttribute="top" secondItem="V0S-7Z-aQD" secondAttribute="top" id="TKR-Hm-2qN"/>
-                            <constraint firstItem="bvv-FB-ind" firstAttribute="leading" secondItem="1oA-M9-D6i" secondAttribute="leading" id="Vya-Gu-I12"/>
-                            <constraint firstItem="V0S-7Z-aQD" firstAttribute="trailing" secondItem="IBB-U8-YSN" secondAttribute="trailing" id="WxO-hl-Zn3"/>
-                            <constraint firstItem="ipe-g8-s8F" firstAttribute="top" secondItem="N22-ht-NdM" secondAttribute="bottom" constant="30" id="X8y-DH-OLd"/>
-                            <constraint firstItem="JCt-hy-UAT" firstAttribute="top" secondItem="bvv-FB-ind" secondAttribute="top" id="Xy0-Be-eGH"/>
-                            <constraint firstItem="HFV-JT-hai" firstAttribute="top" secondItem="ipe-g8-s8F" secondAttribute="top" id="a0a-gr-PDc"/>
-                            <constraint firstItem="P87-3d-HaO" firstAttribute="height" secondItem="xve-KF-Z6b" secondAttribute="height" multiplier="0.05" id="aI2-93-29v"/>
-                            <constraint firstItem="bvv-FB-ind" firstAttribute="top" secondItem="SN0-uy-CP2" secondAttribute="bottom" constant="30" id="bVK-Pu-5JN"/>
-                            <constraint firstItem="N22-ht-NdM" firstAttribute="top" secondItem="bvv-FB-ind" secondAttribute="bottom" constant="30" id="chH-4z-bwc"/>
-                            <constraint firstItem="IBB-U8-YSN" firstAttribute="height" secondItem="xve-KF-Z6b" secondAttribute="height" multiplier="0.04" id="cmL-Wn-hTX"/>
-                            <constraint firstItem="IBB-U8-YSN" firstAttribute="leading" secondItem="xve-KF-Z6b" secondAttribute="leading" id="dhq-t0-fGy"/>
-                            <constraint firstItem="SEV-nf-Mnh" firstAttribute="top" secondItem="N22-ht-NdM" secondAttribute="top" id="oeb-4U-74F"/>
-                            <constraint firstItem="SEV-nf-Mnh" firstAttribute="leading" secondItem="N22-ht-NdM" secondAttribute="trailing" constant="50" id="ot2-LE-CzL"/>
-                            <constraint firstItem="UED-Oy-4rC" firstAttribute="top" secondItem="P87-3d-HaO" secondAttribute="bottom" constant="8" id="uOH-Fl-yTp"/>
-                            <constraint firstItem="P87-3d-HaO" firstAttribute="trailing" secondItem="V0S-7Z-aQD" secondAttribute="trailing" id="zxh-ju-yOp"/>
-                        </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="yPv-un-RQH" appends="YES" id="Zox-JQ-oRA"/>
-                        </connections>
-                    </view>
-                    <navigationItem key="navigationItem" id="zS1-3V-Pvn"/>
-                    <connections>
-                        <outlet property="flightAuthNum" destination="if6-zc-u6L" id="RQm-ti-cXZ"/>
-                        <outlet property="flightSeq" destination="LxM-jS-NTc" id="fVh-5C-447"/>
-                        <outlet property="issuingUnit" destination="Sbg-r9-TOx" id="BDb-vq-2eZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Stz-7n-6Qz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="yPv-un-RQH">
-                    <connections>
-                        <action selector="page2Tapped:" destination="Nal-Je-88Q" id="jJO-jV-VEH"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="2803.90625" y="-411.328125"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="mf2-nI-06T">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LTH-kJ-iN9" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tTR-wC-VNi">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ld3-uy-lcH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1387.5" y="-411.328125"/>
+            <point key="canvasLocation" x="4140" y="-411"/>
         </scene>
         <!--Side Menu Table View Controller-->
         <scene sceneID="o35-8h-pOW">
@@ -2968,32 +2673,32 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zg3-oO-nBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2773" y="-1368"/>
+            <point key="canvasLocation" x="2734" y="-1318"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="dNb-tP-whO">
+        <scene sceneID="2Bi-MS-SjP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IHi-vS-ejK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0HV-IY-Gyq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HzI-4Z-wd2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fZD-MF-Ctf">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="U4v-TO-zaq" kind="relationship" relationship="rootViewController" id="OLm-qv-OTp"/>
+                        <segue destination="U4v-TO-zaq" kind="relationship" relationship="rootViewController" id="6Ne-vc-wJy"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="doD-TP-IAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mvm-ID-BKR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="-1103"/>
+            <point key="canvasLocation" x="1402" y="-1105"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="minus.circle" catalog="system" width="128" height="121"/>
         <image name="printer" catalog="system" width="128" height="111"/>
-        <image name="second" width="30" height="30"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="fog">
             <color red="0.71764705882352942" green="0.73333333333333328" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -3014,6 +2719,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
