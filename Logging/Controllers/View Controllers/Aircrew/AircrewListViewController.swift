@@ -41,14 +41,15 @@ class AircrewListViewController: UIViewController {
     }
     
     @IBAction func addNewAircrewButtonTapped(_ sender: UIButton) {
-        guard let lastName = lastNameTextField.text, !lastName.isEmpty,
+        guard let form = Form781Controller.shared.forms.last,
+              let lastName = lastNameTextField.text, !lastName.isEmpty,
               let firstName = firstNameTextField.text, !firstName.isEmpty,
               let ssn = ssnTextField.text, !ssn.isEmpty,
               let flightAuthDutyCode = flightAuthDutyCodeTextField.text, !flightAuthDutyCode.isEmpty,
               let flyingOrigin = flyingOriginTextField.text, !flyingOrigin.isEmpty
         else { return }
         
-        CrewMemberController.create(form: <#Form781#>, lastName: lastName, firstName: firstName, ssn: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin)
+        CrewMemberController.create(form: form, lastName: lastName, firstName: firstName, ssn: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin)
         
         aircrewTableView.reloadData()
         popUpView.isHidden = true
@@ -73,14 +74,15 @@ class AircrewListViewController: UIViewController {
 extension AircrewListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        CrewMemberController.shared.members.count
+        Form781Controller.shared.forms.last?.crewMembers.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.aircrewTableView.dequeueReusableCell(withIdentifier: "AircrewCell", for: indexPath) as? AircrewTableViewCell else { return UITableViewCell() }
         
-        let crewMember = CrewMemberController.shared.members[indexPath.row]
-        cell.setUpViews(crewMember: crewMember)
+        if let crewMember = Form781Controller.shared.forms.last?.crewMembers[indexPath.row] {
+            cell.setUpViews(crewMember: crewMember)
+        }
         
         return cell
     }
