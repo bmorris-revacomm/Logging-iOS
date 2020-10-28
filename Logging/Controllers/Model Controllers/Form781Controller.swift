@@ -19,18 +19,24 @@ class Form781Controller {
     
     // MARK: - CRUD
     
-    // func create(date: String, mds: String, serialNo: String, unitCharged: String, harmLocation: String, flightData: FlightData, crewMembers: [CrewMember]) {
-    func create() {
+    func create(date: String, mds: String, serialNumber: String, unitCharged: String, harmLocation: String, flightAuthNum: String, issuingUnit: String) {
+        let form = Form781(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
         forms.append(form)
         save(formData: form)
     }
     
-    func update() {
-        //update specific form in array
+    func updateFormWith(flight: FlightData, to form: Form781) {
+        form.flightData.append(flight)
+        save()
+    }
+    
+    func updateFormwith(crewMember: CrewMember, to form: Form781) {
+        form.crewMembers.append(crewMember)
+        save()
     }
     
     func delete() {
-        //delete forms from array
+        //delete form from array
     }
     
     // MARK: - Persistance
@@ -47,6 +53,7 @@ class Form781Controller {
         let encoder = JSONEncoder()
         do {
             let data = try encoder.encode(forms)
+            //print(data.base64EncodedString())
             try data.write(to: fileURL())
         } catch {
             print("There was an error encoding the data: \(error.localizedDescription)")

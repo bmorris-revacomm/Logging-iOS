@@ -25,11 +25,11 @@ class AircrewTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setUpViews(member: CrewMember) {
-        nameLabel.text = "\(member.lastName), \(member.firstName)"
-        ssnLabel.text = member.ssnLast4
-        flyingOriginLabel.text = member.flyingOrgn
-        flightAuthDutyCodeLabel.text = member.flightAuthDutyCode
+    func setUpViews(crewMember: CrewMember) {
+        nameLabel.text = "\(crewMember.lastName), \(crewMember.firstName)"
+        ssnLabel.text = crewMember.ssnLast4
+        flyingOriginLabel.text = crewMember.flyingOrgn
+        flightAuthDutyCodeLabel.text = crewMember.flightAuthDutyCode
     }
 
     @IBAction func editButtonTapped(_ sender: UIButton) {
