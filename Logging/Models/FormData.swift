@@ -15,7 +15,7 @@ struct FormData: Codable {
     var unitCharged: String?
     var harmLocation: String?
     
-    var flightData: FlightData?
+    var flightData: [FlightDataModel]?
 
     var grandTotalFlightTime: String?
     var grandTotalTouchAndGo: String?
@@ -23,20 +23,20 @@ struct FormData: Codable {
     var grandTotalStops: String?
     var grandTotalSorties: String?
     
-    var crewMember: CrewMember?
+    var crewMember: [CrewMember]?
     
     init(date: String? = nil,
         mds: String? = nil,
         serialNo: String? = nil,
         unitCharged: String? = nil,
         harmLocation: String? = nil,
-        flightData: FlightData? = nil,
+        flightData: [FlightDataModel]? = nil,
         grandTotalFlightTime: String? = nil,
         grandTotalTouchAndGo: String? = nil,
         grandTotalFullStop: String? = nil,
         grandTotalStops: String? = nil,
         grandTotalSorties: String? = nil,
-        crewMember: CrewMember? = nil
+        crewMember: [CrewMember]? = nil
     ) {
         self.date = date
         self.mds = mds

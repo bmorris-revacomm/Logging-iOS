@@ -12,7 +12,9 @@ class FlightDataController {
     
     // MARK: - CRUD
     
-    static func create(form: Form781, flightSeq: String, missionNumber: String, missionSymbol: String, fromICAO: String, toICAO: String, takeOffTime: String, landTime: String, totalTime: String, touchAndGo: String, fullStop: String, totalLandings: String, sorties: String, specialUse: String) {
+    static func create(flightSeq: String, missionNumber: String, missionSymbol: String, fromICAO: String, toICAO: String, takeOffTime: String, landTime: String, totalTime: String, touchAndGo: String, fullStop: String, totalLandings: String, sorties: String, specialUse: String) {
+    
+        let form: Form781 = Form781Controller.shared.load()
         
         let flight = FlightData(flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
         

@@ -8,6 +8,8 @@
 
 import Foundation
 
+import Foundation
+
 class Form781Controller {
     
     // MARK: - Singleton & Source of Truth
@@ -49,6 +51,7 @@ class Form781Controller {
     func save() {
         let encoder = JSONEncoder()
         do {
+            encoder.outputFormatting = .prettyPrinted
             let data = try encoder.encode(forms)
             //print(data.base64EncodedString())
             try data.write(to: fileURL())
@@ -57,7 +60,7 @@ class Form781Controller {
         }
     }
     
-    func load() {
+    func load() -> Form781 {
         let decoder = JSONDecoder()
         do {
             let data = try Data(contentsOf: fileURL())
@@ -65,6 +68,8 @@ class Form781Controller {
         } catch {
             print("There was an error decoding the data: \(error.localizedDescription)")
         }
+        return forms[0]
     }
     
 } //End
+ 
