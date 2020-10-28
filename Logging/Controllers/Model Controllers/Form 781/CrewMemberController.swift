@@ -18,8 +18,8 @@ class CrewMemberController {
         Form781Controller.shared.updateFormwith(crewMember: crewMember, to: form)
     }
     
-    func delete() {
-        
+    static func delete() {
+        //delete crew member
     }
     
 } //End

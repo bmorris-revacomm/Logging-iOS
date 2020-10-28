@@ -27,7 +27,7 @@ class Form781Controller {
     }
     
     func updateFormWith(flight: FlightData, to form: Form781) {
-        form.flightData.append(flight)
+        form.flights.append(flight)
         save()
     }
     

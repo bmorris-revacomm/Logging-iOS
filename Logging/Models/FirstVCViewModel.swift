@@ -156,7 +156,7 @@ class FVCVM {
     //    }
     }
 
-    func vmUpdateForm(takeOffTime: UITextField, landingTime: UITextField) -> String{
+    func vmCalculateTotalTime(takeOffTime: UITextField, landTime: UITextField) -> String{
         // Thought here is to calculate the flying hours.
         var diffMin: Int = 0
         var diffHrs: Int = 0
@@ -199,12 +199,12 @@ class FVCVM {
             toHrsStr = "\(hr0)\(hr1)"
             toMinStr = "\(mn0)\(mn1)"
         }
-            if landingTime.text!.rangeOfCharacter(from: colon) != nil {
-                let laTime = landingTime.text!
+            if landTime.text!.rangeOfCharacter(from: colon) != nil {
+                let laTime = landTime.text!
                 laHrsStr = separateHoursAndMins(strInput: laTime, pointer: "hour")
                 laMinStr = separateHoursAndMins(strInput: laTime, pointer: "min")
             } else {
-                let laTime = landingTime.text!
+                let laTime = landTime.text!
                 let hrIndex0 = laTime.index(laTime.startIndex, offsetBy: 0)
                 let hrIndex1 = laTime.index(laTime.startIndex, offsetBy: 1)
                 

@@ -39,11 +39,15 @@
 		7F680CA525488DC300625ECC /* AircrewDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CA325488DC300625ECC /* AircrewDataViewController.swift */; };
 		7F680CA625488DC300625ECC /* AircrewDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CA325488DC300625ECC /* AircrewDataViewController.swift */; };
 		7F680CAE25488DD000625ECC /* FlightDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CAD25488DD000625ECC /* FlightDataViewController.swift */; };
-		7F680CAF25488DD000625ECC /* FlightDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CAD25488DD000625ECC /* FlightDataViewController.swift */; };
-		7F680CB025488DD000625ECC /* FlightDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CAD25488DD000625ECC /* FlightDataViewController.swift */; };
 		7F680CCF25489A2A00625ECC /* MissionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CCE25489A2A00625ECC /* MissionDataViewController.swift */; };
 		7F680CD025489A2A00625ECC /* MissionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CCE25489A2A00625ECC /* MissionDataViewController.swift */; };
 		7F680CD125489A2A00625ECC /* MissionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CCE25489A2A00625ECC /* MissionDataViewController.swift */; };
+		7F680CE32548C1E000625ECC /* FlightDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CE22548C1E000625ECC /* FlightDataTableViewCell.swift */; };
+		7F680CE42548C1E000625ECC /* FlightDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CE22548C1E000625ECC /* FlightDataTableViewCell.swift */; };
+		7F680CE52548C1E000625ECC /* FlightDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CE22548C1E000625ECC /* FlightDataTableViewCell.swift */; };
+		7F680CED2548C46900625ECC /* FlightListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CEC2548C46900625ECC /* FlightListViewController.swift */; };
+		7F680CEE2548C46900625ECC /* FlightListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CEC2548C46900625ECC /* FlightListViewController.swift */; };
+		7F680CEF2548C46900625ECC /* FlightListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F680CEC2548C46900625ECC /* FlightListViewController.swift */; };
 		7F7E0DD22530FC350041C4E9 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7E0DD12530FC350041C4E9 /* Colors.xcassets */; };
 		7F7E0DDB25310ED80041C4E9 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7E0DDA25310ED80041C4E9 /* StyleGuide.swift */; };
 		7F7E0DE0253110330041C4E9 /* PBLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7E0DDF253110330041C4E9 /* PBLButton.swift */; };
@@ -143,6 +147,8 @@
 		7F680CA325488DC300625ECC /* AircrewDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AircrewDataViewController.swift; sourceTree = "<group>"; };
 		7F680CAD25488DD000625ECC /* FlightDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDataViewController.swift; sourceTree = "<group>"; };
 		7F680CCE25489A2A00625ECC /* MissionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDataViewController.swift; sourceTree = "<group>"; };
+		7F680CE22548C1E000625ECC /* FlightDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDataTableViewCell.swift; sourceTree = "<group>"; };
+		7F680CEC2548C46900625ECC /* FlightListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListViewController.swift; sourceTree = "<group>"; };
 		7F7E0DD12530FC350041C4E9 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		7F7E0DDA25310ED80041C4E9 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		7F7E0DDF253110330041C4E9 /* PBLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBLButton.swift; sourceTree = "<group>"; };
@@ -239,13 +245,32 @@
 			isa = PBXGroup;
 			children = (
 				7F680CCE25489A2A00625ECC /* MissionDataViewController.swift */,
-				7F680CAD25488DD000625ECC /* FlightDataViewController.swift */,
+				7F680CEC2548C46900625ECC /* FlightListViewController.swift */,
+				7F680CE22548C1E000625ECC /* FlightDataTableViewCell.swift */,
 				7F680CA325488DC300625ECC /* AircrewDataViewController.swift */,
 				7F0086F72541DDFD00564A52 /* CrewMemberTableViewController.swift */,
-				7F0086E72540AC6800564A52 /* SideMenuTableViewController.swift */,
 				7F0086EE2540B5FD00564A52 /* ContainerViewController.swift */,
-				83D8407E24D3402A00F336E3 /* FirstViewController.swift */,
-				136F3A20251D0D3900E72AAE /* PageViewController.swift */,
+				7F0086E72540AC6800564A52 /* SideMenuTableViewController.swift */,
+			);
+			path = "Form 781";
+			sourceTree = "<group>";
+		};
+		7F680CF62548D3FE00625ECC /* Form 781 */ = {
+			isa = PBXGroup;
+			children = (
+				7F680C3D25475E9200625ECC /* Form781.swift */,
+				7F680C4725475F0100625ECC /* FlightData.swift */,
+				136A646D25470733006B9003 /* CrewMembers.swift */,
+			);
+			path = "Form 781";
+			sourceTree = "<group>";
+		};
+		7F680CF72548D42300625ECC /* Form 781 */ = {
+			isa = PBXGroup;
+			children = (
+				7F680C3625475C2500625ECC /* Form781Controller.swift */,
+				7F680C6A25476A0A00625ECC /* FlightDataController.swift */,
+				7FAB8CA3254363F600868215 /* CrewMemberController.swift */,
 			);
 			path = "Form 781";
 			sourceTree = "<group>";
@@ -264,13 +289,11 @@
 		7F83BBAB252F6E8800D13482 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7F680CF62548D3FE00625ECC /* Form 781 */,
 				13A9901D252CDE02008D7374 /* DiskOperations.swift */,
 				13A9900E252788C9008D7374 /* FlightDataModel.swift */,
 				13A990132527C4F2008D7374 /* FirstVCViewModel.swift */,
 				136A64682546FB25006B9003 /* FormData.swift */,
-				136A646D25470733006B9003 /* CrewMembers.swift */,
-				7F680C3D25475E9200625ECC /* Form781.swift */,
-				7F680C4725475F0100625ECC /* FlightData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,9 +323,7 @@
 		7F83BBAE252F6F3200D13482 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7F680C3625475C2500625ECC /* Form781Controller.swift */,
-				7F680C6A25476A0A00625ECC /* FlightDataController.swift */,
-				7FAB8CA3254363F600868215 /* CrewMemberController.swift */,
+				7F680CF72548D42300625ECC /* Form 781 */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -313,6 +334,7 @@
 				7F0086F52541DDAB00564A52 /* General */,
 				7FAB8C442541FD5100868215 /* Aircrew */,
 				7F0086F62541DDB200564A52 /* Form 781 */,
+				7FDA297F2548DC12008969D5 /* ToDelete */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -339,6 +361,16 @@
 				7FAB8C5625422E1000868215 /* AircrewTableViewCell.swift */,
 			);
 			path = Aircrew;
+			sourceTree = "<group>";
+		};
+		7FDA297F2548DC12008969D5 /* ToDelete */ = {
+			isa = PBXGroup;
+			children = (
+				136F3A20251D0D3900E72AAE /* PageViewController.swift */,
+				83D8407E24D3402A00F336E3 /* FirstViewController.swift */,
+				7F680CAD25488DD000625ECC /* FlightDataViewController.swift */,
+			);
+			path = ToDelete;
 			sourceTree = "<group>";
 		};
 		83D8406E24D3402A00F336E3 = {
@@ -629,6 +661,7 @@
 			files = (
 				7F7E0E422538BCCC0041C4E9 /* PBLTextField.swift in Sources */,
 				7F680C6B25476A0A00625ECC /* FlightDataController.swift in Sources */,
+				7F680CED2548C46900625ECC /* FlightListViewController.swift in Sources */,
 				13A9901E252CDE02008D7374 /* DiskOperations.swift in Sources */,
 				136F3A21251D0D3900E72AAE /* PageViewController.swift in Sources */,
 				7FAB8C502541FDA000868215 /* AircrewListViewController.swift in Sources */,
@@ -643,6 +676,7 @@
 				83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */,
 				7F680C3E25475E9200625ECC /* Form781.swift in Sources */,
 				7F680C4825475F0100625ECC /* FlightData.swift in Sources */,
+				7F680CE32548C1E000625ECC /* FlightDataTableViewCell.swift in Sources */,
 				7FAB8C492541FD9100868215 /* AircrewViewController.swift in Sources */,
 				136A646E25470733006B9003 /* CrewMembers.swift in Sources */,
 				136A64692546FB25006B9003 /* FormData.swift in Sources */,
@@ -676,9 +710,10 @@
 				7F680CD025489A2A00625ECC /* MissionDataViewController.swift in Sources */,
 				7F0086F02540B5FD00564A52 /* ContainerViewController.swift in Sources */,
 				7FAB8C5825422E1000868215 /* AircrewTableViewCell.swift in Sources */,
+				7F680CE42548C1E000625ECC /* FlightDataTableViewCell.swift in Sources */,
 				7FAB8C4A2541FD9100868215 /* AircrewViewController.swift in Sources */,
 				7FAB8C5F254337F700868215 /* SplitTimeViewController.swift in Sources */,
-				7F680CAF25488DD000625ECC /* FlightDataViewController.swift in Sources */,
+				7F680CEE2548C46900625ECC /* FlightListViewController.swift in Sources */,
 				7FAB8CA5254363F600868215 /* CrewMemberController.swift in Sources */,
 				7F97DFF7253F9A80005B0892 /* WelcomeViewController.swift in Sources */,
 				7F680C6C25476A0A00625ECC /* FlightDataController.swift in Sources */,
@@ -700,9 +735,10 @@
 				7F680CD125489A2A00625ECC /* MissionDataViewController.swift in Sources */,
 				7F0086F12540B5FD00564A52 /* ContainerViewController.swift in Sources */,
 				7FAB8C5925422E1000868215 /* AircrewTableViewCell.swift in Sources */,
+				7F680CE52548C1E000625ECC /* FlightDataTableViewCell.swift in Sources */,
 				7FAB8C4B2541FD9100868215 /* AircrewViewController.swift in Sources */,
 				7FAB8C60254337F700868215 /* SplitTimeViewController.swift in Sources */,
-				7F680CB025488DD000625ECC /* FlightDataViewController.swift in Sources */,
+				7F680CEF2548C46900625ECC /* FlightListViewController.swift in Sources */,
 				7FAB8CA6254363F600868215 /* CrewMemberController.swift in Sources */,
 				7F97DFF8253F9A80005B0892 /* WelcomeViewController.swift in Sources */,
 				7F680C6D25476A0A00625ECC /* FlightDataController.swift in Sources */,
