@@ -13,6 +13,8 @@ class FVCVM {
     let WIDTH: Int = 3300
     let HEIGHT: Int = 2550
     
+    let formController = Form781Controller()
+    
     func populateDateField() -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
@@ -23,10 +25,43 @@ class FVCVM {
     
     func checkForFile(filePath: URL) -> Bool {
         print("\(filePath.absoluteString)")
-        if FileManager.default.fileExists(atPath: filePath.absoluteString) {
+        var strPath = filePath.absoluteString
+        strPath = strPath.replacingOccurrences(of: "file://", with: "")
+        if FileManager.default.fileExists(atPath: strPath) {
             return true
         } else {
             return false
+        }
+    }
+    
+    func decodeJSON(jsonFile: URL) -> FormData {
+        var jsonData: Data
+        var formData = FormData()
+        
+        do {
+            jsonData = try Data(contentsOf: jsonFile)
+            do {
+                formData = try JSONDecoder().decode(FormData.self, from: jsonData)
+            }catch{
+                print("JSON decoder error")
+            }
+        }catch{
+            print("[DEBUG] - decodeJSON - Couldn't read json")
+        }
+        
+        return formData
+    }
+    
+    func encodeJSON(jsonFile: URL, formData: FormData) {
+        // Now we need to encode our new object
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        do {
+            let jsonEncoded = try encoder.encode(formData)
+            
+            DiskOperations().updateFile(line: String(data: jsonEncoded, encoding: .utf8)!, fileURL: jsonFile)
+        }catch {
+            print("JSON encoding problem")
         }
     }
     
@@ -46,31 +81,34 @@ class FVCVM {
                       specialUse: String) {
         // Function to add a row to JSON when it's added with addRow function
         // We need to write to the json file when we're done.
-        print(":(")
+        var flightData = FlightDataModel()
+        flightData.line = rowID
+        flightData.missionNumber = missionNumber
+        flightData.missionSymbol = missionSymbol
+        flightData.fromICAO = fromICAO
+        flightData.toICAO = toICAO
+        flightData.takeOffTime = takeOffTime
+        flightData.landingTime = landingTime
+        flightData.totalFlightTime = totalTime
+        flightData.touchAndGo = touchAndGo
+        flightData.fullStop = fullStop
+        flightData.totalLanding = totalLanding
+        flightData.sorties = sorties
+        flightData.specialUse = specialUse
+        
+        var formData: FormData = decodeJSON(jsonFile: jsonFile)
+            
+        
+        formData.flightData = [flightData]
+        
+        encodeJSON(jsonFile: jsonFile, formData: formData)
     }
     
 
     func appendToJSON(jsonFile: URL, key: String, value: String) {
-        if !checkForFile(filePath: jsonFile){
-            DiskOperations().readFile(fileURL: jsonFile)
-        }
+        print("Loading file")
         
-        var jsonData: Data
-        var formData = FormData()
-        
-        do{
-            // Read the file
-            jsonData = try Data(contentsOf: jsonFile)
-        
-            do {
-                // Set up our object
-                formData = try JSONDecoder().decode(FormData.self, from: jsonData)
-            }catch{
-                print ("JSON decoder error")
-            }
-        }catch {
-            print("Couldn't read json")
-        }
+        var formData = Form781Controller().load()
            
             switch(key){
             case "date":
@@ -109,16 +147,9 @@ class FVCVM {
                 break
             
             }
-        // Now we need to encode our new object
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
-        do {
-            let jsonEncoded = try encoder.encode(formData)
-            
-            DiskOperations().updateFile(line: String(data: jsonEncoded, encoding: .utf8)!, fileURL: jsonFile)
-        }catch {
-            print("JSON encoding problem")
-        }
+        print("saving file")
+        Form781Controller().save(formData: formData)
+       
     }
 
     func separateHoursAndMins(strInput: String, pointer: String) -> String {

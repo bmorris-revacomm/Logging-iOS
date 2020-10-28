@@ -34,8 +34,12 @@ class DiskOperations {
         do {
             try fileData.write(to: fileURL, atomically: true, encoding: .utf8)
         }catch {
+            if FileManager.default.fileExists(atPath: fileURL.absoluteString){
+                print("Possible race condition... can't access file.")
+            }else{
             // tried to write to a file that doesn't exist
             FileManager.default.createFile(atPath: fileURL.path, contents: fileData.data(using: .utf8))
+            }
         }
     }
     

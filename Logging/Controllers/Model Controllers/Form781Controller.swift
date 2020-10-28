@@ -14,14 +14,15 @@ class Form781Controller {
     
     static let shared = Form781Controller()
     
-    var forms = [Form781]()
+    var forms = [FormData]()
+    var form = FormData()
     
     // MARK: - CRUD
     
-    func create(date: String, mds: String, serialNo: String, unitCharged: String, harmLocation: String, flightData: FlightData, crewMembers: [CrewMember]) {
-        let form = Form781(date: date, mds: mds, serialNo: serialNo, unitCharged: unitCharged, harmLocation: harmLocation, flightData: flightData, crewMembers: crewMembers)
+    // func create(date: String, mds: String, serialNo: String, unitCharged: String, harmLocation: String, flightData: FlightData, crewMembers: [CrewMember]) {
+    func create() {
         forms.append(form)
-        save()
+        save(formData: form)
     }
     
     func update() {
@@ -40,7 +41,9 @@ class Form781Controller {
         return fileURL
     }
     
-    func save() {
+    func save(formData: FormData) {
+        self.forms.append(formData)
+        
         let encoder = JSONEncoder()
         do {
             let data = try encoder.encode(forms)
@@ -50,14 +53,15 @@ class Form781Controller {
         }
     }
     
-    func load() {
+    func load() -> FormData {
         let decoder = JSONDecoder()
         do {
             let data = try Data(contentsOf: fileURL())
-            forms = try decoder.decode([Form781].self, from: data)
+            forms = try decoder.decode([FormData].self, from: data)
         } catch {
             print("There was an error decoding the data: \(error.localizedDescription)")
         }
+        return forms[0]
     }
     
 } //End

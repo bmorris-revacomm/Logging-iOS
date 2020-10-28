@@ -11,32 +11,35 @@ import Foundation
 
 struct FlightDataModel: Codable {
     
-    var missionNumber: String
-    var missionSymbol: String
-    var fromICAO: String
-    var toICAO: String
-    var takeOffTime: String
-    var landingTime: String
-    var totalFlightTime: String
-    var touchAndGo: String
-    var fullStop: String
-    var totalLanding: String
-    var sorties: String
-    var specialUse: String
+    var line: String?
+    var missionNumber: String?
+    var missionSymbol: String?
+    var fromICAO: String?
+    var toICAO: String?
+    var takeOffTime: String?
+    var landingTime: String?
+    var totalFlightTime: String?
+    var touchAndGo: String?
+    var fullStop: String?
+    var totalLanding: String?
+    var sorties: String?
+    var specialUse: String?
     
-    public init(missionNumber: String,
-              missionSymbol: String,
-              fromICAO: String,
-              toICAO: String,
-              takeOffTime: String,
-              landingTime: String,
-              totalFlightTime: String,
-              touchAndGo: String,
-              fullStop: String,
-              totalLanding: String,
-              sorties: String,
-              specialUse: String) {
+    public init(line: String? = nil,
+                missionNumber: String? = nil,
+                missionSymbol: String? = nil,
+                fromICAO: String? = nil,
+                toICAO: String? = nil,
+                takeOffTime: String? = nil,
+                landingTime: String? = nil,
+                totalFlightTime: String? = nil,
+                touchAndGo: String? = nil,
+                fullStop: String? = nil,
+                totalLanding: String? = nil,
+                sorties: String? = nil,
+                specialUse: String? = nil) {
         
+        self.line = line
         self.missionNumber = missionNumber
         self.missionSymbol = missionSymbol
         self.fromICAO = fromICAO

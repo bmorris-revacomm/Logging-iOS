@@ -161,8 +161,8 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var pilotReview: UITextField!
             
     //MARK: - Properties
-    
-    let fileURL = DiskOperations().generateFileName()
+
+    let fileURL = Form781Controller().fileURL()
     var line6 = [false, false, false, false, false, false]
     
 //    var txtMissionNumber: String = "XX-XXXXX"
@@ -180,7 +180,6 @@ class FirstViewController: UIViewController {
 //    var line3: String = ""
     
     let tags: [String] = [
-        "date",
         "mds",
         "serialNo",
         "unitCharged",
@@ -197,23 +196,33 @@ class FirstViewController: UIViewController {
     //MARK: - Actions
         
     @IBAction func addToJSON(_ sender: UITextField) {
-        if (Date.text == "") {
-            print("date")
-            Date.text = FVCVM().populateDateField()
+        var formData = FormData()
+        if (FVCVM().checkForFile(filePath: fileURL))
+        {
+            print("Found file")
+            formData = Form781Controller().load()
+            if (formData.date != nil) {
+                if(sender.tag == tags.count) {
+                    FVCVM().appendToJSON(jsonFile: fileURL,
+                                         key: "\(tags[sender.tag])",
 
-            FVCVM().appendToJSON(jsonFile: fileURL, key: "Date", value: Date.text ?? "date")
-        }
-            if(sender.tag == tags.count) {
-                FVCVM().appendToJSON(jsonFile: fileURL,
-                                     key: "\(tags[sender.tag])",
+                                         value: "\(sender.text ?? " ")")
+                }else {
+                    FVCVM().appendToJSON(jsonFile: fileURL,
+                                         key: "\(tags[sender.tag])",
+                                         value: "\(sender.text ?? " ")")
+                }
+                
+            }else{
+                print("date")
+                Date.text = FVCVM().populateDateField()
 
-                                     value: "\(sender.text ?? " ")")
-            }else {
-                FVCVM().appendToJSON(jsonFile: fileURL,
-                                     key: "\(tags[sender.tag])",
-                                     value: "\(sender.text ?? " ")")
-            
+                FVCVM().appendToJSON(jsonFile: fileURL, key: "date", value: Date.text!)
             }
+        }else{
+            print("Had to create the file")
+            Form781Controller().create()
+        }
     }
     
     @IBAction func calculateTotalLanding(_sender: Any) {
