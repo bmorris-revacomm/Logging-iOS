@@ -289,6 +289,8 @@ class FlightDataViewController: UIViewController {
                     // Add row to JSON
                     //FVCVM().addRowToJSON(jsonFile: fileURL, rowID: "a", missionNumber: missionNumber.text ?? "", missionSymbol: missionSymbol.text ?? "", fromICAO: fromICAO.text ?? "", toICAO: toICAO.text ?? "", takeOffTime: takeOffTime.text ?? "", landingTime: landingTime.text ?? "", totalTime: totalTime.text ?? "", touchAndGo: touchAndGo.text ?? "", fullStop: fullStop.text ?? "", totalLanding: totalLanding.text ?? "", sorties: sorties.text ?? "", specialUse: specialUse.text ?? "")
                     
+                    FlightDataController.create(flightSeq: flightSeq.text!, missionNumber: missionNumber.text!, missionSymbol: missionSymbol.text!, fromICAO: fromICAO.text!, toICAO: toICAO.text!, takeOffTime: takeOffTime.text!, landTime: landingTime.text!, totalTime: totalTime.text!, touchAndGo: touchAndGo.text!, fullStop: fullStop.text!, totalLandings: totalLanding.text!, sorties: sorties.text!, specialUse: specialUse.text!)
+                
                     clearFields()
                     line6[0] = true
                     popUpView.isHidden = true
@@ -307,6 +309,7 @@ class FlightDataViewController: UIViewController {
                     line6b10.text = totalLanding.text
                     line6b11.text = sorties.text
                     line6b12.text = specialUse.text
+                    FlightDataController.create(flightSeq: flightSeq.text!, missionNumber: missionNumber.text!, missionSymbol: missionSymbol.text!, fromICAO: fromICAO.text!, toICAO: toICAO.text!, takeOffTime: takeOffTime.text!, landTime: landingTime.text!, totalTime: totalTime.text!, touchAndGo: touchAndGo.text!, fullStop: fullStop.text!, totalLandings: totalLanding.text!, sorties: sorties.text!, specialUse: specialUse.text!)
                     clearFields()
                     line6[1] = true
                     popUpView.isHidden = true
@@ -325,6 +328,7 @@ class FlightDataViewController: UIViewController {
                     line6c10.text = totalLanding.text
                     line6c11.text = sorties.text
                     line6c12.text = specialUse.text
+                    FlightDataController.create(flightSeq: flightSeq.text!, missionNumber: missionNumber.text!, missionSymbol: missionSymbol.text!, fromICAO: fromICAO.text!, toICAO: toICAO.text!, takeOffTime: takeOffTime.text!, landTime: landingTime.text!, totalTime: totalTime.text!, touchAndGo: touchAndGo.text!, fullStop: fullStop.text!, totalLandings: totalLanding.text!, sorties: sorties.text!, specialUse: specialUse.text!)
                     clearFields()
                     line6[2] = true
                     popUpView.isHidden = true
@@ -343,6 +347,7 @@ class FlightDataViewController: UIViewController {
                     line6d10.text = totalLanding.text
                     line6d11.text = sorties.text
                     line6d12.text = specialUse.text
+                    FlightDataController.create(flightSeq: flightSeq.text!, missionNumber: missionNumber.text!, missionSymbol: missionSymbol.text!, fromICAO: fromICAO.text!, toICAO: toICAO.text!, takeOffTime: takeOffTime.text!, landTime: landingTime.text!, totalTime: totalTime.text!, touchAndGo: touchAndGo.text!, fullStop: fullStop.text!, totalLandings: totalLanding.text!, sorties: sorties.text!, specialUse: specialUse.text!)
                     clearFields()
                     line6[3] = true
                     popUpView.isHidden = true
@@ -361,6 +366,7 @@ class FlightDataViewController: UIViewController {
                     line6e10.text = totalLanding.text
                     line6e11.text = sorties.text
                     line6e12.text = specialUse.text
+                    FlightDataController.create(flightSeq: flightSeq.text!, missionNumber: missionNumber.text!, missionSymbol: missionSymbol.text!, fromICAO: fromICAO.text!, toICAO: toICAO.text!, takeOffTime: takeOffTime.text!, landTime: landingTime.text!, totalTime: totalTime.text!, touchAndGo: touchAndGo.text!, fullStop: fullStop.text!, totalLandings: totalLanding.text!, sorties: sorties.text!, specialUse: specialUse.text!)
                     clearFields()
                     line6[4] = true
                     popUpView.isHidden = true
@@ -379,6 +385,7 @@ class FlightDataViewController: UIViewController {
                     line6f10.text = totalLanding.text
                     line6f11.text = sorties.text
                     line6f12.text = specialUse.text
+                    FlightDataController.create(flightSeq: flightSeq.text!, missionNumber: missionNumber.text!, missionSymbol: missionSymbol.text!, fromICAO: fromICAO.text!, toICAO: toICAO.text!, takeOffTime: takeOffTime.text!, landTime: landingTime.text!, totalTime: totalTime.text!, touchAndGo: touchAndGo.text!, fullStop: fullStop.text!, totalLandings: totalLanding.text!, sorties: sorties.text!, specialUse: specialUse.text!)
                     clearFields()
                     line6[5] = true
                     popUpView.isHidden = true

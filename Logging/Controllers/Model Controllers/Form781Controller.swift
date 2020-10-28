@@ -8,21 +8,22 @@
 
 import Foundation
 
+import Foundation
+
 class Form781Controller {
     
     // MARK: - Singleton & Source of Truth
     
     static let shared = Form781Controller()
     
-    var forms = [FormData]()
-    var form = FormData()
+    var forms = [Form781]()
     
     // MARK: - CRUD
     
     func create(date: String, mds: String, serialNumber: String, unitCharged: String, harmLocation: String, flightAuthNum: String, issuingUnit: String) {
         let form = Form781(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
         forms.append(form)
-        save(formData: form)
+        save()
     }
     
     func updateFormWith(flight: FlightData, to form: Form781) {
@@ -47,11 +48,10 @@ class Form781Controller {
         return fileURL
     }
     
-    func save(formData: FormData) {
-        self.forms.append(formData)
-        
+    func save() {
         let encoder = JSONEncoder()
         do {
+            encoder.outputFormatting = .prettyPrinted
             let data = try encoder.encode(forms)
             //print(data.base64EncodedString())
             try data.write(to: fileURL())
@@ -60,11 +60,11 @@ class Form781Controller {
         }
     }
     
-    func load() -> FormData {
+    func load() -> Form781 {
         let decoder = JSONDecoder()
         do {
             let data = try Data(contentsOf: fileURL())
-            forms = try decoder.decode([FormData].self, from: data)
+            forms = try decoder.decode([Form781].self, from: data)
         } catch {
             print("There was an error decoding the data: \(error.localizedDescription)")
         }
@@ -72,3 +72,4 @@ class Form781Controller {
     }
     
 } //End
+ 

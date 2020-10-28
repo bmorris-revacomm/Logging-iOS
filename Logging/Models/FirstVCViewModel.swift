@@ -65,92 +65,45 @@ class FVCVM {
         }
     }
     
-    func addRowToJSON(jsonFile: URL,
-                      rowID: String,
-                      missionNumber: String,
-                      missionSymbol: String,
-                      fromICAO: String,
-                      toICAO: String,
-                      takeOffTime: String,
-                      landingTime: String,
-                      totalTime: String,
-                      touchAndGo: String,
-                      fullStop: String,
-                      totalLanding: String,
-                      sorties: String,
-                      specialUse: String) {
-        // Function to add a row to JSON when it's added with addRow function
-        // We need to write to the json file when we're done.
-        var flightData = FlightDataModel()
-        flightData.line = rowID
-        flightData.missionNumber = missionNumber
-        flightData.missionSymbol = missionSymbol
-        flightData.fromICAO = fromICAO
-        flightData.toICAO = toICAO
-        flightData.takeOffTime = takeOffTime
-        flightData.landingTime = landingTime
-        flightData.totalFlightTime = totalTime
-        flightData.touchAndGo = touchAndGo
-        flightData.fullStop = fullStop
-        flightData.totalLanding = totalLanding
-        flightData.sorties = sorties
-        flightData.specialUse = specialUse
-        
-        var formData: FormData = decodeJSON(jsonFile: jsonFile)
-            
-        
-        formData.flightData = [flightData]
-        
-        encodeJSON(jsonFile: jsonFile, formData: formData)
-    }
+//    func addRowToJSON(jsonFile: URL,
+//                      rowID: String,
+//                      missionNumber: String,
+//                      missionSymbol: String,
+//                      fromICAO: String,
+//                      toICAO: String,
+//                      takeOffTime: String,
+//                      landingTime: String,
+//                      totalTime: String,
+//                      touchAndGo: String,
+//                      fullStop: String,
+//                      totalLanding: String,
+//                      sorties: String,
+//                      specialUse: String) {
+//        // Function to add a row to JSON when it's added with addRow function
+//        // We need to write to the json file when we're done.
+//        var flightData = FlightDataModel()
+//        flightData.line = rowID
+//        flightData.missionNumber = missionNumber
+//        flightData.missionSymbol = missionSymbol
+//        flightData.fromICAO = fromICAO
+//        flightData.toICAO = toICAO
+//        flightData.takeOffTime = takeOffTime
+//        flightData.landingTime = landingTime
+//        flightData.totalFlightTime = totalTime
+//        flightData.touchAndGo = touchAndGo
+//        flightData.fullStop = fullStop
+//        flightData.totalLanding = totalLanding
+//        flightData.sorties = sorties
+//        flightData.specialUse = specialUse
+//        
+//        var formData: FormData = decodeJSON(jsonFile: jsonFile)
+//            
+//        
+//        formData.flightData = [flightData]
+//        
+//        encodeJSON(jsonFile: jsonFile, formData: formData)
+//    }
     
-
-    func appendToJSON(jsonFile: URL, key: String, value: String) {
-        print("Loading file")
-        
-        var formData = Form781Controller().load()
-           
-            switch(key){
-            case "date":
-                formData.date = value
-                break
-            case "mds":
-                formData.mds = value
-                break
-            case "serialNo":
-                formData.serialNo = value
-                break
-            case "unitCharged":
-                formData.unitCharged = value
-                break
-            case "harmLocation":
-                formData.harmLocation = value
-                break
-            
-            case "grandTotalFlightTime":
-                formData.grandTotalFlightTime = value
-                break
-            case "grandTotalTouchAndGo":
-                formData.grandTotalTouchAndGo = value
-                break
-            case "grandTotalFullStop":
-                formData.grandTotalFullStop = value
-                break
-            case "grandTotalStops":
-                formData.grandTotalStops = value
-                break
-            case "grandTotalSorties":
-                formData.grandTotalSorties = value
-                break
-            default:
-                print("key not found")
-                break
-            
-            }
-        print("saving file")
-        Form781Controller().save(formData: formData)
-       
-    }
 
     func separateHoursAndMins(strInput: String, pointer: String) -> String {
 
