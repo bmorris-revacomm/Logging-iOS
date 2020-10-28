@@ -13,6 +13,8 @@ class FVCVM {
     let WIDTH: Int = 3300
     let HEIGHT: Int = 2550
     
+    let formController = Form781Controller()
+    
     func populateDateField() -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
@@ -23,89 +25,34 @@ class FVCVM {
     
     func checkForFile(filePath: URL) -> Bool {
         print("\(filePath.absoluteString)")
-        if FileManager.default.fileExists(atPath: filePath.absoluteString) {
+        var strPath = filePath.absoluteString
+        strPath = strPath.replacingOccurrences(of: "file://", with: "")
+        if FileManager.default.fileExists(atPath: strPath) {
             return true
         } else {
             return false
         }
     }
     
-    func addRowToJSON(jsonFile: URL,
-                      rowID: String,
-                      missionNumber: String,
-                      missionSymbol: String,
-                      fromICAO: String,
-                      toICAO: String,
-                      takeOffTime: String,
-                      landingTime: String,
-                      totalTime: String,
-                      touchAndGo: String,
-                      fullStop: String,
-                      totalLanding: String,
-                      sorties: String,
-                      specialUse: String) {
-        // Function to add a row to JSON when it's added with addRow function
-        // We need to write to the json file when we're done.
-        print(":(")
-    }
-    
-
-    func appendToJSON(jsonFile: URL, key: String, value: String) {
-        
+    func decodeJSON(jsonFile: URL) -> FormData {
         var jsonData: Data
         var formData = FormData()
         
-        do{
-            // Read the file
+        do {
             jsonData = try Data(contentsOf: jsonFile)
-        
             do {
-                // Set up our object
                 formData = try JSONDecoder().decode(FormData.self, from: jsonData)
             }catch{
-                print ("JSON decoder error")
+                print("JSON decoder error")
             }
-        }catch {
-            print("Couldn't read json")
+        }catch{
+            print("[DEBUG] - decodeJSON - Couldn't read json")
         }
-           
-            switch(key){
-            case "date":
-                formData.date = value
-                break
-            case "mds":
-                formData.mds = value
-                break
-            case "serialNo":
-                formData.serialNo = value
-                break
-            case "unitCharged":
-                formData.unitCharged = value
-                break
-            case "harmLocation":
-                formData.harmLocation = value
-                break
-            
-            case "grandTotalFlightTime":
-                formData.grandTotalFlightTime = value
-                break
-            case "grandTotalTouchAndGo":
-                formData.grandTotalTouchAndGo = value
-                break
-            case "grandTotalFullStop":
-                formData.grandTotalFullStop = value
-                break
-            case "grandTotalStops":
-                formData.grandTotalStops = value
-                break
-            case "grandTotalSorties":
-                formData.grandTotalSorties = value
-                break
-            default:
-                print("key not found")
-                break
-            
-            }
+        
+        return formData
+    }
+    
+    func encodeJSON(jsonFile: URL, formData: FormData) {
         // Now we need to encode our new object
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
@@ -117,6 +64,46 @@ class FVCVM {
             print("JSON encoding problem")
         }
     }
+    
+//    func addRowToJSON(jsonFile: URL,
+//                      rowID: String,
+//                      missionNumber: String,
+//                      missionSymbol: String,
+//                      fromICAO: String,
+//                      toICAO: String,
+//                      takeOffTime: String,
+//                      landingTime: String,
+//                      totalTime: String,
+//                      touchAndGo: String,
+//                      fullStop: String,
+//                      totalLanding: String,
+//                      sorties: String,
+//                      specialUse: String) {
+//        // Function to add a row to JSON when it's added with addRow function
+//        // We need to write to the json file when we're done.
+//        var flightData = FlightDataModel()
+//        flightData.line = rowID
+//        flightData.missionNumber = missionNumber
+//        flightData.missionSymbol = missionSymbol
+//        flightData.fromICAO = fromICAO
+//        flightData.toICAO = toICAO
+//        flightData.takeOffTime = takeOffTime
+//        flightData.landingTime = landingTime
+//        flightData.totalFlightTime = totalTime
+//        flightData.touchAndGo = touchAndGo
+//        flightData.fullStop = fullStop
+//        flightData.totalLanding = totalLanding
+//        flightData.sorties = sorties
+//        flightData.specialUse = specialUse
+//        
+//        var formData: FormData = decodeJSON(jsonFile: jsonFile)
+//            
+//        
+//        formData.flightData = [flightData]
+//        
+//        encodeJSON(jsonFile: jsonFile, formData: formData)
+//    }
+    
 
     func separateHoursAndMins(strInput: String, pointer: String) -> String {
 

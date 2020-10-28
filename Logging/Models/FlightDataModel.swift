@@ -9,8 +9,9 @@
 import Foundation
 
 
-struct FlightDataModel: Codable {
+class FlightDataModel: Codable {
     
+    var line: String
     var missionNumber: String
     var missionSymbol: String
     var fromICAO: String
@@ -24,19 +25,21 @@ struct FlightDataModel: Codable {
     var sorties: String
     var specialUse: String
     
-    public init(missionNumber: String,
-              missionSymbol: String,
-              fromICAO: String,
-              toICAO: String,
-              takeOffTime: String,
-              landingTime: String,
-              totalFlightTime: String,
-              touchAndGo: String,
-              fullStop: String,
-              totalLanding: String,
-              sorties: String,
-              specialUse: String) {
+    public init(line: String,
+                missionNumber: String,
+                missionSymbol: String,
+                fromICAO: String,
+                toICAO: String,
+                takeOffTime: String,
+                landingTime: String,
+                totalFlightTime: String,
+                touchAndGo: String,
+                fullStop: String,
+                totalLanding: String,
+                sorties: String,
+                specialUse: String) {
         
+        self.line = line
         self.missionNumber = missionNumber
         self.missionSymbol = missionSymbol
         self.fromICAO = fromICAO

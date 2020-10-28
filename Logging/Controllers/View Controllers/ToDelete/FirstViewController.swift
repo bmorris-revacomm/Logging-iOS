@@ -32,8 +32,9 @@ class FirstViewController: UIViewController {
     
             
     //MARK: - Properties
-    
-    let fileURL = DiskOperations().generateFileName()
+
+    let fileURL = Form781Controller().fileURL()
+    var line6 = [false, false, false, false, false, false]
     
 //    var txtMissionNumber: String = "XX-XXXXX"
 //    var missionSymbolText: String = ""
@@ -50,32 +51,17 @@ class FirstViewController: UIViewController {
 //    var line3: String = ""
     
     let tags: [String] = [
-        "MDS", "Serial #", "Unit Charged", "HARM Location",
-        "6a - Mission #", "6a - Mission Symbol", "6a - From (ICAO)",
-        "6a - To (ICAO)", "6a - Take Off Time", "6a - Landing Time",
-        "6a - Total Time", "6a - Touch & Go", "6a - Full Stop",
-        "6a - Sorties", "6a - Total Landings", "6a - Special Use",
-        "6b - Mission #", "6b - Mission Symbol", "6b - From (ICAO)",
-        "6b - To (ICAO)", "6b - Take Off Time", "6b - Landing Time",
-        "6b - Total Time", "6b - Touch & Go", "6b - Full Stop",
-        "6b - Sorties", "6b - Special Use", "6c - Mission #",
-        "6c - Mission Symbol", "6c - From (ICAO)", "6c - To (ICAO)",
-        "6c - Take Off Time", "6c - Landing Time", "6c - Total Time",
-        "6c - Touch & Go", "6c - Full Stop", "6c - Total Landing",
-        "6c - Sorties", "6c - Special Use", "6d - Mission #",
-        "6d - Mission Symbol", "6d - From (ICAO)", "6d - To (ICAO)",
-        "6d - Take Off Time", "6d - Landing Time", "6d - Total Time",
-        "6d - Touch & Go", "6d - Full Stop", "6d - Total Landing",
-        "6d - Sorties", "6d - Special Use", "6e - Mission #", "6e - Mission Symbol",
-        "6e - From (ICAO)", "6e - To (ICAO)", "6e - Take Off Time",
-        "6e - Landing Time", "6e - Total Time", "6e - Touch & Go",
-        "6e - Full Stop", "6e - Total Landing", "6e - Sorties",
-        "6e - Special Use", "6f - Mission #", "6f - Mission Symbol",
-        "6f - From (ICAO)", "6f - To (ICAO)", "6f - Take Off Time",
-        "6f - Landing Time", "6f - Total Time", "6f - Touch & Go",
-        "6f - Full Stop", "6f - Total Landing", "6f - Sorties",
-        "6f - Special Use", "GrandTotalFlightTime", "GrandTotalTouchAndGo",
-        "GrandTotalFullStop", "GrandTotalStops", "GrandTotalSorties"
+        "mds",
+        "serialNo",
+        "unitCharged",
+        "harmLocation",
+        "flightData",
+        "grandTotalFlightTime",
+        "grandTotalTouchAndGo",
+        "grandTotalFullStop",
+        "grandTotalStops",
+        "grandTotalSorties",
+        "crewMember"
     ]
     
     //MARK: - Actions
