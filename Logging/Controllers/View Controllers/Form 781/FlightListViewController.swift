@@ -12,7 +12,7 @@ class FlightListViewController: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var flightDataTableView: UITableView!
+    @IBOutlet weak var flightTableView: UITableView!
     @IBOutlet weak var popUpView: UIView!
     
     @IBOutlet weak var flightSeq: UITextField!
@@ -35,8 +35,8 @@ class FlightListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        flightDataTableView.delegate = self
-        flightDataTableView.dataSource = self
+        flightTableView.delegate = self
+        flightTableView.dataSource = self
     }
     
     // MARK: - Actions
@@ -82,7 +82,7 @@ class FlightListViewController: UIViewController {
         
         FlightDataController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
         
-        flightDataTableView.reloadData()
+        flightTableView.reloadData()
         popUpView.isHidden = true
         print("Saved flight")
     }
@@ -114,13 +114,31 @@ extension FlightListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = self.flightDataTableView.dequeueReusableCell(withIdentifier: "FlightCell", for: indexPath) as? FlightDataTableViewCell else { return UITableViewCell() }
+        guard let cell = self.flightTableView.dequeueReusableCell(withIdentifier: "FlightCell", for: indexPath) as? FlightTableViewCell else { return UITableViewCell() }
         
+        cell.delegate = self
         if let flight = Form781Controller.shared.forms.last?.flights[indexPath.row] {
             cell.setUpViews(flight: flight)
         }
         
         return cell
+    }
+    
+} //End
+
+extension FlightListViewController: FlightTableViewCellDelegate {
+    
+    func editButtonTapped(cell: FlightTableViewCell) {
+        
+    }
+    
+    func deleteButtonTapped(cell: FlightTableViewCell) {
+        guard let form = Form781Controller.shared.forms.last,
+              let indexPath = flightTableView.indexPath(for: cell) else { return }
+        let flight = form.flights[indexPath.row]
+        Form781Controller.shared.remove(flight: flight, from: form)
+        flightTableView.reloadData()
+        print("Deleted flight")
     }
     
 } //End

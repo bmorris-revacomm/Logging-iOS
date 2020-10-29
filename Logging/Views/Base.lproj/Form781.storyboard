@@ -2922,7 +2922,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FlightCell" rowHeight="50" id="h1W-H9-AWJ" customClass="FlightDataTableViewCell" customModule="Logging" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FlightCell" rowHeight="50" id="h1W-H9-AWJ" customClass="FlightTableViewCell" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="78" width="655" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h1W-H9-AWJ" id="Bcw-S7-hn8">
@@ -3024,7 +3024,7 @@
                                                     <color key="tintColor" name="slate"/>
                                                     <state key="normal" image="minus.circle" catalog="system"/>
                                                     <connections>
-                                                        <action selector="removeButtonTapped:" destination="h1W-H9-AWJ" eventType="touchUpInside" id="PK0-5f-AyS"/>
+                                                        <action selector="deleteButtonTapped:" destination="h1W-H9-AWJ" eventType="touchUpInside" id="BQN-BM-ykM"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3414,8 +3414,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="l7d-v2-2M8"/>
                     <connections>
-                        <outlet property="flightDataTableView" destination="89Q-Op-sJj" id="rtM-q5-6Ar"/>
                         <outlet property="flightSeq" destination="e4z-65-0RV" id="dTG-Ul-msf"/>
+                        <outlet property="flightTableView" destination="89Q-Op-sJj" id="rtM-q5-6Ar"/>
                         <outlet property="fromICAO" destination="g7C-Pj-mPc" id="sXp-5b-a5h"/>
                         <outlet property="fullStop" destination="BQY-jp-Xhs" id="j2S-kE-al8"/>
                         <outlet property="landTime" destination="2jh-LT-c0V" id="BtI-L3-lkA"/>

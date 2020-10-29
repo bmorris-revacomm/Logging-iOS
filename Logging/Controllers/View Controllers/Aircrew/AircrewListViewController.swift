@@ -182,11 +182,29 @@ extension AircrewListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = self.aircrewTableView.dequeueReusableCell(withIdentifier: "AircrewCell", for: indexPath) as? AircrewTableViewCell else { return UITableViewCell() }
         
+        cell.delegate = self
         if let crewMember = Form781Controller.shared.forms.last?.crewMembers[indexPath.row] {
             cell.setUpViews(crewMember: crewMember)
         }
         
         return cell
+    }
+    
+} //End
+
+extension AircrewListViewController: AircrewTableViewCellDelegate {
+    
+    func editButtonTapped(cell: AircrewTableViewCell) {
+        
+    }
+    
+    func deleteButtonTapped(cell: AircrewTableViewCell) {
+        guard let form = Form781Controller.shared.forms.last,
+              let indexPath = aircrewTableView.indexPath(for: cell) else { return }
+        let crewMember = form.crewMembers[indexPath.row]
+        Form781Controller.shared.remove(crewMember: crewMember, from: form)
+        aircrewTableView.reloadData()
+        print("Deleted crew member")
     }
     
 } //End

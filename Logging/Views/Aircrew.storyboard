@@ -234,6 +234,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5i5-6E-Kkw" userLabel="printForm">
                                 <rect key="frame" x="715" y="150" width="23" height="22"/>
                                 <state key="normal" image="printer" catalog="system"/>
+                                <connections>
+                                    <segue destination="gQ6-to-w7V" kind="presentation" id="wAr-p2-aBR"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-Rt-Vcw" userLabel="Divider line">
                                 <rect key="frame" x="0.0" y="177.5" width="768" height="1"/>
@@ -422,7 +425,7 @@
                                             <outlet property="flyingOriginLabel" destination="mt8-sO-r0z" id="hHc-KT-XnC"/>
                                             <outlet property="nameLabel" destination="27W-Zv-TID" id="ghn-dC-dru"/>
                                             <outlet property="ssnLabel" destination="T6b-ij-4YN" id="Bi0-E5-lsF"/>
-                                            <segue destination="gQ6-to-w7V" kind="presentation" identifier="ToAircrewDetailVC" id="MWf-jR-oUC"/>
+                                            <segue destination="gQ6-to-w7V" kind="presentation" identifier="ToAircrewDetailVC" id="LcC-yw-bOZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1075,6 +1078,13 @@
                                 <color key="textColor" name="slate"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTY-kq-scd">
+                                <rect key="frame" x="145" y="316" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rxd-cA-WAY"/>
                         <color key="backgroundColor" name="mist"/>
@@ -1083,8 +1093,9 @@
                             <constraint firstItem="tr0-Pk-jiw" firstAttribute="centerY" secondItem="Rxd-cA-WAY" secondAttribute="centerY" multiplier="0.3" id="uIE-AF-PdF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="aH6-jl-HBL"/>
                     <connections>
-                        <outlet property="name" destination="tr0-Pk-jiw" id="dIA-4p-1ia"/>
+                        <outlet property="name" destination="tr0-Pk-jiw" id="sFf-Oq-GP8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVj-QY-eNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1092,6 +1103,9 @@
             <point key="canvasLocation" x="2019" y="-54"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="LcC-yw-bOZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="minus.circle" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>

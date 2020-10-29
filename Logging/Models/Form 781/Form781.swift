@@ -24,7 +24,7 @@ class Form781: Codable {
     var grandTotalStops: String?
     var grandTotalSorties: String?
     
-    var flights: [FlightData]
+    var flights: [Flight]
     var crewMembers: [CrewMember]
     
     #warning("TO DO: add maint and pilot review")
@@ -41,7 +41,7 @@ class Form781: Codable {
         grandTotalFullStop: String? = nil,
         grandTotalStops: String? = nil,
         grandTotalSorties: String? = nil,
-        flights: [FlightData] = [],
+        flights: [Flight] = [],
         crewMembers: [CrewMember] = []
     ) {
         self.date = date

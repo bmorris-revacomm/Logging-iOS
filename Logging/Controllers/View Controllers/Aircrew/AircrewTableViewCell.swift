@@ -8,22 +8,25 @@
 
 import UIKit
 
+protocol AircrewTableViewCellDelegate: class {
+    func editButtonTapped(cell: AircrewTableViewCell)
+    func deleteButtonTapped(cell: AircrewTableViewCell)
+}
+
 class AircrewTableViewCell: UITableViewCell {
+    
+    // MARK: - Outlets
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ssnLabel: UILabel!
     @IBOutlet weak var flyingOriginLabel: UILabel!
     @IBOutlet weak var flightAuthDutyCodeLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
-    }
+    
+    // MARK: - Properties
+    
+    weak var delegate: AircrewTableViewCellDelegate?
+    
+    // MARK: - Methods and Actions
     
     func setUpViews(crewMember: CrewMember) {
         nameLabel.text = "\(crewMember.lastName), \(crewMember.firstName)"
@@ -33,11 +36,11 @@ class AircrewTableViewCell: UITableViewCell {
     }
 
     @IBAction func editButtonTapped(_ sender: UIButton) {
-        
+        delegate?.editButtonTapped(cell: self)
     }
     
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
-        
+        delegate?.deleteButtonTapped(cell: self)
     }
     
 } //End

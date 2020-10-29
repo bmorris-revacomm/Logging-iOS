@@ -26,13 +26,25 @@ class Form781Controller {
         save()
     }
     
-    func updateFormWith(flight: FlightData, form: Form781) {
+    func updateFormWith(flight: Flight, form: Form781) {
         form.flights.append(flight)
         save()
     }
     
     func updateFormwith(crewMember: CrewMember, to form: Form781) {
         form.crewMembers.append(crewMember)
+        save()
+    }
+    
+    func remove(flight: Flight, from form: Form781) {
+        guard let index = form.flights.firstIndex(of: flight) else { return }
+        form.flights.remove(at: index)
+        save()
+    }
+    
+    func remove(crewMember: CrewMember, from form: Form781) {
+        guard let index = form.crewMembers.firstIndex(of: crewMember) else { return }
+        form.crewMembers.remove(at: index)
         save()
     }
     
