@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 class Form781Controller {
     
     // MARK: - Singleton & Source of Truth
@@ -60,15 +58,24 @@ class Form781Controller {
         }
     }
     
-    func load() {
+    func load() throws {
         let decoder = JSONDecoder()
-        do {
-            let data = try Data(contentsOf: fileURL())
-            forms = try decoder.decode([Form781].self, from: data)
-        } catch {
-            print("There was an error decoding the data: \(error.localizedDescription)")
+//        do {
+        guard let data = try? Data(contentsOf: fileURL()) else {
+            print("There was an error finding the file")
+            throw Form781Error.FileNotFound
         }
+        forms = try decoder.decode([Form781].self, from: data)
+//        } catch {
+//            print("There was an error decoding the data: \(error.localizedDescription)")
+//        }
     }
     
+    
+    func loadFormData() {
+        
+    }
+    
+    
+    
 } //End
- 
