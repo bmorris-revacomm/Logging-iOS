@@ -25,6 +25,20 @@ class MissionDataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationController?.setNavigationBarHidden(true, animated: true)
+        // try to load Logging.json
+        do {
+            try Form781Controller.shared.load()
+            if Form781Controller.shared.forms.last?.date == ""{
+                dateTextField.text = Helper().populateDateField()
+            }else{
+                fillFormFields()
+            }
+        } catch {
+            // No form found.  proceed as normal
+            print("I'm in the catch")
+            dateTextField.text = Helper().populateDateField()
+        }
+        
     }
     
     // MARK: - Actions
@@ -53,6 +67,16 @@ class MissionDataViewController: UIViewController {
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func fillFormFields() {
+        dateTextField.text = Form781Controller.shared.forms.last?.date
+        MDS.text = Form781Controller.shared.forms.last?.mds
+        serialNumber.text = Form781Controller.shared.forms.last?.serialNumber
+        unitCharged.text = Form781Controller.shared.forms.last?.unitCharged
+        harmLocation.text = Form781Controller.shared.forms.last?.harmLocation
+        flightAuthNum.text = Form781Controller.shared.forms.last?.flightAuthNum
+        issuingUnit.text = Form781Controller.shared.forms.last?.issuingUnit
     }
 
 } //End
