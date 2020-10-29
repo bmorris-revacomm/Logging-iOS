@@ -28,7 +28,7 @@ class AircrewTableViewCell: UITableViewCell {
     func setUpViews(crewMember: CrewMember) {
         nameLabel.text = "\(crewMember.lastName), \(crewMember.firstName)"
         ssnLabel.text = crewMember.ssnLast4
-        flyingOriginLabel.text = crewMember.flyingOrgn
+        flyingOriginLabel.text = crewMember.flyingOrigin
         flightAuthDutyCodeLabel.text = crewMember.flightAuthDutyCode
     }
 

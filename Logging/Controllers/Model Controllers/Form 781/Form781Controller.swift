@@ -26,7 +26,7 @@ class Form781Controller {
         save()
     }
     
-    func updateFormWith(flight: FlightData, to form: Form781) {
+    func updateFormWith(flight: FlightData, form: Form781) {
         form.flights.append(flight)
         save()
     }
@@ -60,7 +60,7 @@ class Form781Controller {
         }
     }
     
-    func load() -> Form781 {
+    func load() {
         let decoder = JSONDecoder()
         do {
             let data = try Data(contentsOf: fileURL())
@@ -68,7 +68,6 @@ class Form781Controller {
         } catch {
             print("There was an error decoding the data: \(error.localizedDescription)")
         }
-        return forms[0]
     }
     
 } //End
