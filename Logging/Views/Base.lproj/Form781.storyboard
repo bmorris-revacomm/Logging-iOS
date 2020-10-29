@@ -2321,9 +2321,6 @@
                                         <color key="backgroundColor" name="fog"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="VIEW CREW"/>
-                                        <connections>
-                                            <segue destination="8ms-fV-ZIz" kind="presentation" id="270-7e-ZK9"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -2332,6 +2329,9 @@
                                 <color key="backgroundColor" name="slate"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="PjM-lN-wNj" eventType="touchUpInside" id="ZIw-i2-KHu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwW-eX-PxP" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
                                 <rect key="frame" x="50" y="874" width="41" height="30"/>
@@ -2340,17 +2340,6 @@
                                 <state key="normal" title="BACK"/>
                                 <connections>
                                     <action selector="page4BackButtonTapped:" destination="PjM-lN-wNj" eventType="touchUpInside" id="5bC-RF-rGx"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFm-4N-Eae">
-                                <rect key="frame" x="310" y="870" width="108" height="34"/>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="SAVE STUFF">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveStuffTapped:" destination="PjM-lN-wNj" eventType="touchUpInside" id="nEp-2X-scC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2382,11 +2371,9 @@
                             <constraint firstItem="4oh-sD-DDy" firstAttribute="bottom" secondItem="pwW-eX-PxP" secondAttribute="bottom" constant="50" id="Ssz-sh-m1Q"/>
                             <constraint firstItem="Llo-pc-qIf" firstAttribute="leading" secondItem="4oh-sD-DDy" secondAttribute="leading" id="WqS-zT-RFS"/>
                             <constraint firstItem="opQ-4s-3IL" firstAttribute="top" secondItem="4oh-sD-DDy" secondAttribute="top" id="X7L-ED-kHF"/>
-                            <constraint firstItem="iFm-4N-Eae" firstAttribute="centerX" secondItem="4oh-sD-DDy" secondAttribute="centerX" id="aDo-oi-GYn"/>
                             <constraint firstItem="lOs-rb-a9c" firstAttribute="top" secondItem="O8v-F1-ZqR" secondAttribute="bottom" constant="30" id="aeC-yV-743"/>
                             <constraint firstItem="anl-yP-9pp" firstAttribute="leading" secondItem="B1s-iL-Kyd" secondAttribute="leading" id="apH-5Z-rRY"/>
                             <constraint firstItem="ujV-OG-Kg5" firstAttribute="top" secondItem="Llo-pc-qIf" secondAttribute="bottom" constant="10" id="axD-yZ-WqG"/>
-                            <constraint firstItem="4oh-sD-DDy" firstAttribute="bottom" secondItem="iFm-4N-Eae" secondAttribute="bottom" constant="50" id="cLl-cI-bGA"/>
                             <constraint firstItem="ujV-OG-Kg5" firstAttribute="leading" secondItem="4oh-sD-DDy" secondAttribute="leading" constant="30" id="dhM-ew-5hJ"/>
                             <constraint firstItem="pwW-eX-PxP" firstAttribute="leading" secondItem="4oh-sD-DDy" secondAttribute="leading" constant="50" id="gDX-rW-8yy"/>
                             <constraint firstItem="WWz-cC-6gs" firstAttribute="top" secondItem="BjI-dd-Jjo" secondAttribute="bottom" constant="10" id="h7R-sa-f4c"/>
@@ -2446,15 +2433,15 @@
             <objects>
                 <tableViewController id="8ms-fV-ZIz" customClass="CrewMemberTableViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" id="uUD-Rb-gOG">
-                        <rect key="frame" x="0.0" y="0.0" width="728" height="954"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="haze"/>
                         <view key="tableHeaderView" alpha="0.94999999999999996" contentMode="scaleToFill" id="MPu-if-6yS">
-                            <rect key="frame" x="0.0" y="0.0" width="728" height="84"/>
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="84"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <searchBar contentMode="redraw" searchBarStyle="minimal" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c4-DE-gCL">
-                                    <rect key="frame" x="36.5" y="25" width="655" height="59"/>
+                                    <rect key="frame" x="38.5" y="25" width="691" height="59"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <scopeButtonTitles>
                                         <string>Title</string>
@@ -2474,24 +2461,24 @@
                             <tableViewSection id="71w-z4-nYh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="ik9-DM-8tI">
-                                        <rect key="frame" x="0.0" y="112" width="728" height="66"/>
+                                        <rect key="frame" x="0.0" y="112" width="768" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ik9-DM-8tI" id="itk-jW-Kbn">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2B-EG-pH3" customClass="PBLView" customModule="Logging" customModuleProvider="target">
-                                                    <rect key="frame" x="36.5" y="3.5" width="655" height="59"/>
+                                                    <rect key="frame" x="38.5" y="3.5" width="691" height="59"/>
                                                     <color key="backgroundColor" name="mist"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREW MEMBER SSN #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkk-ds-me9">
-                                                    <rect key="frame" x="68" y="22.5" width="191.5" height="21.5"/>
+                                                    <rect key="frame" x="77" y="22.5" width="191.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vs9-wC-dU7">
-                                                    <rect key="frame" x="645" y="22" width="20" height="22"/>
+                                                    <rect key="frame" x="681" y="22" width="20" height="22"/>
                                                     <color key="tintColor" name="slate"/>
                                                     <state key="normal" image="minus.circle" catalog="system"/>
                                                 </button>
@@ -2510,24 +2497,24 @@
                                         <color key="backgroundColor" name="haze"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" alpha="0.94999998807907104" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="LgF-Ce-3WD">
-                                        <rect key="frame" x="0.0" y="178" width="728" height="66"/>
+                                        <rect key="frame" x="0.0" y="178" width="768" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LgF-Ce-3WD" id="wAX-9d-Ife">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4L-lS-on9" customClass="PBLView" customModule="Logging" customModuleProvider="target">
-                                                    <rect key="frame" x="36.5" y="3.5" width="655" height="59"/>
+                                                    <rect key="frame" x="38.5" y="3.5" width="691" height="59"/>
                                                     <color key="backgroundColor" name="mist"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREW MEMBER SSN #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwo-t8-rBx">
-                                                    <rect key="frame" x="68" y="22.5" width="191.5" height="21.5"/>
+                                                    <rect key="frame" x="77" y="22.5" width="191.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb8-Gj-yD8">
-                                                    <rect key="frame" x="645" y="22" width="20" height="22"/>
+                                                    <rect key="frame" x="681" y="22" width="20" height="22"/>
                                                     <color key="tintColor" name="slate"/>
                                                     <state key="normal" image="minus.circle" catalog="system"/>
                                                 </button>
@@ -2546,24 +2533,24 @@
                                         <color key="backgroundColor" name="haze"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" alpha="0.94999998807907104" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="tYO-qa-6Ik">
-                                        <rect key="frame" x="0.0" y="244" width="728" height="66"/>
+                                        <rect key="frame" x="0.0" y="244" width="768" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tYO-qa-6Ik" id="k3c-up-kBd">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="66"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7g6-FR-aPI" customClass="PBLView" customModule="Logging" customModuleProvider="target">
-                                                    <rect key="frame" x="36.5" y="3.5" width="655" height="59"/>
+                                                    <rect key="frame" x="38.5" y="3.5" width="691" height="59"/>
                                                     <color key="backgroundColor" name="mist"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREW MEMBER SSN #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2g-tp-sE0">
-                                                    <rect key="frame" x="68" y="22.5" width="191.5" height="21.5"/>
+                                                    <rect key="frame" x="77" y="22.5" width="191.5" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efu-iq-xII">
-                                                    <rect key="frame" x="645" y="22" width="20" height="22"/>
+                                                    <rect key="frame" x="681" y="22" width="20" height="22"/>
                                                     <color key="tintColor" name="slate"/>
                                                     <state key="normal" image="minus.circle" catalog="system"/>
                                                 </button>

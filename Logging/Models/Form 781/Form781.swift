@@ -27,6 +27,8 @@ class Form781: Codable {
     var flights: [FlightData]
     var crewMembers: [CrewMember]
     
+    #warning("TO DO: add maint and pilot review")
+    
     init(date: String,
         mds: String,
         serialNumber: String,
@@ -59,3 +61,12 @@ class Form781: Codable {
     }
     
 } //End
+
+extension Form781: Equatable {
+    
+    //make sure it equals what we want it to
+    static func ==(lhs: Form781, rhs: Form781) -> Bool {
+        return (lhs.serialNumber == rhs.serialNumber)
+    }
+    
+}

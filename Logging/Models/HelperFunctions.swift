@@ -34,7 +34,6 @@ class Helper {
         }
     }
     
-
     
 
     func separateHoursAndMins(strInput: String, pointer: String) -> String {
