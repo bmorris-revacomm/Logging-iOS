@@ -54,13 +54,13 @@ class FlightListViewController: UIViewController {
     }
     
     @IBAction func calculateTotalTime(_ sender: Any) {
-        let decimalTime = FVCVM().vmCalculateTotalTime(takeOffTime: takeOffTime, landTime: landTime)
+        let decimalTime = Helper().vmCalculateTotalTime(takeOffTime: takeOffTime, landTime: landTime)
         totalTime.text = decimalTime
     }
     
     @IBAction func calculateTotalLandings(_sender: Any) {
         //Here's where we do the math for filling in the total field
-        totalLandings.text = FVCVM().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
+        totalLandings.text = Helper().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
     }
 
     @IBAction func addFlightButtonTapped(_ sender: UIButton) {

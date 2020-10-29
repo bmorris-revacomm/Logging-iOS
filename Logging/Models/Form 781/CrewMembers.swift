@@ -12,8 +12,8 @@ struct CrewMember: Codable {
     
     let flyingOrgn: String?
     let ssnLast4: String?
-    let lastName: String?
-    let firstName: String?
+    let lastName: String
+    let firstName: String
     let flightAuthDutyCode: String?
     let prim: String?
     let sec: String?
@@ -34,8 +34,8 @@ struct CrewMember: Codable {
     
     init(flyingOrgn: String? = nil,
          ssnLast4: String? = nil,
-         lastName: String? = nil,
-         firstName: String? = nil,
+         lastName: String,
+         firstName: String,
          flightAuthDutyCode: String? = nil,
          prim: String? = nil,
          sec: String? = nil,

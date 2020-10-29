@@ -24,12 +24,13 @@ class SplitTimeViewController: UIViewController {
     // MARK: - Methods
     
     func setUpViews() {
-        descriptionLabel.text = "You've added \(Form781Controller.shared.forms.last?.crewMembers.count) crew members to this mission. Would you like to split their time equally?"
+        descriptionLabel.text = "You've added \(Form781Controller.shared.forms.last!.crewMembers.count) crew members to this mission. Would you like to split their time equally?"
     }
     
     // MARK: - Actions
     
     @IBAction func equallyButtonTapped(_ sender: UIButton) {
+        // Based on the duty code is how we will split the time
         
     }
     
