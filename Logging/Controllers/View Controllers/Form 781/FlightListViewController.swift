@@ -31,6 +31,12 @@ class FlightListViewController: UIViewController {
     @IBOutlet weak var sorties: UITextField!
     @IBOutlet weak var specialUse: UITextField!
     
+    @IBOutlet weak var grandTotalTime: UILabel!
+    @IBOutlet weak var grandTouchGo: UILabel!
+    @IBOutlet weak var grandFullStop: UILabel!
+    @IBOutlet weak var grandTotal: UILabel!
+    @IBOutlet weak var grandSorties: UILabel!
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -85,6 +91,14 @@ class FlightListViewController: UIViewController {
         flightTableView.reloadData()
         popUpView.isHidden = true
         print("Saved flight")
+    }
+    
+    @IBAction func continueButtonTapped(_ sender: UIButton) {
+        if let viewController = UIStoryboard(name: "Aircrew", bundle: nil).instantiateViewController(withIdentifier: "Page1") as? AircrewViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(viewController, animated: true)
+            }
+        }
     }
     
     @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
