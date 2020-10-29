@@ -248,7 +248,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
                                 <connections>
-                                    <segue destination="05H-n3-hjH" kind="show" id="6et-Bg-ccq"/>
+                                    <action selector="continueButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="jRf-xF-gpH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVE-5G-obx" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
@@ -344,7 +344,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AircrewCell" rowHeight="53" id="3j7-Nr-k0m" customClass="AircrewTableViewCell" customModule="Logging" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AircrewCell" rowHeight="53" id="3j7-Nr-k0m" customClass="AircrewTableViewCell" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="691" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3j7-Nr-k0m" id="6OS-GT-yxG">
@@ -422,12 +422,13 @@
                                             <outlet property="flyingOriginLabel" destination="mt8-sO-r0z" id="hHc-KT-XnC"/>
                                             <outlet property="nameLabel" destination="27W-Zv-TID" id="ghn-dC-dru"/>
                                             <outlet property="ssnLabel" destination="T6b-ij-4YN" id="Bi0-E5-lsF"/>
+                                            <segue destination="gQ6-to-w7V" kind="presentation" identifier="ToAircrewDetailVC" id="MWf-jR-oUC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdC-pQ-rJc" customClass="shadowView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="115" y="122.5" width="538" height="614.5"/>
+                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDg-JN-tmT" customClass="shadowView" customModule="Logging" customModuleProvider="target">
+                                <rect key="frame" x="115" y="230" width="538" height="614"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9s-45-yBf" userLabel="Exit">
                                         <rect key="frame" x="500.5" y="20" width="17.5" height="22"/>
@@ -437,68 +438,101 @@
                                             <action selector="exitButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="Bl5-rO-Smz"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="snU-Mx-al2">
-                                        <rect key="frame" x="54" y="93.5" width="430" height="58.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="Qhc-KZ-vs3">
+                                        <rect key="frame" x="27" y="58" width="484" height="437"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cq3-AP-zPd">
-                                                <rect key="frame" x="0.0" y="0.0" width="430" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                <color key="textColor" name="slate"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ys9-Mh-LR3" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.5" width="430" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m5Z-po-uoq">
-                                        <rect key="frame" x="54" y="185.5" width="430" height="58.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKM-4B-d1E">
-                                                <rect key="frame" x="0.0" y="0.0" width="430" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                <color key="textColor" name="slate"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N0w-M9-saK" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.5" width="430" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-0U-wAN">
-                                        <rect key="frame" x="54" y="278" width="430" height="58.5"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i9g-kN-hb7">
-                                                <rect key="frame" x="0.0" y="0.0" width="205" height="58.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="snU-Mx-al2">
+                                                <rect key="frame" x="0.0" y="0.0" width="484" height="84.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSN (LAST 4)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-iD-mmF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="205" height="14.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cq3-AP-zPd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="484" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                         <color key="textColor" name="slate"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fp6-rj-sa0" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="24.5" width="205" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ys9-Mh-LR3" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="24.5" width="484" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="fFi-EL-vk2"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jhm-Oy-7Jg">
-                                                <rect key="frame" x="225" y="0.0" width="205" height="58.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m5Z-po-uoq">
+                                                <rect key="frame" x="0.0" y="117.5" width="484" height="84.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT AUTH DUTY CODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-4A-C1Q">
-                                                        <rect key="frame" x="0.0" y="0.0" width="205" height="14.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIRST NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKM-4B-d1E">
+                                                        <rect key="frame" x="0.0" y="0.0" width="484" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                         <color key="textColor" name="slate"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPs-Bv-0am" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="24.5" width="205" height="34"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N0w-M9-saK" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="24.5" width="484" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="Ye1-1z-PK7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-0U-wAN">
+                                                <rect key="frame" x="0.0" y="235" width="484" height="84.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i9g-kN-hb7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSN (LAST 4)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCw-iD-mmF">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fp6-rj-sa0" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="L2i-yQ-MOo"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jhm-Oy-7Jg">
+                                                        <rect key="frame" x="252" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT AUTH DUTY CODE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQw-4A-C1Q">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPs-Bv-0am" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m8o-IZ-whL">
+                                                <rect key="frame" x="0.0" y="352.5" width="484" height="84.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLYING ORIGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooZ-bH-Enf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="484" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                        <color key="textColor" name="slate"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cz5-f9-rge" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="24.5" width="484" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="37x-0c-a51"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -506,49 +540,441 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m8o-IZ-whL">
-                                        <rect key="frame" x="54" y="370" width="161" height="58.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLYING ORIGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ooZ-bH-Enf">
-                                                <rect key="frame" x="0.0" y="0.0" width="161" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                <color key="textColor" name="slate"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cz5-f9-rge" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.5" width="161" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCh-YA-VwV" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="331" y="534.5" width="157" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwJ-3m-oDI" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="467" y="554" width="41" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="ADD NEW AIRCREW +"/>
+                                        <state key="normal" title="NEXT"/>
                                         <connections>
-                                            <action selector="addNewAircrewButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="QA4-VD-e8G"/>
+                                            <action selector="next1ButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="Wi6-Ca-llb"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="DCh-YA-VwV" secondAttribute="bottom" constant="50" id="4e6-fu-UzU"/>
-                                    <constraint firstItem="Ug1-0U-wAN" firstAttribute="centerY" secondItem="JdC-pQ-rJc" secondAttribute="centerY" id="5nx-pG-lJP"/>
-                                    <constraint firstItem="m8o-IZ-whL" firstAttribute="width" secondItem="JdC-pQ-rJc" secondAttribute="width" multiplier="0.3" id="7Nm-dD-Pcu"/>
-                                    <constraint firstAttribute="trailing" secondItem="x9s-45-yBf" secondAttribute="trailing" constant="20" id="9ES-24-96y"/>
-                                    <constraint firstItem="snU-Mx-al2" firstAttribute="centerY" secondItem="JdC-pQ-rJc" secondAttribute="centerY" multiplier="0.4" id="FSe-8X-EZv"/>
-                                    <constraint firstItem="m8o-IZ-whL" firstAttribute="centerY" secondItem="JdC-pQ-rJc" secondAttribute="centerY" multiplier="1.3" id="IwS-GA-LZ5"/>
-                                    <constraint firstItem="x9s-45-yBf" firstAttribute="top" secondItem="JdC-pQ-rJc" secondAttribute="top" constant="20" id="LMa-t5-lLw"/>
-                                    <constraint firstAttribute="trailing" secondItem="DCh-YA-VwV" secondAttribute="trailing" constant="50" id="NCf-a7-Kev"/>
-                                    <constraint firstItem="Ug1-0U-wAN" firstAttribute="width" secondItem="JdC-pQ-rJc" secondAttribute="width" multiplier="0.8" id="S22-or-7Ey"/>
-                                    <constraint firstItem="m8o-IZ-whL" firstAttribute="leading" secondItem="Ug1-0U-wAN" secondAttribute="leading" id="WVj-ZA-Xg7"/>
-                                    <constraint firstItem="snU-Mx-al2" firstAttribute="centerX" secondItem="JdC-pQ-rJc" secondAttribute="centerX" id="XPU-d5-UVk"/>
-                                    <constraint firstItem="m5Z-po-uoq" firstAttribute="width" secondItem="JdC-pQ-rJc" secondAttribute="width" multiplier="0.8" id="XPh-dK-OGS"/>
-                                    <constraint firstItem="m5Z-po-uoq" firstAttribute="centerX" secondItem="JdC-pQ-rJc" secondAttribute="centerX" id="bP1-hc-1Ud"/>
-                                    <constraint firstItem="snU-Mx-al2" firstAttribute="width" secondItem="JdC-pQ-rJc" secondAttribute="width" multiplier="0.8" id="cDj-AW-qPb"/>
-                                    <constraint firstItem="m5Z-po-uoq" firstAttribute="centerY" secondItem="JdC-pQ-rJc" secondAttribute="centerY" multiplier="0.7" id="erR-Tp-yJu"/>
-                                    <constraint firstItem="Ug1-0U-wAN" firstAttribute="centerX" secondItem="JdC-pQ-rJc" secondAttribute="centerX" id="kCv-Ld-6eP"/>
+                                    <constraint firstAttribute="bottom" secondItem="rwJ-3m-oDI" secondAttribute="bottom" constant="30" id="JOw-MQ-LP7"/>
+                                    <constraint firstAttribute="trailing" secondItem="x9s-45-yBf" secondAttribute="trailing" constant="20" id="KNN-mb-rC7"/>
+                                    <constraint firstItem="x9s-45-yBf" firstAttribute="top" secondItem="DDg-JN-tmT" secondAttribute="top" constant="20" id="MKl-wl-4i6"/>
+                                    <constraint firstItem="Qhc-KZ-vs3" firstAttribute="centerY" secondItem="DDg-JN-tmT" secondAttribute="centerY" multiplier="0.9" id="QqV-Q4-J1p"/>
+                                    <constraint firstItem="Qhc-KZ-vs3" firstAttribute="width" secondItem="DDg-JN-tmT" secondAttribute="width" multiplier="0.9" id="SIb-5e-rl9"/>
+                                    <constraint firstItem="Qhc-KZ-vs3" firstAttribute="centerX" secondItem="DDg-JN-tmT" secondAttribute="centerX" id="f1j-SD-Vc0"/>
+                                    <constraint firstAttribute="trailing" secondItem="rwJ-3m-oDI" secondAttribute="trailing" constant="30" id="zjj-EL-k8Q"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opj-XJ-8jT" customClass="shadowView" customModule="Logging" customModuleProvider="target">
+                                <rect key="frame" x="115" y="230" width="538" height="614"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFZ-NQ-ivW" userLabel="Exit">
+                                        <rect key="frame" x="500.5" y="20" width="17.5" height="22"/>
+                                        <color key="tintColor" name="slate"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="exitButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="EAy-Ve-WS9"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="ihW-G2-u56">
+                                        <rect key="frame" x="27" y="58" width="484" height="437"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="a7W-0u-m1p">
+                                                <rect key="frame" x="0.0" y="0.0" width="484" height="84.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-0u-uNQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIMARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR8-cH-fYh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufc-3K-06W" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="4uc-Vv-0zD"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wre-IR-GiV">
+                                                        <rect key="frame" x="252" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECONDARY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="En4-t8-oZ6">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nV0-KE-Snu" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="UdM-b9-2mt"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Trq-8N-Fuu">
+                                                <rect key="frame" x="0.0" y="117.5" width="484" height="84.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ApB-nr-gR6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSTRUCTOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVu-JO-PeW">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lsw-yb-Blq" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="4St-94-Kfu"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZNc-nJ-tiR">
+                                                        <rect key="frame" x="252" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EVALUATOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTm-Z1-tnO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dgr-8R-klW" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AAE-Oh-jXE">
+                                                <rect key="frame" x="0.0" y="235" width="484" height="84.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTHER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYz-kl-trA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="484" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                        <color key="textColor" name="slate"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pnk-bl-gm9" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="24.5" width="484" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="GMr-KN-Yoq"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Jk9-CU-70k">
+                                                <rect key="frame" x="0.0" y="352.5" width="484" height="84.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qMG-My-5Ac">
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wk6-34-mbk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d1v-BI-UaE" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="y4L-DP-v4h"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4ue-3G-r6F">
+                                                        <rect key="frame" x="252" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SRTY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlI-ei-j57">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r2p-cg-lcO" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-MA-nrW" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="467" y="554" width="41" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="NEXT"/>
+                                        <connections>
+                                            <action selector="next2ButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="pos-rE-foO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpE-C9-fHr" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="554" width="40" height="30"/>
+                                        <state key="normal" title="BACK"/>
+                                        <connections>
+                                            <action selector="back2ButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="aaP-tc-dd0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstItem="ihW-G2-u56" firstAttribute="centerX" secondItem="Opj-XJ-8jT" secondAttribute="centerX" id="2od-LM-c5m"/>
+                                    <constraint firstAttribute="trailing" secondItem="BFZ-NQ-ivW" secondAttribute="trailing" constant="20" id="41E-am-j9W"/>
+                                    <constraint firstAttribute="bottom" secondItem="jpE-C9-fHr" secondAttribute="bottom" constant="30" id="7Gt-8y-jBv"/>
+                                    <constraint firstItem="BFZ-NQ-ivW" firstAttribute="top" secondItem="Opj-XJ-8jT" secondAttribute="top" constant="20" id="G3y-n7-ow1"/>
+                                    <constraint firstItem="ihW-G2-u56" firstAttribute="centerY" secondItem="Opj-XJ-8jT" secondAttribute="centerY" multiplier="0.9" id="bSt-XB-n4S"/>
+                                    <constraint firstAttribute="bottom" secondItem="KG6-MA-nrW" secondAttribute="bottom" constant="30" id="mgr-gf-o95"/>
+                                    <constraint firstItem="jpE-C9-fHr" firstAttribute="leading" secondItem="Opj-XJ-8jT" secondAttribute="leading" constant="30" id="rVM-YJ-4Mx"/>
+                                    <constraint firstItem="ihW-G2-u56" firstAttribute="width" secondItem="Opj-XJ-8jT" secondAttribute="width" multiplier="0.9" id="spg-Ww-X3p"/>
+                                    <constraint firstAttribute="trailing" secondItem="KG6-MA-nrW" secondAttribute="trailing" constant="30" id="uGO-ib-ViW"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkC-eR-6x0" customClass="shadowView" customModule="Logging" customModuleProvider="target">
+                                <rect key="frame" x="115" y="230" width="538" height="614"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY8-vF-4Dr" userLabel="Exit">
+                                        <rect key="frame" x="500.5" y="20" width="17.5" height="22"/>
+                                        <color key="tintColor" name="slate"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="exitButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="WNJ-jM-XHo"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="Brt-Xm-IgQ">
+                                        <rect key="frame" x="27" y="58" width="484" height="437"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bg3-wN-0Nl">
+                                                <rect key="frame" x="0.0" y="0.0" width="484" height="84.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RBw-i8-bWt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NIGHT (P/S/I/E)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnM-ks-BKB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="106" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyh-Ts-Rif" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="106" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="Crh-bS-5pA"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="n96-JL-vzh">
+                                                        <rect key="frame" x="126" y="0.0" width="106" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53U-wR-DkH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="106" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CO-4n-H7D" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="106" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="9x4-KG-cCg"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UiT-Zz-YIt">
+                                                        <rect key="frame" x="252" y="0.0" width="106" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIM INS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldM-i9-J5a">
+                                                                <rect key="frame" x="0.0" y="0.0" width="106" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNs-Ot-19T" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="106" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="if2-Zu-DZs"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="H2T-TF-5Te">
+                                                        <rect key="frame" x="378" y="0.0" width="106" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NVG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfs-0D-fTr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="106" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipE-IP-hD0" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="106" height="60"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BnS-eU-nKX">
+                                                <rect key="frame" x="0.0" y="117.5" width="484" height="84.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-Hn-sH8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMBAT TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="le1-d0-6jE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocS-Xc-aTK" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="671-MX-9FU"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VOq-d8-Xkz">
+                                                        <rect key="frame" x="252" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMBAT SRTY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amc-B0-YZt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4j-pQ-jEU" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="zjt-b1-fml"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="kA0-bF-aBT">
+                                                <rect key="frame" x="0.0" y="235" width="484" height="84.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m5z-dD-oI5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMBAT SPT TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjV-vz-2Lx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcM-at-jA6" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="rIM-aD-p60"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="heD-bh-laz">
+                                                        <rect key="frame" x="252" y="0.0" width="232" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMBAT SPT SRTY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfX-j1-lUk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="232" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raw-Xe-Hx0" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yll-xs-2k4">
+                                                <rect key="frame" x="0.0" y="352.5" width="484" height="84.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5X8-2T-MGi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="484" height="84.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESV STATUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyf-A4-xbN">
+                                                                <rect key="frame" x="0.0" y="0.0" width="484" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                                <color key="textColor" name="slate"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPW-Sr-SrW" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="24.5" width="484" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="qtt-0w-SLJ"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiZ-nO-blv" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="375" y="554" width="133" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="+ ADD NEW CREW"/>
+                                        <connections>
+                                            <action selector="addNewAircrewButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="2AK-gJ-aeh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJ0-0h-wtg" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="554" width="40" height="30"/>
+                                        <state key="normal" title="BACK"/>
+                                        <connections>
+                                            <action selector="back3ButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="PZU-ew-0Ms"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RJ0-0h-wtg" secondAttribute="bottom" constant="30" id="IPl-7W-qpi"/>
+                                    <constraint firstItem="Brt-Xm-IgQ" firstAttribute="centerX" secondItem="RkC-eR-6x0" secondAttribute="centerX" id="Jdn-kV-7NY"/>
+                                    <constraint firstAttribute="bottom" secondItem="yiZ-nO-blv" secondAttribute="bottom" constant="30" id="N1k-JH-bMW"/>
+                                    <constraint firstItem="Brt-Xm-IgQ" firstAttribute="centerY" secondItem="RkC-eR-6x0" secondAttribute="centerY" multiplier="0.9" id="UTg-wH-BId"/>
+                                    <constraint firstItem="RJ0-0h-wtg" firstAttribute="leading" secondItem="RkC-eR-6x0" secondAttribute="leading" constant="30" id="ZbK-a9-vuq"/>
+                                    <constraint firstItem="Brt-Xm-IgQ" firstAttribute="width" secondItem="RkC-eR-6x0" secondAttribute="width" multiplier="0.9" id="apR-Mj-VQr"/>
+                                    <constraint firstItem="mY8-vF-4Dr" firstAttribute="top" secondItem="RkC-eR-6x0" secondAttribute="top" constant="20" id="k77-4U-Wtm"/>
+                                    <constraint firstAttribute="trailing" secondItem="mY8-vF-4Dr" secondAttribute="trailing" constant="20" id="mEc-0I-2NA"/>
+                                    <constraint firstAttribute="trailing" secondItem="yiZ-nO-blv" secondAttribute="trailing" constant="30" id="mpN-Sa-Ev5"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -559,209 +985,111 @@
                             <constraint firstItem="r6C-Uu-1Xf" firstAttribute="width" secondItem="Kt0-6t-Giu" secondAttribute="width" multiplier="0.9" id="1lK-pN-80l"/>
                             <constraint firstItem="s4z-4H-J5U" firstAttribute="trailing" secondItem="y3y-3O-bgt" secondAttribute="trailing" constant="50" id="2qY-oE-Iy2"/>
                             <constraint firstItem="r6C-Uu-1Xf" firstAttribute="centerY" secondItem="s4z-4H-J5U" secondAttribute="centerY" id="5wx-aL-94g"/>
+                            <constraint firstItem="DDg-JN-tmT" firstAttribute="centerX" secondItem="s4z-4H-J5U" secondAttribute="centerX" id="8xF-R9-1Xk"/>
+                            <constraint firstItem="RkC-eR-6x0" firstAttribute="height" secondItem="Kt0-6t-Giu" secondAttribute="height" multiplier="0.6" id="FbL-L1-bfn"/>
                             <constraint firstItem="QsK-Rt-Vcw" firstAttribute="trailing" secondItem="s4z-4H-J5U" secondAttribute="trailing" id="HZx-Uj-gov"/>
+                            <constraint firstItem="DDg-JN-tmT" firstAttribute="width" secondItem="Kt0-6t-Giu" secondAttribute="width" multiplier="0.7" id="Hj5-Uc-nOl"/>
                             <constraint firstItem="r6C-Uu-1Xf" firstAttribute="height" secondItem="Kt0-6t-Giu" secondAttribute="height" multiplier="0.7" id="Hl6-Ec-fpf"/>
+                            <constraint firstItem="Opj-XJ-8jT" firstAttribute="height" secondItem="Kt0-6t-Giu" secondAttribute="height" multiplier="0.6" id="JQ2-Hb-48W"/>
                             <constraint firstItem="rUx-fJ-JYP" firstAttribute="top" secondItem="e9o-SC-RLL" secondAttribute="bottom" id="Jis-08-1e4"/>
                             <constraint firstItem="5i5-6E-Kkw" firstAttribute="top" secondItem="rUx-fJ-JYP" secondAttribute="bottom" constant="8" id="KDv-DN-RdW"/>
+                            <constraint firstItem="Opj-XJ-8jT" firstAttribute="centerX" secondItem="s4z-4H-J5U" secondAttribute="centerX" id="Kc2-Xj-sbP"/>
                             <constraint firstItem="s4z-4H-J5U" firstAttribute="bottom" secondItem="uVE-5G-obx" secondAttribute="bottom" constant="50" id="Nha-K7-JWd"/>
                             <constraint firstItem="e9o-SC-RLL" firstAttribute="height" secondItem="Kt0-6t-Giu" secondAttribute="height" multiplier="0.04" id="ToY-zd-rpt"/>
+                            <constraint firstItem="DDg-JN-tmT" firstAttribute="centerY" secondItem="s4z-4H-J5U" secondAttribute="centerY" id="Ufw-jD-2my"/>
                             <constraint firstItem="QsK-Rt-Vcw" firstAttribute="top" secondItem="7iY-fZ-uG6" secondAttribute="bottom" constant="5" id="VR5-ad-QvP"/>
                             <constraint firstItem="s4z-4H-J5U" firstAttribute="trailing" secondItem="e9o-SC-RLL" secondAttribute="trailing" id="YPX-oV-AL5"/>
                             <constraint firstItem="rUx-fJ-JYP" firstAttribute="leading" secondItem="s4z-4H-J5U" secondAttribute="leading" id="Yya-vH-KU1"/>
-                            <constraint firstItem="JdC-pQ-rJc" firstAttribute="height" secondItem="Kt0-6t-Giu" secondAttribute="height" multiplier="0.6" id="bTa-wT-4r0"/>
                             <constraint firstItem="e9o-SC-RLL" firstAttribute="top" secondItem="s4z-4H-J5U" secondAttribute="top" id="bsb-qq-pOW"/>
+                            <constraint firstItem="Opj-XJ-8jT" firstAttribute="width" secondItem="Kt0-6t-Giu" secondAttribute="width" multiplier="0.7" id="c7P-Ad-rv3"/>
+                            <constraint firstItem="RkC-eR-6x0" firstAttribute="centerY" secondItem="s4z-4H-J5U" secondAttribute="centerY" id="cPy-rd-nWN"/>
                             <constraint firstItem="7iY-fZ-uG6" firstAttribute="leading" secondItem="s4z-4H-J5U" secondAttribute="leading" constant="30" id="cfl-wm-xyA"/>
+                            <constraint firstItem="Opj-XJ-8jT" firstAttribute="centerY" secondItem="s4z-4H-J5U" secondAttribute="centerY" id="dBR-Z4-QMm"/>
                             <constraint firstItem="QsK-Rt-Vcw" firstAttribute="leading" secondItem="s4z-4H-J5U" secondAttribute="leading" id="lhU-vR-lk7"/>
                             <constraint firstItem="r6C-Uu-1Xf" firstAttribute="centerX" secondItem="s4z-4H-J5U" secondAttribute="centerX" id="mYU-k5-mUU"/>
                             <constraint firstItem="7iY-fZ-uG6" firstAttribute="top" secondItem="rUx-fJ-JYP" secondAttribute="bottom" constant="10" id="pbc-zg-vJ9"/>
-                            <constraint firstItem="JdC-pQ-rJc" firstAttribute="centerY" secondItem="s4z-4H-J5U" secondAttribute="centerY" multiplier="0.8" id="q5V-sk-Fcb"/>
-                            <constraint firstItem="JdC-pQ-rJc" firstAttribute="centerX" secondItem="s4z-4H-J5U" secondAttribute="centerX" id="qYT-LX-EEi"/>
                             <constraint firstItem="uVE-5G-obx" firstAttribute="leading" secondItem="s4z-4H-J5U" secondAttribute="leading" constant="50" id="rJO-Y6-dlx"/>
+                            <constraint firstItem="RkC-eR-6x0" firstAttribute="centerX" secondItem="s4z-4H-J5U" secondAttribute="centerX" id="rLD-2e-iQ0"/>
                             <constraint firstItem="s4z-4H-J5U" firstAttribute="bottom" secondItem="y3y-3O-bgt" secondAttribute="bottom" constant="50" id="sUV-F5-BbX"/>
-                            <constraint firstItem="JdC-pQ-rJc" firstAttribute="width" secondItem="Kt0-6t-Giu" secondAttribute="width" multiplier="0.7" id="tLt-9o-PnQ"/>
+                            <constraint firstItem="DDg-JN-tmT" firstAttribute="height" secondItem="Kt0-6t-Giu" secondAttribute="height" multiplier="0.6" id="tbe-cO-kSQ"/>
                             <constraint firstItem="e9o-SC-RLL" firstAttribute="leading" secondItem="Kt0-6t-Giu" secondAttribute="leading" id="u17-1k-Ozd"/>
                             <constraint firstItem="s4z-4H-J5U" firstAttribute="trailing" secondItem="5i5-6E-Kkw" secondAttribute="trailing" constant="30" id="u8d-UX-7iR"/>
                             <constraint firstItem="rUx-fJ-JYP" firstAttribute="height" secondItem="Kt0-6t-Giu" secondAttribute="height" multiplier="0.05" id="uFK-HT-3Ws"/>
                             <constraint firstItem="s4z-4H-J5U" firstAttribute="trailing" secondItem="rUx-fJ-JYP" secondAttribute="trailing" id="yYB-Qd-sCL"/>
+                            <constraint firstItem="RkC-eR-6x0" firstAttribute="width" secondItem="Kt0-6t-Giu" secondAttribute="width" multiplier="0.7" id="znu-GN-w49"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="Dw1-VT-D4Z" appends="YES" id="62x-nY-gRF"/>
+                            <outletCollection property="gestureRecognizers" destination="UhS-xe-TvE" appends="YES" id="Btv-dc-o4D"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="hBL-LP-hib"/>
                     <connections>
                         <outlet property="aircrewTableView" destination="r6C-Uu-1Xf" id="Hyy-eP-C2E"/>
-                        <outlet property="firstNameTextField" destination="N0w-M9-saK" id="hhM-Hq-VJb"/>
-                        <outlet property="flightAuthDutyCodeTextField" destination="EPs-Bv-0am" id="n5p-0W-r6A"/>
-                        <outlet property="flyingOriginTextField" destination="Cz5-f9-rge" id="vXF-AQ-v7z"/>
+                        <outlet property="combatSptSrty" destination="raw-Xe-Hx0" id="kSc-CC-GOh"/>
+                        <outlet property="combatSptTime" destination="hcM-at-jA6" id="f35-lv-ZqI"/>
+                        <outlet property="combatSrty" destination="t4j-pQ-jEU" id="L9A-ns-GqT"/>
+                        <outlet property="combatTime" destination="ocS-Xc-aTK" id="kfF-a0-X2n"/>
+                        <outlet property="evaluator" destination="Dgr-8R-klW" id="QEY-0a-nmr"/>
+                        <outlet property="firstName" destination="N0w-M9-saK" id="hhM-Hq-VJb"/>
+                        <outlet property="flightAuthDutyCode" destination="EPs-Bv-0am" id="n5p-0W-r6A"/>
+                        <outlet property="flyingOrigin" destination="Cz5-f9-rge" id="vXF-AQ-v7z"/>
                         <outlet property="headerTitleLabel" destination="ZQM-YJ-PKP" id="f8g-NW-3el"/>
-                        <outlet property="lastNameTextField" destination="Ys9-Mh-LR3" id="IP2-pi-oFh"/>
-                        <outlet property="popUpView" destination="JdC-pQ-rJc" id="G0T-Pp-1ny"/>
-                        <outlet property="ssnTextField" destination="fp6-rj-sa0" id="hgP-e8-z4j"/>
+                        <outlet property="ins" destination="4CO-4n-H7D" id="ea4-f5-hA6"/>
+                        <outlet property="instructor" destination="lsw-yb-Blq" id="kaF-ZY-OUR"/>
+                        <outlet property="lastName" destination="Ys9-Mh-LR3" id="IP2-pi-oFh"/>
+                        <outlet property="nightPSIE" destination="Oyh-Ts-Rif" id="Oqk-Or-6vZ"/>
+                        <outlet property="nvg" destination="ipE-IP-hD0" id="hmx-Md-Fy7"/>
+                        <outlet property="other" destination="pnk-bl-gm9" id="u6h-vf-4Wa"/>
+                        <outlet property="popUp1View" destination="DDg-JN-tmT" id="uYF-Wd-sHU"/>
+                        <outlet property="popUp2View" destination="Opj-XJ-8jT" id="dFj-GH-Ys9"/>
+                        <outlet property="popUp3View" destination="RkC-eR-6x0" id="i4o-ki-Xdb"/>
+                        <outlet property="primary" destination="ufc-3K-06W" id="dR7-8Q-jQp"/>
+                        <outlet property="resvStatus" destination="wPW-Sr-SrW" id="BCt-dH-gJR"/>
+                        <outlet property="secondary" destination="nV0-KE-Snu" id="99h-50-PBm"/>
+                        <outlet property="simIns" destination="KNs-Ot-19T" id="fVH-aG-7NO"/>
+                        <outlet property="srty" destination="r2p-cg-lcO" id="jlp-Wj-s6A"/>
+                        <outlet property="ssn" destination="fp6-rj-sa0" id="hgP-e8-z4j"/>
+                        <outlet property="time" destination="d1v-BI-UaE" id="7z1-qJ-c3I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3x7-h5-XSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Dw1-VT-D4Z">
+                <tapGestureRecognizer id="UhS-xe-TvE">
                     <connections>
-                        <action selector="viewTapped:" destination="u3J-Bq-h7s" id="WgK-i9-KvL"/>
+                        <action selector="viewTapped:" destination="u3J-Bq-h7s" id="jCi-a9-5ed"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1312.5" y="-54.4921875"/>
         </scene>
-        <!--Split Time View Controller-->
-        <scene sceneID="SEc-6v-Hnh">
+        <!--Aircrew Detail View Controller-->
+        <scene sceneID="3wI-DK-0bJ">
             <objects>
-                <viewController id="05H-n3-hjH" customClass="SplitTimeViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IIq-wf-oyL">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                <viewController id="gQ6-to-w7V" customClass="AircrewDetailViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fIu-8Z-ejy">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="984"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiI-Ye-q17">
-                                <rect key="frame" x="0.0" y="50" width="768" height="41"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1K-z2-Hfd" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="8" width="24.5" height="25"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-i3-FIG">
-                                                <rect key="frame" x="4.5" y="7.5" width="15.5" height="10"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstItem="sMR-i3-FIG" firstAttribute="centerX" secondItem="s1K-z2-Hfd" secondAttribute="centerX" id="Xnk-3y-efn"/>
-                                            <constraint firstItem="sMR-i3-FIG" firstAttribute="centerY" secondItem="s1K-z2-Hfd" secondAttribute="centerY" id="jxf-jQ-wY4"/>
-                                            <constraint firstAttribute="width" secondItem="s1K-z2-Hfd" secondAttribute="height" multiplier="1:1" id="yfR-bI-zqm"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGc-hQ-YTJ" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="728.5" y="8" width="24.5" height="25"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAo-V9-mAq">
-                                                <rect key="frame" x="5.5" y="7.5" width="13.5" height="10"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstItem="zAo-V9-mAq" firstAttribute="centerY" secondItem="iGc-hQ-YTJ" secondAttribute="centerY" id="8GE-u4-Pjf"/>
-                                            <constraint firstAttribute="width" secondItem="iGc-hQ-YTJ" secondAttribute="height" multiplier="1:1" id="MnN-vg-kA8"/>
-                                            <constraint firstItem="zAo-V9-mAq" firstAttribute="centerX" secondItem="iGc-hQ-YTJ" secondAttribute="centerX" id="w0I-Ua-sDf"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" name="slate"/>
-                                <constraints>
-                                    <constraint firstItem="s1K-z2-Hfd" firstAttribute="leading" secondItem="SiI-Ye-q17" secondAttribute="leading" constant="15" id="6B6-On-G5C"/>
-                                    <constraint firstItem="iGc-hQ-YTJ" firstAttribute="centerY" secondItem="SiI-Ye-q17" secondAttribute="centerY" id="9c9-Cl-G2Q"/>
-                                    <constraint firstAttribute="trailing" secondItem="iGc-hQ-YTJ" secondAttribute="trailing" constant="15" id="QO2-SG-5cA"/>
-                                    <constraint firstItem="s1K-z2-Hfd" firstAttribute="centerY" secondItem="SiI-Ye-q17" secondAttribute="centerY" id="b2G-fP-kjn"/>
-                                    <constraint firstItem="iGc-hQ-YTJ" firstAttribute="height" secondItem="SiI-Ye-q17" secondAttribute="height" multiplier="0.6" id="g0K-HY-P01"/>
-                                    <constraint firstItem="s1K-z2-Hfd" firstAttribute="height" secondItem="SiI-Ye-q17" secondAttribute="height" multiplier="0.6" id="uJ9-JK-ENI"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splitting Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x94-ZF-VQh">
-                                <rect key="frame" x="176" y="280" width="416.5" height="84"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LASTNAME, FIRSTNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tr0-Pk-jiw">
+                                <rect key="frame" x="212" y="132.5" width="280.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                 <color key="textColor" name="slate"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've added [] crew members to this mission. Would you like to split their time equally?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnW-Vn-cIs">
-                                <rect key="frame" x="112.5" y="394" width="543.5" height="143.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                                <color key="textColor" name="fog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKi-hR-e1v" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="944" width="41" height="30"/>
-                                <color key="backgroundColor" name="haze"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="BACK"/>
-                                <connections>
-                                    <action selector="backButtonTapped:" destination="05H-n3-hjH" eventType="touchUpInside" id="VaQ-c2-l35"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0ae-b7-DQh">
-                                <rect key="frame" x="262" y="577.5" width="244" height="48"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sq0-Nv-tdD" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="48"/>
-                                        <color key="backgroundColor" name="haze"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="YES, SPLIT TIME EQUALLY">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="equallyButtonTapped:" destination="05H-n3-hjH" eventType="touchUpInside" id="r3D-Ac-aBT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-Nf-ver" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="135" y="0.0" width="109" height="48"/>
-                                        <color key="backgroundColor" name="haze"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="NO, SPLIT TIME MANUALLY">
-                                                    <attributes>
-                                                        <font key="NSFont" metaFont="system" size="15"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                        <connections>
-                                            <action selector="manuallyButtonTapped:" destination="05H-n3-hjH" eventType="touchUpInside" id="d0k-DW-kxV"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-sb-X2x">
-                                <rect key="frame" x="313.5" y="680.5" width="141" height="30"/>
-                                <state key="normal" title="View more options +">
-                                    <color key="titleColor" name="slate"/>
-                                </state>
-                                <connections>
-                                    <action selector="moreOptionsButtonTapped:" destination="05H-n3-hjH" eventType="touchUpInside" id="6zr-ov-Qhb"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="hGg-lQ-5MH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="Rxd-cA-WAY"/>
+                        <color key="backgroundColor" name="mist"/>
                         <constraints>
-                            <constraint firstItem="SiI-Ye-q17" firstAttribute="height" secondItem="IIq-wf-oyL" secondAttribute="height" multiplier="0.04" id="4vz-me-ilR"/>
-                            <constraint firstItem="SiI-Ye-q17" firstAttribute="leading" secondItem="IIq-wf-oyL" secondAttribute="leading" id="Dp8-Et-nc9"/>
-                            <constraint firstItem="hGg-lQ-5MH" firstAttribute="trailing" secondItem="SiI-Ye-q17" secondAttribute="trailing" id="M87-9q-hp2"/>
-                            <constraint firstItem="0ae-b7-DQh" firstAttribute="centerX" secondItem="hGg-lQ-5MH" secondAttribute="centerX" id="N74-qF-iwM"/>
-                            <constraint firstItem="x94-ZF-VQh" firstAttribute="centerY" secondItem="hGg-lQ-5MH" secondAttribute="centerY" multiplier="0.6" id="Phu-fO-MyU"/>
-                            <constraint firstItem="Nqk-sb-X2x" firstAttribute="top" secondItem="0ae-b7-DQh" secondAttribute="bottom" constant="55" id="Pxe-3G-ifV"/>
-                            <constraint firstItem="0ae-b7-DQh" firstAttribute="top" secondItem="JnW-Vn-cIs" secondAttribute="bottom" constant="40" id="XPS-IH-ArS"/>
-                            <constraint firstItem="SiI-Ye-q17" firstAttribute="top" secondItem="hGg-lQ-5MH" secondAttribute="top" id="Y50-Pq-BVv"/>
-                            <constraint firstItem="hGg-lQ-5MH" firstAttribute="bottom" secondItem="DKi-hR-e1v" secondAttribute="bottom" constant="50" id="elb-G0-gwB"/>
-                            <constraint firstItem="Nqk-sb-X2x" firstAttribute="centerX" secondItem="hGg-lQ-5MH" secondAttribute="centerX" id="gDi-XR-igt"/>
-                            <constraint firstItem="JnW-Vn-cIs" firstAttribute="top" secondItem="x94-ZF-VQh" secondAttribute="bottom" constant="30" id="lgv-Gr-Yph"/>
-                            <constraint firstItem="JnW-Vn-cIs" firstAttribute="centerX" secondItem="hGg-lQ-5MH" secondAttribute="centerX" id="mZd-vc-g4T"/>
-                            <constraint firstItem="x94-ZF-VQh" firstAttribute="centerX" secondItem="hGg-lQ-5MH" secondAttribute="centerX" id="wlf-UB-TBQ"/>
-                            <constraint firstItem="DKi-hR-e1v" firstAttribute="leading" secondItem="hGg-lQ-5MH" secondAttribute="leading" constant="50" id="yoV-04-Bga"/>
+                            <constraint firstItem="tr0-Pk-jiw" firstAttribute="centerX" secondItem="Rxd-cA-WAY" secondAttribute="centerX" id="otK-cI-HQa"/>
+                            <constraint firstItem="tr0-Pk-jiw" firstAttribute="centerY" secondItem="Rxd-cA-WAY" secondAttribute="centerY" multiplier="0.3" id="uIE-AF-PdF"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="b0J-Vn-qyo"/>
                     <connections>
-                        <outlet property="descriptionLabel" destination="JnW-Vn-cIs" id="StD-KV-6sE"/>
+                        <outlet property="name" destination="tr0-Pk-jiw" id="dIA-4p-1ia"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7EA-Vf-ZC7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVj-QY-eNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2011" y="-54"/>
+            <point key="canvasLocation" x="2019" y="-54"/>
         </scene>
     </scenes>
     <resources>
@@ -776,6 +1104,9 @@
         <namedColor name="haze">
             <color red="0.83529411764705885" green="0.84705882352941175" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="mist">
+            <color red="0.96862745098039216" green="0.97254901960784312" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="notBlack">
             <color red="0.17254901960784313" green="0.17647058823529413" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -784,6 +1115,12 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

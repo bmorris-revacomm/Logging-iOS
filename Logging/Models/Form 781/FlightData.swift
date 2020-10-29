@@ -54,3 +54,12 @@ class FlightData: Codable {
     }
     
 } //End
+
+extension FlightData: Equatable {
+    
+    //make sure it equals what we want it to
+    static func ==(lhs: FlightData, rhs: FlightData) -> Bool {
+        return (lhs.missionNumber == rhs.missionNumber)
+    }
+    
+}

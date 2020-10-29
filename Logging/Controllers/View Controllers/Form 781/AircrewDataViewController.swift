@@ -74,7 +74,7 @@ class AircrewDataViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func addAircrewButtonTapped(_ sender: UIButton) {
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
         if let viewController = UIStoryboard(name: "Aircrew", bundle: nil).instantiateViewController(withIdentifier: "Page1") as? AircrewViewController {
             if let navigator = navigationController {
                 navigator.pushViewController(viewController, animated: true)
@@ -82,9 +82,12 @@ class AircrewDataViewController: UIViewController {
         }
     }
     
-    @IBAction func saveStuffTapped(_ sender: UIButton) {
-        //Form781Controller.shared.create(date: "date", mds: "test", serialNo: "ttt", unitCharged: "testing", harmLocation: "houston", flightData: FlightDataController.shared.flights, crewMembers: CrewMemberController.shared.members)
-        print("Saving stuff")
-    }
+//    @IBAction func addAircrewButtonTapped(_ sender: UIButton) {
+//        if let viewController = UIStoryboard(name: "Aircrew", bundle: nil).instantiateViewController(withIdentifier: "Page1") as? AircrewViewController {
+//            if let navigator = navigationController {
+//                navigator.pushViewController(viewController, animated: true)
+//            }
+//        }
+//    }
 
 } //End
