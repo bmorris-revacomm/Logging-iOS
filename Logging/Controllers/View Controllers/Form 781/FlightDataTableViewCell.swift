@@ -54,5 +54,4 @@ class FlightDataTableViewCell: UITableViewCell {
     @IBAction func removeButtonTapped(_ sender: UIButton) {
         
     }
-
 } //End

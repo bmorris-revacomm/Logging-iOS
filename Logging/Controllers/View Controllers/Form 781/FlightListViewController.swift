@@ -101,8 +101,12 @@ class FlightListViewController: UIViewController {
         totalLandings.resignFirstResponder()
         sorties.resignFirstResponder()
         specialUse.resignFirstResponder()
+        
+//        func loadFromData() {
+//            let forms = Form781Controller.shared.load()
+//            
+//        }
     }
-    
 } //End
 
 // MARK: - TableView Delegate
