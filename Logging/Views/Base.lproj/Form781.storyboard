@@ -361,1135 +361,6 @@
             </objects>
             <point key="canvasLocation" x="2131" y="-411"/>
         </scene>
-        <!--Flight Data View Controller-->
-        <scene sceneID="l3W-Am-vhq">
-            <objects>
-                <viewController storyboardIdentifier="Page2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uHw-GN-qXJ" customClass="FlightDataViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="73Z-dg-KRm">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0o-do-T4u">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="41"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWT-q8-czw" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="8" width="24.5" height="25"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5VZ-p8-zeW">
-                                                <rect key="frame" x="4.5" y="7.5" width="15.5" height="10"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstItem="5VZ-p8-zeW" firstAttribute="centerX" secondItem="VWT-q8-czw" secondAttribute="centerX" id="1Xx-Tt-RfQ"/>
-                                            <constraint firstItem="5VZ-p8-zeW" firstAttribute="centerY" secondItem="VWT-q8-czw" secondAttribute="centerY" id="ibK-zv-Wdu"/>
-                                            <constraint firstAttribute="width" secondItem="VWT-q8-czw" secondAttribute="height" multiplier="1:1" id="xZ9-Uf-ceA"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPG-tf-2xL" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="728.5" y="8" width="24.5" height="25"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7q-gD-APM">
-                                                <rect key="frame" x="5.5" y="7.5" width="13.5" height="10"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstItem="S7q-gD-APM" firstAttribute="centerY" secondItem="uPG-tf-2xL" secondAttribute="centerY" id="1D7-qj-kdq"/>
-                                            <constraint firstAttribute="width" secondItem="uPG-tf-2xL" secondAttribute="height" multiplier="1:1" id="8IR-cK-qWc"/>
-                                            <constraint firstItem="S7q-gD-APM" firstAttribute="centerX" secondItem="uPG-tf-2xL" secondAttribute="centerX" id="o3h-HO-rRB"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" name="notBlack"/>
-                                <constraints>
-                                    <constraint firstItem="uPG-tf-2xL" firstAttribute="centerY" secondItem="U0o-do-T4u" secondAttribute="centerY" id="JAO-2X-D4x"/>
-                                    <constraint firstItem="VWT-q8-czw" firstAttribute="leading" secondItem="U0o-do-T4u" secondAttribute="leading" constant="15" id="Off-o1-lkZ"/>
-                                    <constraint firstItem="VWT-q8-czw" firstAttribute="centerY" secondItem="U0o-do-T4u" secondAttribute="centerY" id="Rn7-Cp-l4f"/>
-                                    <constraint firstItem="uPG-tf-2xL" firstAttribute="height" secondItem="U0o-do-T4u" secondAttribute="height" multiplier="0.6" id="idT-Gq-vZq"/>
-                                    <constraint firstItem="VWT-q8-czw" firstAttribute="height" secondItem="U0o-do-T4u" secondAttribute="height" multiplier="0.6" id="mnM-VV-b7t"/>
-                                    <constraint firstAttribute="trailing" secondItem="uPG-tf-2xL" secondAttribute="trailing" constant="15" id="qyH-Tr-bue"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBI-2f-KEM" userLabel="Header">
-                                <rect key="frame" x="0.0" y="41" width="768" height="51"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AFTO Form 781" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwO-m4-UxZ">
-                                        <rect key="frame" x="30" y="15.5" width="122.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" name="slate"/>
-                                <constraints>
-                                    <constraint firstItem="hwO-m4-UxZ" firstAttribute="centerY" secondItem="cBI-2f-KEM" secondAttribute="centerY" id="3rv-vO-Qa3"/>
-                                    <constraint firstItem="hwO-m4-UxZ" firstAttribute="leading" secondItem="cBI-2f-KEM" secondAttribute="leading" constant="30" id="P49-tp-E59"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Mission Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sW-z9-JHm">
-                                <rect key="frame" x="30" y="102" width="111" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" name="slate"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNZ-Cd-QsK" userLabel="printForm">
-                                <rect key="frame" x="715" y="100" width="23" height="22"/>
-                                <state key="normal" image="printer" catalog="system"/>
-                                <connections>
-                                    <action selector="printButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="Ywp-U7-jvf"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXY-8S-I5n" userLabel="Divider line">
-                                <rect key="frame" x="0.0" y="127.5" width="768" height="1"/>
-                                <color key="backgroundColor" name="fog"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="f0i-s2-sRo"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHy-12-yfo" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="314" y="215.5" width="140" height="30"/>
-                                <color key="backgroundColor" name="fog"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="NEW FLIGHT SEQ +">
-                                    <color key="titleColor" name="slate"/>
-                                    <color key="titleShadowColor" systemColor="opaqueSeparatorColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="newFlightButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="N27-dR-wiB"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbj-Oi-qZw" userLabel="Grand Totals Box" customClass="borderView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="19" y="348" width="730" height="123"/>
-                                <color key="backgroundColor" name="haze"/>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TT3-qi-dhc" userLabel="Grand Totals">
-                                <rect key="frame" x="55.5" y="371" width="657" height="77.5"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FmI-qZ-Nzi">
-                                        <rect key="frame" x="0.0" y="0.0" width="93" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRAND TOTALS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x68-eE-vJP">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J8Q-1e-HBD" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="93" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="z3Q-Un-Fdy"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fza-89-GPc">
-                                        <rect key="frame" x="113" y="0.0" width="92.5" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH &amp; GO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Nz-ha-zUt">
-                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0vn-7E-cTP" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="92.5" height="55"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DOv-h7-BQU">
-                                        <rect key="frame" x="225.5" y="0.0" width="93" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL STOP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJX-kO-V9R">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OCo-2h-xLG" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="93" height="55"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dJH-yG-Lrc">
-                                        <rect key="frame" x="338.5" y="0.0" width="93" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSv-rs-uoY">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHB-49-Gt5" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="93" height="55"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KZy-4F-kps">
-                                        <rect key="frame" x="451.5" y="0.0" width="92.5" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPT-Mg-rwD">
-                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jIr-tC-CTe" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="92.5" height="55"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Hp-2Z-fQ5">
-                                        <rect key="frame" x="564" y="0.0" width="93" height="77.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL USE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifr-ew-orj">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kDR-Zl-whU" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="22.5" width="93" height="55"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiU-ux-0sg" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="582" y="944" width="136" height="30"/>
-                                <color key="backgroundColor" name="slate"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="SAVE &amp; CONTINUE"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jj-9d-XIe" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="944" width="41" height="30"/>
-                                <color key="backgroundColor" name="haze"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="BACK"/>
-                                <connections>
-                                    <action selector="backButtonTapped:" destination="uHw-GN-qXJ" eventType="touchUpInside" id="jxc-aQ-JMm"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIx-Vc-qNu" userLabel="Grid box" customClass="PBLView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="19" y="501" width="730" height="307"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqb-Dr-nVa">
-                                        <rect key="frame" x="62.5" y="20" width="35.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dI-PE-udJ">
-                                        <rect key="frame" x="132" y="20" width="35" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6l-9F-XRi">
-                                        <rect key="frame" x="195" y="20" width="26.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B82-aD-Cct">
-                                        <rect key="frame" x="256" y="20" width="26.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAKE OFF TIME (Z)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-Ag-0R3">
-                                        <rect key="frame" x="316" y="20" width="39.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAND TIME (Z)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwC-Gf-fwy">
-                                        <rect key="frame" x="383.5" y="20" width="34.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL TIME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sj-Is-ZQm">
-                                        <rect key="frame" x="445" y="20" width="26.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH &amp; GO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B97-gK-uwO">
-                                        <rect key="frame" x="492.5" y="20" width="30" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL STOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWP-9f-FnC">
-                                        <rect key="frame" x="539" y="20" width="22" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6a-MT-KaT">
-                                        <rect key="frame" x="579.5" y="25" width="26.5" height="10"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ek-4W-3qI">
-                                        <rect key="frame" x="618" y="25" width="35" height="10"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL USE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryU-7G-jQF">
-                                        <rect key="frame" x="667" y="20" width="34.5" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qRH-Ak-sJE" userLabel="Line 6 Grid">
-                                        <rect key="frame" x="18.5" y="49.5" width="693" height="237.5"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lmy-2v-VNI" userLabel="Line 6a">
-                                                <rect key="frame" x="0.0" y="0.0" width="693" height="39.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nW1-zh-QwZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="39.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ygV-83-caz">
-                                                        <rect key="frame" x="20" y="0.0" width="673" height="39.5"/>
-                                                        <subviews>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TC0221" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LH5-fO-r5x" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="Vbf-yO-Iba"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ABB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RwO-fZ-ePG" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="83.5" y="0.0" width="55.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="oWh-Tq-jtE"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XCHS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qda-1C-Y7a" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="139" y="0.0" width="61.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="iR9-VW-Q35"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AUAB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfL-P2-LAD" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="200.5" y="0.0" width="61" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="qUh-r8-RxU"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0100" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOv-6D-zqB" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="261.5" y="0.0" width="71" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="W4u-mW-tm0"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2300" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="txV-h5-4rw" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="332.5" y="0.0" width="59.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="cvW-PR-OeJ"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="22.6" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MJd-gX-ItI" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="392" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="IZw-Rv-ats"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-6Z-nmb" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="448" y="0.0" width="42.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="tRX-dD-iKy"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uyz-TN-tte" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="490.5" y="0.0" width="42.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="EYL-8W-Wqc"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocs-GF-aJC" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="533" y="0.0" width="43" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="hJ3-lo-NMS"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Unf-oO-6hA" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="576" y="0.0" width="42.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="Zbt-bz-OP8"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="----" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3jE-bi-ye0" customClass="gridTextField" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="618.5" y="0.0" width="54.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="yS0-lg-gaw"/>
-                                                                </connections>
-                                                            </textField>
-                                                        </subviews>
-                                                        <gestureRecognizers/>
-                                                        <connections>
-                                                            <outletCollection property="gestureRecognizers" destination="rG1-mW-zzI" appends="YES" id="uHS-ap-HOs"/>
-                                                        </connections>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xhJ-3V-ETX" userLabel="Line 6b">
-                                                <rect key="frame" x="0.0" y="39.5" width="693" height="40"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TAS-hC-w5F">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="40"/>
-                                                        <gestureRecognizers/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ZZy-Pw-cqp">
-                                                        <rect key="frame" x="20" y="0.0" width="673" height="40"/>
-                                                        <subviews>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4u7-D4-bes">
-                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="5"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="YLT-Q1-gJM"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tp7-iG-SeF">
-                                                                <rect key="frame" x="56" y="0.0" width="56" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="Mbo-bb-i6L"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="irv-dW-laX">
-                                                                <rect key="frame" x="112" y="0.0" width="56" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="b7K-KX-eR5"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q7z-jI-TAS">
-                                                                <rect key="frame" x="168" y="0.0" width="56.5" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="sck-VF-HBH"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWO-a4-eLA">
-                                                                <rect key="frame" x="224.5" y="0.0" width="56" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="3gH-5J-k9Z"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mk-Az-eUi">
-                                                                <rect key="frame" x="280.5" y="0.0" width="56" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="uZ6-4M-Gxo"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YG4-ZY-ivn">
-                                                                <rect key="frame" x="336.5" y="0.0" width="56" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="IKy-2K-5us"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amK-2C-j6m">
-                                                                <rect key="frame" x="392.5" y="0.0" width="56" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="u4D-sY-h2I"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IuK-sU-lOX">
-                                                                <rect key="frame" x="448.5" y="0.0" width="56.5" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="a8G-ZH-sao"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-Hb-dlK">
-                                                                <rect key="frame" x="505" y="0.0" width="56" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="3rm-f3-4Hs"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="js2-Oy-r8K">
-                                                                <rect key="frame" x="561" y="0.0" width="56" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="Wei-py-ba2"/>
-                                                                </connections>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6N-bG-O43">
-                                                                <rect key="frame" x="617" y="0.0" width="56" height="40"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="addToJSON:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="ws5-3D-Pgp"/>
-                                                                </connections>
-                                                            </textField>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="rO4-3V-7g8" appends="YES" id="krP-gj-OEl"/>
-                                                </connections>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9.5" translatesAutoresizingMaskIntoConstraints="NO" id="XWR-5M-e1e" userLabel="Line 6c">
-                                                <rect key="frame" x="0.0" y="79.5" width="693" height="39.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qao-5R-Ymx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="39.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zTR-PH-xOD">
-                                                        <rect key="frame" x="20" y="0.0" width="673" height="39.5"/>
-                                                        <subviews>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Pb-a5-pLc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="5"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGr-jc-DCw">
-                                                                <rect key="frame" x="56" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDi-yr-KHl">
-                                                                <rect key="frame" x="112" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81f-90-uvo">
-                                                                <rect key="frame" x="168" y="0.0" width="56.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qIV-Gb-Is4">
-                                                                <rect key="frame" x="224.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Guw-U6-XXM">
-                                                                <rect key="frame" x="280.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DsM-xt-Txp">
-                                                                <rect key="frame" x="336.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6PY-r2-VJA">
-                                                                <rect key="frame" x="392.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygg-qy-txW">
-                                                                <rect key="frame" x="448.5" y="0.0" width="56.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NMW-o7-Q2i">
-                                                                <rect key="frame" x="505" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8q5-uG-bBw">
-                                                                <rect key="frame" x="561" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7JD-Tj-5iH">
-                                                                <rect key="frame" x="617" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="W0P-xw-XlT" appends="YES" id="X7U-mA-b9Y"/>
-                                                </connections>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9.5" translatesAutoresizingMaskIntoConstraints="NO" id="tDY-g0-5mO" userLabel="Line 6d">
-                                                <rect key="frame" x="0.0" y="119" width="693" height="39.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fYk-6B-hZe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10.5" height="39.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="D3a-VN-Vzz">
-                                                        <rect key="frame" x="20" y="0.0" width="673" height="39.5"/>
-                                                        <subviews>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pU1-Ja-7CZ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="5"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVj-JG-coQ">
-                                                                <rect key="frame" x="56" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-DL-jpR">
-                                                                <rect key="frame" x="112" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0p-fP-BAf">
-                                                                <rect key="frame" x="168" y="0.0" width="56.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pM1-BN-8q7">
-                                                                <rect key="frame" x="224.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3P-OG-e1e">
-                                                                <rect key="frame" x="280.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dv5-np-gD1">
-                                                                <rect key="frame" x="336.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RWx-pY-HjR">
-                                                                <rect key="frame" x="392.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9aO-RM-Gja">
-                                                                <rect key="frame" x="448.5" y="0.0" width="56.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dpf-8j-wfG">
-                                                                <rect key="frame" x="505" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pa-iH-XTH">
-                                                                <rect key="frame" x="561" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOr-tO-aHW">
-                                                                <rect key="frame" x="617" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="orv-I5-aVq" appends="YES" id="d6R-v4-sHk"/>
-                                                </connections>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10.5" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-F3-gf0" userLabel="Line 6e">
-                                                <rect key="frame" x="0.0" y="158.5" width="693" height="39.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9aj-TN-cU6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="9.5" height="39.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="AjL-L7-l7g">
-                                                        <rect key="frame" x="20" y="0.0" width="673" height="39.5"/>
-                                                        <subviews>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPZ-ib-bHt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="5"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WVn-vo-NQw">
-                                                                <rect key="frame" x="56" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mmJ-X9-Byb">
-                                                                <rect key="frame" x="112" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWv-fc-g9B">
-                                                                <rect key="frame" x="168" y="0.0" width="56.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-tc-r1r">
-                                                                <rect key="frame" x="224.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fud-JP-RV3">
-                                                                <rect key="frame" x="280.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C45-sO-PkT">
-                                                                <rect key="frame" x="336.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gd3-FG-7DV">
-                                                                <rect key="frame" x="392.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-nT-QYg">
-                                                                <rect key="frame" x="448.5" y="0.0" width="56.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fBm-fU-ebI">
-                                                                <rect key="frame" x="505" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="knS-i8-rxn">
-                                                                <rect key="frame" x="561" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QP7-We-Qsg">
-                                                                <rect key="frame" x="617" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="y5z-Ka-QRh" appends="YES" id="wwK-eB-Lcj"/>
-                                                </connections>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="11.5" translatesAutoresizingMaskIntoConstraints="NO" id="fRd-Dk-cLI" userLabel="Line 6f">
-                                                <rect key="frame" x="0.0" y="198" width="693" height="39.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NxM-iM-6tv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="8.5" height="39.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PlU-13-eag">
-                                                        <rect key="frame" x="20" y="0.0" width="673" height="39.5"/>
-                                                        <subviews>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7yX-MI-DhP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="5"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cFI-Qr-Sqf">
-                                                                <rect key="frame" x="56" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7wL-W7-4F2">
-                                                                <rect key="frame" x="112" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KIZ-uB-FVN">
-                                                                <rect key="frame" x="168" y="0.0" width="56.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0AS-tn-Sw1">
-                                                                <rect key="frame" x="224.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tGp-zM-b7k">
-                                                                <rect key="frame" x="280.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LrS-3Y-Otq">
-                                                                <rect key="frame" x="336.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4H-bK-fBp">
-                                                                <rect key="frame" x="392.5" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rvc-kz-sCI">
-                                                                <rect key="frame" x="448.5" y="0.0" width="56.5" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6U-QB-vuC">
-                                                                <rect key="frame" x="505" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VFv-gN-kSu">
-                                                                <rect key="frame" x="561" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fkk-fN-Jt8">
-                                                                <rect key="frame" x="617" y="0.0" width="56" height="39.5"/>
-                                                                <color key="backgroundColor" name="mist"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="6"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                                <gestureRecognizers/>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="DIp-1M-ruX" appends="YES" id="gqS-m6-AOD"/>
-                                                </connections>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" name="haze"/>
-                                <constraints>
-                                    <constraint firstItem="9sj-Is-ZQm" firstAttribute="centerX" secondItem="MJd-gX-ItI" secondAttribute="centerX" id="0Om-bb-OVy"/>
-                                    <constraint firstItem="z6a-MT-KaT" firstAttribute="centerX" secondItem="ocs-GF-aJC" secondAttribute="centerX" id="4jb-W9-lgM"/>
-                                    <constraint firstItem="WMs-Ag-0R3" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="6Dh-Fl-orp"/>
-                                    <constraint firstItem="6Ek-4W-3qI" firstAttribute="centerX" secondItem="Unf-oO-6hA" secondAttribute="centerX" id="8Y9-qG-gGn"/>
-                                    <constraint firstItem="aWP-9f-FnC" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="8x3-Ng-tkW"/>
-                                    <constraint firstItem="KwC-Gf-fwy" firstAttribute="centerX" secondItem="txV-h5-4rw" secondAttribute="centerX" id="CT2-dL-hig"/>
-                                    <constraint firstItem="B97-gK-uwO" firstAttribute="centerX" secondItem="vVg-6Z-nmb" secondAttribute="centerX" id="Evt-fD-MRn"/>
-                                    <constraint firstItem="3dI-PE-udJ" firstAttribute="centerX" secondItem="RwO-fZ-ePG" secondAttribute="centerX" id="NB6-6a-x4d"/>
-                                    <constraint firstItem="jqb-Dr-nVa" firstAttribute="centerX" secondItem="LH5-fO-r5x" secondAttribute="centerX" id="NXj-NQ-1w2"/>
-                                    <constraint firstItem="a6l-9F-XRi" firstAttribute="centerX" secondItem="Qda-1C-Y7a" secondAttribute="centerX" id="Qcq-8V-5Ax"/>
-                                    <constraint firstItem="jqb-Dr-nVa" firstAttribute="top" secondItem="kIx-Vc-qNu" secondAttribute="top" constant="20" id="RHb-O8-g6G"/>
-                                    <constraint firstAttribute="bottom" secondItem="qRH-Ak-sJE" secondAttribute="bottom" constant="20" id="Szd-ou-3at"/>
-                                    <constraint firstItem="WMs-Ag-0R3" firstAttribute="centerX" secondItem="OOv-6D-zqB" secondAttribute="centerX" id="YJv-b4-ar1"/>
-                                    <constraint firstItem="qRH-Ak-sJE" firstAttribute="centerX" secondItem="kIx-Vc-qNu" secondAttribute="centerXWithinMargins" id="aEo-PA-eLC"/>
-                                    <constraint firstItem="6Ek-4W-3qI" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="anw-cB-jlh"/>
-                                    <constraint firstItem="ryU-7G-jQF" firstAttribute="centerX" secondItem="3jE-bi-ye0" secondAttribute="centerX" id="d70-jc-v03"/>
-                                    <constraint firstItem="a6l-9F-XRi" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="dQN-yf-3TN"/>
-                                    <constraint firstItem="qRH-Ak-sJE" firstAttribute="top" secondItem="jqb-Dr-nVa" secondAttribute="bottom" constant="10" id="e9l-eM-pcP"/>
-                                    <constraint firstItem="z6a-MT-KaT" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="efZ-Od-gas"/>
-                                    <constraint firstItem="jqb-Dr-nVa" firstAttribute="bottom" secondItem="3dI-PE-udJ" secondAttribute="bottom" id="emh-7f-vcf"/>
-                                    <constraint firstItem="B97-gK-uwO" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="es6-Re-j1j"/>
-                                    <constraint firstItem="9sj-Is-ZQm" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="fWW-2y-Du1"/>
-                                    <constraint firstItem="ryU-7G-jQF" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="hoC-XU-PNa"/>
-                                    <constraint firstItem="aWP-9f-FnC" firstAttribute="centerX" secondItem="Uyz-TN-tte" secondAttribute="centerX" id="ifg-zx-kQh"/>
-                                    <constraint firstItem="qRH-Ak-sJE" firstAttribute="width" secondItem="kIx-Vc-qNu" secondAttribute="width" multiplier="0.95" id="rdF-Fb-Y0t"/>
-                                    <constraint firstItem="KwC-Gf-fwy" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="wKr-P3-7kx"/>
-                                    <constraint firstItem="B82-aD-Cct" firstAttribute="centerX" secondItem="zfL-P2-LAD" secondAttribute="centerX" id="wfb-rD-VbD"/>
-                                    <constraint firstItem="3dI-PE-udJ" firstAttribute="top" secondItem="jqb-Dr-nVa" secondAttribute="top" id="yQC-zh-DzD"/>
-                                    <constraint firstItem="B82-aD-Cct" firstAttribute="centerY" secondItem="jqb-Dr-nVa" secondAttribute="centerY" id="zhX-FL-5Ud"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dxP-v8-4HA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jXY-8S-I5n" secondAttribute="trailing" id="1wU-vf-cyJ"/>
-                            <constraint firstItem="Pbj-Oi-qZw" firstAttribute="centerX" secondItem="dxP-v8-4HA" secondAttribute="centerX" id="299-gB-KdD"/>
-                            <constraint firstItem="cBI-2f-KEM" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.05" id="2n7-Lb-2Jg"/>
-                            <constraint firstItem="dxP-v8-4HA" firstAttribute="trailing" secondItem="JiU-ux-0sg" secondAttribute="trailing" constant="50" id="38z-ET-x4f"/>
-                            <constraint firstItem="dxP-v8-4HA" firstAttribute="bottom" secondItem="1Jj-9d-XIe" secondAttribute="bottom" constant="50" id="3qc-l3-HhM"/>
-                            <constraint firstItem="U0o-do-T4u" firstAttribute="top" secondItem="dxP-v8-4HA" secondAttribute="top" id="4Fs-Ie-0QZ"/>
-                            <constraint firstItem="5sW-z9-JHm" firstAttribute="leading" secondItem="dxP-v8-4HA" secondAttribute="leading" constant="30" id="55o-yr-LPQ"/>
-                            <constraint firstItem="jXY-8S-I5n" firstAttribute="leading" secondItem="73Z-dg-KRm" secondAttribute="leading" id="6xf-K8-NkY"/>
-                            <constraint firstItem="dxP-v8-4HA" firstAttribute="trailing" secondItem="U0o-do-T4u" secondAttribute="trailing" id="Bpa-1T-Jfs"/>
-                            <constraint firstItem="kIx-Vc-qNu" firstAttribute="top" secondItem="Pbj-Oi-qZw" secondAttribute="bottom" constant="30" id="GV0-t4-HSp"/>
-                            <constraint firstItem="dxP-v8-4HA" firstAttribute="trailing" secondItem="pNZ-Cd-QsK" secondAttribute="trailing" constant="30" id="KQ2-tH-wfO"/>
-                            <constraint firstItem="Pbj-Oi-qZw" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.12" id="LA6-Bf-hfB"/>
-                            <constraint firstItem="cBI-2f-KEM" firstAttribute="trailing" secondItem="dxP-v8-4HA" secondAttribute="trailing" id="OnX-Id-Uq2"/>
-                            <constraint firstItem="5sW-z9-JHm" firstAttribute="top" secondItem="cBI-2f-KEM" secondAttribute="bottom" constant="10" id="PI0-s2-8Sg"/>
-                            <constraint firstItem="JHy-12-yfo" firstAttribute="centerY" secondItem="dxP-v8-4HA" secondAttribute="centerY" multiplier="0.45" id="Pze-Vd-fdQ"/>
-                            <constraint firstItem="cBI-2f-KEM" firstAttribute="leading" secondItem="dxP-v8-4HA" secondAttribute="leading" id="WLj-k7-xCH"/>
-                            <constraint firstItem="Pbj-Oi-qZw" firstAttribute="centerY" secondItem="dxP-v8-4HA" secondAttribute="centerY" multiplier="0.8" id="YNM-0S-7tk"/>
-                            <constraint firstItem="jXY-8S-I5n" firstAttribute="top" secondItem="5sW-z9-JHm" secondAttribute="bottom" constant="5" id="Zrl-d2-s4r"/>
-                            <constraint firstItem="JHy-12-yfo" firstAttribute="centerX" secondItem="dxP-v8-4HA" secondAttribute="centerX" id="dSO-TH-9Tg"/>
-                            <constraint firstItem="dxP-v8-4HA" firstAttribute="bottom" secondItem="JiU-ux-0sg" secondAttribute="bottom" constant="50" id="eVe-GS-oje"/>
-                            <constraint firstItem="kIx-Vc-qNu" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.3" id="ftM-q7-dS7"/>
-                            <constraint firstItem="pNZ-Cd-QsK" firstAttribute="top" secondItem="cBI-2f-KEM" secondAttribute="bottom" constant="8" id="g4S-ze-Qcz"/>
-                            <constraint firstItem="U0o-do-T4u" firstAttribute="height" secondItem="73Z-dg-KRm" secondAttribute="height" multiplier="0.04" id="gxu-7e-p7S"/>
-                            <constraint firstItem="cBI-2f-KEM" firstAttribute="top" secondItem="U0o-do-T4u" secondAttribute="bottom" id="hE3-DE-HPL"/>
-                            <constraint firstItem="TT3-qi-dhc" firstAttribute="centerX" secondItem="Pbj-Oi-qZw" secondAttribute="centerX" id="jA2-5n-jOG"/>
-                            <constraint firstItem="Pbj-Oi-qZw" firstAttribute="width" secondItem="73Z-dg-KRm" secondAttribute="width" multiplier="0.95" id="l0A-u9-3YN"/>
-                            <constraint firstItem="kIx-Vc-qNu" firstAttribute="width" secondItem="73Z-dg-KRm" secondAttribute="width" multiplier="0.95" id="l6c-Ev-kuW"/>
-                            <constraint firstItem="TT3-qi-dhc" firstAttribute="width" secondItem="Pbj-Oi-qZw" secondAttribute="width" multiplier="0.9" id="ndK-jl-4dK"/>
-                            <constraint firstItem="1Jj-9d-XIe" firstAttribute="leading" secondItem="dxP-v8-4HA" secondAttribute="leading" constant="50" id="qrj-td-ZXM"/>
-                            <constraint firstItem="U0o-do-T4u" firstAttribute="leading" secondItem="73Z-dg-KRm" secondAttribute="leading" id="tQ8-r7-4nh"/>
-                            <constraint firstItem="TT3-qi-dhc" firstAttribute="centerY" secondItem="Pbj-Oi-qZw" secondAttribute="centerY" id="wYd-g4-e6E"/>
-                            <constraint firstItem="kIx-Vc-qNu" firstAttribute="centerX" secondItem="dxP-v8-4HA" secondAttribute="centerX" id="xOU-2d-K0N"/>
-                        </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="6MJ-U2-JDn" appends="YES" id="hdL-7g-Vn5"/>
-                        </connections>
-                    </view>
-                    <navigationItem key="navigationItem" id="VEE-JX-5RO"/>
-                    <connections>
-                        <outlet property="grandTotalFullStop" destination="OCo-2h-xLG" id="Ivm-vG-qYp"/>
-                        <outlet property="grandTotalLanding" destination="kHB-49-Gt5" id="40s-70-nPd"/>
-                        <outlet property="grandTotalSorties" destination="jIr-tC-CTe" id="tt2-qj-mRt"/>
-                        <outlet property="grandTotalSpecialUse" destination="kDR-Zl-whU" id="1Iz-Ic-kUX"/>
-                        <outlet property="grandTotalTime" destination="J8Q-1e-HBD" id="ccU-m6-Y5e"/>
-                        <outlet property="grandTotalTouchAndGo" destination="0vn-7E-cTP" id="EqZ-YE-3kM"/>
-                        <outlet property="line6a01" destination="LH5-fO-r5x" id="LLE-NT-KrF"/>
-                        <outlet property="line6a02" destination="RwO-fZ-ePG" id="MT0-Tf-Q4p"/>
-                        <outlet property="line6a03" destination="Qda-1C-Y7a" id="9Bl-HL-JSA"/>
-                        <outlet property="line6a04" destination="zfL-P2-LAD" id="3oU-QU-WiA"/>
-                        <outlet property="line6a05" destination="OOv-6D-zqB" id="Ald-SR-F5S"/>
-                        <outlet property="line6a06" destination="txV-h5-4rw" id="hEY-pi-RbW"/>
-                        <outlet property="line6a07" destination="MJd-gX-ItI" id="Yf8-u6-W49"/>
-                        <outlet property="line6a08" destination="vVg-6Z-nmb" id="Ni5-7Z-IoX"/>
-                        <outlet property="line6a09" destination="Uyz-TN-tte" id="OKy-jV-5ay"/>
-                        <outlet property="line6a10" destination="ocs-GF-aJC" id="9hz-h9-qHS"/>
-                        <outlet property="line6a11" destination="Unf-oO-6hA" id="COh-M5-vjX"/>
-                        <outlet property="line6a12" destination="3jE-bi-ye0" id="vHy-WO-Ljx"/>
-                        <outlet property="line6b01" destination="4u7-D4-bes" id="Y60-vx-2J7"/>
-                        <outlet property="line6b02" destination="Tp7-iG-SeF" id="B9z-fr-gJs"/>
-                        <outlet property="line6b03" destination="irv-dW-laX" id="tjc-8e-tou"/>
-                        <outlet property="line6b04" destination="Q7z-jI-TAS" id="2mk-d6-14R"/>
-                        <outlet property="line6b05" destination="GWO-a4-eLA" id="sss-Fc-sWm"/>
-                        <outlet property="line6b06" destination="1mk-Az-eUi" id="ade-48-5bf"/>
-                        <outlet property="line6b07" destination="YG4-ZY-ivn" id="Vld-Vy-IAn"/>
-                        <outlet property="line6b08" destination="amK-2C-j6m" id="66g-Yp-xOD"/>
-                        <outlet property="line6b09" destination="IuK-sU-lOX" id="W4h-PU-P86"/>
-                        <outlet property="line6b10" destination="7ho-Hb-dlK" id="OlX-eF-xoT"/>
-                        <outlet property="line6b11" destination="js2-Oy-r8K" id="aJh-GE-gOD"/>
-                        <outlet property="line6b12" destination="B6N-bG-O43" id="w7w-yo-CWg"/>
-                        <outlet property="line6c01" destination="5Pb-a5-pLc" id="cxf-go-nBh"/>
-                        <outlet property="line6c02" destination="PGr-jc-DCw" id="97D-3U-WXT"/>
-                        <outlet property="line6c03" destination="zDi-yr-KHl" id="9pF-hN-lId"/>
-                        <outlet property="line6c04" destination="81f-90-uvo" id="bnL-fM-QFB"/>
-                        <outlet property="line6c05" destination="qIV-Gb-Is4" id="dUA-SN-poW"/>
-                        <outlet property="line6c06" destination="Guw-U6-XXM" id="bOg-tl-L3r"/>
-                        <outlet property="line6c07" destination="DsM-xt-Txp" id="X6L-0W-5Nl"/>
-                        <outlet property="line6c08" destination="6PY-r2-VJA" id="LMT-Tu-3h6"/>
-                        <outlet property="line6c09" destination="Ygg-qy-txW" id="F54-Gy-VFw"/>
-                        <outlet property="line6c10" destination="NMW-o7-Q2i" id="1hN-Zb-ePl"/>
-                        <outlet property="line6c11" destination="8q5-uG-bBw" id="tTR-5M-Wyi"/>
-                        <outlet property="line6c12" destination="7JD-Tj-5iH" id="yr2-gL-u9O"/>
-                        <outlet property="line6d01" destination="pU1-Ja-7CZ" id="Sm3-Fb-b1H"/>
-                        <outlet property="line6d02" destination="ZVj-JG-coQ" id="Jy5-aY-Nia"/>
-                        <outlet property="line6d03" destination="Q2T-DL-jpR" id="bYX-PK-f9L"/>
-                        <outlet property="line6d04" destination="h0p-fP-BAf" id="XjX-vW-Ste"/>
-                        <outlet property="line6d05" destination="pM1-BN-8q7" id="Hkg-Af-s2a"/>
-                        <outlet property="line6d06" destination="r3P-OG-e1e" id="2Q1-cY-f1e"/>
-                        <outlet property="line6d07" destination="Dv5-np-gD1" id="tel-tD-IvM"/>
-                        <outlet property="line6d08" destination="RWx-pY-HjR" id="o7l-Yd-Dep"/>
-                        <outlet property="line6d09" destination="9aO-RM-Gja" id="Oc8-vT-7NU"/>
-                        <outlet property="line6d10" destination="Dpf-8j-wfG" id="xwN-Co-bHX"/>
-                        <outlet property="line6d11" destination="0pa-iH-XTH" id="mTq-f8-8Vh"/>
-                        <outlet property="line6d12" destination="qOr-tO-aHW" id="qW4-Jt-YMR"/>
-                        <outlet property="line6e01" destination="CPZ-ib-bHt" id="o9A-WE-g2j"/>
-                        <outlet property="line6e02" destination="WVn-vo-NQw" id="6BK-6K-0SQ"/>
-                        <outlet property="line6e03" destination="mmJ-X9-Byb" id="Rc9-yi-RbZ"/>
-                        <outlet property="line6e04" destination="bWv-fc-g9B" id="KXf-fU-87r"/>
-                        <outlet property="line6e05" destination="fY0-tc-r1r" id="rZ2-Ug-6PP"/>
-                        <outlet property="line6e06" destination="Fud-JP-RV3" id="Pwq-YQ-Mdt"/>
-                        <outlet property="line6e07" destination="C45-sO-PkT" id="i1q-cl-PaG"/>
-                        <outlet property="line6e08" destination="Gd3-FG-7DV" id="MNY-Ys-bap"/>
-                        <outlet property="line6e09" destination="qXz-nT-QYg" id="vqx-uj-pL3"/>
-                        <outlet property="line6e10" destination="fBm-fU-ebI" id="9gm-q4-txj"/>
-                        <outlet property="line6e11" destination="knS-i8-rxn" id="Fpw-21-ypu"/>
-                        <outlet property="line6e12" destination="QP7-We-Qsg" id="eFL-GQ-4c1"/>
-                        <outlet property="line6f01" destination="7yX-MI-DhP" id="j5o-i0-EEP"/>
-                        <outlet property="line6f02" destination="cFI-Qr-Sqf" id="RJb-pB-yW4"/>
-                        <outlet property="line6f03" destination="7wL-W7-4F2" id="VBl-WM-let"/>
-                        <outlet property="line6f04" destination="KIZ-uB-FVN" id="Wsh-j5-V4s"/>
-                        <outlet property="line6f05" destination="0AS-tn-Sw1" id="WMr-gc-7yd"/>
-                        <outlet property="line6f06" destination="tGp-zM-b7k" id="IzZ-f6-Pg1"/>
-                        <outlet property="line6f07" destination="LrS-3Y-Otq" id="pQI-xD-obH"/>
-                        <outlet property="line6f08" destination="J4H-bK-fBp" id="uE0-Xm-hRA"/>
-                        <outlet property="line6f09" destination="Rvc-kz-sCI" id="P8F-jj-Zd6"/>
-                        <outlet property="line6f10" destination="h6U-QB-vuC" id="ZEG-qF-8T5"/>
-                        <outlet property="line6f11" destination="VFv-gN-kSu" id="uCL-fo-M0q"/>
-                        <outlet property="line6f12" destination="fkk-fN-Jt8" id="CMr-ai-kkD"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kEE-hK-oVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="rG1-mW-zzI" userLabel="6aTapped">
-                    <connections>
-                        <action selector="line6aTapped:" destination="uHw-GN-qXJ" id="7Yn-Xf-SXn"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="rO4-3V-7g8" userLabel="6bTapped">
-                    <connections>
-                        <action selector="line6bTapped:" destination="uHw-GN-qXJ" id="mQf-dW-LHH"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="W0P-xw-XlT" userLabel="6cTapped">
-                    <connections>
-                        <action selector="line6cTapped:" destination="uHw-GN-qXJ" id="H7H-C6-bh6"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="orv-I5-aVq" userLabel="6dTapped">
-                    <connections>
-                        <action selector="line6dTapped:" destination="uHw-GN-qXJ" id="1X9-ZL-YDn"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="y5z-Ka-QRh" userLabel="6eTapped">
-                    <connections>
-                        <action selector="line6eTapped:" destination="uHw-GN-qXJ" id="VCw-xx-jtd"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="DIp-1M-ruX" userLabel="6fTapped">
-                    <connections>
-                        <action selector="line6fTapped:" destination="uHw-GN-qXJ" id="A3g-Yd-8pw"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="6MJ-U2-JDn">
-                    <connections>
-                        <action selector="viewTapped:" destination="uHw-GN-qXJ" id="LUd-Co-sGg"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="2798" y="258"/>
-        </scene>
         <!--Side Menu Table View Controller-->
         <scene sceneID="o35-8h-pOW">
             <objects>
@@ -1710,74 +581,74 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Idc-8I-T7t">
                                                     <rect key="frame" x="0.0" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CId-6p-ubb">
                                                     <rect key="frame" x="49.5" y="0.0" width="45" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zx-ci-pkS">
                                                     <rect key="frame" x="99.5" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEp-qu-uWm">
                                                     <rect key="frame" x="149" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAKE OFF TIME (Z)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoH-hN-Wbc">
                                                     <rect key="frame" x="198.5" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAND TIME (Z)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rz-Pp-WCs">
                                                     <rect key="frame" x="248" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL TIME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDl-My-5da">
                                                     <rect key="frame" x="297.5" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH &amp; GO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viD-4p-f76">
                                                     <rect key="frame" x="347" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL STOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTc-eH-1Nm">
                                                     <rect key="frame" x="396.5" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rij-Ba-S9J">
                                                     <rect key="frame" x="446" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTIES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-7u-Xw7">
                                                     <rect key="frame" x="495.5" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL USE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80j-rB-oFb">
                                                     <rect key="frame" x="545" y="0.0" width="44.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1842,74 +713,74 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TCO221" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ulc-96-V58">
                                                             <rect key="frame" x="0.0" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpH-9Q-gyA">
                                                             <rect key="frame" x="49.5" y="0.0" width="45" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XCHS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgF-Gu-2ZH">
                                                             <rect key="frame" x="99.5" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUAB" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97P-H5-ltt">
                                                             <rect key="frame" x="149" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2345" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6h-QF-epG">
                                                             <rect key="frame" x="198.5" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0200" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moy-rw-JC1">
                                                             <rect key="frame" x="248" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AM1-RK-aDX">
                                                             <rect key="frame" x="297.5" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgF-Ot-qTd">
                                                             <rect key="frame" x="347" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSo-tH-RaM">
                                                             <rect key="frame" x="396.5" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7b-GB-0Pq">
                                                             <rect key="frame" x="446" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B2y-FZ-4Lc">
                                                             <rect key="frame" x="495.5" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pa-g2-3Ah">
                                                             <rect key="frame" x="545" y="0.0" width="44.5" height="12"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                            <color key="textColor" name="slate"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -1922,9 +793,9 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjA-C1-saM">
-                                                    <rect key="frame" x="10" y="19" width="10" height="12"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="10" y="19" width="10.5" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                    <color key="textColor" name="slate"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBO-h2-Jy8">
@@ -2342,9 +1213,6 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
-                                                        <connections>
-                                                            <action selector="calculateTotalLandingWith_sender:" destination="uHw-GN-qXJ" eventType="editingDidEnd" id="Ddn-xb-12E"/>
-                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -2570,9 +1438,6 @@
         <namedColor name="slate">
             <color red="0.28235294117647058" green="0.29411764705882354" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -31,7 +31,17 @@ class Form781Controller {
         save()
     }
     
-    func updateFormwith(crewMember: CrewMember, to form: Form781) {
+    //save after every flight entered or after continue button?
+    func updateFormWith(grandTotalTime: Int, grandTouchGo: Int, grandFullStop: Int, grandTotalLandings: Int, grandTotalSorties: Int, form: Form781) {
+        form.grandTotalTime = grandTotalTime
+        form.grandTotalTouchAndGo = grandTouchGo
+        form.grandTotalFullStop = grandFullStop
+        form.grandTotalLandings = grandTotalLandings
+        form.grandTotalSorties = grandTotalSorties
+        save()
+    }
+    
+    func updateFormwith(crewMember: CrewMember, form: Form781) {
         form.crewMembers.append(crewMember)
         save()
     }

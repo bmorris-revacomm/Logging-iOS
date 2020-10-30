@@ -1,14 +1,14 @@
 //
-//  SplitTimeListViewController.swift
+//  SplitFlightConditionsViewController.swift
 //  Logging
 //
-//  Created by Bethany Morris on 10/29/20.
+//  Created by Bethany Morris on 10/30/20.
 //  Copyright © 2020 Christian Brechbuhl. All rights reserved.
 //
 
 import UIKit
 
-class SplitTimeListViewController: UIViewController {
+class SplitFlightConditionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,4 +27,4 @@ class SplitTimeListViewController: UIViewController {
     }
     */
 
-} //End
+}

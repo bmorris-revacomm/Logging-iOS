@@ -86,9 +86,24 @@ class FlightListViewController: UIViewController {
               let specialUse = specialUse.text
         else { return }
         
-        FlightDataController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
+        FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
         
         flightTableView.reloadData()
+        
+        let grandTotalTime = FlightController.calculateTotalTime()
+        let grandTouchGo = FlightController.calculateTotalTouchGo()
+        let grandFullStop = FlightController.calculateTotalFullStop()
+        let grandTotalLandings = FlightController.calculateTotalLandings()
+        let grandTotalSorties = FlightController.calculateTotalSorties()
+        
+        self.grandTotalTime.text = String(grandTotalTime)
+        self.grandTouchGo.text = String(grandTouchGo)
+        self.grandFullStop.text = String(grandFullStop)
+        self.grandTotal.text = String(grandTotalLandings)
+        self.grandSorties.text = String(grandTotalSorties)
+        
+        Form781Controller.shared.updateFormWith(grandTotalTime: grandTotalTime, grandTouchGo: grandTouchGo, grandFullStop: grandFullStop, grandTotalLandings: grandTotalLandings, grandTotalSorties: grandTotalSorties, form: form)
+        
         popUpView.isHidden = true
         print("Saved flight")
     }

@@ -18,11 +18,11 @@ class Form781: Codable {
     var flightAuthNum: String
     var issuingUnit: String
     
-    var grandTotalFlightTime: String?
-    var grandTotalTouchAndGo: String?
-    var grandTotalFullStop: String?
-    var grandTotalStops: String?
-    var grandTotalSorties: String?
+    var grandTotalTime: Int?
+    var grandTotalTouchAndGo: Int?
+    var grandTotalFullStop: Int?
+    var grandTotalLandings: Int?
+    var grandTotalSorties: Int?
     
     var flights: [Flight]
     var crewMembers: [CrewMember]
@@ -36,11 +36,11 @@ class Form781: Codable {
         harmLocation: String,
         flightAuthNum: String,
         issuingUnit: String,
-        grandTotalFlightTime: String? = nil,
-        grandTotalTouchAndGo: String? = nil,
-        grandTotalFullStop: String? = nil,
-        grandTotalStops: String? = nil,
-        grandTotalSorties: String? = nil,
+        grandTotalFlightTime: Int? = nil,
+        grandTotalTouchAndGo: Int? = nil,
+        grandTotalFullStop: Int? = nil,
+        grandTotalStops: Int? = nil,
+        grandTotalSorties: Int? = nil,
         flights: [Flight] = [],
         crewMembers: [CrewMember] = []
     ) {
@@ -51,10 +51,10 @@ class Form781: Codable {
         self.harmLocation = harmLocation
         self.flightAuthNum = flightAuthNum
         self.issuingUnit = issuingUnit
-        self.grandTotalFlightTime = grandTotalFlightTime
+        self.grandTotalTime = grandTotalFlightTime
         self.grandTotalTouchAndGo = grandTotalTouchAndGo
         self.grandTotalFullStop = grandTotalFullStop
-        self.grandTotalStops = grandTotalStops
+        self.grandTotalLandings = grandTotalStops
         self.grandTotalSorties = grandTotalSorties
         self.flights = flights
         self.crewMembers = crewMembers
