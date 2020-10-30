@@ -20,7 +20,6 @@ class SplitFlightTimeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     // MARK: - Actions
@@ -41,3 +40,47 @@ class SplitFlightTimeViewController: UIViewController {
     }
 
 } //End
+
+// MARK: - TableView Delegate
+
+extension SplitFlightTimeViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == self.flightTimeTableView {
+            return Form781Controller.shared.forms.last?.crewMembers.count ?? 0
+        }
+        if tableView == self.flightSeqTableView {
+            return Form781Controller.shared.forms.last?.flights.count ?? 0
+        }
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if tableView == self.flightTimeTableView {
+            guard let cell = self.flightTimeTableView.dequeueReusableCell(withIdentifier: "FlightTimeCell", for: indexPath) as? FlightTimeTableViewCell else { return UITableViewCell() }
+            
+            if let crewMember = Form781Controller.shared.forms.last?.crewMembers[indexPath.row] {
+                cell.setUpViews(crewMember: crewMember)
+            }
+            
+            return cell
+        }
+        if tableView == self.flightSeqTableView {
+            guard let cell = self.flightSeqTableView.dequeueReusableCell(withIdentifier: "FlightCell", for: indexPath) as? FlightTableViewCell else { return UITableViewCell() }
+            
+            cell.delegate = self
+            if let flight = Form781Controller.shared.forms.last?.flights[indexPath.row] {
+                cell.setUpViews(flight: flight)
+            }
+            
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
+} //End
+
+extension SplitFlightTimeViewController: FlightTableViewCellDelegate {
+    func deleteButtonTapped(cell: FlightTableViewCell) {
+    }
+}

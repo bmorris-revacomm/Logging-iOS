@@ -90,7 +90,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fDb-HB-o5P">
                                 <rect key="frame" x="248" y="529.5" width="272" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6e-vY-BUM" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6e-vY-BUM" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="143" height="30"/>
                                         <color key="backgroundColor" name="haze"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
