@@ -17,7 +17,7 @@ class PBLView: UIView {
     
 }
 
-class borderView: PBLView {
+class borderView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()

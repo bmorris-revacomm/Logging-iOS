@@ -36,7 +36,6 @@ class SplitTimeViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func equallyButtonTapped(_ sender: UIButton) {
-        // Based on the duty code is how we will split the time
         
     }
     

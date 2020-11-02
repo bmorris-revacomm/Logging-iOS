@@ -5,9 +5,10 @@
 //  Created by Pete Misik on 10/2/20.
 //  Copyright © 2020 Christian Brechbuhl. All rights reserved.
 //
+
 import UIKit
 
-class Helper {
+class FVCVM {
     
     let WIDTH: Int = 3300
     let HEIGHT: Int = 2550
@@ -33,6 +34,75 @@ class Helper {
         }
     }
     
+//    func decodeJSON(jsonFile: URL) -> Form781 {
+//        var jsonData: Data
+//        var formData = Form781()
+//
+//        do {
+//            jsonData = try Data(contentsOf: jsonFile)
+//            do {
+//                formData = try JSONDecoder().decode(Form781.self, from: jsonData)
+//            }catch{
+//                print("JSON decoder error")
+//            }
+//        }catch{
+//            print("[DEBUG] - decodeJSON - Couldn't read json")
+//        }
+//
+//        return formData
+//    }
+    
+    func encodeJSON(jsonFile: URL, formData: Form781) {
+        // Now we need to encode our new object
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        do {
+            let jsonEncoded = try encoder.encode(formData)
+            
+            //DiskOperations().updateFile(line: String(data: jsonEncoded, encoding: .utf8)!, fileURL: jsonFile)
+        }catch {
+            print("JSON encoding problem")
+        }
+    }
+    
+//    func addRowToJSON(jsonFile: URL,
+//                      rowID: String,
+//                      missionNumber: String,
+//                      missionSymbol: String,
+//                      fromICAO: String,
+//                      toICAO: String,
+//                      takeOffTime: String,
+//                      landingTime: String,
+//                      totalTime: String,
+//                      touchAndGo: String,
+//                      fullStop: String,
+//                      totalLanding: String,
+//                      sorties: String,
+//                      specialUse: String) {
+//        // Function to add a row to JSON when it's added with addRow function
+//        // We need to write to the json file when we're done.
+//        var flightData = FlightDataModel()
+//        flightData.line = rowID
+//        flightData.missionNumber = missionNumber
+//        flightData.missionSymbol = missionSymbol
+//        flightData.fromICAO = fromICAO
+//        flightData.toICAO = toICAO
+//        flightData.takeOffTime = takeOffTime
+//        flightData.landingTime = landingTime
+//        flightData.totalFlightTime = totalTime
+//        flightData.touchAndGo = touchAndGo
+//        flightData.fullStop = fullStop
+//        flightData.totalLanding = totalLanding
+//        flightData.sorties = sorties
+//        flightData.specialUse = specialUse
+//        
+//        var formData: FormData = decodeJSON(jsonFile: jsonFile)
+//            
+//        
+//        formData.flightData = [flightData]
+//        
+//        encodeJSON(jsonFile: jsonFile, formData: formData)
+//    }
     
 
     func separateHoursAndMins(strInput: String, pointer: String) -> String {
