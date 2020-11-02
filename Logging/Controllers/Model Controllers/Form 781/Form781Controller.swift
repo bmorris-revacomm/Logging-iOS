@@ -8,6 +8,8 @@
 
 import Foundation
 
+import Foundation
+
 class Form781Controller {
     
     // MARK: - Singleton & Source of Truth
@@ -24,13 +26,35 @@ class Form781Controller {
         save()
     }
     
-    func updateFormWith(flight: FlightData, form: Form781) {
+    func updateFormWith(flight: Flight, form: Form781) {
         form.flights.append(flight)
         save()
     }
     
-    func updateFormwith(crewMember: CrewMember, to form: Form781) {
+    //save after every flight entered or after continue button?
+    func updateFormWith(grandTotalTime: Int, grandTouchGo: Int, grandFullStop: Int, grandTotalLandings: Int, grandTotalSorties: Int, form: Form781) {
+        form.grandTotalTime = grandTotalTime
+        form.grandTotalTouchAndGo = grandTouchGo
+        form.grandTotalFullStop = grandFullStop
+        form.grandTotalLandings = grandTotalLandings
+        form.grandTotalSorties = grandTotalSorties
+        save()
+    }
+    
+    func updateFormwith(crewMember: CrewMember, form: Form781) {
         form.crewMembers.append(crewMember)
+        save()
+    }
+    
+    func remove(flight: Flight, from form: Form781) {
+        guard let index = form.flights.firstIndex(of: flight) else { return }
+        form.flights.remove(at: index)
+        save()
+    }
+    
+    func remove(crewMember: CrewMember, from form: Form781) {
+        guard let index = form.crewMembers.firstIndex(of: crewMember) else { return }
+        form.crewMembers.remove(at: index)
         save()
     }
     
@@ -58,22 +82,15 @@ class Form781Controller {
         }
     }
     
-    func load() throws {
+    func load() {
         let decoder = JSONDecoder()
-//        do {
-        guard let data = try? Data(contentsOf: fileURL()) else {
-            print("There was an error finding the file")
-            throw Form781Error.FileNotFound
+        do {
+            let data = try Data(contentsOf: fileURL())
+            forms = try decoder.decode([Form781].self, from: data)
+        } catch {
+            print("There was an error decoding the data: \(error.localizedDescription)")
         }
-        forms = try decoder.decode([Form781].self, from: data)
-//        } catch {
-//            print("There was an error decoding the data: \(error.localizedDescription)")
-//        }
     }
-    
-    func loadFormData() {
-    }
-    
-    
     
 } //End
+ 

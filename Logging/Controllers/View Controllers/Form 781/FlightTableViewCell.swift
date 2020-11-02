@@ -8,7 +8,14 @@
 
 import UIKit
 
-class FlightDataTableViewCell: UITableViewCell {
+protocol FlightTableViewCellDelegate: class {
+    //func editButtonTapped(cell: FlightTableViewCell)
+    func deleteButtonTapped(cell: FlightTableViewCell)
+}
+
+class FlightTableViewCell: UITableViewCell {
+    
+    // MARK: - Outlets
     
     @IBOutlet weak var flightSeq: UILabel!
     @IBOutlet weak var missionNumber: UILabel!
@@ -24,18 +31,13 @@ class FlightDataTableViewCell: UITableViewCell {
     @IBOutlet weak var sorties: UILabel!
     @IBOutlet weak var specialUse: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    // MARK: - Properties
     
-    func setUpViews(flight: FlightData) {
+    weak var delegate: FlightTableViewCellDelegate?
+    
+    // MARK: - Methods and Actions
+    
+    func setUpViews(flight: Flight) {
         flightSeq.text = flight.flightSeq
         missionNumber.text = flight.missionNumber
         missionSymbol.text = flight.missionSymbol
@@ -51,7 +53,8 @@ class FlightDataTableViewCell: UITableViewCell {
         specialUse.text = flight.specialUse
     }
     
-    @IBAction func removeButtonTapped(_ sender: UIButton) {
-        
+    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+        delegate?.deleteButtonTapped(cell: self)
     }
+    
 } //End
