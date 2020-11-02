@@ -37,6 +37,7 @@ class FlightListViewController: UIViewController {
         super.viewDidLoad()
         flightDataTableView.delegate = self
         flightDataTableView.dataSource = self
+        loadFromData()
     }
     
     // MARK: - Actions
@@ -101,11 +102,12 @@ class FlightListViewController: UIViewController {
         totalLandings.resignFirstResponder()
         sorties.resignFirstResponder()
         specialUse.resignFirstResponder()
+    }
         
-//        func loadFromData() {
-//            let forms = Form781Controller.shared.load()
-//            
-//        }
+    func loadFromData() {
+        let numberOfForms = Form781Controller.shared.forms.count
+        let flightsarray = Form781Controller.shared.forms[numberOfForms - 2].flights
+        Form781Controller.shared.forms.last?.flights = flightsarray
     }
 } //End
 

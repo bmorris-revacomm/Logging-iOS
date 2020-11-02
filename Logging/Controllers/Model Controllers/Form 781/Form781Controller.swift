@@ -43,6 +43,7 @@ class Form781Controller {
     func fileURL() -> URL {
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let fileURL = url[0].appendingPathComponent("Logging.json")
+        print(fileURL)
         return fileURL
     }
     
@@ -70,10 +71,4 @@ class Form781Controller {
 //            print("There was an error decoding the data: \(error.localizedDescription)")
 //        }
     }
-    
-    func loadFormData() {
-    }
-    
-    
-    
 } //End

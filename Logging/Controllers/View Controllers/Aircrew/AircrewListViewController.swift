@@ -49,6 +49,7 @@ class AircrewListViewController: UIViewController {
         setUpViews()
         aircrewTableView.delegate = self
         aircrewTableView.dataSource = self
+        loadFromData()
     }
     
     // MARK: - Methods
@@ -157,6 +158,12 @@ class AircrewListViewController: UIViewController {
         combatSptTime.resignFirstResponder()
         combatSptSrty.resignFirstResponder()
         resvStatus.resignFirstResponder()
+    }
+    
+    func loadFromData() {
+        let numberOfForms = Form781Controller.shared.forms.count
+        let crewMemberArray = Form781Controller.shared.forms[numberOfForms - 2].crewMembers
+        Form781Controller.shared.forms.last?.crewMembers = crewMemberArray
     }
     
     // MARK: - Navigation
