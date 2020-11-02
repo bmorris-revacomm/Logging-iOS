@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		131239A32518EFCF00F3B636 /* afto781.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 131239A22518EFCF00F3B636 /* afto781.pdf */; };
 		131239A82518F98100F3B636 /* afto781.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 131239A72518F98000F3B636 /* afto781.jpg */; };
-		13A990142527C4F2008D7374 /* FirstVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A990132527C4F2008D7374 /* FirstVCViewModel.swift */; };
+		13941316254B4C4000B673FE /* Form781Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13941315254B4C4000B673FE /* Form781Error.swift */; };
+		1394131B254B4C5E00B673FE /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1394131A254B4C5E00B673FE /* HelperFunctions.swift */; };
 		13F08EA125221F7D00CDAEE4 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F08EA025221F7D00CDAEE4 /* header.png */; };
 		13F08EAE252222A800CDAEE4 /* separator line.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13F08EAD252222A800CDAEE4 /* separator line.jpg */; };
 		7C3790BDC466879F81B1B28B /* Pods_Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2B17BC9BB310463EA2A32E /* Pods_Logging.framework */; };
@@ -101,6 +102,12 @@
 		7FAB8CA4254363F600868215 /* CrewMemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8CA3254363F600868215 /* CrewMemberController.swift */; };
 		7FAB8CA5254363F600868215 /* CrewMemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8CA3254363F600868215 /* CrewMemberController.swift */; };
 		7FAB8CA6254363F600868215 /* CrewMemberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAB8CA3254363F600868215 /* CrewMemberController.swift */; };
+		7FE48BB8255088D600F26760 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BB7255088D600F26760 /* HelperFunctions.swift */; };
+		7FE48BB9255088D600F26760 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BB7255088D600F26760 /* HelperFunctions.swift */; };
+		7FE48BBA255088D600F26760 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BB7255088D600F26760 /* HelperFunctions.swift */; };
+		7FE48BC22550898A00F26760 /* Form781Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BC12550898A00F26760 /* Form781Error.swift */; };
+		7FE48BC32550898A00F26760 /* Form781Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BC12550898A00F26760 /* Form781Error.swift */; };
+		7FE48BC42550898A00F26760 /* Form781Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BC12550898A00F26760 /* Form781Error.swift */; };
 		83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407A24D3402A00F336E3 /* AppDelegate.swift */; };
 		83D8407D24D3402A00F336E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407C24D3402A00F336E3 /* SceneDelegate.swift */; };
 		83D8408424D3402A00F336E3 /* Form781.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D8408224D3402A00F336E3 /* Form781.storyboard */; };
@@ -132,8 +139,9 @@
 /* Begin PBXFileReference section */
 		131239A22518EFCF00F3B636 /* afto781.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = afto781.pdf; sourceTree = "<group>"; };
 		131239A72518F98000F3B636 /* afto781.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = afto781.jpg; sourceTree = "<group>"; };
+		13941315254B4C4000B673FE /* Form781Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form781Error.swift; sourceTree = "<group>"; };
+		1394131A254B4C5E00B673FE /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		13965D85DFCED656F8ABF8B0 /* Pods-Logging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logging.debug.xcconfig"; path = "Target Support Files/Pods-Logging/Pods-Logging.debug.xcconfig"; sourceTree = "<group>"; };
-		13A990132527C4F2008D7374 /* FirstVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVCViewModel.swift; sourceTree = "<group>"; };
 		13F08EA025221F7D00CDAEE4 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		13F08EAD252222A800CDAEE4 /* separator line.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "separator line.jpg"; sourceTree = "<group>"; };
 		261E04EA491F9077DD955A76 /* Pods-Logging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logging.release.xcconfig"; path = "Target Support Files/Pods-Logging/Pods-Logging.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +185,8 @@
 		7FAB8C8525434E1400868215 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		7FAB8C8C25434E2300868215 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		7FAB8CA3254363F600868215 /* CrewMemberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMemberController.swift; sourceTree = "<group>"; };
+		7FE48BB7255088D600F26760 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		7FE48BC12550898A00F26760 /* Form781Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form781Error.swift; sourceTree = "<group>"; };
 		83D8407724D3402A00F336E3 /* Logging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D8407A24D3402A00F336E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D8407C24D3402A00F336E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -299,6 +309,8 @@
 		7F7E0DD925310EC50041C4E9 /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
+				13941315254B4C4000B673FE /* Form781Error.swift */,
+				7FE48BC12550898A00F26760 /* Form781Error.swift */,
 				7F7E0DDA25310ED80041C4E9 /* StyleGuide.swift */,
 				7F7E0DDF253110330041C4E9 /* PBLButton.swift */,
 				7F7E0E3C2538B4560041C4E9 /* PBLView.swift */,
@@ -310,8 +322,9 @@
 		7F83BBAB252F6E8800D13482 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1394131A254B4C5E00B673FE /* HelperFunctions.swift */,
 				7F680CF62548D3FE00625ECC /* Form 781 */,
-				13A990132527C4F2008D7374 /* FirstVCViewModel.swift */,
+				7FE48BB7255088D600F26760 /* HelperFunctions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -676,12 +689,16 @@
 				7F680C6B25476A0A00625ECC /* FlightController.swift in Sources */,
 				7F680CED2548C46900625ECC /* FlightListViewController.swift in Sources */,
 				7FAB8C502541FDA000868215 /* AircrewListViewController.swift in Sources */,
+				7FE48BC22550898A00F26760 /* Form781Error.swift in Sources */,
 				7F5453D7254CA47300968BFA /* FlightConditionsTableViewCell.swift in Sources */,
 				7F2D11942549DDA00062AC7A /* CrewMember.swift in Sources */,
 				7FAB8CA4254363F600868215 /* CrewMemberController.swift in Sources */,
 				7F680CCF25489A2A00625ECC /* MissionDataViewController.swift in Sources */,
 				7F574327254C77E700794C57 /* SplitFlightConditionsViewController.swift in Sources */,
+				1394131B254B4C5E00B673FE /* HelperFunctions.swift in Sources */,
 				7F0086E82540AC6800564A52 /* SideMenuTableViewController.swift in Sources */,
+				13941316254B4C4000B673FE /* Form781Error.swift in Sources */,
+				7FE48BB8255088D600F26760 /* HelperFunctions.swift in Sources */,
 				7F7E0E3D2538B4560041C4E9 /* PBLView.swift in Sources */,
 				83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */,
 				7F680C3E25475E9200625ECC /* Form781.swift in Sources */,
@@ -694,7 +711,6 @@
 				7FAB8C5725422E1000868215 /* AircrewTableViewCell.swift in Sources */,
 				7F2D11C7254B252E0062AC7A /* SplitFlightTimeViewController.swift in Sources */,
 				7F0086EF2540B5FD00564A52 /* ContainerViewController.swift in Sources */,
-				13A990142527C4F2008D7374 /* FirstVCViewModel.swift in Sources */,
 				7FAB8C8625434E1400868215 /* OverviewViewController.swift in Sources */,
 				7F2D11D1254B2A580062AC7A /* AircrewDetailViewController.swift in Sources */,
 				7F7E0DE0253110330041C4E9 /* PBLButton.swift in Sources */,
@@ -718,6 +734,7 @@
 				7F2D11952549DDA00062AC7A /* CrewMember.swift in Sources */,
 				7F2D11D2254B2A580062AC7A /* AircrewDetailViewController.swift in Sources */,
 				7FAB8C512541FDA000868215 /* AircrewListViewController.swift in Sources */,
+				7FE48BB9255088D600F26760 /* HelperFunctions.swift in Sources */,
 				7F2D11C8254B252E0062AC7A /* SplitFlightTimeViewController.swift in Sources */,
 				7F5453D1254CA22800968BFA /* FlightTimeTableViewCell.swift in Sources */,
 				7F0086E92540AC6800564A52 /* SideMenuTableViewController.swift in Sources */,
@@ -730,6 +747,7 @@
 				7F5453E2254CCC8F00968BFA /* MissionViewController.swift in Sources */,
 				7F680CEE2548C46900625ECC /* FlightListViewController.swift in Sources */,
 				7FAB8CA5254363F600868215 /* CrewMemberController.swift in Sources */,
+				7FE48BC32550898A00F26760 /* Form781Error.swift in Sources */,
 				7F97DFF7253F9A80005B0892 /* WelcomeViewController.swift in Sources */,
 				7F680C6C25476A0A00625ECC /* FlightController.swift in Sources */,
 			);
@@ -748,6 +766,7 @@
 				7F2D11962549DDA00062AC7A /* CrewMember.swift in Sources */,
 				7F2D11D3254B2A580062AC7A /* AircrewDetailViewController.swift in Sources */,
 				7FAB8C522541FDA000868215 /* AircrewListViewController.swift in Sources */,
+				7FE48BBA255088D600F26760 /* HelperFunctions.swift in Sources */,
 				7F2D11C9254B252E0062AC7A /* SplitFlightTimeViewController.swift in Sources */,
 				7F5453D2254CA22800968BFA /* FlightTimeTableViewCell.swift in Sources */,
 				7F0086EA2540AC6800564A52 /* SideMenuTableViewController.swift in Sources */,
@@ -760,6 +779,7 @@
 				7F5453E3254CCC8F00968BFA /* MissionViewController.swift in Sources */,
 				7F680CEF2548C46900625ECC /* FlightListViewController.swift in Sources */,
 				7FAB8CA6254363F600868215 /* CrewMemberController.swift in Sources */,
+				7FE48BC42550898A00F26760 /* Form781Error.swift in Sources */,
 				7F97DFF8253F9A80005B0892 /* WelcomeViewController.swift in Sources */,
 				7F680C6D25476A0A00625ECC /* FlightController.swift in Sources */,
 			);
