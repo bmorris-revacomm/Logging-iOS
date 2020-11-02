@@ -18,6 +18,7 @@ class Form781Controller {
     
     var forms = [Form781]()
     
+    #warning("Currently, there is no functionality for clearing this without restarting app (if user needs to fill out new form)")
     var currentForm: Form781? {
         didSet {
             guard let form = forms.last, let currentForm = currentForm else { return }
@@ -41,16 +42,11 @@ class Form781Controller {
     }
     
     func updateMissionData(date: String, mds: String, serialNumber: String, unitCharged: String, harmLocation: String, flightAuthNum: String, issuingUnit: String) {
+                
+        let form = Form781(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
         
-        guard let currentForm = currentForm else { return }
-        
-        currentForm.date = date
-        currentForm.mds = mds
-        currentForm.serialNumber = serialNumber
-        currentForm.unitCharged = unitCharged
-        currentForm.harmLocation = harmLocation
-        currentForm.flightAuthNum = flightAuthNum
-        currentForm.issuingUnit = issuingUnit
+        currentForm = form
+        save()
     }
     
     func updateFormWith(flight: Flight, form: Form781) {
