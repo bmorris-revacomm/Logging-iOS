@@ -16,6 +16,8 @@ class AircrewDetailViewController: UIViewController {
 
     @IBOutlet weak var name: UILabel!
     
+    @IBOutlet weak var lastName: UITextField!
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -29,5 +31,13 @@ class AircrewDetailViewController: UIViewController {
         guard let crewMember = crewMember else { return }
         name.text = "\(crewMember.lastName), \(crewMember.firstName)"
     }
-
+    
+    @IBAction func exitButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        
+    }
+    
 } //End
