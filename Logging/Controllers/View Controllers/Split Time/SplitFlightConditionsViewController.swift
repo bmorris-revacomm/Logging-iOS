@@ -39,6 +39,16 @@ class SplitFlightConditionsViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func continueButtonTapped(_ sender: UIButton) {
+        #warning("Save here?")
+        
+        if let viewController = UIStoryboard(name: "Overview", bundle: nil).instantiateViewController(withIdentifier: "Page1") as? OverviewViewController {
+            if let navigator = navigationController {
+                navigator.pushViewController(viewController, animated: true)
+            }
+        }
+    }
+    
 } //End
 
 // MARK: - TableView Delegate
