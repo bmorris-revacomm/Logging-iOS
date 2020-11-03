@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		131239A32518EFCF00F3B636 /* afto781.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 131239A22518EFCF00F3B636 /* afto781.pdf */; };
 		131239A82518F98100F3B636 /* afto781.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 131239A72518F98000F3B636 /* afto781.jpg */; };
-		135CFC4C255098D7008D1F1E /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CFC4B255098D7008D1F1E /* HelperFunctions.swift */; };
 		13941316254B4C4000B673FE /* Form781Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13941315254B4C4000B673FE /* Form781Error.swift */; };
 		13F08EA125221F7D00CDAEE4 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F08EA025221F7D00CDAEE4 /* header.png */; };
 		13F08EAE252222A800CDAEE4 /* separator line.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13F08EAD252222A800CDAEE4 /* separator line.jpg */; };
@@ -231,6 +230,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1305C2872551949A0017F98F /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				135CFC4B255098D7008D1F1E /* HelperFunctions.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		131239AC2518FA7400F3B636 /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +410,7 @@
 				83D8407824D3402A00F336E3 /* Products */,
 				AC2BC68D45133CCDF12A05CE /* Pods */,
 				21BF12A5A9F2C2E0D672C5F7 /* Frameworks */,
+				1305C2872551949A0017F98F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -696,7 +704,6 @@
 				7F574327254C77E700794C57 /* SplitFlightConditionsViewController.swift in Sources */,
 				7F0086E82540AC6800564A52 /* SideMenuTableViewController.swift in Sources */,
 				13941316254B4C4000B673FE /* Form781Error.swift in Sources */,
-				135CFC4C255098D7008D1F1E /* HelperFunctions.swift in Sources */,
 				7FE48BB8255088D600F26760 /* HelperFunctions.swift in Sources */,
 				7F7E0E3D2538B4560041C4E9 /* PBLView.swift in Sources */,
 				83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */,
