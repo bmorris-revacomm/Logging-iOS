@@ -210,10 +210,10 @@ class Helper {
             return "\(diffHrs).\(decMin)"
         }
 
-    func vmPrint_func(missionNumber: String, missionSymbol: String, fromICAO: String, toICAO: String, takeOffTime: String, landingTime: String, totalTime: String, touchAndGo: String, fullStop: String, totalLanding: String, sorties: String, specialUse: String) {
+    func vmPrint_func() {
         
         let formImage = UIImage(named: "afto781.jpg")
-        let dataImage = generateImage(missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landingTime: landingTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLanding: totalLanding, sorties: sorties, specialUse: specialUse)
+        let dataImage = generateImage()
         
         let size = CGSize(width: WIDTH, height: HEIGHT)
         UIGraphicsBeginImageContext(size)
@@ -240,7 +240,7 @@ class Helper {
     }
 
 
-    func generateImage(missionNumber: String, missionSymbol: String, fromICAO: String, toICAO: String, takeOffTime: String, landingTime: String, totalTime: String, touchAndGo: String, fullStop: String, totalLanding: String, sorties: String, specialUse: String) -> UIImage? {
+    func generateImage() -> UIImage? {
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: WIDTH, height: HEIGHT))
         
         let img = renderer.image { ctx in
@@ -249,46 +249,47 @@ class Helper {
             ]
             
             // Section 1
-            let strTail = "89-1192"
-            let tailString = NSAttributedString(string: strTail, attributes: attrs)
+            let form = Form781Controller.shared.forms.last
+            
+            let tailString = NSAttributedString(string: form?.serialNumber ?? " ", attributes: attrs)
             tailString.draw(with: CGRect(x: 1035, y: 330, width: 300, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let msnNumberString = NSAttributedString(string: missionNumber, attributes: attrs)
+            let msnNumberString = NSAttributedString(string: form?.flights.last?.missionNumber ?? " ", attributes: attrs)
             msnNumberString.draw(with: CGRect(x: 445, y: 545, width: 300, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let msnSymbolString = NSAttributedString(string: missionSymbol, attributes: attrs)
+            let msnSymbolString = NSAttributedString(string: form?.flights.last?.missionSymbol ?? " ", attributes: attrs)
             msnSymbolString.draw(with: CGRect(x: 915, y: 545, width: 300, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let fromICAOString = NSAttributedString(string: fromICAO, attributes: attrs)
+            let fromICAOString = NSAttributedString(string: form?.flights.last?.fromICAO ?? " ", attributes: attrs)
             fromICAOString.draw(with: CGRect(x: 1135, y: 545, width: 300, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let toICAOString = NSAttributedString(string: toICAO, attributes: attrs)
+            let toICAOString = NSAttributedString(string: form?.flights.last?.toICAO ?? " ", attributes: attrs)
             toICAOString.draw(with: CGRect(x: 1325, y: 545, width: 300, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let toTime = NSAttributedString(string: takeOffTime, attributes: attrs)
+            let toTime = NSAttributedString(string: form?.flights.last?.takeOffTime ?? " ", attributes: attrs)
             toTime.draw(with: CGRect(x: 1525, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let landTime = NSAttributedString(string: landingTime, attributes: attrs)
+            let landTime = NSAttributedString(string: form?.flights.last?.landTime ?? " ", attributes: attrs)
             landTime.draw(with: CGRect(x: 1710, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let totalTime = NSAttributedString(string: totalTime, attributes: attrs)
+            let totalTime = NSAttributedString(string: form?.flights.last?.totalTime ?? " ", attributes: attrs)
             totalTime.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
             
             // fix x
-            let touchAndGo = NSAttributedString(string: touchAndGo, attributes: attrs)
+            let touchAndGo = NSAttributedString(string: form?.flights.last?.touchAndGo ?? " ", attributes: attrs)
             touchAndGo.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let fullStop = NSAttributedString(string: fullStop, attributes: attrs)
+            let fullStop = NSAttributedString(string: form?.flights.last?.fullStop ?? " ", attributes: attrs)
             fullStop.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let totalLanding = NSAttributedString(string: totalLanding, attributes: attrs)
+            let totalLanding = NSAttributedString(string: form?.flights.last?.totalLandings ?? " ", attributes: attrs)
             totalLanding.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let sorties = NSAttributedString(string: sorties, attributes: attrs)
+            let sorties = NSAttributedString(string: form?.flights.last?.sorties ?? " ", attributes: attrs)
             sorties.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
-            let specialUse = NSAttributedString(string: specialUse, attributes: attrs)
+            let specialUse = NSAttributedString(string: form?.flights.last?.specialUse ?? " ", attributes: attrs)
             specialUse.draw(with: CGRect(x: 1935, y: 545, width: 200, height: 50), options: .usesLineFragmentOrigin, context: nil)
             
             
