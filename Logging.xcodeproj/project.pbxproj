@@ -315,6 +315,7 @@
 				7F7E0DDF253110330041C4E9 /* PBLButton.swift */,
 				7F7E0E3C2538B4560041C4E9 /* PBLView.swift */,
 				7F7E0E412538BCCC0041C4E9 /* PBLTextField.swift */,
+				7FE48BB7255088D600F26760 /* HelperFunctions.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -323,8 +324,6 @@
 			isa = PBXGroup;
 			children = (
 				7F680CF62548D3FE00625ECC /* Form 781 */,
-				135CFC4B255098D7008D1F1E /* HelperFunctions.swift */,
-				7FE48BB7255088D600F26760 /* HelperFunctions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

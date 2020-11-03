@@ -18,11 +18,34 @@ class Form781Controller {
     
     var forms = [Form781]()
     
+    #warning("Currently, there is no functionality for clearing this without restarting app (if user needs to fill out new form)")
+    var currentForm: Form781? {
+        didSet {
+            guard let form = forms.last, let currentForm = currentForm else { return }
+            form.date = currentForm.date
+            form.mds = currentForm.mds
+            form.serialNumber = currentForm.serialNumber
+            form.unitCharged = currentForm.unitCharged
+            form.harmLocation = currentForm.harmLocation
+            form.flightAuthNum = currentForm.flightAuthNum
+            form.issuingUnit = currentForm.issuingUnit
+        }
+    }
+    
     // MARK: - CRUD
     
     func create(date: String, mds: String, serialNumber: String, unitCharged: String, harmLocation: String, flightAuthNum: String, issuingUnit: String) {
         let form = Form781(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
         forms.append(form)
+        currentForm = form
+        save()
+    }
+    
+    func updateMissionData(date: String, mds: String, serialNumber: String, unitCharged: String, harmLocation: String, flightAuthNum: String, issuingUnit: String) {
+                
+        let form = Form781(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
+        
+        currentForm = form
         save()
     }
     
@@ -67,7 +90,7 @@ class Form781Controller {
     func fileURL() -> URL {
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let fileURL = url[0].appendingPathComponent("Logging.json")
-        print(fileURL)
+        print("File URL: \(fileURL)")
         return fileURL
     }
     
@@ -76,7 +99,6 @@ class Form781Controller {
         do {
             encoder.outputFormatting = .prettyPrinted
             let data = try encoder.encode(forms)
-            //print(data.base64EncodedString())
             try data.write(to: fileURL())
         } catch {
             print("There was an error encoding the data: \(error.localizedDescription)")

@@ -87,6 +87,7 @@ class FlightListViewController: UIViewController {
               let specialUse = specialUse.text
         else { return }
         
+        #warning("TO DO: Functionality for limiting number of flights in array")
         FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
         
         flightTableView.reloadData()

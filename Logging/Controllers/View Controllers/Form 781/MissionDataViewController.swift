@@ -48,8 +48,13 @@ class MissionDataViewController: UIViewController {
               let issuingUnit = issuingUnit.text
         else { return }
         
-        Form781Controller.shared.create(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
-        print("Saved form")
+        if Form781Controller.shared.currentForm == nil {
+            Form781Controller.shared.create(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
+            print("Created form")
+        } else {
+            Form781Controller.shared.updateMissionData(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
+            print("Saved form")
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
