@@ -1520,8 +1520,28 @@
                     </view>
                     <navigationItem key="navigationItem" id="aH6-jl-HBL"/>
                     <connections>
+                        <outlet property="combatSptSrty" destination="78U-vB-8Ty" id="ZXX-Gs-hWX"/>
+                        <outlet property="combatSptTime" destination="LOX-Xt-dlI" id="fcL-pN-1bm"/>
+                        <outlet property="combatSrty" destination="U86-Da-4sE" id="Aow-rA-AlF"/>
+                        <outlet property="combatTime" destination="DKf-Pt-v1X" id="gaZ-f9-Nnz"/>
+                        <outlet property="evaluator" destination="98N-sH-u7R" id="Sd5-w2-LR0"/>
+                        <outlet property="firstName" destination="0EO-rE-Gkl" id="cJJ-dD-SdL"/>
+                        <outlet property="flightAuthDutyCode" destination="rl4-ng-z5a" id="zT2-ce-nB2"/>
+                        <outlet property="flyingOrigin" destination="rIe-F1-6N5" id="JUZ-mR-oqS"/>
+                        <outlet property="insPIE" destination="Fve-Un-P2m" id="SuI-Dd-lwW"/>
+                        <outlet property="instructor" destination="bIQ-cq-WXF" id="E71-eR-WXE"/>
                         <outlet property="lastName" destination="Xmg-B1-bqR" id="mE5-Hx-0hH"/>
                         <outlet property="name" destination="tr0-Pk-jiw" id="sFf-Oq-GP8"/>
+                        <outlet property="nightPSIE" destination="XdC-e6-sU4" id="Qjv-Nt-ChU"/>
+                        <outlet property="nvg" destination="K1K-9O-3ao" id="JcG-Ky-DQg"/>
+                        <outlet property="other" destination="19F-Kp-6r1" id="hxE-Um-PET"/>
+                        <outlet property="primary" destination="6gR-gk-qnt" id="B7k-Pl-A78"/>
+                        <outlet property="resv" destination="zRa-HY-hOX" id="3pl-cY-CPT"/>
+                        <outlet property="secondary" destination="kHC-TH-fs6" id="hsW-Vl-fzG"/>
+                        <outlet property="simIns" destination="Ts4-4u-v8K" id="dnM-Ax-IvE"/>
+                        <outlet property="srty" destination="Akq-aL-P7n" id="Isc-fZ-hUc"/>
+                        <outlet property="ssn" destination="CSc-BV-1P1" id="FC2-nH-v3H"/>
+                        <outlet property="time" destination="40j-UQ-DU2" id="c5h-UL-wzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVj-QY-eNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
