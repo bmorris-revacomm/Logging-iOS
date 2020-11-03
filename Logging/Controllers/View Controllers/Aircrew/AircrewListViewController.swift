@@ -159,7 +159,8 @@ class AircrewListViewController: UIViewController {
         combatSptSrty.resignFirstResponder()
         resvStatus.resignFirstResponder()
     }
-    
+
+    #warning("Put this function in Form781Controller")
     func loadFromData() {
         let numberOfForms = Form781Controller.shared.forms.count
         let crewMemberArray = Form781Controller.shared.forms[numberOfForms - 2].crewMembers

@@ -64,7 +64,7 @@ class MissionDataViewController: UIViewController {
     func loadFromData(){
         do {
             try Form781Controller.shared.load()
-        }catch{
+        } catch {
             print(Form781Error.FileNotFound)
         }
         
@@ -77,7 +77,7 @@ class MissionDataViewController: UIViewController {
             harmLocation.text = form?.harmLocation
             flightAuthNum.text = form?.flightAuthNum
             issuingUnit.text = form?.issuingUnit
-        }else{
+        } else {
             dateTextField.text = Helper().populateDateField()
         }
     }

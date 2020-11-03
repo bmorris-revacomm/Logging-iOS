@@ -866,6 +866,9 @@
                                 <color key="backgroundColor" name="slate"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="SAVE &amp; CONTINUE"/>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="Vcr-OO-9bL" eventType="touchUpInside" id="8vL-3r-Mtx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J66-XC-LR6" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
                                 <rect key="frame" x="50" y="944" width="41" height="30"/>
