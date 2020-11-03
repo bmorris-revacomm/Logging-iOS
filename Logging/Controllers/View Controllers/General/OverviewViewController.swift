@@ -18,6 +18,18 @@ class OverviewViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func editButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func submitButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func printButtonTapped(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
