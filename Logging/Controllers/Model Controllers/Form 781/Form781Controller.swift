@@ -105,14 +105,10 @@ class Form781Controller {
         }
     }
     
-    func load() {
+    func load() throws{
         let decoder = JSONDecoder()
-        do {
-            let data = try Data(contentsOf: fileURL())
-            forms = try decoder.decode([Form781].self, from: data)
-        } catch {
-            print("There was an error decoding the data: \(error.localizedDescription)")
-        }
+        let data = try Data(contentsOf: fileURL())
+        forms = try decoder.decode([Form781].self, from: data)
     }
     
 } //End

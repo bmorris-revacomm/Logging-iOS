@@ -24,6 +24,8 @@ class MissionDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //navigationController?.setNavigationBarHidden(true, animated: true)
+        loadFromData()
     }
     
     // MARK: - Actions
@@ -57,6 +59,27 @@ class MissionDataViewController: UIViewController {
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func loadFromData(){
+        do {
+            try Form781Controller.shared.load()
+        }catch{
+            print(Form781Error.FileNotFound)
+        }
+        
+        let form = Form781Controller.shared.forms.last
+        if Helper().checkForFile(filePath: Form781Controller.shared.fileURL()){
+            dateTextField.text = form?.date
+            MDS.text = form?.mds
+            serialNumber.text = form?.serialNumber
+            unitCharged.text = form?.unitCharged
+            harmLocation.text = form?.harmLocation
+            flightAuthNum.text = form?.flightAuthNum
+            issuingUnit.text = form?.issuingUnit
+        }else{
+            dateTextField.text = Helper().populateDateField()
+        }
     }
 
 } //End
