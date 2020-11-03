@@ -24,7 +24,6 @@ class MissionDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationController?.setNavigationBarHidden(true, animated: true)
         loadFromData()
     }
     
@@ -38,15 +37,15 @@ class MissionDataViewController: UIViewController {
         harmLocation.resignFirstResponder()
     }
     
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
-        guard let date = dateTextField.text,
-              let mds = MDS.text,
-              let serialNumber = serialNumber.text,
-              let unitCharged = unitCharged.text,
-              let harmLocation = harmLocation.text,
-              let flightAuthNum = flightAuthNum.text,
-              let issuingUnit = issuingUnit.text
-        else { return }
+    @IBAction func continueButtonTapped(_ sender: UIButton) {
+        guard let date = dateTextField.text, !date.isEmpty,
+              let mds = MDS.text, !mds.isEmpty,
+              let serialNumber = serialNumber.text, !serialNumber.isEmpty,
+              let unitCharged = unitCharged.text, !unitCharged.isEmpty,
+              let harmLocation = harmLocation.text, !harmLocation.isEmpty,
+              let flightAuthNum = flightAuthNum.text, !flightAuthNum.isEmpty,
+              let issuingUnit = issuingUnit.text, !issuingUnit.isEmpty
+        else { return }//Alerts.showErrorAlert(on: self, storyboardName: "Form781", identifier: "Page1", destinationVC: FlightListViewController) }
         
         if Form781Controller.shared.currentForm == nil {
             Form781Controller.shared.create(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)

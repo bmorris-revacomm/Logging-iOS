@@ -84,6 +84,53 @@ class AircrewDetailViewController: UIViewController {
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
         
+        guard let lastName = lastName.text,
+              let firstName = firstName.text,
+              let ssn = ssn.text,
+              let flyingOrigin = flyingOrigin.text,
+              let flightAuthDutyCode = flightAuthDutyCode.text,
+              let primary = primary.text,
+              let secondary = secondary.text,
+              let instructor = instructor.text,
+              let evaluator = evaluator.text,
+              let other = other.text,
+              let time = time.text,
+              let srty = srty.text,
+              let nightPSIE = nightPSIE.text,
+              let insPIE = insPIE.text,
+              let simIns = simIns.text,
+              let nvg = nvg.text,
+              let combatTime = combatTime.text,
+              let combatSrty = combatSrty.text,
+              let combatSptTime = combatSptTime.text,
+              let combatSptSrty = combatSptSrty.text,
+              let resv = resv.text
+        else { return }
+        
+        //check that this works
+        if crewMember != nil {
+            crewMember!.lastName = lastName
+            crewMember!.firstName = firstName
+            crewMember!.ssnLast4 = ssn
+            crewMember!.flyingOrigin = flyingOrigin
+            crewMember!.flightAuthDutyCode = flightAuthDutyCode
+            crewMember!.primary = primary
+            crewMember!.secondary = secondary
+            crewMember!.instructor = instructor
+            crewMember!.evaluator = evaluator
+            crewMember!.other = other
+            crewMember!.time = time
+            crewMember!.srty = srty
+            crewMember!.nightPSIE = nightPSIE
+            crewMember!.insPIE = insPIE
+            crewMember!.simIns = simIns
+            crewMember!.nvg = nvg
+            crewMember!.combatTime = combatTime
+            crewMember!.combatSrty = combatSrty
+            crewMember!.combatSptTime = combatSptTime
+            crewMember!.combatSptSrty = combatSptSrty
+            crewMember!.resvStatus = resv
+        }
     }
     
 } //End

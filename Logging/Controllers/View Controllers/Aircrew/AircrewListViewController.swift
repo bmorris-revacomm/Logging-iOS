@@ -52,6 +52,10 @@ class AircrewListViewController: UIViewController {
         loadFromData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        aircrewTableView.reloadData()
+    }
+    
     // MARK: - Methods
     
     func setUpViews() {
@@ -198,10 +202,10 @@ extension AircrewListViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected")
-        performSegue(withIdentifier: "ToAircrewDetailVC", sender: indexPath.row)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("selected")
+//        performSegue(withIdentifier: "ToAircrewDetailVC", sender: indexPath.row)
+//    }
     
 } //End
 
