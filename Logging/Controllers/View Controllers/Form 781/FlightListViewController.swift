@@ -41,14 +41,9 @@ class FlightListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
-        flightDataTableView.delegate = self
-        flightDataTableView.dataSource = self
-        loadFromData()
-=======
         flightTableView.delegate = self
         flightTableView.dataSource = self
->>>>>>> upstream/master
+        loadFromData()
     }
     
     // MARK: - Actions
@@ -140,8 +135,10 @@ class FlightListViewController: UIViewController {
         
     func loadFromData() {
         let numberOfForms = Form781Controller.shared.forms.count
-        let flightsarray = Form781Controller.shared.forms[numberOfForms - 2].flights
-        Form781Controller.shared.forms.last?.flights = flightsarray
+        if numberOfForms > 1{
+            let flightsarray = Form781Controller.shared.forms[numberOfForms - 2].flights
+            Form781Controller.shared.forms.last?.flights = flightsarray
+        }
     }
 } //End
 
