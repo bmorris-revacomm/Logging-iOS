@@ -48,15 +48,58 @@ class FlightListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        print("test")
     }
     
     // MARK: - Methods
     
     func setUpViews() {
-        loadFromData()
+        Form781Controller.shared.loadFlights()
         guard let form = Form781Controller.shared.forms.last else { return }
         updateGrandTotals(form: form)
+    }
+    
+    func updateGrandTotals(form: Form781) {
+        let grandTotalTime = FlightController.calculateTotalTime()
+        let grandTouchGo = FlightController.calculateTotalTouchGo()
+        let grandFullStop = FlightController.calculateTotalFullStop()
+        let grandTotalLandings = FlightController.calculateTotalLandings()
+        let grandTotalSorties = FlightController.calculateTotalSorties()
+        
+        self.grandTotalTime.text = String(grandTotalTime)
+        self.grandTouchGo.text = String(grandTouchGo)
+        self.grandFullStop.text = String(grandFullStop)
+        self.grandTotal.text = String(grandTotalLandings)
+        self.grandSorties.text = String(grandTotalSorties)
+        
+        Form781Controller.shared.updateFormWith(grandTotalTime: grandTotalTime, grandTouchGo: grandTouchGo, grandFullStop: grandFullStop, grandTotalLandings: grandTotalLandings, grandTotalSorties: grandTotalSorties, form: form)
+    }
+    
+    func presentAlert() {
+        guard let form = Form781Controller.shared.forms.last,
+              let flightSeq = flightSeq.text,
+              let missionNumber = missionNumber.text,
+              let missionSymbol = missionSymbol.text,
+              let fromICAO = fromICAO.text,
+              let toICAO = toICAO.text,
+              let takeOffTime = takeOffTime.text,
+              let landTime = landTime.text,
+              let totalTime = totalTime.text,
+              let touchAndGo = touchAndGo.text,
+              let fullStop = fullStop.text,
+              let totalLandings = totalLandings.text,
+              let sorties = sorties.text,
+              let specialUse = specialUse.text
+        else { return }
+        
+        Alerts.showTextFieldsAlert(on: self) { (_) in
+            
+            FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
+            
+            self.flightTableView.reloadData()
+            self.updateGrandTotals(form: form)
+            self.popUpView.isHidden = true
+            print("Saved flight")
+        }
     }
     
     // MARK: - Actions
@@ -82,42 +125,25 @@ class FlightListViewController: UIViewController {
         //Here's where we do the math for filling in the total field
         totalLandings.text = Helper().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
     }
-    
-    func updateGrandTotals(form: Form781) {
-        let grandTotalTime = FlightController.calculateTotalTime()
-        let grandTouchGo = FlightController.calculateTotalTouchGo()
-        let grandFullStop = FlightController.calculateTotalFullStop()
-        let grandTotalLandings = FlightController.calculateTotalLandings()
-        let grandTotalSorties = FlightController.calculateTotalSorties()
-        
-        self.grandTotalTime.text = String(grandTotalTime)
-        self.grandTouchGo.text = String(grandTouchGo)
-        self.grandFullStop.text = String(grandFullStop)
-        self.grandTotal.text = String(grandTotalLandings)
-        self.grandSorties.text = String(grandTotalSorties)
-        
-        Form781Controller.shared.updateFormWith(grandTotalTime: grandTotalTime, grandTouchGo: grandTouchGo, grandFullStop: grandFullStop, grandTotalLandings: grandTotalLandings, grandTotalSorties: grandTotalSorties, form: form)
-    }
 
     @IBAction func addFlightButtonTapped(_ sender: UIButton) {
         
         #warning("TO DO: Functionality for limiting number of flights in array")
-        
         guard let form = Form781Controller.shared.forms.last,
-              let flightSeq = flightSeq.text,
-              let missionNumber = missionNumber.text,
-              let missionSymbol = missionSymbol.text,
-              let fromICAO = fromICAO.text,
-              let toICAO = toICAO.text,
-              let takeOffTime = takeOffTime.text,
-              let landTime = landTime.text,
-              let totalTime = totalTime.text,
-              let touchAndGo = touchAndGo.text,
-              let fullStop = fullStop.text,
-              let totalLandings = totalLandings.text,
-              let sorties = sorties.text,
-              let specialUse = specialUse.text
-        else { return }
+              let flightSeq = flightSeq.text, !flightSeq.isEmpty,
+              let missionNumber = missionNumber.text, !missionNumber.isEmpty,
+              let missionSymbol = missionSymbol.text, !missionSymbol.isEmpty,
+              let fromICAO = fromICAO.text, !fromICAO.isEmpty,
+              let toICAO = toICAO.text, !toICAO.isEmpty,
+              let takeOffTime = takeOffTime.text, !takeOffTime.isEmpty,
+              let landTime = landTime.text, !landTime.isEmpty,
+              let totalTime = totalTime.text,!totalTime.isEmpty,
+              let touchAndGo = touchAndGo.text, !touchAndGo.isEmpty,
+              let fullStop = fullStop.text, !fullStop.isEmpty,
+              let totalLandings = totalLandings.text, !totalLandings.isEmpty,
+              let sorties = sorties.text, !sorties.isEmpty,
+              let specialUse = specialUse.text, !specialUse.isEmpty
+        else { return presentAlert() }
         
         FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
         
@@ -149,17 +175,6 @@ class FlightListViewController: UIViewController {
         totalLandings.resignFirstResponder()
         sorties.resignFirstResponder()
         specialUse.resignFirstResponder()
-    }
-        
-    func loadFromData() {
-        if FlightController.flightsLoaded == false {
-            let numberOfForms = Form781Controller.shared.forms.count
-            if numberOfForms > 1 {
-                let flightsarray = Form781Controller.shared.forms[numberOfForms - 2].flights
-                Form781Controller.shared.forms.last?.flights = flightsarray
-            }
-            FlightController.flightsLoaded = true
-        }
     }
     
 } //End

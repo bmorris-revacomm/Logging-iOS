@@ -116,10 +116,30 @@ class Form781Controller {
         }
     }
     
-    func load() throws{
+    func loadForms() throws{
         let decoder = JSONDecoder()
         let data = try Data(contentsOf: fileURL())
         forms = try decoder.decode([Form781].self, from: data)
+    }
+    
+    //populates from previous form
+    func loadFlights() {
+        ///need this because viewDidLoad called multiple times (not a segue)
+        if FlightController.flightsLoaded == false {
+            let numberOfForms = forms.count
+            if numberOfForms > 1 {
+                let flightsarray = forms[numberOfForms - 2].flights
+                forms.last?.flights = flightsarray
+            }
+            FlightController.flightsLoaded = true
+        }
+    }
+    
+    //populates from previous form
+    func loadCrewMembers() {
+        let numberOfForms = forms.count
+        let crewMemberArray = forms[numberOfForms - 2].crewMembers
+        forms.last?.crewMembers = crewMemberArray
     }
     
 } //End

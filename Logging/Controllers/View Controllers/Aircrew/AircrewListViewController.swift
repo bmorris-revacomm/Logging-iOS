@@ -33,7 +33,7 @@ class AircrewListViewController: UIViewController {
     @IBOutlet weak var srty: UITextField!
 
     @IBOutlet weak var nightPSIE: UITextField!
-    @IBOutlet weak var ins: UITextField!
+    @IBOutlet weak var insPIE: UITextField!
     @IBOutlet weak var simIns: UITextField!
     @IBOutlet weak var nvg: UITextField!
     @IBOutlet weak var combatTime: UITextField!
@@ -46,10 +46,9 @@ class AircrewListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpViews()
         aircrewTableView.delegate = self
         aircrewTableView.dataSource = self
-        loadFromData()
+        setUpViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,8 +58,44 @@ class AircrewListViewController: UIViewController {
     // MARK: - Methods
     
     func setUpViews() {
+        Form781Controller.shared.loadCrewMembers()
         guard let form = Form781Controller.shared.forms.last else { return }
         headerTitleLabel.text = "Mission \(form.date)"
+    }
+    
+    func presentAlert() {
+        guard let form = Form781Controller.shared.forms.last,
+              let lastName = lastName.text,
+              let firstName = firstName.text,
+              let ssn = ssn.text, !ssn.isEmpty,
+              let flightAuthDutyCode = flightAuthDutyCode.text,
+              let flyingOrigin = flyingOrigin.text,
+              let primary = primary.text,
+              let secondary = secondary.text,
+              let instructor = instructor.text,
+              let evaluator = evaluator.text,
+              let other = other.text,
+              let time = time.text,
+              let srty = srty.text,
+              let nightPSIE = nightPSIE.text,
+              let ins = insPIE.text,
+              let simIns = simIns.text,
+              let nvg = nvg.text,
+              let combatTime = combatTime.text,
+              let combatSrty = combatSrty.text,
+              let combatSptTime = combatSptTime.text,
+              let combatSptSrty = combatSptSrty.text,
+              let resvStatus = resvStatus.text
+        else { return }
+        
+        Alerts.showTextFieldsAlert(on: self) { (_) in
+            
+            CrewMemberController.create(form: form, lastName: lastName, firstName: firstName, ssnLast4: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin, primary: primary, secondary: secondary, instructor: instructor, evaluator: evaluator, other: other, time: time, srty: srty, nightPSIE: nightPSIE, insPIE: ins, simIns: simIns, nvg: nvg, combatTime: combatTime, combatSrty: combatSrty, combatSptTime: combatSptTime, combatSptSrty: combatSptSrty, resvStatus: resvStatus)
+            
+            self.aircrewTableView.reloadData()
+            self.popUp3View.isHidden = true
+            print("Saved crew member")
+        }
     }
     
     // MARK: - Actions
@@ -103,25 +138,25 @@ class AircrewListViewController: UIViewController {
               let ssn = ssn.text, !ssn.isEmpty,
               let flightAuthDutyCode = flightAuthDutyCode.text, !flightAuthDutyCode.isEmpty,
               let flyingOrigin = flyingOrigin.text, !flyingOrigin.isEmpty,
-              let primary = primary.text,
-              let secondary = secondary.text,
-              let instructor = instructor.text,
-              let evaluator = evaluator.text,
-              let other = other.text,
-              let time = time.text,
-              let srty = srty.text,
-              let nightPSIE = nightPSIE.text,
-              let ins = ins.text,
-              let simIns = simIns.text,
-              let nvg = nvg.text,
-              let combatTime = combatTime.text,
-              let combatSrty = combatSrty.text,
-              let combatSptTime = combatSptTime.text,
-              let combatSptSrty = combatSptSrty.text,
-              let resvStatus = resvStatus.text
-        else { return }
+              let primary = primary.text, !primary.isEmpty,
+              let secondary = secondary.text, !secondary.isEmpty,
+              let instructor = instructor.text, !instructor.isEmpty,
+              let evaluator = evaluator.text, !evaluator.isEmpty,
+              let other = other.text, !other.isEmpty,
+              let time = time.text, !time.isEmpty,
+              let srty = srty.text, !srty.isEmpty,
+              let nightPSIE = nightPSIE.text, !nightPSIE.isEmpty,
+              let insPIE = insPIE.text, !insPIE.isEmpty,
+              let simIns = simIns.text, !simIns.isEmpty,
+              let nvg = nvg.text, !nvg.isEmpty,
+              let combatTime = combatTime.text, !combatTime.isEmpty,
+              let combatSrty = combatSrty.text, !combatSrty.isEmpty,
+              let combatSptTime = combatSptTime.text, !combatSptTime.isEmpty,
+              let combatSptSrty = combatSptSrty.text, !combatSptSrty.isEmpty,
+              let resvStatus = resvStatus.text, !resvStatus.isEmpty
+        else { return presentAlert() }
         
-        CrewMemberController.create(form: form, lastName: lastName, firstName: firstName, ssnLast4: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin, primary: primary, secondary: secondary, instructor: instructor, evaluator: evaluator, other: other, time: time, srty: srty, nightPSIE: nightPSIE, insPIE: ins, simIns: simIns, nvg: nvg, combatTime: combatTime, combatSrty: combatSrty, combatSptTime: combatSptTime, combatSptSrty: combatSptSrty, resvStatus: resvStatus)
+        CrewMemberController.create(form: form, lastName: lastName, firstName: firstName, ssnLast4: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin, primary: primary, secondary: secondary, instructor: instructor, evaluator: evaluator, other: other, time: time, srty: srty, nightPSIE: nightPSIE, insPIE: insPIE, simIns: simIns, nvg: nvg, combatTime: combatTime, combatSrty: combatSrty, combatSptTime: combatSptTime, combatSptSrty: combatSptSrty, resvStatus: resvStatus)
         
         aircrewTableView.reloadData()
         popUp3View.isHidden = true
@@ -154,7 +189,7 @@ class AircrewListViewController: UIViewController {
         time.resignFirstResponder()
         srty.resignFirstResponder()
         nightPSIE.resignFirstResponder()
-        ins.resignFirstResponder()
+        insPIE.resignFirstResponder()
         simIns.resignFirstResponder()
         nvg.resignFirstResponder()
         combatTime.resignFirstResponder()
@@ -162,13 +197,6 @@ class AircrewListViewController: UIViewController {
         combatSptTime.resignFirstResponder()
         combatSptSrty.resignFirstResponder()
         resvStatus.resignFirstResponder()
-    }
-
-    #warning("Put this function in Form781Controller")
-    func loadFromData() {
-        let numberOfForms = Form781Controller.shared.forms.count
-        let crewMemberArray = Form781Controller.shared.forms[numberOfForms - 2].crewMembers
-        Form781Controller.shared.forms.last?.crewMembers = crewMemberArray
     }
     
     // MARK: - Navigation

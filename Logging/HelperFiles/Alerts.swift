@@ -10,18 +10,13 @@ import UIKit
 
 struct Alerts {
     
-    private static func showAlert(on vc: UIViewController, title: String, message: String, storyboardName: String, identifier: String, destinationVC: UIViewController) {
+    private static func showAlert(on vc: UIViewController, title: String, message: String, completion: @escaping (Result<Void, Error>) -> Void) {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let editAction = UIAlertAction(title: "Edit Fields", style: .default, handler: nil)
-        let continueAction = UIAlertAction(title: title, style: .destructive) { (_) in
-            // as? destinationVC not working
-            if let viewController = UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: identifier) as? UIViewController  {
-                if let navigator = vc.navigationController {
-                    navigator.pushViewController(viewController, animated: true)
-                }
-            }
+        let continueAction = UIAlertAction(title: "Continue Anyway", style: .destructive) { (_) in
+            completion(.success(()))
         }
         
         alert.addAction(editAction)
@@ -29,8 +24,8 @@ struct Alerts {
         vc.present(alert, animated: true, completion: nil)
     }
     
-    static func showErrorAlert(on vc: UIViewController, storyboardName: String, identifier: String, destinationVC: UIViewController) {
-        showAlert(on: vc, title: "Oops!", message: "Some fields have been filled out incorrectly or not at all. Would you like to continue anyway?", storyboardName: storyboardName, identifier: identifier, destinationVC: destinationVC)
+    static func showTextFieldsAlert(on vc: UIViewController, completion: @escaping (Result<Void, Error>) -> Void) {
+        showAlert(on: vc, title: "Oops!", message: "Some fields have been filled out incorrectly or not at all. Would you like to continue anyway?", completion: completion)
     }
     
 } //End
