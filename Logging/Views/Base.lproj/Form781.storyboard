@@ -343,13 +343,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="dMg-WP-STT"/>
                     <connections>
-                        <outlet property="MDS" destination="gjr-0y-vh0" id="44G-Xf-djJ"/>
                         <outlet property="dateTextField" destination="6uc-fP-OZQ" id="mSY-Oo-hUg"/>
-                        <outlet property="flightAuthNum" destination="if6-zc-u6L" id="5dK-YX-45q"/>
-                        <outlet property="harmLocation" destination="D8q-NM-XVJ" id="8sr-Da-Hnz"/>
-                        <outlet property="issuingUnit" destination="Sbg-r9-TOx" id="Wcx-L1-bQj"/>
-                        <outlet property="serialNumber" destination="zeS-W3-NlD" id="Qs0-bG-usv"/>
-                        <outlet property="unitCharged" destination="3C4-Of-Na3" id="7Pl-9g-S2D"/>
+                        <outlet property="flightAuthNumTextField" destination="if6-zc-u6L" id="5dK-YX-45q"/>
+                        <outlet property="harmLocationTextField" destination="D8q-NM-XVJ" id="8sr-Da-Hnz"/>
+                        <outlet property="issuingUnitTextField" destination="Sbg-r9-TOx" id="Wcx-L1-bQj"/>
+                        <outlet property="mdsTextField" destination="gjr-0y-vh0" id="44G-Xf-djJ"/>
+                        <outlet property="serialNumberTextField" destination="zeS-W3-NlD" id="Qs0-bG-usv"/>
+                        <outlet property="unitChargedTextField" destination="3C4-Of-Na3" id="7Pl-9g-S2D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyL-kO-ELH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -447,7 +447,7 @@
         <!--Flight List View Controller-->
         <scene sceneID="dbc-4b-XtW">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="gFV-3G-E5E" customClass="FlightListViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gFV-3G-E5E" customClass="FlightListViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xUH-4b-EGE">
                         <rect key="frame" x="0.0" y="0.0" width="728" height="954"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

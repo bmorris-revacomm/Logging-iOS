@@ -43,7 +43,20 @@ class FlightListViewController: UIViewController {
         super.viewDidLoad()
         flightTableView.delegate = self
         flightTableView.dataSource = self
+        setUpViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print("test")
+    }
+    
+    // MARK: - Methods
+    
+    func setUpViews() {
         loadFromData()
+        guard let form = Form781Controller.shared.forms.last else { return }
+        updateGrandTotals(form: form)
     }
     
     // MARK: - Actions
@@ -139,10 +152,13 @@ class FlightListViewController: UIViewController {
     }
         
     func loadFromData() {
-        let numberOfForms = Form781Controller.shared.forms.count
-        if numberOfForms > 1{
-            let flightsarray = Form781Controller.shared.forms[numberOfForms - 2].flights
-            Form781Controller.shared.forms.last?.flights = flightsarray
+        if FlightController.flightsLoaded == false {
+            let numberOfForms = Form781Controller.shared.forms.count
+            if numberOfForms > 1 {
+                let flightsarray = Form781Controller.shared.forms[numberOfForms - 2].flights
+                Form781Controller.shared.forms.last?.flights = flightsarray
+            }
+            FlightController.flightsLoaded = true
         }
     }
     
