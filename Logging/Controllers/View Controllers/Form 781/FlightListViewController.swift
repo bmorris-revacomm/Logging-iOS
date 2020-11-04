@@ -43,7 +43,20 @@ class FlightListViewController: UIViewController {
         super.viewDidLoad()
         flightTableView.delegate = self
         flightTableView.dataSource = self
+        setUpViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print("test")
+    }
+    
+    // MARK: - Methods
+    
+    func setUpViews() {
         loadFromData()
+        guard let form = Form781Controller.shared.forms.last else { return }
+        updateGrandTotals(form: form)
     }
     
     // MARK: - Actions
@@ -69,8 +82,27 @@ class FlightListViewController: UIViewController {
         //Here's where we do the math for filling in the total field
         totalLandings.text = Helper().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
     }
+    
+    func updateGrandTotals(form: Form781) {
+        let grandTotalTime = FlightController.calculateTotalTime()
+        let grandTouchGo = FlightController.calculateTotalTouchGo()
+        let grandFullStop = FlightController.calculateTotalFullStop()
+        let grandTotalLandings = FlightController.calculateTotalLandings()
+        let grandTotalSorties = FlightController.calculateTotalSorties()
+        
+        self.grandTotalTime.text = String(grandTotalTime)
+        self.grandTouchGo.text = String(grandTouchGo)
+        self.grandFullStop.text = String(grandFullStop)
+        self.grandTotal.text = String(grandTotalLandings)
+        self.grandSorties.text = String(grandTotalSorties)
+        
+        Form781Controller.shared.updateFormWith(grandTotalTime: grandTotalTime, grandTouchGo: grandTouchGo, grandFullStop: grandFullStop, grandTotalLandings: grandTotalLandings, grandTotalSorties: grandTotalSorties, form: form)
+    }
 
     @IBAction func addFlightButtonTapped(_ sender: UIButton) {
+        
+        #warning("TO DO: Functionality for limiting number of flights in array")
+        
         guard let form = Form781Controller.shared.forms.last,
               let flightSeq = flightSeq.text,
               let missionNumber = missionNumber.text,
@@ -87,25 +119,10 @@ class FlightListViewController: UIViewController {
               let specialUse = specialUse.text
         else { return }
         
-        #warning("TO DO: Functionality for limiting number of flights in array")
         FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
         
         flightTableView.reloadData()
-        
-        let grandTotalTime = FlightController.calculateTotalTime()
-        let grandTouchGo = FlightController.calculateTotalTouchGo()
-        let grandFullStop = FlightController.calculateTotalFullStop()
-        let grandTotalLandings = FlightController.calculateTotalLandings()
-        let grandTotalSorties = FlightController.calculateTotalSorties()
-        
-        self.grandTotalTime.text = String(grandTotalTime)
-        self.grandTouchGo.text = String(grandTouchGo)
-        self.grandFullStop.text = String(grandFullStop)
-        self.grandTotal.text = String(grandTotalLandings)
-        self.grandSorties.text = String(grandTotalSorties)
-        
-        Form781Controller.shared.updateFormWith(grandTotalTime: grandTotalTime, grandTouchGo: grandTouchGo, grandFullStop: grandFullStop, grandTotalLandings: grandTotalLandings, grandTotalSorties: grandTotalSorties, form: form)
-        
+        updateGrandTotals(form: form)
         popUpView.isHidden = true
         print("Saved flight")
     }
@@ -135,12 +152,16 @@ class FlightListViewController: UIViewController {
     }
         
     func loadFromData() {
-        let numberOfForms = Form781Controller.shared.forms.count
-        if numberOfForms > 1{
-            let flightsarray = Form781Controller.shared.forms[numberOfForms - 2].flights
-            Form781Controller.shared.forms.last?.flights = flightsarray
+        if FlightController.flightsLoaded == false {
+            let numberOfForms = Form781Controller.shared.forms.count
+            if numberOfForms > 1 {
+                let flightsarray = Form781Controller.shared.forms[numberOfForms - 2].flights
+                Form781Controller.shared.forms.last?.flights = flightsarray
+            }
+            FlightController.flightsLoaded = true
         }
     }
+    
 } //End
 
 // MARK: - TableView Delegate
@@ -177,6 +198,8 @@ extension FlightListViewController: FlightTableViewCellDelegate {
         Form781Controller.shared.remove(flight: flight, from: form)
         flightTableView.reloadData()
         print("Deleted flight")
+        
+        updateGrandTotals(form: form)
     }
     
 } //End

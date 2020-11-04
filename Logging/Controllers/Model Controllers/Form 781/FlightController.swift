@@ -10,6 +10,8 @@ import Foundation
 
 class FlightController {
     
+    static var flightsLoaded = false
+    
     // MARK: - CRUD
     
     static func create(form: Form781, flightSeq: String, missionNumber: String, missionSymbol: String, fromICAO: String, toICAO: String, takeOffTime: String, landTime: String, totalTime: String, touchAndGo: String, fullStop: String, totalLandings: String, sorties: String, specialUse: String) {

@@ -20,8 +20,15 @@ class PBLTextField: UITextField {
         self.textColor = .slate
         self.textAlignment = .center
         self.autocapitalizationType = .allCharacters
-        self.font = .boldSystemFont(ofSize: 17)
+        self.updateFont(to: FontNames.dmSansBold)
     }
+    
+    func updateFont(to font: String) {
+        guard let size = self.font?.pointSize else { return }
+        self.font = UIFont(name: font, size: size)
+    }
+    
+    #warning("set up placeholder font")
     
     let padding = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
     

@@ -10,27 +10,27 @@ import Foundation
 
 class CrewMember: Codable {
     
-    let lastName: String
-    let firstName: String
-    let ssnLast4: String
-    let flightAuthDutyCode: String
-    let flyingOrigin: String
-    let primary: String
-    let secondary: String
-    let instructor: String
-    let evaluator: String
-    let other: String
-    let time: String
-    let srty: String
-    let nightPSIE: String
-    let insPIE: String
-    let simIns: String
-    let nvg: String
-    let combatTime: String
-    let combatSrty: String
-    let combatSptTime: String
-    let combatSptSrty: String
-    let resvStatus: String
+    var lastName: String
+    var firstName: String
+    var ssnLast4: String
+    var flightAuthDutyCode: String
+    var flyingOrigin: String
+    var primary: String
+    var secondary: String
+    var instructor: String
+    var evaluator: String
+    var other: String
+    var time: String
+    var srty: String
+    var nightPSIE: String
+    var insPIE: String
+    var simIns: String
+    var nvg: String
+    var combatTime: String
+    var combatSrty: String
+    var combatSptTime: String
+    var combatSptSrty: String
+    var resvStatus: String
     
     init(lastName: String,
          firstName: String,

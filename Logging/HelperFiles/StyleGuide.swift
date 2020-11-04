@@ -31,3 +31,10 @@ extension UIColor {
     static let mist = UIColor(named: "mist")!
 
 }
+
+struct FontNames {
+    
+    static let dmSansMedium = "DMSans-Medium"
+    static let dmSansBold = "DMSans-Bold"
+    
+}

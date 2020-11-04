@@ -19,6 +19,18 @@
 		7F0086EF2540B5FD00564A52 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0086EE2540B5FD00564A52 /* ContainerViewController.swift */; };
 		7F0086F02540B5FD00564A52 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0086EE2540B5FD00564A52 /* ContainerViewController.swift */; };
 		7F0086F12540B5FD00564A52 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0086EE2540B5FD00564A52 /* ContainerViewController.swift */; };
+		7F1EC55E2551F0C4006A644D /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F1EC55C2551F0C4006A644D /* DMSans-Bold.ttf */; };
+		7F1EC55F2551F0C4006A644D /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F1EC55C2551F0C4006A644D /* DMSans-Bold.ttf */; };
+		7F1EC5602551F0C4006A644D /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F1EC55C2551F0C4006A644D /* DMSans-Bold.ttf */; };
+		7F1EC5612551F0C4006A644D /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F1EC55D2551F0C4006A644D /* DMSans-Medium.ttf */; };
+		7F1EC5622551F0C4006A644D /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F1EC55D2551F0C4006A644D /* DMSans-Medium.ttf */; };
+		7F1EC5632551F0C4006A644D /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F1EC55D2551F0C4006A644D /* DMSans-Medium.ttf */; };
+		7F1EC56B2551F2FA006A644D /* PBLLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC56A2551F2FA006A644D /* PBLLabel.swift */; };
+		7F1EC56C2551F2FA006A644D /* PBLLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC56A2551F2FA006A644D /* PBLLabel.swift */; };
+		7F1EC56D2551F2FA006A644D /* PBLLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC56A2551F2FA006A644D /* PBLLabel.swift */; };
+		7F1EC578255207C5006A644D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC577255207C5006A644D /* Alerts.swift */; };
+		7F1EC579255207C5006A644D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC577255207C5006A644D /* Alerts.swift */; };
+		7F1EC57A255207C5006A644D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC577255207C5006A644D /* Alerts.swift */; };
 		7F2D11942549DDA00062AC7A /* CrewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D11932549DDA00062AC7A /* CrewMember.swift */; };
 		7F2D11952549DDA00062AC7A /* CrewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D11932549DDA00062AC7A /* CrewMember.swift */; };
 		7F2D11962549DDA00062AC7A /* CrewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2D11932549DDA00062AC7A /* CrewMember.swift */; };
@@ -152,6 +164,10 @@
 		7192C4E0628E4E7D0C02BFBC /* Pods_Logging_LoggingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logging_LoggingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0086E72540AC6800564A52 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		7F0086EE2540B5FD00564A52 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		7F1EC55C2551F0C4006A644D /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		7F1EC55D2551F0C4006A644D /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		7F1EC56A2551F2FA006A644D /* PBLLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBLLabel.swift; sourceTree = "<group>"; };
+		7F1EC577255207C5006A644D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		7F2D11932549DDA00062AC7A /* CrewMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMember.swift; sourceTree = "<group>"; };
 		7F2D11A42549F69A0062AC7A /* SplitTime.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplitTime.storyboard; sourceTree = "<group>"; };
 		7F2D11C6254B252E0062AC7A /* SplitFlightTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitFlightTimeViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +297,15 @@
 			path = "Form 781";
 			sourceTree = "<group>";
 		};
+		7F1EC55B2551F0A8006A644D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7F1EC55C2551F0C4006A644D /* DMSans-Bold.ttf */,
+				7F1EC55D2551F0C4006A644D /* DMSans-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7F2D11AE2549F7290062AC7A /* Split Time */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,13 +341,15 @@
 		7F7E0DD925310EC50041C4E9 /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
+				7F1EC577255207C5006A644D /* Alerts.swift */,
 				13941315254B4C4000B673FE /* Form781Error.swift */,
 				7FE48BC12550898A00F26760 /* Form781Error.swift */,
 				7FE48BB7255088D600F26760 /* HelperFunctions.swift */,
 				7F7E0DDA25310ED80041C4E9 /* StyleGuide.swift */,
-				7F7E0DDF253110330041C4E9 /* PBLButton.swift */,
 				7F7E0E3C2538B4560041C4E9 /* PBLView.swift */,
+				7F1EC56A2551F2FA006A644D /* PBLLabel.swift */,
 				7F7E0E412538BCCC0041C4E9 /* PBLTextField.swift */,
+				7F7E0DDF253110330041C4E9 /* PBLButton.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -380,6 +407,7 @@
 		7F83BBB3252F6F8700D13482 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7F1EC55B2551F0A8006A644D /* Fonts */,
 				83D8407A24D3402A00F336E3 /* AppDelegate.swift */,
 				83D8407C24D3402A00F336E3 /* SceneDelegate.swift */,
 				83D8408524D3402D00F336E3 /* Assets.xcassets */,
@@ -580,6 +608,8 @@
 				13F08EAE252222A800CDAEE4 /* separator line.jpg in Resources */,
 				83D8408924D3402D00F336E3 /* LaunchScreen.storyboard in Resources */,
 				131239A82518F98100F3B636 /* afto781.jpg in Resources */,
+				7F1EC5612551F0C4006A644D /* DMSans-Medium.ttf in Resources */,
+				7F1EC55E2551F0C4006A644D /* DMSans-Bold.ttf in Resources */,
 				7FAB8C3E2541F4E800868215 /* Aircrew.storyboard in Resources */,
 				131239A32518EFCF00F3B636 /* afto781.pdf in Resources */,
 				7F97DFE9253F94E9005B0892 /* Welcome.storyboard in Resources */,
@@ -596,6 +626,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FAB8C3F2541F4E800868215 /* Aircrew.storyboard in Resources */,
+				7F1EC5622551F0C4006A644D /* DMSans-Medium.ttf in Resources */,
+				7F1EC55F2551F0C4006A644D /* DMSans-Bold.ttf in Resources */,
 				7FAB8C7D25434D5800868215 /* Error.storyboard in Resources */,
 				7F97DFEA253F94E9005B0892 /* Welcome.storyboard in Resources */,
 				7FAB8C73254347EF00868215 /* Overview.storyboard in Resources */,
@@ -608,6 +640,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FAB8C402541F4E800868215 /* Aircrew.storyboard in Resources */,
+				7F1EC5632551F0C4006A644D /* DMSans-Medium.ttf in Resources */,
+				7F1EC5602551F0C4006A644D /* DMSans-Bold.ttf in Resources */,
 				7FAB8C7E25434D5800868215 /* Error.storyboard in Resources */,
 				7F97DFEB253F94E9005B0892 /* Welcome.storyboard in Resources */,
 				7FAB8C74254347EF00868215 /* Overview.storyboard in Resources */,
@@ -717,7 +751,9 @@
 				7FAB8C5725422E1000868215 /* AircrewTableViewCell.swift in Sources */,
 				7F2D11C7254B252E0062AC7A /* SplitFlightTimeViewController.swift in Sources */,
 				7F0086EF2540B5FD00564A52 /* ContainerViewController.swift in Sources */,
+				7F1EC578255207C5006A644D /* Alerts.swift in Sources */,
 				7FAB8C8625434E1400868215 /* OverviewViewController.swift in Sources */,
+				7F1EC56B2551F2FA006A644D /* PBLLabel.swift in Sources */,
 				7F2D11D1254B2A580062AC7A /* AircrewDetailViewController.swift in Sources */,
 				7F7E0DE0253110330041C4E9 /* PBLButton.swift in Sources */,
 				7F7E0DDB25310ED80041C4E9 /* StyleGuide.swift in Sources */,
@@ -747,7 +783,9 @@
 				7F680CD025489A2A00625ECC /* MissionDataViewController.swift in Sources */,
 				7F0086F02540B5FD00564A52 /* ContainerViewController.swift in Sources */,
 				7FAB8C5825422E1000868215 /* AircrewTableViewCell.swift in Sources */,
+				7F1EC579255207C5006A644D /* Alerts.swift in Sources */,
 				7F680CE42548C1E000625ECC /* FlightTableViewCell.swift in Sources */,
+				7F1EC56C2551F2FA006A644D /* PBLLabel.swift in Sources */,
 				7FAB8C4A2541FD9100868215 /* AircrewViewController.swift in Sources */,
 				7FAB8C5F254337F700868215 /* SplitTimeViewController.swift in Sources */,
 				7F5453E2254CCC8F00968BFA /* MissionViewController.swift in Sources */,
@@ -779,7 +817,9 @@
 				7F680CD125489A2A00625ECC /* MissionDataViewController.swift in Sources */,
 				7F0086F12540B5FD00564A52 /* ContainerViewController.swift in Sources */,
 				7FAB8C5925422E1000868215 /* AircrewTableViewCell.swift in Sources */,
+				7F1EC57A255207C5006A644D /* Alerts.swift in Sources */,
 				7F680CE52548C1E000625ECC /* FlightTableViewCell.swift in Sources */,
+				7F1EC56D2551F2FA006A644D /* PBLLabel.swift in Sources */,
 				7FAB8C4B2541FD9100868215 /* AircrewViewController.swift in Sources */,
 				7FAB8C60254337F700868215 /* SplitTimeViewController.swift in Sources */,
 				7F5453E3254CCC8F00968BFA /* MissionViewController.swift in Sources */,
