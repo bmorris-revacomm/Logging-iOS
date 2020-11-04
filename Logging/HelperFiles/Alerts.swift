@@ -10,9 +10,9 @@ import UIKit
 
 struct Alerts {
     
-    private static func showAlert(on vc: UIViewController, title: String, message: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    static func showInputErrorAlert(on vc: UIViewController, completion: @escaping (Result<Void, Error>) -> Void) {
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Oops!", message: "Some fields have been filled out incorrectly or not at all. Would you like to continue anyway?", preferredStyle: .alert)
         
         let editAction = UIAlertAction(title: "Edit Fields", style: .default, handler: nil)
         let continueAction = UIAlertAction(title: "Continue Anyway", style: .destructive) { (_) in
@@ -21,11 +21,18 @@ struct Alerts {
         
         alert.addAction(editAction)
         alert.addAction(continueAction)
+        
         vc.present(alert, animated: true, completion: nil)
     }
     
-    static func showTextFieldsAlert(on vc: UIViewController, completion: @escaping (Result<Void, Error>) -> Void) {
-        showAlert(on: vc, title: "Oops!", message: "Some fields have been filled out incorrectly or not at all. Would you like to continue anyway?", completion: completion)
+    static func showFlightsErrorAlert(on vc: UIViewController) {
+        
+        let alert = UIAlertController(title: "Oops!", message: "You already have 6 flights on this form.", preferredStyle: .alert)
+        
+        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(okayAction)
+        
+        vc.present(alert, animated: true, completion: nil)
     }
     
 } //End

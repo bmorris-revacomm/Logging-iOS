@@ -63,7 +63,7 @@ class AircrewListViewController: UIViewController {
         headerTitleLabel.text = "Mission \(form.date)"
     }
     
-    func presentAlert() {
+    func presentInputErrorAlert() {
         guard let form = Form781Controller.shared.forms.last,
               let lastName = lastName.text,
               let firstName = firstName.text,
@@ -88,7 +88,7 @@ class AircrewListViewController: UIViewController {
               let resvStatus = resvStatus.text
         else { return }
         
-        Alerts.showTextFieldsAlert(on: self) { (_) in
+        Alerts.showInputErrorAlert(on: self) { (_) in
             
             CrewMemberController.create(form: form, lastName: lastName, firstName: firstName, ssnLast4: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin, primary: primary, secondary: secondary, instructor: instructor, evaluator: evaluator, other: other, time: time, srty: srty, nightPSIE: nightPSIE, insPIE: ins, simIns: simIns, nvg: nvg, combatTime: combatTime, combatSrty: combatSrty, combatSptTime: combatSptTime, combatSptSrty: combatSptSrty, resvStatus: resvStatus)
             
@@ -154,7 +154,7 @@ class AircrewListViewController: UIViewController {
               let combatSptTime = combatSptTime.text, !combatSptTime.isEmpty,
               let combatSptSrty = combatSptSrty.text, !combatSptSrty.isEmpty,
               let resvStatus = resvStatus.text, !resvStatus.isEmpty
-        else { return presentAlert() }
+        else { return presentInputErrorAlert() }
         
         CrewMemberController.create(form: form, lastName: lastName, firstName: firstName, ssnLast4: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin, primary: primary, secondary: secondary, instructor: instructor, evaluator: evaluator, other: other, time: time, srty: srty, nightPSIE: nightPSIE, insPIE: insPIE, simIns: simIns, nvg: nvg, combatTime: combatTime, combatSrty: combatSrty, combatSptTime: combatSptTime, combatSptSrty: combatSptSrty, resvStatus: resvStatus)
         

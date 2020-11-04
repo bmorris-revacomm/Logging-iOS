@@ -74,7 +74,7 @@ class FlightListViewController: UIViewController {
         Form781Controller.shared.updateFormWith(grandTotalTime: grandTotalTime, grandTouchGo: grandTouchGo, grandFullStop: grandFullStop, grandTotalLandings: grandTotalLandings, grandTotalSorties: grandTotalSorties, form: form)
     }
     
-    func presentAlert() {
+    func presentInputErrorAlert() {
         guard let form = Form781Controller.shared.forms.last,
               let flightSeq = flightSeq.text,
               let missionNumber = missionNumber.text,
@@ -91,7 +91,7 @@ class FlightListViewController: UIViewController {
               let specialUse = specialUse.text
         else { return }
         
-        Alerts.showTextFieldsAlert(on: self) { (_) in
+        Alerts.showInputErrorAlert(on: self) { (_) in
             
             FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
             
@@ -127,10 +127,10 @@ class FlightListViewController: UIViewController {
     }
 
     @IBAction func addFlightButtonTapped(_ sender: UIButton) {
+        guard let form = Form781Controller.shared.forms.last else { return }
+        guard form.flights.count < 6 else { return Alerts.showFlightsErrorAlert(on: self) }
         
-        #warning("TO DO: Functionality for limiting number of flights in array")
-        guard let form = Form781Controller.shared.forms.last,
-              let flightSeq = flightSeq.text, !flightSeq.isEmpty,
+        guard let flightSeq = flightSeq.text, !flightSeq.isEmpty,
               let missionNumber = missionNumber.text, !missionNumber.isEmpty,
               let missionSymbol = missionSymbol.text, !missionSymbol.isEmpty,
               let fromICAO = fromICAO.text, !fromICAO.isEmpty,
@@ -143,7 +143,7 @@ class FlightListViewController: UIViewController {
               let totalLandings = totalLandings.text, !totalLandings.isEmpty,
               let sorties = sorties.text, !sorties.isEmpty,
               let specialUse = specialUse.text, !specialUse.isEmpty
-        else { return presentAlert() }
+        else { return presentInputErrorAlert() }
         
         FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
         
