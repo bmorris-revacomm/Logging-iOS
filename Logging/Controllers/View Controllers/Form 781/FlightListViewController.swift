@@ -79,15 +79,25 @@ class FlightListViewController: UIViewController {
     @IBAction func calculateTotalTime(_ sender: Any) {
         
         if Helper().checkInput(time: takeOffTime.text!) {
+            takeOffTimeString = takeOffTime.text!
+            takeOffTime.layer.borderColor = UIColor.lightGray.cgColor
+            takeOffTime.layer.borderWidth = 1
+            
             if Helper().checkInput(time: landTime.text!) {
-                takeOffTimeString = takeOffTime.text!
                 landTimeString = landTime.text!
+                landTime.layer.borderColor = UIColor.lightGray.cgColor
+                landTime.layer.borderWidth = 1
+                
                 let decimalTime = Helper().vmCalculateTotalTime(takeOffTime: takeOffTime, landTime: landTime)
                 totalTime.text = decimalTime
             } else {
+                landTime.layer.borderColor = UIColor.red.cgColor
+                landTime.layer.borderWidth = 1
                 throwAlert(alertTitle: "Landing time error")
             }
         } else {
+            takeOffTime.layer.borderColor = UIColor.red.cgColor
+            takeOffTime.layer.borderWidth = 1
             throwAlert(alertTitle: "Take Off time error")
         }
     }
