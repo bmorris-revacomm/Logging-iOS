@@ -12,37 +12,43 @@ import Foundation
 
 class Form781Controller {
     
-    // MARK: - Singleton & Source of Truth
+    // MARK: - Singleton
     
     static let shared = Form781Controller()
     
-    var forms = [Form781]()
+    // MARK: - Properties
     
+    var forms = [Form781]()
     var formCreated = false
     
-//   #warning("Currently, there is no functionality for clearing this without restarting app (if user needs to fill out new form)")
-//    var currentForm: Form781? {
-//        didSet {
-//            guard let form = forms.last, let currentForm = currentForm else { return }
-//            form.date = currentForm.date
-//            form.mds = currentForm.mds
-//            form.serialNumber = currentForm.serialNumber
-//            form.unitCharged = currentForm.unitCharged
-//            form.harmLocation = currentForm.harmLocation
-//            form.flightAuthNum = currentForm.flightAuthNum
-//            form.issuingUnit = currentForm.issuingUnit
-//        }
-//    }
-    
-    // MARK: - CRUD
+    // MARK: - Create
     
     func create(date: String, mds: String, serialNumber: String, unitCharged: String, harmLocation: String, flightAuthNum: String, issuingUnit: String) {
         let form = Form781(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
         forms.append(form)
         formCreated = true
-        //currentForm = form
+        populateFlights()
+        populateCrewMembers()
         save()
     }
+    
+    //populates from previous form
+    func populateFlights() {
+        let numberOfForms = forms.count
+        if numberOfForms > 1 {
+            let flightsArray = forms[numberOfForms - 2].flights
+            forms.last?.flights = flightsArray
+        }
+    }
+    
+    //populates from previous form
+    func populateCrewMembers() {
+        let numberOfForms = forms.count
+        let crewMemberArray = forms[numberOfForms - 2].crewMembers
+        forms.last?.crewMembers = crewMemberArray
+    }
+    
+    // MARK: - Update
     
     func updateMissionData(date: String, mds: String, serialNumber: String, unitCharged: String, harmLocation: String, flightAuthNum: String, issuingUnit: String) {
         
@@ -54,10 +60,6 @@ class Form781Controller {
         form.harmLocation = harmLocation
         form.flightAuthNum = flightAuthNum
         form.issuingUnit = issuingUnit
-                
-        //let form = Form781(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
-        //currentForm = form
-        
         save()
     }
     
@@ -79,6 +81,8 @@ class Form781Controller {
         form.crewMembers.append(crewMember)
         save()
     }
+    
+    // MARK: - Delete
     
     func remove(flight: Flight, from form: Form781) {
         guard let index = form.flights.firstIndex(of: flight) else { return }
@@ -121,26 +125,6 @@ class Form781Controller {
         let data = try Data(contentsOf: fileURL())
         forms = try decoder.decode([Form781].self, from: data)
     }
-    
-    //populates from previous form
-    func loadFlights() {
-        ///need if statement because viewDidLoad called multiple times (not a segue) - this way, func is only called once
-        if FlightController.flightsLoaded == false {
-            let numberOfForms = forms.count
-            if numberOfForms > 1 {
-                let flightsarray = forms[numberOfForms - 2].flights
-                forms.last?.flights = flightsarray
-            }
-            FlightController.flightsLoaded = true
-        }
-    }
-    
-    //populates from previous form
-    func loadCrewMembers() {
-        let numberOfForms = forms.count
-        let crewMemberArray = forms[numberOfForms - 2].crewMembers
-        forms.last?.crewMembers = crewMemberArray
-    }
-    
+        
 } //End
  

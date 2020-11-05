@@ -12,6 +12,7 @@ class MissionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
