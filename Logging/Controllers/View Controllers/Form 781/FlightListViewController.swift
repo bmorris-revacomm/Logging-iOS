@@ -132,14 +132,14 @@ class FlightListViewController: UIViewController {
             } else {
                 landTime.layer.borderColor = UIColor.red.cgColor
                 landTime.layer.borderWidth = 1
-                throwAlert(alertTitle: "Landing time error")
+                Alerts.showTimeErrorAlert(on: self)
             }
         } else {
             takeOffTime.layer.borderColor = UIColor.red.cgColor
             takeOffTime.layer.borderWidth = 1
-            throwAlert(alertTitle: "Take Off time error")
+            Alerts.showTimeErrorAlert(on: self)
         }
-        Alerts.showTimeErrorAlert(on: self)
+        
     }
         
     @IBAction func calculateTotalLandings(_sender: Any) {
