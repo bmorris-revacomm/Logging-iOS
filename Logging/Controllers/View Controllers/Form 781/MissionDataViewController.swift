@@ -31,7 +31,7 @@ class MissionDataViewController: UIViewController {
     
     func loadFromData(){
         do {
-            try Form781Controller.shared.load()
+            try Form781Controller.shared.loadForms()
         } catch {
             print(Form781Error.FileNotFound)
         }
@@ -60,7 +60,22 @@ class MissionDataViewController: UIViewController {
               let issuingUnit = issuingUnitTextField.text
         else { return }
         
-        presentErrorAlert(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
+        Alerts.showTextFieldsAlert(on: self) { (_) in
+            
+            if Form781Controller.shared.formCreated == false {
+                Form781Controller.shared.create(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
+                print("Created form")
+            } else {
+                Form781Controller.shared.updateMissionData(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
+                print("Saved form")
+            }
+            
+            if let viewController = UIStoryboard(name: "Form781", bundle: nil).instantiateViewController(withIdentifier: "FlightList") as? FlightListViewController {
+                if let navigator = self.navigationController {
+                    navigator.pushViewController(viewController, animated: true)
+                }
+            }
+        }
     }
     
     // MARK: - Actions
@@ -96,37 +111,4 @@ class MissionDataViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 
-} //End
-
-// MARK: - Alerts
-
-extension MissionDataViewController {
-    
-    func presentErrorAlert(date: String, mds: String, serialNumber: String, unitCharged: String, harmLocation: String, flightAuthNum: String, issuingUnit: String) {
-        
-        let alert = UIAlertController(title: "Oops!", message: "Some fields have been filled out incorrectly or not at all. Would you like to continue anyway?", preferredStyle: .alert)
-        
-        let editAction = UIAlertAction(title: "Edit Fields", style: .default, handler: nil)
-        let continueAction = UIAlertAction(title: "Continue Anyway", style: .destructive) { (_) in
-            
-            if Form781Controller.shared.formCreated == false {
-                Form781Controller.shared.create(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
-                print("Created form")
-            } else {
-                Form781Controller.shared.updateMissionData(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
-                print("Saved form")
-            }
-            
-            if let viewController = UIStoryboard(name: "Form781", bundle: nil).instantiateViewController(withIdentifier: "FlightList") as? FlightListViewController {
-                if let navigator = self.navigationController {
-                    navigator.pushViewController(viewController, animated: true)
-                }
-            }
-        }
-        
-        alert.addAction(editAction)
-        alert.addAction(continueAction)
-        present(alert, animated: true, completion: nil)
-    }
-    
 } //End
