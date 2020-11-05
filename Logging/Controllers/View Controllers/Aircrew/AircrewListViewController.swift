@@ -13,10 +13,13 @@ class AircrewListViewController: UIViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var headerTitleLabel: UILabel!
+    @IBOutlet weak var printButton: UIButton!
     @IBOutlet weak var aircrewTableView: UITableView!
     @IBOutlet weak var popUp1View: UIView!
     @IBOutlet weak var popUp2View: UIView!
     @IBOutlet weak var popUp3View: UIView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
     
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var firstName: UITextField!
@@ -46,19 +49,14 @@ class AircrewListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        aircrewTableView.delegate = self
-        aircrewTableView.dataSource = self
         setUpViews()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        aircrewTableView.reloadData()
     }
     
     // MARK: - Methods
     
     func setUpViews() {
-        Form781Controller.shared.loadCrewMembers()
+        aircrewTableView.delegate = self
+        aircrewTableView.dataSource = self
         guard let form = Form781Controller.shared.forms.last else { return }
         headerTitleLabel.text = "Mission \(form.date)"
     }
@@ -94,20 +92,37 @@ class AircrewListViewController: UIViewController {
             
             self.aircrewTableView.reloadData()
             self.popUp3View.isHidden = true
+            self.enableButtons()
             print("Saved crew member")
         }
+    }
+    
+    func disableButtons() {
+        aircrewTableView.isUserInteractionEnabled = false
+        printButton.isUserInteractionEnabled = false
+        backButton.isUserInteractionEnabled = false
+        continueButton.isUserInteractionEnabled = false
+    }
+    
+    func enableButtons() {
+        aircrewTableView.isUserInteractionEnabled = true
+        printButton.isUserInteractionEnabled = true
+        backButton.isUserInteractionEnabled = true
+        continueButton.isUserInteractionEnabled = true
     }
     
     // MARK: - Actions
     
     @IBAction func addButtonTapped(_ sender: UIButton) {
         popUp1View.isHidden = false
+        disableButtons()
     }
     
     @IBAction func exitButtonTapped(_ sender: UIButton) {
         popUp1View.isHidden = true
         popUp2View.isHidden = true
         popUp3View.isHidden = true
+        enableButtons()
     }
     
     @IBAction func back2ButtonTapped(_ sender: UIButton) {
@@ -159,6 +174,7 @@ class AircrewListViewController: UIViewController {
         
         aircrewTableView.reloadData()
         popUp3View.isHidden = true
+        enableButtons()
         print("Saved crew member")
     }
     
@@ -210,7 +226,7 @@ class AircrewListViewController: UIViewController {
     
 } //End
 
-// MARK: - TableViewDelegate
+// MARK: - TableView Delegate
 
 extension AircrewListViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -235,6 +251,8 @@ extension AircrewListViewController: UITableViewDelegate, UITableViewDataSource 
 //    }
     
 } //End
+
+// MARK: - TableViewCell Delegate
 
 extension AircrewListViewController: AircrewTableViewCellDelegate {
     

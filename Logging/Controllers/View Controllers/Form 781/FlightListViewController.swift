@@ -14,6 +14,10 @@ class FlightListViewController: UIViewController {
     
     @IBOutlet weak var flightTableView: UITableView!
     @IBOutlet weak var popUpView: UIView!
+    @IBOutlet weak var printButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
     
     @IBOutlet weak var flightSeq: UITextField!
     @IBOutlet weak var missionNumber: UITextField!
@@ -46,15 +50,14 @@ class FlightListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        flightTableView.delegate = self
-        flightTableView.dataSource = self
         setUpViews()
     }
     
     // MARK: - Methods
     
     func setUpViews() {
-        Form781Controller.shared.loadFlights()
+        flightTableView.delegate = self
+        flightTableView.dataSource = self
         guard let form = Form781Controller.shared.forms.last else { return }
         updateGrandTotals(form: form)
     }
@@ -97,11 +100,27 @@ class FlightListViewController: UIViewController {
             self.flightTableView.reloadData()
             self.updateGrandTotals(form: form)
             self.popUpView.isHidden = true
+            self.enableButtons()
             print("Saved flight")
         }
     }
-
     
+    func disableButtons() {
+        flightTableView.isUserInteractionEnabled = false
+        printButton.isUserInteractionEnabled = false
+        editButton.isUserInteractionEnabled = false
+        backButton.isUserInteractionEnabled = false
+        continueButton.isUserInteractionEnabled = false
+    }
+    
+    func enableButtons() {
+        flightTableView.isUserInteractionEnabled = true
+        printButton.isUserInteractionEnabled = true
+        editButton.isUserInteractionEnabled = true
+        backButton.isUserInteractionEnabled = true
+        continueButton.isUserInteractionEnabled = true
+    }
+
     // MARK: - Actions
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
@@ -110,10 +129,12 @@ class FlightListViewController: UIViewController {
     
     @IBAction func newFlightButtonTapped(_ sender: UIButton) {
         popUpView.isHidden = false
+        disableButtons()
     }
     
     @IBAction func exitButtonTapped(_ sender: UIButton) {
         popUpView.isHidden = true
+        enableButtons()
     }
     
     @IBAction func calculateTotalTime(_ sender: Any) {    
@@ -139,7 +160,6 @@ class FlightListViewController: UIViewController {
             takeOffTime.layer.borderWidth = 1
             Alerts.showTimeErrorAlert(on: self)
         }
-        
     }
         
     @IBAction func calculateTotalLandings(_sender: Any) {
@@ -169,6 +189,7 @@ class FlightListViewController: UIViewController {
         flightTableView.reloadData()
         updateGrandTotals(form: form)
         popUpView.isHidden = true
+        enableButtons()
         print("Saved flight")
     }
     
