@@ -20,6 +20,16 @@ class SplitFlightTimeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpViews()
+    }
+    
+    // MARK: - Methods
+    
+    func setUpViews() {
+        flightTimeTableView.delegate = self
+        flightTimeTableView.dataSource = self
+        flightSeqTableView.delegate = self
+        flightSeqTableView.dataSource = self
     }
     
     // MARK: - Actions

@@ -34,6 +34,7 @@ extension UIColor {
 
 struct FontNames {
     
+    static let dmSansRegular = "DMSans-Regular"
     static let dmSansMedium = "DMSans-Medium"
     static let dmSansBold = "DMSans-Bold"
     
