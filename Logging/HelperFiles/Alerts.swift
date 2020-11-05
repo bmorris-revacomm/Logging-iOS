@@ -12,7 +12,7 @@ struct Alerts {
     
     static func showInputErrorAlert(on vc: UIViewController, completion: @escaping (Result<Void, Error>) -> Void) {
         
-        let alert = UIAlertController(title: "Oops!", message: "Some fields have been filled out incorrectly or not at all. Would you like to continue anyway?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Oops!", message: "Some fields have not been filled out. Would you like to continue anyway?", preferredStyle: .alert)
         
         let editAction = UIAlertAction(title: "Edit Fields", style: .default, handler: nil)
         let continueAction = UIAlertAction(title: "Continue Anyway", style: .destructive) { (_) in

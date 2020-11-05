@@ -66,7 +66,7 @@ class Form781Controller {
         save()
     }
     
-    func updateFormWith(grandTotalTime: Int, grandTouchGo: Int, grandFullStop: Int, grandTotalLandings: Int, grandTotalSorties: Int, form: Form781) {
+    func updateFormWith(grandTotalTime: Double, grandTouchGo: Int, grandFullStop: Int, grandTotalLandings: Int, grandTotalSorties: Int, form: Form781) {
         form.grandTotalTime = grandTotalTime
         form.grandTotalTouchAndGo = grandTouchGo
         form.grandTotalFullStop = grandFullStop
