@@ -103,7 +103,7 @@ class AircrewDetailViewController: UIViewController {
               let resv = resv.text
         else { return }
         
-        Alerts.showTextFieldsAlert(on: self) { (_) in
+        Alerts.showInputErrorAlert(on: self) { (_) in
             
             crewMember.lastName = lastName
             crewMember.firstName = firstName

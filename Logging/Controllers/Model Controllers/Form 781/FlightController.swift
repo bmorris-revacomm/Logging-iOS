@@ -21,12 +21,12 @@ class FlightController {
         Form781Controller.shared.updateFormWith(flight: flight, form: form)
     }
     
-    static func calculateTotalTime() -> Int {
+    static func calculateTotalTime() -> Double {
         guard let form = Form781Controller.shared.forms.last else { return 0 }
-        var totalTime = 0
+        var totalTime = 0.0
 
         for flight in form.flights {
-            totalTime += Int(flight.totalTime) ?? 0
+            totalTime += Double(flight.totalTime) ?? 0.0
         }
         return totalTime
     }

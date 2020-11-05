@@ -50,7 +50,7 @@ class MissionDataViewController: UIViewController {
         }
     }
     
-    func presentAlert() {
+    func presentInputErrorAlert() {
         guard let date = dateTextField.text,
               let mds = mdsTextField.text,
               let serialNumber = serialNumberTextField.text,
@@ -60,7 +60,7 @@ class MissionDataViewController: UIViewController {
               let issuingUnit = issuingUnitTextField.text
         else { return }
         
-        Alerts.showTextFieldsAlert(on: self) { (_) in
+        Alerts.showInputErrorAlert(on: self) { (_) in
             
             if Form781Controller.shared.formCreated == false {
                 Form781Controller.shared.create(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
@@ -96,7 +96,7 @@ class MissionDataViewController: UIViewController {
               let harmLocation = harmLocationTextField.text, !harmLocation.isEmpty,
               let flightAuthNum = flightAuthNumTextField.text, !flightAuthNum.isEmpty,
               let issuingUnit = issuingUnitTextField.text, !issuingUnit.isEmpty
-        else { return presentAlert() }
+        else { return presentInputErrorAlert() }
         
         if Form781Controller.shared.formCreated == false {
             Form781Controller.shared.create(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)

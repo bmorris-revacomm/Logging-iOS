@@ -18,7 +18,7 @@ class Form781: Codable {
     var flightAuthNum: String
     var issuingUnit: String
     
-    var grandTotalTime: Int?
+    var grandTotalTime: Double?
     var grandTotalTouchAndGo: Int?
     var grandTotalFullStop: Int?
     var grandTotalLandings: Int?
@@ -36,7 +36,7 @@ class Form781: Codable {
         harmLocation: String,
         flightAuthNum: String,
         issuingUnit: String,
-        grandTotalFlightTime: Int? = nil,
+        grandTotalTime: Double? = nil,
         grandTotalTouchAndGo: Int? = nil,
         grandTotalFullStop: Int? = nil,
         grandTotalStops: Int? = nil,
@@ -51,7 +51,7 @@ class Form781: Codable {
         self.harmLocation = harmLocation
         self.flightAuthNum = flightAuthNum
         self.issuingUnit = issuingUnit
-        self.grandTotalTime = grandTotalFlightTime
+        self.grandTotalTime = grandTotalTime
         self.grandTotalTouchAndGo = grandTotalTouchAndGo
         self.grandTotalFullStop = grandTotalFullStop
         self.grandTotalLandings = grandTotalStops

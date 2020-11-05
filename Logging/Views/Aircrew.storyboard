@@ -589,7 +589,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufc-3K-06W" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufc-3K-06W" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="4uc-Vv-0zD"/>
@@ -608,7 +608,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nV0-KE-Snu" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nV0-KE-Snu" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="UdM-b9-2mt"/>
@@ -632,7 +632,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lsw-yb-Blq" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lsw-yb-Blq" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="4St-94-Kfu"/>
@@ -651,7 +651,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dgr-8R-klW" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dgr-8R-klW" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -669,7 +669,7 @@
                                                         <color key="textColor" name="slate"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pnk-bl-gm9" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pnk-bl-gm9" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="24.5" width="484" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="GMr-KN-Yoq"/>
@@ -691,7 +691,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d1v-BI-UaE" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d1v-BI-UaE" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="y4L-DP-v4h"/>
@@ -710,7 +710,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r2p-cg-lcO" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r2p-cg-lcO" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -776,7 +776,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyh-Ts-Rif" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oyh-Ts-Rif" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="106" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="Crh-bS-5pA"/>
@@ -795,7 +795,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CO-4n-H7D" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CO-4n-H7D" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="106" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="9x4-KG-cCg"/>
@@ -814,7 +814,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNs-Ot-19T" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KNs-Ot-19T" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="106" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="if2-Zu-DZs"/>
@@ -833,7 +833,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipE-IP-hD0" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipE-IP-hD0" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="106" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -854,7 +854,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocS-Xc-aTK" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocS-Xc-aTK" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="671-MX-9FU"/>
@@ -873,7 +873,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ASDFGHJKL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4j-pQ-jEU" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t4j-pQ-jEU" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="zjt-b1-fml"/>
@@ -897,7 +897,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcM-at-jA6" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hcM-at-jA6" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="rIM-aD-p60"/>
@@ -916,7 +916,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raw-Xe-Hx0" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raw-Xe-Hx0" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="232" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -937,7 +937,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPW-Sr-SrW" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wPW-Sr-SrW" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="24.5" width="484" height="60"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="qtt-0w-SLJ"/>
@@ -1112,7 +1112,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmg-B1-bqR" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ASDFGHJKL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xmg-B1-bqR" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="100.5" y="0.0" width="173.5" height="18.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1128,7 +1128,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0EO-rE-Gkl" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ASDFGHJKL" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0EO-rE-Gkl" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="104.5" y="0.0" width="169.5" height="18.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1165,7 +1165,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rIe-F1-6N5" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rIe-F1-6N5" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="123" y="0.0" width="151" height="18.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1183,7 +1183,7 @@
                                                         <color key="textColor" name="slate"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-ng-z5a" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="XX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rl4-ng-z5a" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="205" y="0.0" width="358" height="18.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -1210,7 +1210,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gR-gk-qnt" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gR-gk-qnt" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="81.5" y="0.0" width="192.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1226,7 +1226,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHC-TH-fs6" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHC-TH-fs6" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="106.5" y="0.0" width="167.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1247,7 +1247,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIQ-cq-WXF" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIQ-cq-WXF" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="111.5" y="0.0" width="162.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1263,7 +1263,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="98N-sH-u7R" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="98N-sH-u7R" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="102.5" y="0.0" width="171.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1281,7 +1281,7 @@
                                                                 <color key="textColor" name="slate"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19F-Kp-6r1" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="19F-Kp-6r1" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                 <rect key="frame" x="65.5" y="0.0" width="497.5" height="18.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -1311,7 +1311,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="40j-UQ-DU2" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="40j-UQ-DU2" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="51" y="0.0" width="223" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1327,7 +1327,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Akq-aL-P7n" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Akq-aL-P7n" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="53.5" y="0.0" width="220.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1358,7 +1358,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdC-e6-sU4" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XdC-e6-sU4" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="123.5" y="0.0" width="150.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1374,7 +1374,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fve-Un-P2m" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fve-Un-P2m" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="87" y="0.0" width="187" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1395,7 +1395,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ts4-4u-v8K" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ts4-4u-v8K" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="118" y="0.0" width="156" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1411,7 +1411,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K1K-9O-3ao" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K1K-9O-3ao" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="47" y="0.0" width="227" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1443,7 +1443,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKf-Pt-v1X" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DKf-Pt-v1X" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="51" y="0.0" width="223" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1459,7 +1459,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U86-Da-4sE" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U86-Da-4sE" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="53.5" y="0.0" width="220.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1486,7 +1486,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOX-Xt-dlI" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOX-Xt-dlI" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="51" y="0.0" width="223" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1502,7 +1502,7 @@
                                                                         <color key="textColor" name="slate"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="78U-vB-8Ty" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="78U-vB-8Ty" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="53.5" y="0.0" width="220.5" height="18.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
@@ -1522,7 +1522,7 @@
                                                         <color key="textColor" name="slate"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1234" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRa-HY-hOX" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRa-HY-hOX" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                         <rect key="frame" x="115" y="0.0" width="448" height="18.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
