@@ -37,7 +37,8 @@ class FlightListViewController: UIViewController {
     @IBOutlet weak var grandTotal: UILabel!
     @IBOutlet weak var grandSorties: UILabel!
     
-    // MARK: - Local Variables
+    // MARK: - Properties
+    
     var takeOffTimeString: String = " "
     var landTimeString: String = " "
     
@@ -50,51 +51,12 @@ class FlightListViewController: UIViewController {
         setUpViews()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-    }
-    
     // MARK: - Methods
     
     func setUpViews() {
         Form781Controller.shared.loadFlights()
         guard let form = Form781Controller.shared.forms.last else { return }
         updateGrandTotals(form: form)
-    }
-    
-    // MARK: - Actions
-    
-    @IBAction func backButtonTapped(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func newFlightButtonTapped(_ sender: UIButton) {
-        popUpView.isHidden = false
-    }
-    
-    @IBAction func exitButtonTapped(_ sender: UIButton) {
-        popUpView.isHidden = true
-    }
-    
-    @IBAction func calculateTotalTime(_ sender: Any) {
-        
-        if Helper().checkInput(time: takeOffTime.text!) {
-            if Helper().checkInput(time: landTime.text!) {
-                takeOffTimeString = takeOffTime.text!
-                landTimeString = landTime.text!
-                let decimalTime = Helper().vmCalculateTotalTime(takeOffTime: takeOffTime, landTime: landTime)
-                totalTime.text = decimalTime
-            } else {
-                throwAlert(alertTitle: "Landing time error")
-            }
-        } else {
-            throwAlert(alertTitle: "Take Off time error")
-        }
-    }
-    
-    @IBAction func calculateTotalLandings(_sender: Any) {
-        //Here's where we do the math for filling in the total field
-        totalLandings.text = Helper().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
     }
     
     func updateGrandTotals(form: Form781) {
@@ -138,10 +100,42 @@ class FlightListViewController: UIViewController {
             print("Saved flight")
         }
     }
+
     
     // MARK: - Actions
     
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     
+    @IBAction func newFlightButtonTapped(_ sender: UIButton) {
+        popUpView.isHidden = false
+    }
+    
+    @IBAction func exitButtonTapped(_ sender: UIButton) {
+        popUpView.isHidden = true
+    }
+    
+    @IBAction func calculateTotalTime(_ sender: Any) {
+        
+        if Helper().checkInput(time: takeOffTime.text!) {
+            if Helper().checkInput(time: landTime.text!) {
+                takeOffTimeString = takeOffTime.text!
+                landTimeString = landTime.text!
+                let decimalTime = Helper().vmCalculateTotalTime(takeOffTime: takeOffTime, landTime: landTime)
+                totalTime.text = decimalTime
+            } else {
+                Alerts.showTimeErrorAlert(on: self)
+            }
+        } else {
+            Alerts.showTimeErrorAlert(on: self)
+        }
+    }
+    
+    @IBAction func calculateTotalLandings(_sender: Any) {
+        //Here's where we do the math for filling in the total field
+        totalLandings.text = Helper().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
+    }
 
     @IBAction func addFlightButtonTapped(_ sender: UIButton) {
         guard let form = Form781Controller.shared.forms.last else { return }
@@ -215,6 +209,8 @@ extension FlightListViewController: UITableViewDelegate, UITableViewDataSource {
     
 } //End
 
+// MARK: - TableViewCell Delegate
+
 extension FlightListViewController: FlightTableViewCellDelegate {
     
     func editButtonTapped(cell: FlightTableViewCell) {
@@ -233,16 +229,3 @@ extension FlightListViewController: FlightTableViewCellDelegate {
     }
     
 } //End
-
-// MARK: -Alerts
-    
-extension FlightListViewController {
-    func throwAlert(alertTitle: String) {
-        
-        let alert = UIAlertController(title: "Invalid Time", message: "Please enter your time in the 4 digit manner ie 0400", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
-    }
-}

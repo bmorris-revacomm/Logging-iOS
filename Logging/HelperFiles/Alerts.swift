@@ -35,4 +35,14 @@ struct Alerts {
         vc.present(alert, animated: true, completion: nil)
     }
     
+    static func showTimeErrorAlert(on vc: UIViewController) {
+        
+        let alert = UIAlertController(title: "Invalid Time", message: "Please enter your time in the 4 digit manner, ie 0400", preferredStyle: .alert)
+        
+        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
+        alert.addAction(okayAction)
+        
+        vc.present(alert, animated: true, completion: nil)
+    }
+    
 } //End

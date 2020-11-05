@@ -124,7 +124,7 @@ class Form781Controller {
     
     //populates from previous form
     func loadFlights() {
-        ///need this because viewDidLoad called multiple times (not a segue)
+        ///need if statement because viewDidLoad called multiple times (not a segue) - this way, func is only called once
         if FlightController.flightsLoaded == false {
             let numberOfForms = forms.count
             if numberOfForms > 1 {
