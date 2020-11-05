@@ -130,7 +130,7 @@ class FlightListViewController: UIViewController {
         
         Alerts.showTextFieldsAlert(on: self) { (_) in
             
-            FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
+            FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: self.takeOffTimeString, landTime: self.landTimeString, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
             
             self.flightTableView.reloadData()
             self.updateGrandTotals(form: form)
@@ -141,27 +141,7 @@ class FlightListViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func backButtonTapped(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
-    }
     
-    @IBAction func newFlightButtonTapped(_ sender: UIButton) {
-        popUpView.isHidden = false
-    }
-    
-    @IBAction func exitButtonTapped(_ sender: UIButton) {
-        popUpView.isHidden = true
-    }
-    
-    @IBAction func calculateTotalTime(_ sender: Any) {
-        let decimalTime = Helper().vmCalculateTotalTime(takeOffTime: takeOffTime, landTime: landTime)
-        totalTime.text = decimalTime
-    }
-    
-    @IBAction func calculateTotalLandings(_sender: Any) {
-        //Here's where we do the math for filling in the total field
-        totalLandings.text = Helper().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
-    }
 
     @IBAction func addFlightButtonTapped(_ sender: UIButton) {
         
@@ -172,8 +152,6 @@ class FlightListViewController: UIViewController {
               let missionSymbol = missionSymbol.text, !missionSymbol.isEmpty,
               let fromICAO = fromICAO.text, !fromICAO.isEmpty,
               let toICAO = toICAO.text, !toICAO.isEmpty,
-              let takeOffTime = takeOffTime.text, !takeOffTime.isEmpty,
-              let landTime = landTime.text, !landTime.isEmpty,
               let totalTime = totalTime.text,!totalTime.isEmpty,
               let touchAndGo = touchAndGo.text, !touchAndGo.isEmpty,
               let fullStop = fullStop.text, !fullStop.isEmpty,
@@ -182,7 +160,7 @@ class FlightListViewController: UIViewController {
               let specialUse = specialUse.text, !specialUse.isEmpty
         else { return presentAlert() }
         
-        FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTime, landTime: landTime, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
+        FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTimeString, landTime: landTimeString, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
         
         flightTableView.reloadData()
         updateGrandTotals(form: form)
