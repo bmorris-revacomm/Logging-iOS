@@ -33,8 +33,15 @@ class Helper {
         }
     }
     
+    func checkInput(time: String) -> Bool {
+        if time.count == 4{
+            return true
+        } else {
+            return false
+        }
+        
+    }
     
-
     func separateHoursAndMins(strInput: String, pointer: String) -> String {
 
         let index0 = strInput.index(strInput.startIndex, offsetBy: 0)
