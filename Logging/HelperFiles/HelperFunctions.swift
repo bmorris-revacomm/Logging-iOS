@@ -198,8 +198,18 @@ class Helper {
         
             return "\(diffHrs).\(decMin)"
         }
+    
+    func highlightRed(textField: UITextField) {
+        textField.layer.borderColor = UIColor.red.cgColor
+        textField.layer.borderWidth = 1
+    }
+    
+    func highlightGray(textField: UITextField) {
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.layer.borderWidth = 1
+    }
 
-    func vmPrint_func() {
+    func printFormFunc() {
         
         let formImage = UIImage(named: "afto781.jpg")
         let dataImage = generateImage()

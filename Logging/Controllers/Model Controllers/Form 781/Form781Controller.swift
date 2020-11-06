@@ -44,8 +44,10 @@ class Form781Controller {
     //populates from previous form
     func populateCrewMembers() {
         let numberOfForms = forms.count
-        let crewMemberArray = forms[numberOfForms - 2].crewMembers
-        forms.last?.crewMembers = crewMemberArray
+        if numberOfForms > 1 {
+            let crewMemberArray = forms[numberOfForms - 2].crewMembers
+            forms.last?.crewMembers = crewMemberArray
+        }
     }
     
     // MARK: - Update

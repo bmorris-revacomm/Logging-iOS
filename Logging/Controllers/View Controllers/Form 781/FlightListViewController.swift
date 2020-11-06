@@ -79,6 +79,11 @@ class FlightListViewController: UIViewController {
     }
     
     func presentInputErrorAlert() {
+        
+        if specialUse.text == "" {
+            Helper().highlightRed(textField: specialUse)
+        }
+        
         guard let form = Form781Controller.shared.forms.last,
               let flightSeq = flightSeq.text,
               let missionNumber = missionNumber.text,
@@ -140,24 +145,20 @@ class FlightListViewController: UIViewController {
     @IBAction func calculateTotalTime(_ sender: Any) {    
         if Helper().checkInput(time: takeOffTime.text!) {
             takeOffTimeString = takeOffTime.text!
-            takeOffTime.layer.borderColor = UIColor.lightGray.cgColor
-            takeOffTime.layer.borderWidth = 1
+            Helper().highlightGray(textField: takeOffTime)
             
             if Helper().checkInput(time: landTime.text!) {
                 landTimeString = landTime.text!
-                landTime.layer.borderColor = UIColor.lightGray.cgColor
-                landTime.layer.borderWidth = 1
+                Helper().highlightGray(textField: landTime)
                 
                 let decimalTime = Helper().vmCalculateTotalTime(takeOffTime: takeOffTime, landTime: landTime)
                 totalTime.text = decimalTime
             } else {
-                landTime.layer.borderColor = UIColor.red.cgColor
-                landTime.layer.borderWidth = 1
+                Helper().highlightRed(textField: landTime)
                 Alerts.showTimeErrorAlert(on: self)
             }
         } else {
-            takeOffTime.layer.borderColor = UIColor.red.cgColor
-            takeOffTime.layer.borderWidth = 1
+            Helper().highlightRed(textField: takeOffTime)
             Alerts.showTimeErrorAlert(on: self)
         }
     }

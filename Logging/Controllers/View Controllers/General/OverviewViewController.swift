@@ -27,7 +27,7 @@ class OverviewViewController: UIViewController {
     }
     
     @IBAction func printButtonTapped(_ sender: UIButton) {
-        Helper().vmPrint_func()
+        Helper().printFormFunc()
     }
     
     /*
