@@ -57,6 +57,7 @@ class AircrewListViewController: UIViewController {
     func setUpViews() {
         aircrewTableView.delegate = self
         aircrewTableView.dataSource = self
+        
         guard let form = Form781Controller.shared.forms.last else { return }
         headerTitleLabel.text = "Mission \(form.date)"
     }
@@ -221,6 +222,7 @@ class AircrewListViewController: UIViewController {
             guard let indexPath = aircrewTableView.indexPathForSelectedRow, let destinationVC = segue.destination as? AircrewDetailViewController else { return }
             let crewMember = Form781Controller.shared.forms.last?.crewMembers[indexPath.row]
             destinationVC.crewMember = crewMember
+            destinationVC.delegate = self
         }
     }
     
@@ -245,11 +247,6 @@ extension AircrewListViewController: UITableViewDelegate, UITableViewDataSource 
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("selected")
-//        performSegue(withIdentifier: "ToAircrewDetailVC", sender: indexPath.row)
-//    }
-    
 } //End
 
 // MARK: - TableViewCell Delegate
@@ -257,9 +254,9 @@ extension AircrewListViewController: UITableViewDelegate, UITableViewDataSource 
 extension AircrewListViewController: AircrewTableViewCellDelegate {
     
     func editButtonTapped(cell: AircrewTableViewCell) {
-        
+        self.performSegue(withIdentifier: "ToAircrewDetailVC", sender: self)
     }
-    
+
     func deleteButtonTapped(cell: AircrewTableViewCell) {
         guard let form = Form781Controller.shared.forms.last,
               let indexPath = aircrewTableView.indexPath(for: cell) else { return }
@@ -267,6 +264,16 @@ extension AircrewListViewController: AircrewTableViewCellDelegate {
         Form781Controller.shared.remove(crewMember: crewMember, from: form)
         aircrewTableView.reloadData()
         print("Deleted crew member")
+    }
+    
+} //End
+
+extension AircrewListViewController: AircrewDetailViewControllerDelegate {
+    
+    func exitButtonTapped() {
+        navigationController?.dismiss(animated: true, completion: {
+            self.aircrewTableView.reloadData()
+        })
     }
     
 } //End

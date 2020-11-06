@@ -8,11 +8,13 @@
 
 import UIKit
 
+protocol AircrewDetailViewControllerDelegate: class {
+    func exitButtonTapped()
+}
+
 class AircrewDetailViewController: UIViewController {
     
     // MARK: - Outlets
-    
-    var crewMember: CrewMember?
 
     @IBOutlet weak var name: UILabel!
     
@@ -39,8 +41,10 @@ class AircrewDetailViewController: UIViewController {
     @IBOutlet weak var combatSptTime: UITextField!
     @IBOutlet weak var combatSptSrty: UITextField!
     @IBOutlet weak var resv: UITextField!
-
     
+    var crewMember: CrewMember?
+    weak var delegate: AircrewDetailViewControllerDelegate?
+
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -132,7 +136,7 @@ class AircrewDetailViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func exitButtonTapped(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        delegate?.exitButtonTapped()
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
