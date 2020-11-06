@@ -34,7 +34,7 @@ class AircrewTableViewCell: UITableViewCell {
         flyingOriginLabel.text = crewMember.flyingOrigin
         flightAuthDutyCodeLabel.text = crewMember.flightAuthDutyCode
     }
-
+    
     @IBAction func editButtonTapped(_ sender: UIButton) {
         delegate?.editButtonTapped(cell: self)
     }
