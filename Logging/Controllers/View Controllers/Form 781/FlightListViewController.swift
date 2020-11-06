@@ -154,12 +154,26 @@ class FlightListViewController: UIViewController {
                 let decimalTime = Helper().vmCalculateTotalTime(takeOffTime: takeOffTime, landTime: landTime)
                 totalTime.text = decimalTime
             } else {
-                Helper().highlightRed(textField: landTime)
-                Alerts.showTimeErrorAlert(on: self)
+                if landTime.text == ""{
+                    landTime.text = ""
+                    totalTime.text = " "
+                    Helper().highlightRed(textField: landTime)
+                    Alerts.showTimeErrorAlert(on: self)
+                } else {
+                    Helper().highlightRed(textField: landTime)
+                    Alerts.showTimeErrorAlert(on: self)
+                }
             }
         } else {
-            Helper().highlightRed(textField: takeOffTime)
-            Alerts.showTimeErrorAlert(on: self)
+            if takeOffTime.text == ""{
+                takeOffTime.text = ""
+                totalTime.text = ""
+                Helper().highlightRed(textField: takeOffTime)
+                Alerts.showTimeErrorAlert(on: self)
+            } else {
+                Helper().highlightRed(textField: takeOffTime)
+                Alerts.showTimeErrorAlert(on: self)
+            }
         }
     }
         
