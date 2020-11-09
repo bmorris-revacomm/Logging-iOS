@@ -25,7 +25,6 @@ extension UIColor {
     
     static let notBlack = UIColor(named: "notBlack")!
     static let slate = UIColor(named: "slate")!
-    static let PBLGray = UIColor(named: "PBLGray")!
     static let fog = UIColor(named: "fog")!
     static let haze = UIColor(named: "haze")!
     static let mist = UIColor(named: "mist")!

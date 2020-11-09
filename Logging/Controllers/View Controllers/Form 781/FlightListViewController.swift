@@ -333,15 +333,15 @@ class FlightListViewController: UIViewController {
         
         var flightSeq = "A"
         switch form.flights.count {
-        case 2:
+        case 1:
             flightSeq = "B"
-        case 3:
+        case 2:
             flightSeq = "C"
-        case 4:
+        case 3:
             flightSeq = "D"
-        case 5:
+        case 4:
             flightSeq = "E"
-        case 6:
+        case 5:
             flightSeq = "F"
         default:
             flightSeq = "A"

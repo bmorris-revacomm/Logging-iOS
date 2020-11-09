@@ -87,21 +87,21 @@
                                     <action selector="backButtonTapped:" destination="unr-ra-C2P" eventType="touchUpInside" id="zlh-10-bPv"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fDb-HB-o5P">
-                                <rect key="frame" x="248" y="529.5" width="272" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fDb-HB-o5P">
+                                <rect key="frame" x="329.5" y="529.5" width="109" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6e-vY-BUM" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="143" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6e-vY-BUM" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="109" height="30"/>
                                         <color key="backgroundColor" name="haze"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="YES, ADD AIRCREW"/>
+                                        <state key="normal" title="YES"/>
                                         <connections>
                                             <action selector="addAircrewButtonTapped:" destination="unr-ra-C2P" eventType="touchUpInside" id="pWx-gI-5wI"/>
                                             <segue destination="u3J-Bq-h7s" kind="show" id="Mh9-v2-4O6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojz-qN-SvQ" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="163" y="0.0" width="109" height="30"/>
+                                        <rect key="frame" x="0.0" y="50" width="109" height="30"/>
                                         <color key="backgroundColor" name="haze"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="SKIP FOR NOW"/>
