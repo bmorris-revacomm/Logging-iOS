@@ -144,10 +144,8 @@ class FlightListViewController: UIViewController {
             
             if Form781Controller.shared.formCreated == false {
                 Form781Controller.shared.create(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
-                print("Created form")
             } else {
                 Form781Controller.shared.updateMissionData(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
-                print("Saved form")
             }
             
             self.updateLabels()
@@ -199,7 +197,6 @@ class FlightListViewController: UIViewController {
             self.updateGrandTotals(form: form)
             self.flightSeqPopUp2.isHidden = true
             self.enableButtons()
-            print("Saved flight")
         }
     }
     
@@ -238,10 +235,8 @@ class FlightListViewController: UIViewController {
         
         if Form781Controller.shared.formCreated == false {
             Form781Controller.shared.create(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
-            print("Created form")
         } else {
             Form781Controller.shared.updateMissionData(date: date, mds: mds, serialNumber: serialNumber, unitCharged: unitCharged, harmLocation: harmLocation, flightAuthNum: flightAuthNum, issuingUnit: issuingUnit)
-            print("Saved form")
         }
         
         updateLabels()
@@ -353,7 +348,6 @@ class FlightListViewController: UIViewController {
         updateGrandTotals(form: form)
         flightSeqPopUp2.isHidden = true
         enableButtons()
-        print("Saved flight")
     }
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {

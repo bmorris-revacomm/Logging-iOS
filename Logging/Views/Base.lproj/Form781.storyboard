@@ -671,7 +671,7 @@
                                     <rect key="frame" x="0.0" y="156" width="691" height="49"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBO-fX-j2m" userLabel="Divider line">
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBO-fX-j2m" userLabel="Divider line">
                                             <rect key="frame" x="0.0" y="48" width="691" height="1"/>
                                             <color key="backgroundColor" name="fog"/>
                                             <constraints>

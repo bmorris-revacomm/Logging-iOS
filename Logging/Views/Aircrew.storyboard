@@ -326,7 +326,7 @@
                                                 <action selector="addButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="1iN-aj-Klp"/>
                                             </connections>
                                         </button>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIA-Yj-Mtu" userLabel="Divider line">
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIA-Yj-Mtu" userLabel="Divider line">
                                             <rect key="frame" x="0.0" y="43" width="691" height="1"/>
                                             <color key="backgroundColor" name="fog"/>
                                             <constraints>
@@ -1536,6 +1536,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rxd-cA-WAY"/>
                         <color key="backgroundColor" name="mist"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="EZB-vb-0yS" firstAttribute="top" secondItem="Rxd-cA-WAY" secondAttribute="top" constant="30" id="3zH-cX-nEn"/>
                             <constraint firstItem="yJI-1h-Y3D" firstAttribute="centerX" secondItem="Rxd-cA-WAY" secondAttribute="centerX" id="AFB-cs-XcW"/>
@@ -1547,6 +1548,9 @@
                             <constraint firstItem="tr0-Pk-jiw" firstAttribute="centerX" secondItem="Rxd-cA-WAY" secondAttribute="centerX" id="otK-cI-HQa"/>
                             <constraint firstItem="tr0-Pk-jiw" firstAttribute="centerY" secondItem="Rxd-cA-WAY" secondAttribute="centerY" multiplier="0.2" id="uIE-AF-PdF"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="vei-j3-Xc6" appends="YES" id="lY5-co-JA2"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="aH6-jl-HBL"/>
                     <connections>
@@ -1575,6 +1579,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVj-QY-eNg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="vei-j3-Xc6">
+                    <connections>
+                        <action selector="viewTapped:" destination="gQ6-to-w7V" id="SBJ-Kb-xy3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2019" y="-54"/>
         </scene>
