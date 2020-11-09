@@ -671,7 +671,7 @@
                                     <rect key="frame" x="0.0" y="156" width="691" height="49"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBO-fX-j2m" userLabel="Divider line">
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBO-fX-j2m" userLabel="Divider line">
                                             <rect key="frame" x="0.0" y="48" width="691" height="1"/>
                                             <color key="backgroundColor" name="fog"/>
                                             <constraints>
@@ -1922,7 +1922,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to add mission data?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUs-fS-5Wd" customClass="PBLLabelLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="190" y="388" width="388.5" height="104.5"/>
+                                <rect key="frame" x="197.5" y="388" width="373.5" height="93.5"/>
                                 <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="40"/>
                                 <color key="textColor" name="fog"/>
                                 <nil key="highlightedColor"/>
@@ -1937,7 +1937,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ihq-J4-Y87">
-                                <rect key="frame" x="329.5" y="532.5" width="109" height="80"/>
+                                <rect key="frame" x="329.5" y="521.5" width="109" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcn-OI-ZjX" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="109" height="30"/>

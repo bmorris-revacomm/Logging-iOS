@@ -56,3 +56,21 @@ class PBLButtonLight: PBLButton {
     }
     
 }
+
+class PBLOverviewButton: PBLButtonClear {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = .mist
+        self.setTitleColor(.slate, for: .normal)
+        self.tintColor = .slate
+        self.contentHorizontalAlignment = .left
+        self.contentEdgeInsets = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 0)
+        
+        self.layer.shadowColor = UIColor.fog.cgColor
+        self.layer.shadowOpacity = 1
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        self.layer.shadowRadius = 2
+    }
+    
+}

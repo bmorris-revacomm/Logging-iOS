@@ -90,7 +90,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lyo-k7-NQA">
                                 <rect key="frame" x="237" y="577.5" width="294" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Gaq-5F-brU" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Gaq-5F-brU" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="294" height="30"/>
                                         <color key="backgroundColor" name="haze"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
@@ -100,7 +100,7 @@
                                             <segue destination="K4U-Ne-7YF" kind="show" id="bnj-cR-YOb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-Nk-EBD" customClass="PBLButtonClear" customModule="Logging" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-Nk-EBD" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="294" height="30"/>
                                         <color key="backgroundColor" name="haze"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>

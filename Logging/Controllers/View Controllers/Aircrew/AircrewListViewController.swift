@@ -268,9 +268,17 @@ extension AircrewListViewController: AircrewTableViewCellDelegate {
     
 } //End
 
+// MARK: - Detail View Delegate
+
 extension AircrewListViewController: AircrewDetailViewControllerDelegate {
-    
+
     func exitButtonTapped() {
+        navigationController?.dismiss(animated: true, completion: {
+            self.aircrewTableView.reloadData()
+        })
+    }
+    
+    func saveButtonTapped() {
         navigationController?.dismiss(animated: true, completion: {
             self.aircrewTableView.reloadData()
         })
