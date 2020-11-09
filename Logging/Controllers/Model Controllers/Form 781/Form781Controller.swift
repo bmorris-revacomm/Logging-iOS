@@ -29,6 +29,7 @@ class Form781Controller {
         formCreated = true
         populateFlights()
         populateCrewMembers()
+        print("Created form")
         save()
     }
     
@@ -38,6 +39,7 @@ class Form781Controller {
         if numberOfForms > 1 {
             let flightsArray = forms[numberOfForms - 2].flights
             forms.last?.flights = flightsArray
+            print("Populated flights")
         }
     }
     
@@ -47,6 +49,7 @@ class Form781Controller {
         if numberOfForms > 1 {
             let crewMemberArray = forms[numberOfForms - 2].crewMembers
             forms.last?.crewMembers = crewMemberArray
+            print("Populated crew members")
         }
     }
     
@@ -62,11 +65,13 @@ class Form781Controller {
         form.harmLocation = harmLocation
         form.flightAuthNum = flightAuthNum
         form.issuingUnit = issuingUnit
+        print("Updated mission data")
         save()
     }
     
     func updateFormWith(flight: Flight, form: Form781) {
         form.flights.append(flight)
+        print("Added flight")
         save()
     }
     
@@ -76,11 +81,41 @@ class Form781Controller {
         form.grandTotalFullStop = grandFullStop
         form.grandTotalLandings = grandTotalLandings
         form.grandTotalSorties = grandTotalSorties
+        print("Updated grand totals")
         save()
     }
     
     func updateFormwith(crewMember: CrewMember, form: Form781) {
         form.crewMembers.append(crewMember)
+        print("Added crew member")
+        save()
+    }
+    
+    func updateCrewMember(crewMember: CrewMember, lastName: String, firstName: String, ssnLast4: String, flightAuthDutyCode: String, flyingOrigin: String, primary: String, secondary: String, instructor: String, evaluator: String, other: String, time: String, srty: String, nightPSIE: String, insPIE: String, simIns: String, nvg: String, combatTime: String, combatSrty: String, combatSptTime: String, combatSptSrty: String, resvStatus: String) {
+        
+        crewMember.lastName = lastName
+        crewMember.firstName = firstName
+        crewMember.ssnLast4 = ssnLast4
+        crewMember.flyingOrigin = flyingOrigin
+        crewMember.flightAuthDutyCode = flightAuthDutyCode
+        crewMember.primary = primary
+        crewMember.secondary = secondary
+        crewMember.instructor = instructor
+        crewMember.evaluator = evaluator
+        crewMember.other = other
+        crewMember.time = time
+        crewMember.srty = srty
+        crewMember.nightPSIE = nightPSIE
+        crewMember.insPIE = insPIE
+        crewMember.simIns = simIns
+        crewMember.nvg = nvg
+        crewMember.combatTime = combatTime
+        crewMember.combatSrty = combatSrty
+        crewMember.combatSptTime = combatSptTime
+        crewMember.combatSptSrty = combatSptSrty
+        crewMember.resvStatus = resvStatus
+                
+        print("Updated crew member")
         save()
     }
     
@@ -89,12 +124,38 @@ class Form781Controller {
     func remove(flight: Flight, from form: Form781) {
         guard let index = form.flights.firstIndex(of: flight) else { return }
         form.flights.remove(at: index)
+        updateFlightSeqLetters()
+        print("Removed flight")
         save()
+    }
+    
+    func updateFlightSeqLetters() {
+        guard let flights = forms.last?.flights else { return }
+        for (index, flight) in flights.enumerated() {
+            
+            switch index {
+            case 0:
+                flight.flightSeq = "A"
+            case 1:
+                flight.flightSeq = "B"
+            case 2:
+                flight.flightSeq = "C"
+            case 3:
+                flight.flightSeq = "D"
+            case 4:
+                flight.flightSeq = "E"
+            case 5:
+                flight.flightSeq = "F"
+            default:
+                flight.flightSeq = ""
+            }
+        }
     }
     
     func remove(crewMember: CrewMember, from form: Form781) {
         guard let index = form.crewMembers.firstIndex(of: crewMember) else { return }
         form.crewMembers.remove(at: index)
+        print("Removed crew member")
         save()
     }
     

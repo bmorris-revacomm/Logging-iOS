@@ -10,6 +10,7 @@ import UIKit
 
 protocol AircrewDetailViewControllerDelegate: class {
     func exitButtonTapped()
+    func saveButtonTapped()
 }
 
 class AircrewDetailViewController: UIViewController {
@@ -109,27 +110,9 @@ class AircrewDetailViewController: UIViewController {
         
         Alerts.showInputErrorAlert(on: self) { (_) in
             
-            crewMember.lastName = lastName
-            crewMember.firstName = firstName
-            crewMember.ssnLast4 = ssn
-            crewMember.flyingOrigin = flyingOrigin
-            crewMember.flightAuthDutyCode = flightAuthDutyCode
-            crewMember.primary = primary
-            crewMember.secondary = secondary
-            crewMember.instructor = instructor
-            crewMember.evaluator = evaluator
-            crewMember.other = other
-            crewMember.time = time
-            crewMember.srty = srty
-            crewMember.nightPSIE = nightPSIE
-            crewMember.insPIE = insPIE
-            crewMember.simIns = simIns
-            crewMember.nvg = nvg
-            crewMember.combatTime = combatTime
-            crewMember.combatSrty = combatSrty
-            crewMember.combatSptTime = combatSptTime
-            crewMember.combatSptSrty = combatSptSrty
-            crewMember.resvStatus = resv
+            Form781Controller.shared.updateCrewMember(crewMember: crewMember, lastName: lastName, firstName: firstName, ssnLast4: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin, primary: primary, secondary: secondary, instructor: instructor, evaluator: evaluator, other: other, time: time, srty: srty, nightPSIE: nightPSIE, insPIE: insPIE, simIns: simIns, nvg: nvg, combatTime: combatTime, combatSrty: combatSrty, combatSptTime: combatSptTime, combatSptSrty: combatSptSrty, resvStatus: resv)
+            
+            self.delegate?.saveButtonTapped()
         }
     }
     
@@ -165,27 +148,33 @@ class AircrewDetailViewController: UIViewController {
               let resv = resv.text, !resv.isEmpty
         else { return presentAlert() }
         
-        crewMember.lastName = lastName
-        crewMember.firstName = firstName
-        crewMember.ssnLast4 = ssn
-        crewMember.flyingOrigin = flyingOrigin
-        crewMember.flightAuthDutyCode = flightAuthDutyCode
-        crewMember.primary = primary
-        crewMember.secondary = secondary
-        crewMember.instructor = instructor
-        crewMember.evaluator = evaluator
-        crewMember.other = other
-        crewMember.time = time
-        crewMember.srty = srty
-        crewMember.nightPSIE = nightPSIE
-        crewMember.insPIE = insPIE
-        crewMember.simIns = simIns
-        crewMember.nvg = nvg
-        crewMember.combatTime = combatTime
-        crewMember.combatSrty = combatSrty
-        crewMember.combatSptTime = combatSptTime
-        crewMember.combatSptSrty = combatSptSrty
-        crewMember.resvStatus = resv
+        Form781Controller.shared.updateCrewMember(crewMember: crewMember, lastName: lastName, firstName: firstName, ssnLast4: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin, primary: primary, secondary: secondary, instructor: instructor, evaluator: evaluator, other: other, time: time, srty: srty, nightPSIE: nightPSIE, insPIE: insPIE, simIns: simIns, nvg: nvg, combatTime: combatTime, combatSrty: combatSrty, combatSptTime: combatSptTime, combatSptSrty: combatSptSrty, resvStatus: resv)
+        
+        delegate?.saveButtonTapped()
     }
     
+    @IBAction func viewTapped(_ sender: UITapGestureRecognizer) {
+        lastName.resignFirstResponder()
+        firstName.resignFirstResponder()
+        ssn.resignFirstResponder()
+        flyingOrigin.resignFirstResponder()
+        flightAuthDutyCode.resignFirstResponder()
+        primary.resignFirstResponder()
+        secondary.resignFirstResponder()
+        instructor.resignFirstResponder()
+        evaluator.resignFirstResponder()
+        other.resignFirstResponder()
+        time.resignFirstResponder()
+        srty.resignFirstResponder()
+        nightPSIE.resignFirstResponder()
+        insPIE.resignFirstResponder()
+        simIns.resignFirstResponder()
+        nvg.resignFirstResponder()
+        combatTime.resignFirstResponder()
+        combatSrty.resignFirstResponder()
+        combatSptTime.resignFirstResponder()
+        combatSptSrty.resignFirstResponder()
+        resv.resignFirstResponder()
+    }
+        
 } //End
