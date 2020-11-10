@@ -66,7 +66,7 @@ class AircrewListViewController: UIViewController {
         guard let form = Form781Controller.shared.forms.last,
               let lastName = lastName.text,
               let firstName = firstName.text,
-              let ssn = ssn.text, !ssn.isEmpty,
+              let ssn = ssn.text,
               let flightAuthDutyCode = flightAuthDutyCode.text,
               let flyingOrigin = flyingOrigin.text,
               let primary = primary.text,
@@ -94,8 +94,55 @@ class AircrewListViewController: UIViewController {
             self.aircrewTableView.reloadData()
             self.popUp3View.isHidden = true
             self.enableButtons()
-            print("Saved crew member")
         }
+    }
+    
+    func highlight() {
+        lastName.text == "" ? Helper.highlightRed(textField: lastName) : Helper.unhighlight(textField: lastName)
+        firstName.text == "" ? Helper.highlightRed(textField: firstName) : Helper.unhighlight(textField: firstName)
+        ssn.text == "" ? Helper.highlightRed(textField: ssn) : Helper.unhighlight(textField: ssn)
+        flightAuthDutyCode.text == "" ? Helper.highlightRed(textField: flightAuthDutyCode) : Helper.unhighlight(textField: flightAuthDutyCode)
+        flyingOrigin.text == "" ? Helper.highlightRed(textField: flyingOrigin) : Helper.unhighlight(textField: flyingOrigin)
+        primary.text == "" ? Helper.highlightRed(textField: primary) : Helper.unhighlight(textField: primary)
+        secondary.text == "" ? Helper.highlightRed(textField: secondary) : Helper.unhighlight(textField: secondary)
+        instructor.text == "" ? Helper.highlightRed(textField: instructor) : Helper.unhighlight(textField: instructor)
+        evaluator.text == "" ? Helper.highlightRed(textField: evaluator) : Helper.unhighlight(textField: evaluator)
+        other.text == "" ? Helper.highlightRed(textField: other) : Helper.unhighlight(textField: other)
+        time.text == "" ? Helper.highlightRed(textField: time) : Helper.unhighlight(textField: time)
+        srty.text == "" ? Helper.highlightRed(textField: srty) : Helper.unhighlight(textField: srty)
+        nightPSIE.text == "" ? Helper.highlightRed(textField: nightPSIE) : Helper.unhighlight(textField: nightPSIE)
+        insPIE.text == "" ? Helper.highlightRed(textField: insPIE) : Helper.unhighlight(textField: insPIE)
+        simIns.text == "" ? Helper.highlightRed(textField: simIns) : Helper.unhighlight(textField: simIns)
+        nvg.text == "" ? Helper.highlightRed(textField: nvg) : Helper.unhighlight(textField: nvg)
+        combatTime.text == "" ? Helper.highlightRed(textField: combatTime) : Helper.unhighlight(textField: combatTime)
+        combatSrty.text == "" ? Helper.highlightRed(textField: combatSrty) : Helper.unhighlight(textField: combatSrty)
+        combatSptTime.text == "" ? Helper.highlightRed(textField: combatSptTime) : Helper.unhighlight(textField: combatSptTime)
+        combatSptSrty.text == "" ? Helper.highlightRed(textField: combatSptSrty) : Helper.unhighlight(textField: combatSptSrty)
+        resvStatus.text == "" ? Helper.highlightRed(textField: resvStatus) : Helper.unhighlight(textField: resvStatus)
+    }
+    
+    func unhighlight() {
+        Helper.unhighlight(textField: lastName)
+        Helper.unhighlight(textField: firstName)
+        Helper.unhighlight(textField: ssn)
+        Helper.unhighlight(textField: flightAuthDutyCode)
+        Helper.unhighlight(textField: flyingOrigin)
+        Helper.unhighlight(textField: primary)
+        Helper.unhighlight(textField: secondary)
+        Helper.unhighlight(textField: instructor)
+        Helper.unhighlight(textField: evaluator)
+        Helper.unhighlight(textField: other)
+        Helper.unhighlight(textField: time)
+        Helper.unhighlight(textField: srty)
+        Helper.unhighlight(textField: nightPSIE)
+        Helper.unhighlight(textField: insPIE)
+        Helper.unhighlight(textField: simIns)
+        Helper.unhighlight(textField: nvg)
+        Helper.unhighlight(textField: combatTime)
+        Helper.unhighlight(textField: combatSrty)
+        Helper.unhighlight(textField: combatSptTime)
+        Helper.unhighlight(textField: combatSptSrty)
+        Helper.unhighlight(textField: resvStatus)
     }
     
     func disableButtons() {
@@ -115,6 +162,7 @@ class AircrewListViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func addButtonTapped(_ sender: UIButton) {
+        unhighlight()
         popUp1View.isHidden = false
         disableButtons()
     }
@@ -147,8 +195,9 @@ class AircrewListViewController: UIViewController {
     }
     
     @IBAction func addNewAircrewButtonTapped(_ sender: UIButton) {
-        guard let form = Form781Controller.shared.forms.last,
-              let lastName = lastName.text, !lastName.isEmpty,
+        highlight()
+        guard let form = Form781Controller.shared.forms.last else { return }
+        guard let lastName = lastName.text, !lastName.isEmpty,
               let firstName = firstName.text, !firstName.isEmpty,
               let ssn = ssn.text, !ssn.isEmpty,
               let flightAuthDutyCode = flightAuthDutyCode.text, !flightAuthDutyCode.isEmpty,
@@ -176,7 +225,6 @@ class AircrewListViewController: UIViewController {
         aircrewTableView.reloadData()
         popUp3View.isHidden = true
         enableButtons()
-        print("Saved crew member")
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
@@ -263,7 +311,6 @@ extension AircrewListViewController: AircrewTableViewCellDelegate {
         let crewMember = form.crewMembers[indexPath.row]
         Form781Controller.shared.remove(crewMember: crewMember, from: form)
         aircrewTableView.reloadData()
-        print("Deleted crew member")
     }
     
 } //End

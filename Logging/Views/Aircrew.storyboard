@@ -540,10 +540,10 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwJ-3m-oDI" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="467" y="554" width="41" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="NEXT"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwJ-3m-oDI">
+                                        <rect key="frame" x="488" y="562" width="20" height="22"/>
+                                        <color key="tintColor" name="slate"/>
+                                        <state key="normal" image="arrow.right.circle" catalog="system"/>
                                         <connections>
                                             <action selector="next1ButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="Wi6-Ca-llb"/>
                                         </connections>
@@ -718,17 +718,18 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-MA-nrW" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="467" y="554" width="41" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="NEXT"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KG6-MA-nrW">
+                                        <rect key="frame" x="488" y="562" width="20" height="22"/>
+                                        <color key="tintColor" name="slate"/>
+                                        <state key="normal" image="arrow.right.circle" catalog="system"/>
                                         <connections>
                                             <action selector="next2ButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="pos-rE-foO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpE-C9-fHr" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="554" width="40" height="30"/>
-                                        <state key="normal" title="BACK"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpE-C9-fHr">
+                                        <rect key="frame" x="30" y="562" width="20" height="22"/>
+                                        <color key="tintColor" name="slate"/>
+                                        <state key="normal" image="arrow.backward.circle" catalog="system"/>
                                         <connections>
                                             <action selector="back2ButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="aaP-tc-dd0"/>
                                         </connections>
@@ -948,17 +949,18 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiZ-nO-blv" customClass="PBLButton" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="375" y="554" width="133" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiZ-nO-blv" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="372" y="554" width="136" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                        <state key="normal" title="+ ADD NEW CREW"/>
+                                        <state key="normal" title="SAVE &amp; CONTINUE"/>
                                         <connections>
                                             <action selector="addNewAircrewButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="2AK-gJ-aeh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJ0-0h-wtg" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="554" width="40" height="30"/>
-                                        <state key="normal" title="BACK"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJ0-0h-wtg" customClass="PBLButtonClear" customModule="Logging" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="562" width="20" height="22"/>
+                                        <color key="tintColor" name="slate"/>
+                                        <state key="normal" image="arrow.backward.circle" catalog="system"/>
                                         <connections>
                                             <action selector="back3ButtonTapped:" destination="u3J-Bq-h7s" eventType="touchUpInside" id="PZU-ew-0Ms"/>
                                         </connections>
@@ -1589,6 +1591,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
+        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
         <image name="minus.circle" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
