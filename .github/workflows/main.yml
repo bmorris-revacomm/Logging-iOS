@@ -16,10 +16,13 @@ jobs:
         
     #- name: Test
     #  run: xcodebuild -workspace Logging.xcworkspace -scheme "Logging"  -destination 'platform=iOS Simulator,name=iPad Pro (9.7-inch),OS=14.0' test
-    - name: Archive
-      run: xcodebuild -workspace Logging.xcworkspace -scheme "Logging" -sdk iphoneos -allowProvisioningUpdates -configuration AppStoreDistribution archive -archivePath $PWD/build/Logging.xcarchive
-    - name: Export
-      run: xcodebuild -exportArchive -archivePath $PWD/build/Logging.xcarchive -exportOptionsPlist exportOptions.plist -exportPath $PWD/build
+    - name: Build
+      run: xcodebuild -workspace Logging.xcworkspace -scheme "Logging"  -destination 'platform=iOS Simulator,name=iPad Pro (9.7-inch),OS=14.0' 
+    
+    #- name: Archive
+     # run: xcodebuild -workspace Logging.xcworkspace -scheme "Logging" -sdk iphoneos -allowProvisioningUpdates -configuration AppStoreDistribution archive -archivePath $PWD/build/Logging.xcarchive
+    #- name: Export
+     # run: xcodebuild -exportArchive -archivePath $PWD/build/Logging.xcarchive -exportOptionsPlist exportOptions.plist -exportPath $PWD/build
       
     - name: NowSecure Platform Integration
       uses: blawrencens/nowsecure-actions-integration@1.0.2
