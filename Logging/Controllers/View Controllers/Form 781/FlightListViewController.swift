@@ -210,7 +210,6 @@ class FlightListViewController: UIViewController {
         missionSymbol.text == "" ? Helper.highlightRed(textField: missionSymbol) : Helper.unhighlight(textField: missionSymbol)
         fromICAO.text == "" ? Helper.highlightRed(textField: fromICAO) : Helper.unhighlight(textField: fromICAO)
         toICAO.text == "" ? Helper.highlightRed(textField: toICAO) : Helper.unhighlight(textField: toICAO)
-        specialUse.text == "" ? Helper.highlightRed(textField: specialUse) : Helper.unhighlight(textField: specialUse)
         takeOffTime.text == "" ? Helper.highlightRed(textField: takeOffTime) : Helper.unhighlight(textField: takeOffTime)
         landTime.text == "" ? Helper.highlightRed(textField: landTime) : Helper.unhighlight(textField: landTime)
         totalTime.text == "" ? Helper.highlightRed(textField: totalTime) : Helper.unhighlight(textField: totalTime)
@@ -293,6 +292,8 @@ class FlightListViewController: UIViewController {
     }
     
     @IBAction func newFlightButtonTapped(_ sender: UIButton) {
+        guard let form = Form781Controller.shared.forms.last else { return }
+        guard form.flights.count < 6 else { return Alerts.showFlightsErrorAlert(on: self) }
         unhighlightFlightSeq()
         flightSeqPopUp1.isHidden = false
         disableButtons()
@@ -361,7 +362,6 @@ class FlightListViewController: UIViewController {
 
     @IBAction func saveFlightButtonTapped(_ sender: UIButton) {
         guard let form = Form781Controller.shared.forms.last else { return }
-        guard form.flights.count < 6 else { return Alerts.showFlightsErrorAlert(on: self) }
         highlightFlightSeq()
                 
         guard let missionNumber = missionNumber.text, !missionNumber.isEmpty,
