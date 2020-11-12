@@ -20,6 +20,7 @@ class PBLTextField: UITextField {
         self.textColor = .slate
         self.textAlignment = .center
         self.autocapitalizationType = .allCharacters
+        self.autocorrectionType = .no
         self.updateFont(to: FontNames.dmSansBold)
     }
     

@@ -1219,16 +1219,16 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="430" height="77.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xyf-2l-YvA" userLabel="6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="261" height="77.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="243.5" height="77.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-5f-9y6" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="261" height="14.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="243.5" height="14.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD MMM YYY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whD-PI-M6O" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="261" height="55"/>
+                                                                        <rect key="frame" x="0.0" y="22.5" width="243.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="h2p-Lb-aMs"/>
                                                                         </constraints>
@@ -1238,16 +1238,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Bt-ji-XAw" userLabel="7">
-                                                                <rect key="frame" x="291" y="0.0" width="139" height="77.5"/>
+                                                                <rect key="frame" x="273.5" y="0.0" width="156.5" height="77.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogI-P3-onR" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="14.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="156.5" height="14.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-zc-2NM" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="139" height="55"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X-XX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-zc-2NM" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="22.5" width="156.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="fbg-TC-PLD"/>
                                                                         </constraints>
@@ -1339,9 +1339,6 @@
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
-                                                                        <connections>
-                                                                            <action selector="calculateTotalTime:" destination="gFV-3G-E5E" eventType="editingDidEnd" id="fxf-iQ-6gG"/>
-                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
