@@ -155,11 +155,6 @@ class FlightListViewController: UIViewController {
     }
     
     func presentFlightInputErrorAlert() {
-        
-        if specialUse.text == "" {
-            Helper().highlightRed(textField: specialUse)
-        }
-        
         guard let form = Form781Controller.shared.forms.last,
               let missionNumber = missionNumber.text,
               let missionSymbol = missionSymbol.text,
@@ -200,6 +195,56 @@ class FlightListViewController: UIViewController {
         }
     }
     
+    func highlightMissionData() {
+        dateTextField.text == "" ? Helper.highlightRed(textField: dateTextField) : Helper.unhighlight(textField: dateTextField)
+        mdsTextField.text == "" ? Helper.highlightRed(textField: mdsTextField) : Helper.unhighlight(textField: mdsTextField)
+        serialNumTextField.text == "" ? Helper.highlightRed(textField: serialNumTextField) : Helper.unhighlight(textField: serialNumTextField)
+        unitChargedTextField.text == "" ? Helper.highlightRed(textField: unitChargedTextField) : Helper.unhighlight(textField: unitChargedTextField)
+        harmLocationTextField.text == "" ? Helper.highlightRed(textField: harmLocationTextField) : Helper.unhighlight(textField: harmLocationTextField)
+        flightAuthTextField.text == "" ? Helper.highlightRed(textField: flightAuthTextField) : Helper.unhighlight(textField: flightAuthTextField)
+        issuingUnitTextField.text == "" ? Helper.highlightRed(textField: issuingUnitTextField) : Helper.unhighlight(textField: issuingUnitTextField)
+    }
+    
+    func highlightFlightSeq() {
+        missionNumber.text == "" ? Helper.highlightRed(textField: missionNumber) : Helper.unhighlight(textField: missionNumber)
+        missionSymbol.text == "" ? Helper.highlightRed(textField: missionSymbol) : Helper.unhighlight(textField: missionSymbol)
+        fromICAO.text == "" ? Helper.highlightRed(textField: fromICAO) : Helper.unhighlight(textField: fromICAO)
+        toICAO.text == "" ? Helper.highlightRed(textField: toICAO) : Helper.unhighlight(textField: toICAO)
+        specialUse.text == "" ? Helper.highlightRed(textField: specialUse) : Helper.unhighlight(textField: specialUse)
+        takeOffTime.text == "" ? Helper.highlightRed(textField: takeOffTime) : Helper.unhighlight(textField: takeOffTime)
+        landTime.text == "" ? Helper.highlightRed(textField: landTime) : Helper.unhighlight(textField: landTime)
+        totalTime.text == "" ? Helper.highlightRed(textField: totalTime) : Helper.unhighlight(textField: totalTime)
+        touchAndGo.text == "" ? Helper.highlightRed(textField: touchAndGo) : Helper.unhighlight(textField: touchAndGo)
+        fullStop.text == "" ? Helper.highlightRed(textField: fullStop) : Helper.unhighlight(textField: fullStop)
+        totalLandings.text == "" ? Helper.highlightRed(textField: totalLandings) : Helper.unhighlight(textField: totalLandings)
+        sorties.text == "" ? Helper.highlightRed(textField: sorties) : Helper.unhighlight(textField: sorties)
+    }
+    
+    func unhighlightMissionData() {
+        Helper.unhighlight(textField: dateTextField)
+        Helper.unhighlight(textField: mdsTextField)
+        Helper.unhighlight(textField: serialNumTextField)
+        Helper.unhighlight(textField: unitChargedTextField)
+        Helper.unhighlight(textField: harmLocationTextField)
+        Helper.unhighlight(textField: flightAuthTextField)
+        Helper.unhighlight(textField: issuingUnitTextField)
+    }
+    
+    func unhighlightFlightSeq() {
+        Helper.unhighlight(textField: missionNumber)
+        Helper.unhighlight(textField: missionSymbol)
+        Helper.unhighlight(textField: fromICAO)
+        Helper.unhighlight(textField: toICAO)
+        Helper.unhighlight(textField: specialUse)
+        Helper.unhighlight(textField: takeOffTime)
+        Helper.unhighlight(textField: landTime)
+        Helper.unhighlight(textField: totalTime)
+        Helper.unhighlight(textField: touchAndGo)
+        Helper.unhighlight(textField: fullStop)
+        Helper.unhighlight(textField: totalLandings)
+        Helper.unhighlight(textField: sorties)
+    }
+    
     func disableButtons() {
         flightTableView.isUserInteractionEnabled = false
         printButton.isUserInteractionEnabled = false
@@ -219,11 +264,14 @@ class FlightListViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func editMissionButtonTapped(_ sender: UIButton) {
+        unhighlightMissionData()
         missionDataPopUp.isHidden = false
         disableButtons()
     }
     
     @IBAction func saveMissionDataTapped(_ sender: UIButton) {
+        highlightMissionData()
+        
         guard let date = dateTextField.text, !date.isEmpty,
               let mds = mdsTextField.text, !mds.isEmpty,
               let serialNumber = serialNumTextField.text, !serialNumber.isEmpty,
@@ -244,17 +292,8 @@ class FlightListViewController: UIViewController {
         enableButtons()
     }
     
-    @IBAction func popUpNextButtonTapped(_ sender: UIButton) {
-        flightSeqPopUp2.isHidden = false
-        flightSeqPopUp1.isHidden = true
-    }
-    
-    @IBAction func popUpBackButtonTapped(_ sender: UIButton) {
-        flightSeqPopUp1.isHidden = false
-        flightSeqPopUp2.isHidden = true
-    }
-    
     @IBAction func newFlightButtonTapped(_ sender: UIButton) {
+        unhighlightFlightSeq()
         flightSeqPopUp1.isHidden = false
         disableButtons()
     }
@@ -266,36 +305,46 @@ class FlightListViewController: UIViewController {
         enableButtons()
     }
     
+    @IBAction func popUpNextButtonTapped(_ sender: UIButton) {
+        flightSeqPopUp2.isHidden = false
+        flightSeqPopUp1.isHidden = true
+    }
+    
+    @IBAction func popUpBackButtonTapped(_ sender: UIButton) {
+        flightSeqPopUp1.isHidden = false
+        flightSeqPopUp2.isHidden = true
+    }
+    
     @IBAction func calculateTotalTime(_ sender: Any) {    
         if Helper().checkInput(time: takeOffTime.text!) {
             takeOffTimeString = takeOffTime.text!
-            Helper().highlightGray(textField: takeOffTime)
+            Helper.unhighlight(textField: takeOffTime)
             
             if Helper().checkInput(time: landTime.text!) {
                 landTimeString = landTime.text!
-                Helper().highlightGray(textField: landTime)
+                Helper.unhighlight(textField: landTime)
                 
                 let decimalTime = Helper().vmCalculateTotalTime(takeOffTime: takeOffTime, landTime: landTime)
                 totalTime.text = decimalTime
             } else {
-                if landTime.text == ""{
+                if landTime.text == "" {
                     landTime.text = ""
-                    totalTime.text = " "
-                    Helper().highlightRed(textField: landTime)
+                    totalTime.text = ""
+                    Helper.highlightRed(textField: landTime)
                     Alerts.showTimeErrorAlert(on: self)
                 } else {
-                    Helper().highlightRed(textField: landTime)
+                    Helper.highlightRed(textField: landTime)
                     Alerts.showTimeErrorAlert(on: self)
                 }
             }
         } else {
-            if takeOffTime.text == ""{
+            if takeOffTime.text == "" {
                 takeOffTime.text = ""
                 totalTime.text = ""
-                Helper().highlightRed(textField: takeOffTime)
+                Helper.highlightRed(textField: takeOffTime)
                 Alerts.showTimeErrorAlert(on: self)
             } else {
-                Helper().highlightRed(textField: takeOffTime)
+                Helper.highlightRed(textField: takeOffTime)
                 Alerts.showTimeErrorAlert(on: self)
             }
         }
@@ -313,6 +362,7 @@ class FlightListViewController: UIViewController {
     @IBAction func saveFlightButtonTapped(_ sender: UIButton) {
         guard let form = Form781Controller.shared.forms.last else { return }
         guard form.flights.count < 6 else { return Alerts.showFlightsErrorAlert(on: self) }
+        highlightFlightSeq()
                 
         guard let missionNumber = missionNumber.text, !missionNumber.isEmpty,
               let missionSymbol = missionSymbol.text, !missionSymbol.isEmpty,
@@ -419,7 +469,6 @@ extension FlightListViewController: FlightTableViewCellDelegate {
         let flight = form.flights[indexPath.row]
         Form781Controller.shared.remove(flight: flight, from: form)
         flightTableView.reloadData()
-        print("Deleted flight")
         
         updateGrandTotals(form: form)
     }
