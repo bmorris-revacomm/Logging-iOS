@@ -29,7 +29,7 @@ class Form781: Codable {
     
     #warning("TO DO: add maint and pilot review")
     
-    init(date: String,
+    public init(date: String,
         mds: String,
         serialNumber: String,
         unitCharged: String,
