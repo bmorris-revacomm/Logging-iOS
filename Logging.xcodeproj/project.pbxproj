@@ -119,6 +119,8 @@
 		7FEE987C2554588D00971F60 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FEE987B2554588D00971F60 /* DMSans-Regular.ttf */; };
 		7FEE987D2554588D00971F60 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FEE987B2554588D00971F60 /* DMSans-Regular.ttf */; };
 		7FEE987E2554588D00971F60 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FEE987B2554588D00971F60 /* DMSans-Regular.ttf */; };
+		7FEE9894255DDD1600971F60 /* Form781.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D8408224D3402A00F336E3 /* Form781.storyboard */; };
+		7FEE9898255DDD1700971F60 /* Form781.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D8408224D3402A00F336E3 /* Form781.storyboard */; };
 		83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407A24D3402A00F336E3 /* AppDelegate.swift */; };
 		83D8407D24D3402A00F336E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407C24D3402A00F336E3 /* SceneDelegate.swift */; };
 		83D8408424D3402A00F336E3 /* Form781.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D8408224D3402A00F336E3 /* Form781.storyboard */; };
@@ -629,6 +631,7 @@
 				7FAB8C3F2541F4E800868215 /* Aircrew.storyboard in Resources */,
 				7F1EC5622551F0C4006A644D /* DMSans-Medium.ttf in Resources */,
 				7F1EC55F2551F0C4006A644D /* DMSans-Bold.ttf in Resources */,
+				7FEE9894255DDD1600971F60 /* Form781.storyboard in Resources */,
 				7FEE987D2554588D00971F60 /* DMSans-Regular.ttf in Resources */,
 				7FAB8C7D25434D5800868215 /* Error.storyboard in Resources */,
 				7F97DFEA253F94E9005B0892 /* Welcome.storyboard in Resources */,
@@ -644,6 +647,7 @@
 				7FAB8C402541F4E800868215 /* Aircrew.storyboard in Resources */,
 				7F1EC5632551F0C4006A644D /* DMSans-Medium.ttf in Resources */,
 				7F1EC5602551F0C4006A644D /* DMSans-Bold.ttf in Resources */,
+				7FEE9898255DDD1700971F60 /* Form781.storyboard in Resources */,
 				7FEE987E2554588D00971F60 /* DMSans-Regular.ttf in Resources */,
 				7FAB8C7E25434D5800868215 /* Error.storyboard in Resources */,
 				7F97DFEB253F94E9005B0892 /* Welcome.storyboard in Resources */,
@@ -998,7 +1002,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mil.airmencoders.logging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -1018,7 +1022,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mil.airmencoders.logging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
