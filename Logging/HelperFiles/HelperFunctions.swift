@@ -12,6 +12,9 @@ class Helper {
     let WIDTH: Int = 3300
     let HEIGHT: Int = 2550
     
+    #warning("Can we delete this?")
+    let formController = Form781Controller()
+    
     func populateDateField() -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
@@ -206,14 +209,13 @@ class Helper {
     }
        
     
-    func highlightRed(textField: UITextField) {
+    static func highlightRed(textField: UITextField) {
         textField.layer.borderColor = UIColor.red.cgColor
-        textField.layer.borderWidth = 1
     }
     
-    func highlightGray(textField: UITextField) {
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.borderWidth = 1
+    static func unhighlight(textField: UITextField) {
+        let color: UIColor = .fog
+        textField.layer.borderColor = color.cgColor
     }
 
     func printFormFunc() {
