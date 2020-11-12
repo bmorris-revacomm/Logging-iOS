@@ -12,8 +12,6 @@ class Helper {
     let WIDTH: Int = 3300
     let HEIGHT: Int = 2550
     
-    let formController = Form781Controller()
-    
     func populateDateField() -> String{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"

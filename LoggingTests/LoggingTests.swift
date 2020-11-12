@@ -10,25 +10,40 @@ import XCTest
 @testable import Logging
 
 class LoggingTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    
+    func testHelperFunction() {
+        let date = Helper().populateDateField()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        let testDate = dateFormatter.string(from: Date())
+        
+        XCTAssertEqual(date, testDate)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testFileFound() {
+       
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
+        let url = path?.appendingPathComponent("Logging.json", isDirectory: false)
+        let result = Helper().checkForFile(filePath: url!)
+        XCTAssertTrue(result)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testCheckInput() {
+        let result = Helper().checkInput(time: "0900")
+        XCTAssertTrue(result)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testSeperateHours() {
+        // Test requires input to have a colon
+        let hrs = Helper().separateHoursAndMins(strInput: "10:00", pointer: "hour")
+        XCTAssertEqual(hrs, "10")
     }
-
-}
+    
+    func testSeperateMins() {
+        // Test requires input to have a colon
+        let min = Helper().separateHoursAndMins(strInput: "10:30", pointer: "min")
+        XCTAssertEqual(min, "30")
+    }
+}//End
