@@ -14,10 +14,10 @@ jobs:
         pod repo update
         pod install
         
-    - name: Test
-      run: xcodebuild -workspace Logging.xcworkspace -scheme "Logging"  -destination 'platform=iOS Simulator,name=iPad Pro (9.7-inch),OS=13.7' test
-    - name: Archive
-      run: xcodebuild -workspace Logging.xcworkspace -scheme "Logging" -sdk iphoneos -allowProvisioningUpdates -configuration AppStoreDistribution archive -archivePath $PWD/build/Logging.xcarchive
+#     - name: Test
+#       run: xcodebuild -workspace Logging.xcworkspace -scheme "Logging"  -destination 'platform=iOS Simulator,name=iPad Pro (9.7-inch),OS=13.7' test
+#     - name: Archive
+#       run: xcodebuild -workspace Logging.xcworkspace -scheme "Logging" -sdk iphoneos -allowProvisioningUpdates -configuration AppStoreDistribution archive -archivePath $PWD/build/Logging.xcarchive
     - name: Export
       run: xcodebuild -exportArchive -archivePath $PWD/build/Logging.xcarchive -exportOptionsPlist exportOptions.plist -exportPath $PWD/build
       
@@ -29,4 +29,4 @@ jobs:
         # Please provide the API Key for NowSecure Platform
         api-key: ${{ secrets.PLATFORM_API_KEY }}
         # Please provide the Group Id of the application being integrated, using Tron group
-        group-id: "89418d5f-12ec-4fe9-9b48-3870a9c82d1e"
+        group-id: "e01d876f-dffd-4beb-91ac-145459657511"
