@@ -24,7 +24,7 @@ class Flight: Codable {
     var sorties: String
     var specialUse: String
     
-    init(flightSeq: String,
+    public init(flightSeq: String,
          missionNumber: String,
          missionSymbol: String,
          fromICAO: String,
