@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oh9-0Q-fMO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oh9-0Q-fMO">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1391,9 +1391,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Db-LR-eeD">
-                                        <rect key="frame" x="468" y="542.5" width="20" height="22"/>
+                                        <rect key="frame" x="475.5" y="542.5" width="12.5" height="22"/>
                                         <color key="tintColor" name="slate"/>
-                                        <state key="normal" image="arrow.forward.circle" catalog="system"/>
+                                        <state key="normal" image="chevron.forward" catalog="system"/>
                                         <connections>
                                             <action selector="popUpNextButtonTapped:" destination="gFV-3G-E5E" eventType="touchUpInside" id="jVj-LJ-6bf"/>
                                         </connections>
@@ -1727,9 +1727,9 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd8-Qc-xZB">
-                                        <rect key="frame" x="50" y="542" width="20" height="22"/>
+                                        <rect key="frame" x="50" y="542" width="12.5" height="22"/>
                                         <color key="tintColor" name="slate"/>
-                                        <state key="normal" image="arrow.backward.circle" catalog="system"/>
+                                        <state key="normal" image="chevron.backward" catalog="system"/>
                                         <connections>
                                             <action selector="popUpBackButtonTapped:" destination="gFV-3G-E5E" eventType="touchUpInside" id="zSa-mm-qU2"/>
                                         </connections>
@@ -1919,7 +1919,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to add mission data?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUs-fS-5Wd" customClass="PBLLabelLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="197.5" y="388" width="373.5" height="93.5"/>
+                                <rect key="frame" x="190" y="388" width="388.5" height="104.5"/>
                                 <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="40"/>
                                 <color key="textColor" name="fog"/>
                                 <nil key="highlightedColor"/>
@@ -1934,7 +1934,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ihq-J4-Y87">
-                                <rect key="frame" x="329.5" y="521.5" width="109" height="80"/>
+                                <rect key="frame" x="329.5" y="532.5" width="109" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcn-OI-ZjX" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="109" height="30"/>
@@ -1999,9 +1999,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
-        <image name="arrow.forward.circle" catalog="system" width="128" height="121"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="minus.circle" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
