@@ -28,7 +28,7 @@ class FlightController {
         for flight in form.flights {
             totalTime += Double(flight.totalTime) ?? 0.0
         }
-        return totalTime
+        return totalTime.truncate(places: 1)
     }
     
     static func calculateTotalTouchGo() -> Int {
@@ -74,3 +74,9 @@ class FlightController {
 
     
 } //End
+
+extension Double {
+    func truncate(places: Int) -> Double {
+        return Double(ceil(pow(10.0, Double(places)) * self) / pow(10.0, Double(places)))
+    }
+}

@@ -168,8 +168,6 @@ class FlightListViewController: UIViewController {
               let specialUse = specialUse.text
         else { return }
         
-        print("presentFlightInputErrorAlert")
-        print("\(form.flights.count)")
         
         var flightSeq = "A"
         switch form.flights.count + 1{
@@ -376,7 +374,7 @@ class FlightListViewController: UIViewController {
               let fullStop = fullStop.text, !fullStop.isEmpty,
               let totalLandings = totalLandings.text, !totalLandings.isEmpty,
               let sorties = sorties.text, !sorties.isEmpty,
-              let specialUse = specialUse.text, !specialUse.isEmpty
+              let specialUse = specialUse.text
         else { return presentFlightInputErrorAlert() }
         
         var flightSeq = "A"
