@@ -167,10 +167,9 @@ class FlightListViewController: UIViewController {
               let sorties = sorties.text,
               let specialUse = specialUse.text
         else { return }
-        
-        
+                
         var flightSeq = "A"
-        switch form.flights.count + 1{
+        switch form.flights.count + 1 {
         case 2:
             flightSeq = "B"
         case 3:
@@ -376,22 +375,18 @@ class FlightListViewController: UIViewController {
               let sorties = sorties.text, !sorties.isEmpty,
               let specialUse = specialUse.text
         else { return presentFlightInputErrorAlert() }
-        
+                
         var flightSeq = "A"
-        
-        print("saveFlightButtonTapped")
-        print("\(form.flights.count)")
-        
-        switch form.flights.count{
-        case 1:
-            flightSeq = "B"
+        switch form.flights.count + 1 {
         case 2:
-            flightSeq = "C"
+            flightSeq = "B"
         case 3:
-            flightSeq = "D"
+            flightSeq = "C"
         case 4:
-            flightSeq = "E"
+            flightSeq = "D"
         case 5:
+            flightSeq = "E"
+        case 6:
             flightSeq = "F"
         default:
             flightSeq = "A"
