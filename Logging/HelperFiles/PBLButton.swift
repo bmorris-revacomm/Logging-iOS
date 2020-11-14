@@ -15,6 +15,8 @@ class PBLButtonClear: UIButton {
         self.backgroundColor = .clear
         self.setTitleColor(.slate, for: .normal)
         self.updateFont(to: FontNames.dmSansBold)
+        self.titleLabel?.adjustsFontSizeToFitWidth = true
+        //self.titleLabel?.adjustsFontForContentSizeCategory = true
     }
     
     func updateFont(to font: String) {
@@ -29,7 +31,7 @@ class PBLButton: PBLButtonClear {
     override func awakeFromNib() {
         super.awakeFromNib()
         //self.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
-        self.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        self.contentEdgeInsets = UIEdgeInsets(top: 14, left: 20, bottom: 14, right: 20)
         self.addCornerRadius(self.frame.size.height/1.6)
         self.backgroundColor = .fog
         self.tintColor = .clear
