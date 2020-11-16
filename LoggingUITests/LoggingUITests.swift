@@ -23,12 +23,23 @@ class LoggingUITests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
+        
         let app = XCUIApplication()
         app.launch()
+        do {
+            try runMissionData(app: app)
+        } catch {
+            print("Mission Data Failure")
+        }
         
+        
+    }
+    
+    func runMissionData(app: XCUIApplication) throws {
+    
         let element = app.keyboards.children(matching: .other).element.children(matching: .other).element
         let moreKey = element/*@START_MENU_TOKEN@*/.children(matching: .key).matching(identifier: "more").element(boundBy: 0)/*[[".children(matching: .key).matching(identifier: \"letters\").element(boundBy: 0)",".children(matching: .key).matching(identifier: \"more\").element(boundBy: 0)"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        
+
         app/*@START_MENU_TOKEN@*/.staticTexts["YES"]/*[[".buttons[\"YES\"].staticTexts[\"YES\"]",".staticTexts[\"YES\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         // Date auto-populated
         app.textFields["DD MMM YYY"].tap()
@@ -41,7 +52,7 @@ class LoggingUITests: XCTestCase {
         app.keys["A"].tap()
         //Serial Number
         app.textFields["00-0000"].tap()
-        
+
         moreKey.tap()
         app.keys["9"].tap()
         app.keys["9"].tap()
@@ -50,8 +61,8 @@ class LoggingUITests: XCTestCase {
         app.keys["0"].tap()
         app.keys["8"].tap()
         app.keys["2"].tap()
-        
-        
+
+
         //Unit Charged
         app.textFields["00 AB CDE FG"].tap()
         moreKey.tap()
@@ -75,7 +86,7 @@ class LoggingUITests: XCTestCase {
         app.keys["K"].tap()
         app.keys["F"].tap()
         app.keys["X"].tap()
-        
+
         //Harm Location
         app.textFields["JOINT BASE CHARLESTON, SC 29404"].tap()
         app.keys["J"].tap()
@@ -112,7 +123,7 @@ class LoggingUITests: XCTestCase {
         app.keys["4"].tap()
         app.keys["2"].tap()
         //Issuing Unit
-        
+
         app.textFields["00 AA"].tap()
         moreKey.tap()
         app.keys["0"].tap()
@@ -120,8 +131,8 @@ class LoggingUITests: XCTestCase {
         app.keys["1"].tap()
         app.keys["6"].tap()
 
-        app.tables["MISSION NUMBER, MISSION SYMBOL, FROM (ICAO), TO (ICAO), TAKE OFF TIME (Z), LAND TIME (Z), TOTAL TIME, TOUCH & GO, FULL STOP, TOTAL, SORTIES, SPECIAL USE"].tap()
         
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 4).buttons["SAVE & CONTINUE"].tap()
     }
 
     func testPerformanceExample() throws {
