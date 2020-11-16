@@ -8,12 +8,13 @@
 
 import UIKit
 
-class PBLLabel: UILabel {
+class PBLLabelBold: UILabel {
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.textColor = .slate
         self.updateFont(to: FontNames.dmSansBold)
+        self.adjustsFontSizeToFitWidth = true
     }
     
     func updateFont(to font: String) {
@@ -23,7 +24,7 @@ class PBLLabel: UILabel {
     
 }
 
-class PBLLabelLight: PBLLabel {
+class PBLLabelLightBold: PBLLabelBold {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,7 +33,16 @@ class PBLLabelLight: PBLLabel {
     
 }
 
-class PBLLabelWhite: PBLLabel {
+class PBLLabelLight: PBLLabelLightBold {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.updateFont(to: FontNames.dmSansRegular)
+    }
+    
+}
+
+class PBLLabelWhiteBold: PBLLabelBold {
     
     override func awakeFromNib() {
         super.awakeFromNib()
