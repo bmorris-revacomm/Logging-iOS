@@ -27,10 +27,10 @@ class SplitFlightConditionsViewController: UIViewController {
     @IBAction func flightSeqButtonTapped(_ sender: UIButton) {
         flightSeqButton.isSelected.toggle()
         if flightSeqButton.isSelected {
-            flightSeqButton.setImage(UIImage(systemName: "arrowtriangle.down.fill"), for: .normal)
+            flightSeqButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
             flightSeqTableView.isHidden = false
         } else {
-            flightSeqButton.setImage(UIImage(systemName: "arrowtriangle.forward.fill"), for: .normal)
+            flightSeqButton.setImage(UIImage(systemName: "chevron.up"), for: .normal)
             flightSeqTableView.isHidden = true
         }
     }
