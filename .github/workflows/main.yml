@@ -26,7 +26,7 @@ jobs:
       uses: blawrencens/nowsecure-actions-integration@1.0.2
       with:
         # Please provide the path for the app to be uploaded
-        app-path: "/build/Logging.ipa"
+        app-path: "$PWD/build/Logging.ipa"
         # Please provide the API Key for NowSecure Platform
         api-key: ${{ secrets.PLATFORM_API_KEY }}
         # Please provide the Group Id of the application being integrated, using Tron group
