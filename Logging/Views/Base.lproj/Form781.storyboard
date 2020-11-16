@@ -1351,7 +1351,7 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00 AA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQb-zd-kSB" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00 AA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQb-zd-kSB" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="22.5" width="271.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="IZj-Sq-MAZ"/>
@@ -1919,7 +1919,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to add mission data?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUs-fS-5Wd" customClass="PBLLabelLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="309" y="502.5" width="406.5" height="112"/>
+                                <rect key="frame" x="309" y="496" width="406.5" height="125"/>
                                 <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="48"/>
                                 <color key="textColor" name="fog"/>
                                 <nil key="highlightedColor"/>
@@ -1934,7 +1934,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ihq-J4-Y87">
-                                <rect key="frame" x="384" y="687" width="256" height="92"/>
+                                <rect key="frame" x="384" y="722" width="256" height="92"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcn-OI-ZjX" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="36"/>
@@ -1969,7 +1969,7 @@
                             <constraint firstItem="itD-Fi-GBg" firstAttribute="trailing" secondItem="evp-Iz-1XA" secondAttribute="trailing" id="PTT-At-VRi"/>
                             <constraint firstItem="UUs-fS-5Wd" firstAttribute="centerY" secondItem="itD-Fi-GBg" secondAttribute="centerY" multiplier="0.8" id="S3h-WL-CYx"/>
                             <constraint firstItem="evp-Iz-1XA" firstAttribute="top" secondItem="itD-Fi-GBg" secondAttribute="top" id="bic-Ky-1jw"/>
-                            <constraint firstItem="ihq-J4-Y87" firstAttribute="centerY" secondItem="itD-Fi-GBg" secondAttribute="centerY" multiplier="1.05" id="bps-gx-0z9"/>
+                            <constraint firstItem="ihq-J4-Y87" firstAttribute="centerY" secondItem="itD-Fi-GBg" secondAttribute="centerY" multiplier="1.1" id="bps-gx-0z9"/>
                             <constraint firstItem="bMz-Uj-SMh" firstAttribute="centerY" secondItem="itD-Fi-GBg" secondAttribute="centerY" multiplier="0.6" id="j6n-mk-HUX"/>
                             <constraint firstItem="ihq-J4-Y87" firstAttribute="centerX" secondItem="itD-Fi-GBg" secondAttribute="centerX" id="kFi-03-yHR"/>
                             <constraint firstItem="itD-Fi-GBg" firstAttribute="bottom" secondItem="iTo-a5-sKX" secondAttribute="bottom" constant="50" id="uUL-p6-8SO"/>

@@ -30,9 +30,13 @@ class PBLButton: PBLButtonClear {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //self.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
-        self.contentEdgeInsets = UIEdgeInsets(top: 14, left: 20, bottom: 14, right: 20)
-        self.addCornerRadius(self.frame.size.height/1.6)
+        //self.heightAnchor.constraint(equalToConstant: 64.0).isActive = true
+        //self.frame.size.height = 64
+        print(UIScreen.main.bounds)
+        self.heightAnchor.constraint(equalToConstant: 64.0).isActive = true
+        self.frame.size.height = 64
+        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        self.addCornerRadius(self.frame.size.height/2)
         self.backgroundColor = .fog
         self.tintColor = .clear
     }
