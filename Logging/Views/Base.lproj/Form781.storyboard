@@ -1195,7 +1195,7 @@
                                             <action selector="exitButtonTapped:" destination="gFV-3G-E5E" eventType="touchUpInside" id="9Tm-aK-Usk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgI-W2-Cab" userLabel="savemsndata" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgI-W2-Cab" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="531" y="739.5" width="136" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <state key="normal" title="SAVE &amp; CONTINUE"/>
@@ -1919,7 +1919,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to add mission data?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUs-fS-5Wd" customClass="PBLLabelLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="309" y="502.5" width="406.5" height="112"/>
+                                <rect key="frame" x="309" y="496" width="406.5" height="125"/>
                                 <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="48"/>
                                 <color key="textColor" name="fog"/>
                                 <nil key="highlightedColor"/>
