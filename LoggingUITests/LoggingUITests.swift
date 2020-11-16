@@ -26,19 +26,101 @@ class LoggingUITests: XCTestCase {
         let app = XCUIApplication()
         app.launch()
         
-        app.buttons["YES"].tap()
-        app.textFields["XX"].tap()
+        let element = app.keyboards.children(matching: .other).element.children(matching: .other).element
+        let moreKey = element/*@START_MENU_TOKEN@*/.children(matching: .key).matching(identifier: "more").element(boundBy: 0)/*[[".children(matching: .key).matching(identifier: \"letters\").element(boundBy: 0)",".children(matching: .key).matching(identifier: \"more\").element(boundBy: 0)"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        
+        app/*@START_MENU_TOKEN@*/.staticTexts["YES"]/*[[".buttons[\"YES\"].staticTexts[\"YES\"]",".staticTexts[\"YES\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        // Date auto-populated
+        app.textFields["DD MMM YYY"].tap()
+        //MDS
+        app.textFields["X-XX"].tap()
+        app.keys["C"].tap()
+        app.keys["P"].swipeDown()
+        app.keys["Q"].swipeDown()
+        app.keys["U"].swipeDown()
+        app.keys["A"].tap()
+        //Serial Number
         app.textFields["00-0000"].tap()
+        
+        moreKey.tap()
+        app.keys["9"].tap()
+        app.keys["9"].tap()
+        app.keys["-"].tap()
+        app.keys["0"].tap()
+        app.keys["0"].tap()
+        app.keys["8"].tap()
+        app.keys["2"].tap()
+        
+        
+        //Unit Charged
         app.textFields["00 AB CDE FG"].tap()
+        moreKey.tap()
+        app.keys["4"].tap()
+        app.keys["3"].tap()
+        app.keys["7"].tap()
+        app.keys["space"].tap()
+        app.keys["A"].tap()
+        app.keys["W"].tap()
+        moreKey.tap()
+        app.keys["("].tap()
+        moreKey.tap()
+        app.keys["A"].tap()
+        app.keys["M"].tap()
+        app.keys["C"].tap()
+        moreKey.tap()
+        app.keys[")"].tap()
+        app.keys["/"].tap()
+        moreKey.tap()
+        app.keys["D"].tap()
+        app.keys["K"].tap()
+        app.keys["F"].tap()
+        app.keys["X"].tap()
+        
+        //Harm Location
         app.textFields["JOINT BASE CHARLESTON, SC 29404"].tap()
+        app.keys["J"].tap()
+        app.keys["B"].tap()
+        app.keys["space"].tap()
+        app.keys["C"].tap()
+        app.keys["H"].tap()
+        app.keys["A"].tap()
+        app.keys["R"].tap()
+        app.keys["L"].tap()
+        app.keys["E"].tap()
+        app.keys["S"].tap()
+        app.keys["T"].tap()
+        app.keys["O"].tap()
+        app.keys["N"].tap()
+        app.keys["space"].tap()
+        app.keys["S"].tap()
+        app.keys["C"].tap()
+        app.keys["space"].tap()
+        moreKey.tap()
+        app.keys["2"].tap()
+        app.keys["9"].tap()
+        app.keys["4"].tap()
+        app.keys["0"].tap()
+        app.keys["4"].tap()
+        //Flight Auth #
         app.textFields["00-XXXX"].tap()
-        // app.alerts["Invalid Time"].scrollViews.otherElements.buttons["Okay"].tap()
+        moreKey.tap()
+        app.keys["2"].tap()
+        app.keys["0"].tap()
+        app.keys["-"].tap()
+        app.keys["0"].tap()
+        app.keys["4"].tap()
+        app.keys["4"].tap()
+        app.keys["2"].tap()
+        //Issuing Unit
         
-        let textField = app.textFields["00 AA"]
-        textField.tap()
-        app/*@START_MENU_TOKEN@*/.tables.containing(.button, identifier:"add").element/*[[".tables.containing(.staticText, identifier:\"SPECIAL USE\").element",".tables.containing(.staticText, identifier:\"SORTIES\").element",".tables.containing(.staticText, identifier:\"TOTAL\").element",".tables.containing(.staticText, identifier:\"FULL STOP\").element",".tables.containing(.staticText, identifier:\"TOUCH & GO\").element",".tables.containing(.staticText, identifier:\"TOTAL TIME\").element",".tables.containing(.staticText, identifier:\"LAND TIME (Z)\").element",".tables.containing(.staticText, identifier:\"TAKE OFF TIME (Z)\").element",".tables.containing(.staticText, identifier:\"TO (ICAO)\").element",".tables.containing(.staticText, identifier:\"FROM (ICAO)\").element",".tables.containing(.staticText, identifier:\"MISSION SYMBOL\").element",".tables.containing(.staticText, identifier:\"MISSION NUMBER\").element",".tables.containing(.button, identifier:\"add\").element"],[[[-1,12],[-1,11],[-1,10],[-1,9],[-1,8],[-1,7],[-1,6],[-1,5],[-1,4],[-1,3],[-1,2],[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
-        
+        app.textFields["00 AA"].tap()
+        moreKey.tap()
+        app.keys["0"].tap()
+        app.keys["0"].tap()
+        app.keys["1"].tap()
+        app.keys["6"].tap()
+
+        app.tables["MISSION NUMBER, MISSION SYMBOL, FROM (ICAO), TO (ICAO), TAKE OFF TIME (Z), LAND TIME (Z), TOTAL TIME, TOUCH & GO, FULL STOP, TOTAL, SORTIES, SPECIAL USE"].tap()
         
     }
 
