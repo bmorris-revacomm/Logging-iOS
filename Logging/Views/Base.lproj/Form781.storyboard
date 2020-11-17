@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oh9-0Q-fMO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCq-Ls-vbn">
     <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,11 +9,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="DMSans-Regular.ttf">
-            <string>DMSans-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Container View Controller-->
         <scene sceneID="TJm-q6-BKt">
@@ -58,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4G-Yr-fLF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2130" y="-782"/>
+            <point key="canvasLocation" x="1724" y="-749"/>
         </scene>
         <!--Mission Data View Controller-->
         <scene sceneID="dsV-EI-5wO">
@@ -369,7 +364,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3024" y="-826"/>
+            <point key="canvasLocation" x="2614" y="-665"/>
         </scene>
         <!--Side Menu Table View Controller-->
         <scene sceneID="o35-8h-pOW">
@@ -452,7 +447,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zg3-oO-nBQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2566" y="-1124"/>
+            <point key="canvasLocation" x="2190" y="-1116"/>
         </scene>
         <!--Flight List View Controller-->
         <scene sceneID="dbc-4b-XtW">
@@ -465,49 +460,52 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9K-2n-qpg">
                                 <rect key="frame" x="0.0" y="50" width="1024" height="54.5"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNK-Tp-j7G" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="11" width="33" height="32.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="YNY-eY-9Ke">
+                                        <rect key="frame" x="15.5" y="11" width="993" height="32.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apL-4A-sPI" customClass="PBLLabelWhiteBold" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="8.5" y="11.5" width="15.5" height="10"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNK-Tp-j7G" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apL-4A-sPI" customClass="PBLLabelWhiteBold" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="8.5" y="11.5" width="15.5" height="10"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="fog"/>
+                                                <constraints>
+                                                    <constraint firstItem="apL-4A-sPI" firstAttribute="centerY" secondItem="gNK-Tp-j7G" secondAttribute="centerY" id="63z-9T-svf"/>
+                                                    <constraint firstAttribute="width" secondItem="gNK-Tp-j7G" secondAttribute="height" multiplier="1:1" id="d3k-MF-uPu"/>
+                                                    <constraint firstItem="apL-4A-sPI" firstAttribute="centerX" secondItem="gNK-Tp-j7G" secondAttribute="centerX" id="sbJ-N6-daH"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9MB-Ad-gXn" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
+                                                <rect key="frame" x="960.5" y="0.0" width="32.5" height="32.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGr-uj-YG4" customClass="PBLLabelWhiteBold" customModule="Logging" customModuleProvider="target">
+                                                        <rect key="frame" x="9.5" y="11.5" width="13.5" height="10"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="fog"/>
+                                                <constraints>
+                                                    <constraint firstItem="WGr-uj-YG4" firstAttribute="centerY" secondItem="9MB-Ad-gXn" secondAttribute="centerY" id="EgY-W6-iG3"/>
+                                                    <constraint firstItem="WGr-uj-YG4" firstAttribute="centerX" secondItem="9MB-Ad-gXn" secondAttribute="centerX" id="apW-i2-vuW"/>
+                                                    <constraint firstAttribute="width" secondItem="9MB-Ad-gXn" secondAttribute="height" multiplier="1:1" id="wSa-qg-vch"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
-                                        <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstItem="apL-4A-sPI" firstAttribute="centerY" secondItem="gNK-Tp-j7G" secondAttribute="centerY" id="63z-9T-svf"/>
-                                            <constraint firstAttribute="width" secondItem="gNK-Tp-j7G" secondAttribute="height" multiplier="1:1" id="UnG-Pa-Wzj"/>
-                                            <constraint firstItem="apL-4A-sPI" firstAttribute="centerX" secondItem="gNK-Tp-j7G" secondAttribute="centerX" id="sbJ-N6-daH"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9MB-Ad-gXn" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="976" y="11" width="33" height="32.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGr-uj-YG4" customClass="PBLLabelWhiteBold" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="11.5" width="13.5" height="10"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstItem="WGr-uj-YG4" firstAttribute="centerY" secondItem="9MB-Ad-gXn" secondAttribute="centerY" id="EgY-W6-iG3"/>
-                                            <constraint firstItem="WGr-uj-YG4" firstAttribute="centerX" secondItem="9MB-Ad-gXn" secondAttribute="centerX" id="apW-i2-vuW"/>
-                                            <constraint firstAttribute="width" secondItem="9MB-Ad-gXn" secondAttribute="height" multiplier="1:1" id="mql-Co-rPv"/>
-                                        </constraints>
-                                    </view>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="notBlack"/>
                                 <constraints>
-                                    <constraint firstItem="gNK-Tp-j7G" firstAttribute="leading" secondItem="g9K-2n-qpg" secondAttribute="leading" constant="15" id="2UU-XC-5xx"/>
-                                    <constraint firstItem="gNK-Tp-j7G" firstAttribute="height" secondItem="g9K-2n-qpg" secondAttribute="height" multiplier="0.6" id="8Yu-nq-Ngi"/>
-                                    <constraint firstItem="9MB-Ad-gXn" firstAttribute="centerY" secondItem="g9K-2n-qpg" secondAttribute="centerY" id="BEc-FM-tAT"/>
-                                    <constraint firstItem="gNK-Tp-j7G" firstAttribute="centerY" secondItem="g9K-2n-qpg" secondAttribute="centerY" id="OnM-qu-Ttj"/>
-                                    <constraint firstItem="9MB-Ad-gXn" firstAttribute="height" secondItem="g9K-2n-qpg" secondAttribute="height" multiplier="0.6" id="Opu-x5-kFp"/>
-                                    <constraint firstAttribute="trailing" secondItem="9MB-Ad-gXn" secondAttribute="trailing" constant="15" id="Zzf-BE-7s6"/>
+                                    <constraint firstItem="YNY-eY-9Ke" firstAttribute="centerX" secondItem="g9K-2n-qpg" secondAttribute="centerX" id="3sH-VN-UdV"/>
+                                    <constraint firstItem="YNY-eY-9Ke" firstAttribute="width" secondItem="g9K-2n-qpg" secondAttribute="width" multiplier="0.97" id="SLp-aZ-ful"/>
+                                    <constraint firstItem="YNY-eY-9Ke" firstAttribute="height" secondItem="g9K-2n-qpg" secondAttribute="height" multiplier="0.6" id="VBc-lk-Zbk"/>
+                                    <constraint firstItem="YNY-eY-9Ke" firstAttribute="centerY" secondItem="g9K-2n-qpg" secondAttribute="centerY" id="ldV-Nt-M9K"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkU-Hp-kPG" userLabel="Header">
@@ -532,7 +530,7 @@
                                 <color key="textColor" name="slate"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kt-uY-5Th" userLabel="printForm" customClass="PBLButtonClear" customModule="Logging" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kt-uY-5Th" userLabel="printForm" customClass="PBLPrintButton" customModule="Logging" customModuleProvider="target">
                                 <rect key="frame" x="932" y="181" width="62" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="tintColor" name="slate"/>
@@ -1204,31 +1202,31 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rrp-hU-T7X">
-                                        <rect key="frame" x="72" y="163.5" width="573" height="410.5"/>
+                                        <rect key="frame" x="72" y="154" width="573" height="429"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8y-DQ-z1U" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="573" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="573" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rgi-Kq-R8v">
-                                                <rect key="frame" x="0.0" y="40.5" width="573" height="370"/>
+                                                <rect key="frame" x="0.0" y="49" width="573" height="380"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="iyE-Eh-gRH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="573" height="77.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="573" height="80"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xyf-2l-YvA" userLabel="6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="324.5" height="77.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="324.5" height="80"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbb-5f-9y6" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="324.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="324.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD MMM YYY" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whD-PI-M6O" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="324.5" height="55"/>
+                                                                        <rect key="frame" x="0.0" y="25" width="324.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="h2p-Lb-aMs"/>
                                                                         </constraints>
@@ -1238,16 +1236,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Bt-ji-XAw" userLabel="7">
-                                                                <rect key="frame" x="354.5" y="0.0" width="218.5" height="77.5"/>
+                                                                <rect key="frame" x="354.5" y="0.0" width="218.5" height="80"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MDS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogI-P3-onR" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="218.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="218.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="X-XX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQa-zc-2NM" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="218.5" height="55"/>
+                                                                        <rect key="frame" x="0.0" y="25" width="218.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="fbg-TC-PLD"/>
                                                                         </constraints>
@@ -1259,19 +1257,19 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="v7I-Wo-0wW">
-                                                        <rect key="frame" x="0.0" y="97.5" width="573" height="77.5"/>
+                                                        <rect key="frame" x="0.0" y="100" width="573" height="80"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Yx-gG-DT1" userLabel="9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="77.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="165.5" height="80"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SERIAL NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRo-mN-GOq" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="163.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00-0000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDU-2z-khW" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="163.5" height="55"/>
+                                                                        <rect key="frame" x="0.0" y="25" width="165.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="7QN-tU-W0L"/>
                                                                         </constraints>
@@ -1281,16 +1279,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tKp-Uu-I9A" userLabel="10">
-                                                                <rect key="frame" x="193.5" y="0.0" width="379.5" height="77.5"/>
+                                                                <rect key="frame" x="195.5" y="0.0" width="377.5" height="80"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNIT CHARGED FOR FLYING HOURS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OV2-dV-jvU" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="379.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="377.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00 AB CDE FG" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9uX-yu-VhE" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="379.5" height="55"/>
+                                                                        <rect key="frame" x="0.0" y="25" width="377.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="yMI-yf-7bi"/>
                                                                         </constraints>
@@ -1302,16 +1300,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XKB-J9-r8O" userLabel="11">
-                                                        <rect key="frame" x="0.0" y="195" width="573" height="77.5"/>
+                                                        <rect key="frame" x="0.0" y="200" width="573" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HARM LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae2-0s-WL9" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="573" height="14.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="573" height="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="JOINT BASE CHARLESTON, SC 29404" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Omy-ru-fYK" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="22.5" width="573" height="55"/>
+                                                                <rect key="frame" x="0.0" y="25" width="573" height="55"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="55" id="abh-LC-CtN"/>
                                                                 </constraints>
@@ -1321,19 +1319,19 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xdx-x7-1hl">
-                                                        <rect key="frame" x="0.0" y="292.5" width="573" height="77.5"/>
+                                                        <rect key="frame" x="0.0" y="300" width="573" height="80"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zvj-tA-1dh" userLabel="12">
-                                                                <rect key="frame" x="0.0" y="0.0" width="271.5" height="77.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="271.5" height="80"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLIGHT AUTH #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFe-hk-wUo" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00-XXXX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtR-qz-4wH" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="271.5" height="55"/>
+                                                                        <rect key="frame" x="0.0" y="25" width="271.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="413-pY-j08"/>
                                                                         </constraints>
@@ -1343,16 +1341,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oCc-iE-9QE" userLabel="13">
-                                                                <rect key="frame" x="301.5" y="0.0" width="271.5" height="77.5"/>
+                                                                <rect key="frame" x="301.5" y="0.0" width="271.5" height="80"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISSUING UNIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h27-bH-Yb4" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00 AA" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wQb-zd-kSB" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="271.5" height="55"/>
+                                                                        <rect key="frame" x="0.0" y="25" width="271.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="IZj-Sq-MAZ"/>
                                                                         </constraints>
@@ -1379,160 +1377,8 @@
                                     <constraint firstItem="rrp-hU-T7X" firstAttribute="width" secondItem="WKZ-CG-2CK" secondAttribute="width" multiplier="0.8" id="uNY-r8-HMo"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCQ-ah-evn" customClass="shadowView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="153.5" y="218.5" width="717" height="819.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnN-P0-t8S" userLabel="Exit">
-                                        <rect key="frame" x="679.5" y="20" width="17.5" height="22"/>
-                                        <color key="tintColor" name="slate"/>
-                                        <state key="normal" image="xmark" catalog="system"/>
-                                        <connections>
-                                            <action selector="exitButtonTapped:" destination="gFV-3G-E5E" eventType="touchUpInside" id="W2r-Fp-31T"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Db-LR-eeD">
-                                        <rect key="frame" x="654.5" y="747.5" width="12.5" height="22"/>
-                                        <color key="tintColor" name="slate"/>
-                                        <state key="normal" image="chevron.forward" catalog="system"/>
-                                        <connections>
-                                            <action selector="popUpNextButtonTapped:" destination="gFV-3G-E5E" eventType="touchUpInside" id="jVj-LJ-6bf"/>
-                                        </connections>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sDE-7l-bqg">
-                                        <rect key="frame" x="72" y="210" width="573" height="317"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight SEQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tid-9D-yi5" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="573" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="sUj-XJ-3j0">
-                                                <rect key="frame" x="0.0" y="40.5" width="573" height="276.5"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qw4-sh-ytK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="573" height="77.5"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-80-nJc" userLabel="7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="271.5" height="77.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylg-VC-2qc" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ABCDEFGHIJ-1234567890" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UcB-RA-l2M" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="271.5" height="55"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="55" id="3Cr-8e-NdW"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gMd-3c-XaK" userLabel="8">
-                                                                <rect key="frame" x="301.5" y="0.0" width="271.5" height="77.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vca-vw-IBv" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AB-12" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WuB-D1-CIX" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="271.5" height="55"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="55" id="mJh-fk-Xg7"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="AV1-bX-2gZ">
-                                                        <rect key="frame" x="0.0" y="99.5" width="573" height="77.5"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Ou-ej-vD6" userLabel="9">
-                                                                <rect key="frame" x="0.0" y="0.0" width="271.5" height="77.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFh-js-Kxy" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AUAB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bR-pL-Sc3" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="271.5" height="55"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="55" id="uP2-9M-1ML"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9LQ-jo-o6z" userLabel="10">
-                                                                <rect key="frame" x="301.5" y="0.0" width="271.5" height="77.5"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFG-oL-ZG1" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XCHS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T4q-ww-YfK" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="271.5" height="55"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="55" id="1Kx-0u-TFQ"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hik-ec-K3Y" userLabel="16">
-                                                        <rect key="frame" x="0.0" y="199" width="573" height="77.5"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL USE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmH-cG-WHi" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="573" height="14.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3C7-Ai-IQy" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="22.5" width="573" height="55"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="55" id="x7s-wz-UWm"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="5Db-LR-eeD" secondAttribute="trailing" constant="50" id="3Ds-xe-Mx0"/>
-                                    <constraint firstAttribute="trailing" secondItem="YnN-P0-t8S" secondAttribute="trailing" constant="20" id="CLP-Q1-GWA"/>
-                                    <constraint firstItem="sDE-7l-bqg" firstAttribute="centerX" secondItem="NCQ-ah-evn" secondAttribute="centerX" id="LKp-lV-B1l"/>
-                                    <constraint firstAttribute="bottom" secondItem="5Db-LR-eeD" secondAttribute="bottom" constant="50" id="Ujf-ra-Tsr"/>
-                                    <constraint firstItem="YnN-P0-t8S" firstAttribute="top" secondItem="NCQ-ah-evn" secondAttribute="top" constant="20" id="bQx-5m-QfN"/>
-                                    <constraint firstItem="sDE-7l-bqg" firstAttribute="width" secondItem="NCQ-ah-evn" secondAttribute="width" multiplier="0.8" id="rZw-Kz-44q"/>
-                                    <constraint firstItem="sDE-7l-bqg" firstAttribute="centerY" secondItem="NCQ-ah-evn" secondAttribute="centerY" multiplier="0.9" id="vIM-88-Cxr"/>
-                                </constraints>
-                            </view>
                             <view hidden="YES" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzq-4X-6Gf" customClass="shadowView" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="153.5" y="218.5" width="717" height="819.5"/>
+                                <rect key="frame" x="153.5" y="152" width="717" height="1092"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCB-ll-Lb1" userLabel="Exit">
                                         <rect key="frame" x="679.5" y="20" width="17.5" height="22"/>
@@ -1543,39 +1389,169 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy2-xl-Sta" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="531" y="739.5" width="136" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <rect key="frame" x="468" y="992.5" width="175" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <state key="normal" title="SAVE &amp; CONTINUE"/>
                                         <connections>
                                             <action selector="saveFlightButtonTapped:" destination="gFV-3G-E5E" eventType="touchUpInside" id="DXh-XH-4YI"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5F9-oO-rC5">
-                                        <rect key="frame" x="72" y="158" width="573" height="421"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5F9-oO-rC5">
+                                        <rect key="frame" x="72" y="118.5" width="573" height="746"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flight SEQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTT-LM-sbo" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="573" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="sUj-XJ-3j0">
+                                                <rect key="frame" x="0.0" y="49" width="573" height="284"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qw4-sh-ytK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="573" height="80"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-80-nJc" userLabel="7">
+                                                                <rect key="frame" x="0.0" y="0.0" width="271.5" height="80"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION NUMBER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ylg-VC-2qc" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="120.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ABCDEFGHIJ-1234567890" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UcB-RA-l2M" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="25" width="271.5" height="55"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="55" id="3Cr-8e-NdW"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="UcB-RA-l2M" firstAttribute="width" secondItem="cRO-80-nJc" secondAttribute="width" id="Gbj-TX-9RD"/>
+                                                                    <constraint firstItem="Ylg-VC-2qc" firstAttribute="width" secondItem="cRO-80-nJc" secondAttribute="width" multiplier="0.443831" id="eFV-MW-yUy"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gMd-3c-XaK" userLabel="8">
+                                                                <rect key="frame" x="301.5" y="0.0" width="271.5" height="80"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MISSION SYMBOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vca-vw-IBv" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="119" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AB-12" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WuB-D1-CIX" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="25" width="271.5" height="55"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="55" id="mJh-fk-Xg7"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="WuB-D1-CIX" firstAttribute="width" secondItem="gMd-3c-XaK" secondAttribute="width" id="jPa-sb-Mh9"/>
+                                                                    <constraint firstItem="vca-vw-IBv" firstAttribute="width" secondItem="gMd-3c-XaK" secondAttribute="width" multiplier="0.438306" id="v7w-yY-bwo"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="AV1-bX-2gZ">
+                                                        <rect key="frame" x="0.0" y="102" width="573" height="80"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Ou-ej-vD6" userLabel="9">
+                                                                <rect key="frame" x="0.0" y="0.0" width="271.5" height="80"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFh-js-Kxy" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="86.5" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AUAB" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bR-pL-Sc3" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="25" width="271.5" height="55"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="55" id="uP2-9M-1ML"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="vFh-js-Kxy" firstAttribute="width" secondItem="5Ou-ej-vD6" secondAttribute="width" multiplier="0.3186" id="Ff8-cJ-Vy6"/>
+                                                                    <constraint firstItem="5bR-pL-Sc3" firstAttribute="width" secondItem="5Ou-ej-vD6" secondAttribute="width" id="uVh-8Q-Zj7"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9LQ-jo-o6z" userLabel="10">
+                                                                <rect key="frame" x="301.5" y="0.0" width="271.5" height="80"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO (ICAO)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFG-oL-ZG1" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="66" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="XCHS" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T4q-ww-YfK" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="25" width="271.5" height="55"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="55" id="1Kx-0u-TFQ"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                        <textInputTraits key="textInputTraits"/>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="T4q-ww-YfK" firstAttribute="width" secondItem="9LQ-jo-o6z" secondAttribute="width" id="Mmc-nd-aYz"/>
+                                                                    <constraint firstItem="lFG-oL-ZG1" firstAttribute="width" secondItem="9LQ-jo-o6z" secondAttribute="width" multiplier="0.243094" id="nmv-1a-qVt"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hik-ec-K3Y" userLabel="16">
+                                                        <rect key="frame" x="0.0" y="204" width="573" height="80"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPECIAL USE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmH-cG-WHi" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="87.5" height="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3C7-Ai-IQy" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="25" width="573" height="55"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="55" id="x7s-wz-UWm"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="FmH-cG-WHi" firstAttribute="width" secondItem="Hik-ec-K3Y" secondAttribute="width" multiplier="0.152705" id="Aqz-gz-fdl"/>
+                                                            <constraint firstItem="3C7-Ai-IQy" firstAttribute="width" secondItem="Hik-ec-K3Y" secondAttribute="width" id="Msa-dL-0H4"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="LBM-3Z-s6V">
-                                                <rect key="frame" x="0.0" y="40.5" width="573" height="380.5"/>
+                                                <rect key="frame" x="0.0" y="353" width="573" height="393"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nDM-CA-zIg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="573" height="77.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="573" height="80"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fAW-2R-R3I" userLabel="11">
-                                                                <rect key="frame" x="0.0" y="0.0" width="271.5" height="77.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fAW-2R-R3I" userLabel="11">
+                                                                <rect key="frame" x="0.0" y="0.0" width="271.5" height="80"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAKE OFF TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anE-EZ-hKN" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="101" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1230" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QbF-06-TaO" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="271.5" height="55"/>
+                                                                        <rect key="frame" x="0.0" y="25" width="271.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="4aV-Sc-27Y"/>
                                                                         </constraints>
@@ -1583,18 +1559,22 @@
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="QbF-06-TaO" firstAttribute="width" secondItem="fAW-2R-R3I" secondAttribute="width" id="9DG-Y1-NDW"/>
+                                                                    <constraint firstItem="anE-EZ-hKN" firstAttribute="width" secondItem="fAW-2R-R3I" secondAttribute="width" multiplier="0.372007" id="J91-P0-usH"/>
+                                                                </constraints>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jk1-9V-X27" userLabel="12">
-                                                                <rect key="frame" x="301.5" y="0.0" width="271.5" height="77.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jk1-9V-X27" userLabel="12">
+                                                                <rect key="frame" x="301.5" y="0.0" width="271.5" height="80"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAND TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCn-sq-ow3" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="271.5" height="14.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2120" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jh-LT-c0V" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="22.5" width="271.5" height="55"/>
+                                                                        <rect key="frame" x="0.0" y="25" width="271.5" height="55"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="55" id="nn4-uC-3If"/>
                                                                         </constraints>
@@ -1605,20 +1585,24 @@
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="2jh-LT-c0V" firstAttribute="width" secondItem="jk1-9V-X27" secondAttribute="width" id="szP-KY-xPB"/>
+                                                                    <constraint firstItem="nCn-sq-ow3" firstAttribute="width" secondItem="jk1-9V-X27" secondAttribute="width" multiplier="0.27256" id="yNo-Aj-aDK"/>
+                                                                </constraints>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="flD-O8-jL8" userLabel="13">
-                                                        <rect key="frame" x="0.0" y="94.5" width="573" height="77.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="flD-O8-jL8" userLabel="13">
+                                                        <rect key="frame" x="0.0" y="97" width="573" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaI-53-L7n" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="573" height="14.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="80" height="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20.8" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6do-sr-FBO" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="22.5" width="573" height="55"/>
+                                                                <rect key="frame" x="0.0" y="25" width="573" height="55"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="55" id="fWM-K7-5iM"/>
                                                                 </constraints>
@@ -1626,30 +1610,34 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="6do-sr-FBO" firstAttribute="width" secondItem="flD-O8-jL8" secondAttribute="width" id="RZi-9Q-vlr"/>
+                                                            <constraint firstItem="qaI-53-L7n" firstAttribute="width" secondItem="flD-O8-jL8" secondAttribute="width" multiplier="0.139616" id="m48-s3-o5M"/>
+                                                        </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FKa-4L-PX8">
-                                                        <rect key="frame" x="0.0" y="189" width="573" height="97"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FKa-4L-PX8">
+                                                        <rect key="frame" x="0.0" y="194" width="573" height="102"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LANDINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqL-jA-Vbx" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="573" height="14.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="70.5" height="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="b6b-y6-nsn">
-                                                                <rect key="frame" x="0.0" y="19.5" width="573" height="77.5"/>
+                                                                <rect key="frame" x="0.0" y="22" width="573" height="80"/>
                                                                 <subviews>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="58Z-JL-P5u" userLabel="Touch &amp; Go">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="77.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="58Z-JL-P5u" userLabel="Touch &amp; Go">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="80"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH &amp; GO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8v-23-O7G" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="14.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="88" height="17"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hoH-Zg-mFp" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="22.5" width="171" height="55"/>
+                                                                                <rect key="frame" x="0.0" y="25" width="171" height="55"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="55" id="s2e-so-2Ny"/>
                                                                                 </constraints>
@@ -1657,18 +1645,22 @@
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
                                                                         </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="hoH-Zg-mFp" firstAttribute="width" secondItem="58Z-JL-P5u" secondAttribute="width" id="Ag1-Zw-4m2"/>
+                                                                            <constraint firstItem="j8v-23-O7G" firstAttribute="width" secondItem="58Z-JL-P5u" secondAttribute="width" multiplier="0.51462" id="kfO-cK-sZx"/>
+                                                                        </constraints>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jdn-Rn-Ku5" userLabel="Full Stop">
-                                                                        <rect key="frame" x="201" y="0.0" width="171" height="77.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jdn-Rn-Ku5" userLabel="Full Stop">
+                                                                        <rect key="frame" x="201" y="0.0" width="171" height="80"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FULL STOP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V5-1w-haS" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="14.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="74" height="17"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BQY-jp-Xhs" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="22.5" width="171" height="55"/>
+                                                                                <rect key="frame" x="0.0" y="25" width="171" height="55"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="55" id="nVz-dq-Xag"/>
                                                                                 </constraints>
@@ -1679,18 +1671,22 @@
                                                                                 </connections>
                                                                             </textField>
                                                                         </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="BQY-jp-Xhs" firstAttribute="width" secondItem="jdn-Rn-Ku5" secondAttribute="width" id="VS9-Ww-HQJ"/>
+                                                                            <constraint firstItem="3V5-1w-haS" firstAttribute="width" secondItem="jdn-Rn-Ku5" secondAttribute="width" multiplier="0.432749" id="xOj-AQ-EI1"/>
+                                                                        </constraints>
                                                                     </stackView>
-                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xsj-pH-uzl" userLabel="Total">
-                                                                        <rect key="frame" x="402" y="0.0" width="171" height="77.5"/>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xsj-pH-uzl" userLabel="Total">
+                                                                        <rect key="frame" x="402" y="0.0" width="171" height="80"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Gn-gB-73P" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="14.5"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="17"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m70-bR-0Ea" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="22.5" width="171" height="55"/>
+                                                                                <rect key="frame" x="0.0" y="25" width="171" height="55"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="55" id="Oq5-na-eR3"/>
                                                                                 </constraints>
@@ -1698,22 +1694,30 @@
                                                                                 <textInputTraits key="textInputTraits"/>
                                                                             </textField>
                                                                         </subviews>
+                                                                        <constraints>
+                                                                            <constraint firstItem="m70-bR-0Ea" firstAttribute="width" secondItem="xsj-pH-uzl" secondAttribute="width" id="VA4-4S-zL1"/>
+                                                                            <constraint firstItem="5Gn-gB-73P" firstAttribute="width" secondItem="xsj-pH-uzl" secondAttribute="width" multiplier="0.254386" id="dVD-Bf-Lie"/>
+                                                                        </constraints>
                                                                     </stackView>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="SqL-jA-Vbx" firstAttribute="width" secondItem="FKa-4L-PX8" secondAttribute="width" multiplier="0.123037" id="GKm-mw-Hgo"/>
+                                                            <constraint firstItem="b6b-y6-nsn" firstAttribute="width" secondItem="FKa-4L-PX8" secondAttribute="width" id="cmS-XV-thH"/>
+                                                        </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5AY-ws-p4R" userLabel="15">
-                                                        <rect key="frame" x="0.0" y="303" width="573" height="77.5"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5AY-ws-p4R" userLabel="15">
+                                                        <rect key="frame" x="0.0" y="313" width="573" height="80"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SORTIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2O-B0-Jnh" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="573" height="14.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="58" height="17"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fey-wh-WVB" customClass="PBLTextFieldBordered" customModule="Logging" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="22.5" width="573" height="55"/>
+                                                                <rect key="frame" x="0.0" y="25" width="573" height="55"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="55" id="hYp-1i-4YD"/>
                                                                 </constraints>
@@ -1721,31 +1725,30 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="J2O-B0-Jnh" firstAttribute="width" secondItem="5AY-ws-p4R" secondAttribute="width" multiplier="0.101222" id="Nkz-nE-zXL"/>
+                                                            <constraint firstItem="fey-wh-WVB" firstAttribute="width" secondItem="5AY-ws-p4R" secondAttribute="width" id="ctp-Hb-Q6b"/>
+                                                        </constraints>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sUj-XJ-3j0" firstAttribute="width" secondItem="5F9-oO-rC5" secondAttribute="width" id="BWt-Vd-dzP"/>
+                                            <constraint firstItem="vTT-LM-sbo" firstAttribute="width" secondItem="5F9-oO-rC5" secondAttribute="width" multiplier="0.190227" id="OLR-FG-sM3"/>
+                                            <constraint firstItem="LBM-3Z-s6V" firstAttribute="width" secondItem="5F9-oO-rC5" secondAttribute="width" id="ywB-XG-R27"/>
+                                        </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd8-Qc-xZB">
-                                        <rect key="frame" x="50" y="747.5" width="12.5" height="22"/>
-                                        <color key="tintColor" name="slate"/>
-                                        <state key="normal" image="chevron.backward" catalog="system"/>
-                                        <connections>
-                                            <action selector="popUpBackButtonTapped:" destination="gFV-3G-E5E" eventType="touchUpInside" id="zSa-mm-qU2"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
                                     <constraint firstItem="BCB-ll-Lb1" firstAttribute="top" secondItem="qzq-4X-6Gf" secondAttribute="top" constant="20" id="7vf-vJ-WzB"/>
-                                    <constraint firstAttribute="bottom" secondItem="cd8-Qc-xZB" secondAttribute="bottom" constant="50" id="8pB-fQ-SNo"/>
                                     <constraint firstItem="5F9-oO-rC5" firstAttribute="width" secondItem="qzq-4X-6Gf" secondAttribute="width" multiplier="0.8" id="AtD-k8-eQV"/>
+                                    <constraint firstItem="hy2-xl-Sta" firstAttribute="centerY" secondItem="qzq-4X-6Gf" secondAttribute="centerY" multiplier="1.85" id="DpG-Wc-JFp"/>
                                     <constraint firstItem="5F9-oO-rC5" firstAttribute="centerY" secondItem="qzq-4X-6Gf" secondAttribute="centerY" multiplier="0.9" id="PQN-94-RlA"/>
                                     <constraint firstAttribute="trailing" secondItem="BCB-ll-Lb1" secondAttribute="trailing" constant="20" id="W1f-qK-U65"/>
-                                    <constraint firstItem="cd8-Qc-xZB" firstAttribute="leading" secondItem="qzq-4X-6Gf" secondAttribute="leading" constant="50" id="ddD-pk-rrd"/>
                                     <constraint firstItem="5F9-oO-rC5" firstAttribute="centerX" secondItem="qzq-4X-6Gf" secondAttribute="centerX" id="ggj-TW-Kgp"/>
-                                    <constraint firstAttribute="trailing" secondItem="hy2-xl-Sta" secondAttribute="trailing" constant="50" id="ksZ-le-tuq"/>
-                                    <constraint firstAttribute="bottom" secondItem="hy2-xl-Sta" secondAttribute="bottom" constant="50" id="nai-gb-QRW"/>
+                                    <constraint firstItem="hy2-xl-Sta" firstAttribute="centerX" secondItem="qzq-4X-6Gf" secondAttribute="centerX" multiplier="1.55" id="omy-YJ-fuk"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1753,7 +1756,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="NCQ-ah-evn" firstAttribute="width" secondItem="xUH-4b-EGE" secondAttribute="width" multiplier="0.7" id="06Q-H5-Iwf"/>
                             <constraint firstItem="2kt-uY-5Th" firstAttribute="top" secondItem="HkU-Hp-kPG" secondAttribute="bottom" constant="8" id="1Fs-7y-316"/>
                             <constraint firstItem="WKZ-CG-2CK" firstAttribute="centerX" secondItem="wGp-gN-Abo" secondAttribute="centerX" id="1uz-WM-kzd"/>
                             <constraint firstItem="wGp-gN-Abo" firstAttribute="trailing" secondItem="xei-Ao-Yqc" secondAttribute="trailing" constant="50" id="2O7-WB-5y4"/>
@@ -1761,42 +1763,39 @@
                             <constraint firstItem="n6u-Ue-oDd" firstAttribute="width" secondItem="xUH-4b-EGE" secondAttribute="width" multiplier="0.9" id="3Bt-sq-ZO7"/>
                             <constraint firstItem="n6u-Ue-oDd" firstAttribute="centerX" secondItem="wGp-gN-Abo" secondAttribute="centerX" id="3IR-Rw-aGw"/>
                             <constraint firstItem="89Q-Op-sJj" firstAttribute="top" secondItem="YnF-at-cfX" secondAttribute="bottom" constant="5" id="3w6-iD-3vZ"/>
-                            <constraint firstItem="qzq-4X-6Gf" firstAttribute="centerY" secondItem="wGp-gN-Abo" secondAttribute="centerY" multiplier="0.9" id="5Yj-Vb-ZPJ"/>
+                            <constraint firstItem="qzq-4X-6Gf" firstAttribute="centerY" secondItem="wGp-gN-Abo" secondAttribute="centerY" id="5Yj-Vb-ZPJ"/>
                             <constraint firstItem="xei-Ao-Yqc" firstAttribute="top" secondItem="n6u-Ue-oDd" secondAttribute="bottom" constant="35" id="5a8-WS-b52"/>
                             <constraint firstItem="wGp-gN-Abo" firstAttribute="bottom" secondItem="qld-re-4cl" secondAttribute="bottom" constant="50" id="5gp-YY-htC"/>
+                            <constraint firstItem="g9K-2n-qpg" firstAttribute="centerX" secondItem="wGp-gN-Abo" secondAttribute="centerX" id="5yB-Zx-5lY"/>
                             <constraint firstItem="VVp-XJ-FR7" firstAttribute="top" secondItem="wJ7-7N-1G3" secondAttribute="bottom" constant="5" id="A9U-06-bhU"/>
                             <constraint firstItem="PA1-Ot-sSk" firstAttribute="centerX" secondItem="wGp-gN-Abo" secondAttribute="centerX" id="CPW-6x-17u"/>
                             <constraint firstItem="g9K-2n-qpg" firstAttribute="top" secondItem="wGp-gN-Abo" secondAttribute="top" id="EZI-JX-Sfk"/>
                             <constraint firstItem="wJ7-7N-1G3" firstAttribute="top" secondItem="HkU-Hp-kPG" secondAttribute="bottom" constant="10" id="Ma3-ID-vjO"/>
                             <constraint firstItem="wJ7-7N-1G3" firstAttribute="leading" secondItem="wGp-gN-Abo" secondAttribute="leading" constant="30" id="MoV-l9-ZiW"/>
                             <constraint firstItem="WKZ-CG-2CK" firstAttribute="width" secondItem="xUH-4b-EGE" secondAttribute="width" multiplier="0.7" id="Nrg-ng-gle"/>
-                            <constraint firstItem="wGp-gN-Abo" firstAttribute="trailing" secondItem="g9K-2n-qpg" secondAttribute="trailing" id="OwH-ci-zI3"/>
-                            <constraint firstItem="NCQ-ah-evn" firstAttribute="centerX" secondItem="wGp-gN-Abo" secondAttribute="centerX" id="R13-rs-cbr"/>
                             <constraint firstItem="89Q-Op-sJj" firstAttribute="centerX" secondItem="wGp-gN-Abo" secondAttribute="centerX" id="RdG-mj-ndo"/>
                             <constraint firstItem="HkU-Hp-kPG" firstAttribute="leading" secondItem="wGp-gN-Abo" secondAttribute="leading" id="RpU-tQ-5BK"/>
                             <constraint firstItem="89Q-Op-sJj" firstAttribute="width" secondItem="xUH-4b-EGE" secondAttribute="width" multiplier="0.9" id="TWS-Ha-UtC"/>
                             <constraint firstItem="WKZ-CG-2CK" firstAttribute="height" secondItem="xUH-4b-EGE" secondAttribute="height" multiplier="0.6" id="UG7-YK-PCW"/>
                             <constraint firstItem="PA1-Ot-sSk" firstAttribute="width" secondItem="xUH-4b-EGE" secondAttribute="width" multiplier="0.9" id="WEd-1l-yjh"/>
-                            <constraint firstItem="NCQ-ah-evn" firstAttribute="centerY" secondItem="wGp-gN-Abo" secondAttribute="centerY" multiplier="0.9" id="XC5-UG-gkG"/>
                             <constraint firstItem="wGp-gN-Abo" firstAttribute="bottom" secondItem="xei-Ao-Yqc" secondAttribute="bottom" constant="50" id="YN7-5F-8ik"/>
                             <constraint firstItem="WKZ-CG-2CK" firstAttribute="centerY" secondItem="wGp-gN-Abo" secondAttribute="centerY" multiplier="0.9" id="Ytc-uH-cN4"/>
-                            <constraint firstItem="NCQ-ah-evn" firstAttribute="height" secondItem="xUH-4b-EGE" secondAttribute="height" multiplier="0.6" id="ZLI-1t-Ua4"/>
-                            <constraint firstItem="g9K-2n-qpg" firstAttribute="leading" secondItem="xUH-4b-EGE" secondAttribute="leading" id="a7Z-LC-kOL"/>
                             <constraint firstItem="ngX-TU-rMX" firstAttribute="width" secondItem="xUH-4b-EGE" secondAttribute="width" multiplier="0.9" id="c4W-k5-Wrt"/>
                             <constraint firstItem="89Q-Op-sJj" firstAttribute="height" secondItem="xUH-4b-EGE" secondAttribute="height" multiplier="0.4" id="ciO-H4-ZiP"/>
                             <constraint firstItem="PA1-Ot-sSk" firstAttribute="bottom" secondItem="n6u-Ue-oDd" secondAttribute="bottom" id="dMe-cp-UpT"/>
                             <constraint firstItem="VVp-XJ-FR7" firstAttribute="trailing" secondItem="wGp-gN-Abo" secondAttribute="trailing" id="eFb-BD-x9N"/>
                             <constraint firstItem="YnF-at-cfX" firstAttribute="leading" secondItem="wJ7-7N-1G3" secondAttribute="leading" id="edB-xS-pTG"/>
+                            <constraint firstItem="g9K-2n-qpg" firstAttribute="height" secondItem="xUH-4b-EGE" secondAttribute="height" multiplier="0.04" id="geU-xg-LXz"/>
                             <constraint firstItem="wGp-gN-Abo" firstAttribute="trailing" secondItem="2kt-uY-5Th" secondAttribute="trailing" constant="30" id="ioV-D8-8Mp"/>
+                            <constraint firstItem="g9K-2n-qpg" firstAttribute="width" secondItem="xUH-4b-EGE" secondAttribute="width" id="kSh-lo-SQb"/>
                             <constraint firstItem="HkU-Hp-kPG" firstAttribute="height" secondItem="xUH-4b-EGE" secondAttribute="height" multiplier="0.05" id="kl3-Lt-Nq1"/>
                             <constraint firstItem="qzq-4X-6Gf" firstAttribute="width" secondItem="xUH-4b-EGE" secondAttribute="width" multiplier="0.7" constant="-0.20000000000004547" id="mPc-oF-l8d"/>
                             <constraint firstItem="qzq-4X-6Gf" firstAttribute="centerX" secondItem="wGp-gN-Abo" secondAttribute="centerX" id="nW7-kc-314"/>
                             <constraint firstItem="YnF-at-cfX" firstAttribute="top" secondItem="ngX-TU-rMX" secondAttribute="bottom" constant="30" id="rHc-8N-WN9"/>
                             <constraint firstItem="ngX-TU-rMX" firstAttribute="top" secondItem="VVp-XJ-FR7" secondAttribute="bottom" constant="15" id="t1o-26-gkY"/>
                             <constraint firstItem="ngX-TU-rMX" firstAttribute="centerX" secondItem="wGp-gN-Abo" secondAttribute="centerX" id="tXL-mb-hh8"/>
-                            <constraint firstItem="g9K-2n-qpg" firstAttribute="height" secondItem="xUH-4b-EGE" secondAttribute="height" multiplier="0.04" id="v4e-ND-PgS"/>
                             <constraint firstItem="HkU-Hp-kPG" firstAttribute="top" secondItem="g9K-2n-qpg" secondAttribute="bottom" id="vEx-Fl-45y"/>
-                            <constraint firstItem="qzq-4X-6Gf" firstAttribute="height" secondItem="xUH-4b-EGE" secondAttribute="height" multiplier="0.6" constant="-0.39999999999997726" id="vde-By-ZcX"/>
+                            <constraint firstItem="qzq-4X-6Gf" firstAttribute="height" secondItem="xUH-4b-EGE" secondAttribute="height" multiplier="0.8" constant="-0.39999999999997726" id="vde-By-ZcX"/>
                             <constraint firstItem="qld-re-4cl" firstAttribute="leading" secondItem="wGp-gN-Abo" secondAttribute="leading" constant="50" id="vep-7G-RCx"/>
                             <constraint firstItem="wGp-gN-Abo" firstAttribute="trailing" secondItem="HkU-Hp-kPG" secondAttribute="trailing" id="zwx-eD-AFB"/>
                         </constraints>
@@ -1813,8 +1812,7 @@
                         <outlet property="editButton" destination="66O-gl-p5p" id="yFA-50-3dz"/>
                         <outlet property="flightAuthLabel" destination="hNA-5K-Dwf" id="dyI-Uz-Fsq"/>
                         <outlet property="flightAuthTextField" destination="qtR-qz-4wH" id="9lY-Y4-3tA"/>
-                        <outlet property="flightSeqPopUp1" destination="NCQ-ah-evn" id="I2A-eL-md2"/>
-                        <outlet property="flightSeqPopUp2" destination="qzq-4X-6Gf" id="DFi-Wb-OTi"/>
+                        <outlet property="flightSeqPopUp" destination="qzq-4X-6Gf" id="DFi-Wb-OTi"/>
                         <outlet property="flightTableView" destination="89Q-Op-sJj" id="rtM-q5-6Ar"/>
                         <outlet property="fromICAO" destination="5bR-pL-Sc3" id="ciE-XM-ejN"/>
                         <outlet property="fullStop" destination="BQY-jp-Xhs" id="j2S-kE-al8"/>
@@ -1854,157 +1852,29 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2118" y="-54"/>
-        </scene>
-        <!--Mission View Controller-->
-        <scene sceneID="38R-gE-O5N">
-            <objects>
-                <viewController storyboardIdentifier="Page1" id="334-sr-6ga" customClass="MissionViewController" customModule="Logging" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w2E-bn-RTO">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evp-Iz-1XA">
-                                <rect key="frame" x="0.0" y="50" width="1024" height="54.5"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4B4-qZ-5dv" userLabel="PBL Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="11" width="33" height="32.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PBL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njz-pf-lwV" customClass="PBLLabelWhiteBold" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="8.5" y="11.5" width="15.5" height="10"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstItem="Njz-pf-lwV" firstAttribute="centerY" secondItem="4B4-qZ-5dv" secondAttribute="centerY" id="2Ym-ST-dmx"/>
-                                            <constraint firstItem="Njz-pf-lwV" firstAttribute="centerX" secondItem="4B4-qZ-5dv" secondAttribute="centerX" id="R2c-nR-dXP"/>
-                                            <constraint firstAttribute="width" secondItem="4B4-qZ-5dv" secondAttribute="height" multiplier="1:1" id="sIK-id-p9n"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dF-7L-dTl" userLabel="MC Circle View" customClass="circleView" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="976" y="11" width="33" height="32.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R17-sM-P0s" customClass="PBLLabelWhiteBold" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="10" y="11.5" width="13.5" height="10"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" name="fog"/>
-                                        <constraints>
-                                            <constraint firstItem="R17-sM-P0s" firstAttribute="centerY" secondItem="2dF-7L-dTl" secondAttribute="centerY" id="eOq-ox-6GT"/>
-                                            <constraint firstAttribute="width" secondItem="2dF-7L-dTl" secondAttribute="height" multiplier="1:1" id="ecd-oa-XyL"/>
-                                            <constraint firstItem="R17-sM-P0s" firstAttribute="centerX" secondItem="2dF-7L-dTl" secondAttribute="centerX" id="uoC-hh-aww"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" name="slate"/>
-                                <constraints>
-                                    <constraint firstItem="2dF-7L-dTl" firstAttribute="height" secondItem="evp-Iz-1XA" secondAttribute="height" multiplier="0.6" id="2dS-l2-Iwp"/>
-                                    <constraint firstItem="4B4-qZ-5dv" firstAttribute="centerY" secondItem="evp-Iz-1XA" secondAttribute="centerY" id="42W-vy-E0N"/>
-                                    <constraint firstAttribute="trailing" secondItem="2dF-7L-dTl" secondAttribute="trailing" constant="15" id="Hch-LG-AZQ"/>
-                                    <constraint firstItem="4B4-qZ-5dv" firstAttribute="height" secondItem="evp-Iz-1XA" secondAttribute="height" multiplier="0.6" id="K4y-8N-h4t"/>
-                                    <constraint firstItem="4B4-qZ-5dv" firstAttribute="leading" secondItem="evp-Iz-1XA" secondAttribute="leading" constant="15" id="Npa-pW-Do7"/>
-                                    <constraint firstItem="2dF-7L-dTl" firstAttribute="centerY" secondItem="evp-Iz-1XA" secondAttribute="centerY" id="kax-l4-BWg"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMz-Uj-SMh" customClass="PBLLabelBold" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="289" y="371" width="446.5" height="95.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="80"/>
-                                <color key="textColor" name="slate"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to add mission data?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUs-fS-5Wd" customClass="PBLLabelLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="309" y="496" width="406.5" height="125"/>
-                                <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="48"/>
-                                <color key="textColor" name="fog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTo-a5-sKX" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="1260" width="53" height="36"/>
-                                <color key="backgroundColor" name="haze"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="BACK"/>
-                                <connections>
-                                    <action selector="backButtonTapped:" destination="334-sr-6ga" eventType="touchUpInside" id="WUI-9V-ks8"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ihq-J4-Y87">
-                                <rect key="frame" x="384" y="722" width="256" height="92"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcn-OI-ZjX" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="36"/>
-                                        <color key="backgroundColor" name="haze"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <state key="normal" title="YES"/>
-                                        <connections>
-                                            <segue destination="gFV-3G-E5E" kind="show" id="8IU-ml-es2"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dd6-XM-G1B" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="56" width="256" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                        <state key="normal" title="SKIP FOR NOW"/>
-                                        <connections>
-                                            <action selector="skipButtonTapped:" destination="334-sr-6ga" eventType="touchUpInside" id="zzV-bD-dwa"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="itD-Fi-GBg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="bMz-Uj-SMh" firstAttribute="width" secondItem="w2E-bn-RTO" secondAttribute="width" multiplier="0.436035" id="Aaw-Wy-vrf"/>
-                            <constraint firstItem="evp-Iz-1XA" firstAttribute="leading" secondItem="w2E-bn-RTO" secondAttribute="leading" id="Avb-O6-j1T"/>
-                            <constraint firstItem="UUs-fS-5Wd" firstAttribute="width" secondItem="w2E-bn-RTO" secondAttribute="width" multiplier="0.396973" id="C3T-fc-GYQ"/>
-                            <constraint firstItem="evp-Iz-1XA" firstAttribute="height" secondItem="w2E-bn-RTO" secondAttribute="height" multiplier="0.04" id="Dp3-cq-bXV"/>
-                            <constraint firstItem="ihq-J4-Y87" firstAttribute="width" secondItem="w2E-bn-RTO" secondAttribute="width" multiplier="0.25" id="I6i-5E-8Pn"/>
-                            <constraint firstItem="iTo-a5-sKX" firstAttribute="leading" secondItem="itD-Fi-GBg" secondAttribute="leading" constant="50" id="Jb2-e1-XH0"/>
-                            <constraint firstItem="UUs-fS-5Wd" firstAttribute="centerX" secondItem="itD-Fi-GBg" secondAttribute="centerX" id="NLI-FT-EVe"/>
-                            <constraint firstItem="itD-Fi-GBg" firstAttribute="trailing" secondItem="evp-Iz-1XA" secondAttribute="trailing" id="PTT-At-VRi"/>
-                            <constraint firstItem="UUs-fS-5Wd" firstAttribute="centerY" secondItem="itD-Fi-GBg" secondAttribute="centerY" multiplier="0.8" id="S3h-WL-CYx"/>
-                            <constraint firstItem="evp-Iz-1XA" firstAttribute="top" secondItem="itD-Fi-GBg" secondAttribute="top" id="bic-Ky-1jw"/>
-                            <constraint firstItem="ihq-J4-Y87" firstAttribute="centerY" secondItem="itD-Fi-GBg" secondAttribute="centerY" multiplier="1.1" id="bps-gx-0z9"/>
-                            <constraint firstItem="bMz-Uj-SMh" firstAttribute="centerY" secondItem="itD-Fi-GBg" secondAttribute="centerY" multiplier="0.6" id="j6n-mk-HUX"/>
-                            <constraint firstItem="ihq-J4-Y87" firstAttribute="centerX" secondItem="itD-Fi-GBg" secondAttribute="centerX" id="kFi-03-yHR"/>
-                            <constraint firstItem="itD-Fi-GBg" firstAttribute="bottom" secondItem="iTo-a5-sKX" secondAttribute="bottom" constant="50" id="uUL-p6-8SO"/>
-                            <constraint firstItem="bMz-Uj-SMh" firstAttribute="centerX" secondItem="itD-Fi-GBg" secondAttribute="centerX" id="xck-tw-o6a"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="g5G-hh-T9B"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Bl-5J-Cd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1392.1875" y="-54.4921875"/>
+            <point key="canvasLocation" x="1359" y="-54"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="3Jv-0F-Qcy">
+        <scene sceneID="gHB-Df-QZi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oh9-0Q-fMO" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NCq-Ls-vbn" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8tJ-PH-hwD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oad-m4-AqC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="334-sr-6ga" kind="relationship" relationship="rootViewController" id="CQX-EV-1LX"/>
+                        <segue destination="gFV-3G-E5E" kind="relationship" relationship="rootViewController" id="VLW-LW-akY"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nfu-EH-ONo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kwi-Fh-M2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="626.5625" y="-54.4921875"/>
+            <point key="canvasLocation" x="637" y="-54"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="chevron.forward" catalog="system" width="96" height="128"/>
         <image name="minus.circle" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
@@ -2030,9 +1900,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

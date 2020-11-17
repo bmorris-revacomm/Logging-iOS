@@ -29,14 +29,12 @@ class FlightListViewController: UIViewController {
     @IBOutlet weak var flightAuthTextField: UITextField!
     @IBOutlet weak var issuingUnitTextField: UITextField!
     
-    @IBOutlet weak var flightSeqPopUp1: UIView!
+    @IBOutlet weak var flightSeqPopUp: UIView!
     @IBOutlet weak var missionNumber: UITextField!
     @IBOutlet weak var missionSymbol: UITextField!
     @IBOutlet weak var fromICAO: UITextField!
     @IBOutlet weak var toICAO: UITextField!
     @IBOutlet weak var specialUse: UITextField!
-    
-    @IBOutlet weak var flightSeqPopUp2: UIView!
     @IBOutlet weak var takeOffTime: UITextField!
     @IBOutlet weak var landTime: UITextField!
     @IBOutlet weak var totalTime: UITextField!
@@ -190,7 +188,7 @@ class FlightListViewController: UIViewController {
             
             self.flightTableView.reloadData()
             self.updateGrandTotals(form: form)
-            self.flightSeqPopUp2.isHidden = true
+            self.flightSeqPopUp.isHidden = true
             self.enableButtons()
         }
     }
@@ -292,28 +290,17 @@ class FlightListViewController: UIViewController {
     }
     
     @IBAction func newFlightButtonTapped(_ sender: UIButton) {
-        guard let form = Form781Controller.shared.forms.last else { return }
+        guard let form = Form781Controller.shared.forms.last else { return Alerts.showNoFormAlert(on: self) }
         guard form.flights.count < 6 else { return Alerts.showFlightsErrorAlert(on: self) }
         unhighlightFlightSeq()
-        flightSeqPopUp1.isHidden = false
+        flightSeqPopUp.isHidden = false
         disableButtons()
     }
     
     @IBAction func exitButtonTapped(_ sender: UIButton) {
         missionDataPopUp.isHidden = true
-        flightSeqPopUp1.isHidden = true
-        flightSeqPopUp2.isHidden = true
+        flightSeqPopUp.isHidden = true
         enableButtons()
-    }
-    
-    @IBAction func popUpNextButtonTapped(_ sender: UIButton) {
-        flightSeqPopUp2.isHidden = false
-        flightSeqPopUp1.isHidden = true
-    }
-    
-    @IBAction func popUpBackButtonTapped(_ sender: UIButton) {
-        flightSeqPopUp1.isHidden = false
-        flightSeqPopUp2.isHidden = true
     }
     
     @IBAction func calculateTotalTime(_ sender: Any) {    
@@ -396,12 +383,12 @@ class FlightListViewController: UIViewController {
         
         flightTableView.reloadData()
         updateGrandTotals(form: form)
-        flightSeqPopUp2.isHidden = true
+        flightSeqPopUp.isHidden = true
         enableButtons()
     }
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
-        if let viewController = UIStoryboard(name: "Aircrew", bundle: nil).instantiateViewController(withIdentifier: "Page1") as? AircrewViewController {
+        if let viewController = UIStoryboard(name: "Aircrew", bundle: nil).instantiateViewController(withIdentifier: "Aircrew") as? AircrewListViewController {
             if let navigator = navigationController {
                 navigator.pushViewController(viewController, animated: true)
             }
