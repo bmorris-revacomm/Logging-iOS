@@ -50,7 +50,7 @@ jobs:
         uses: blawrencens/nowsecure-actions-integration@1.0.2
         with:
          # Please provide the path for the app to be uploaded
-         app-path: "/Users/runner/work/Logging-iOS/Logging-iOS/$PRODUCT_NAME.ipa"
+         app-path: "/Users/runner/work/Logging-iOS/Logging-iOS/Logging.ipa"
          # Please provide the API Key for NowSecure Platform
          api-key: ${{ secrets.PLATFORM_API_KEY }}
          # Please provide the Group Id of the application being integrated, using Tron group
