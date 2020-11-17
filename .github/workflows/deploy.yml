@@ -46,6 +46,16 @@ jobs:
  #       env:
  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+     - name: NowSecure Platform Integration
+       uses: blawrencens/nowsecure-actions-integration@1.0.2
+       with:
+         # Please provide the path for the app to be uploaded
+         app-path: "$PRODUCT_NAME.ipa"
+         # Please provide the API Key for NowSecure Platform
+         api-key: ${{ secrets.PLATFORM_API_KEY }}
+         # Please provide the Group Id of the application being integrated, using Tron group
+         group-id: "e01d876f-dffd-4beb-91ac-145459657511"
+
       - name: Upload app to App Store Connect
    #     if: startsWith(github.ref, 'refs/tags/v')
         env:
