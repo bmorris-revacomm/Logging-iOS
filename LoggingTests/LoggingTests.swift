@@ -27,7 +27,7 @@ class LoggingTests: XCTestCase {
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
         let url = path?.appendingPathComponent("Logging.json", isDirectory: false)
         let result = Helper().checkForFile(filePath: url!)
-        XCTAssertTrue(result)
+        XCTAssertFalse(result)
     }
     
     func testCheckInput() {

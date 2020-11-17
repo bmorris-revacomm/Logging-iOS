@@ -23,15 +23,45 @@ class LoggingUITests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        
         let app = XCUIApplication()
         app.launch()
         do {
             try runMissionData(app: app)
+            do {
+                try addAFlight(app: app)
+            } catch {
+                print("Flight data error")
+            }
         } catch {
             print("Mission Data Failure")
         }
         
+    }
+    func addAFlight(app: XCUIApplication) throws {
+        let element = app.keyboards.children(matching: .other).element.children(matching: .other).element
+        let moreKey = element/*@START_MENU_TOKEN@*/.children(matching: .key).matching(identifier: "more").element(boundBy: 0)/*[[".children(matching: .key).matching(identifier: \"letters\").element(boundBy: 0)",".children(matching: .key).matching(identifier: \"more\").element(boundBy: 0)"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        
+        let tableName = "MISSION NUMBER, MISSION SYMBOL, FROM (ICAO), TO (ICAO), TAKE OFF TIME (Z), LAND TIME (Z), TOTAL TIME, TOUCH & GO, FULL STOP, TOTAL, SORTIES, SPECIAL USE"
+        let predicate = NSPredicate(format: "label LIKE %@", tableName)
+        
+        app.tables.staticTexts.element(matching: predicate).buttons["add"].tap()
+        
+        app.textFields["ABCDEFGHIJ-1234567890"].tap()
+        app.keys["A"].tap()
+        app.keys["U"].tap()
+        app.keys["N"].tap()
+        moreKey.tap()
+        app.keys["0"].tap()
+        app.keys["3"].tap()
+        moreKey.tap()
+        app.keys["T"].tap()
+        moreKey.tap()
+        app.keys["1"].tap()
+        app.keys["0"].tap()
+        app.keys["3"].tap()
+        app.keys["2"].tap()
+        app.keys["0"].tap()
+        app.keys["6"].tap()
         
     }
     
@@ -44,6 +74,10 @@ class LoggingUITests: XCTestCase {
         // Date auto-populated
         app.textFields["DD MMM YYY"].tap()
         //MDS
+        if app.buttons["Keyboard"].exists{
+            app.buttons["Keyboard"].tap()
+            app.popovers.scrollViews.otherElements.buttons["Show Keyboard"].tap()
+        }
         app.textFields["X-XX"].tap()
         app.keys["C"].tap()
         app.keys["P"].swipeDown()
