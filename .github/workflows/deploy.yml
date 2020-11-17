@@ -36,15 +36,15 @@ jobs:
           name: build.log
           path: ~/Library/Logs/gym/*.log
 
-      - name: Upload release assets
+#      - name: Upload release assets
 #        if: startsWith(github.ref, 'refs/tags/v')
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            ${{ env.PRODUCT_NAME }}.ipa
-            ${{ env.PRODUCT_NAME }}.app.dSYM.zip
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        uses: softprops/action-gh-release@v1
+ #       with:
+ #         files: |
+ #           ${{ env.PRODUCT_NAME }}.ipa
+ #           ${{ env.PRODUCT_NAME }}.app.dSYM.zip
+ #       env:
+ #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload app to App Store Connect
    #     if: startsWith(github.ref, 'refs/tags/v')
