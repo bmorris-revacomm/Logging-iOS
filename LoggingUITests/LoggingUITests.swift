@@ -27,11 +27,11 @@ class LoggingUITests: XCTestCase {
         app.launch()
         do {
             try runMissionData(app: app)
-            do {
-                try addAFlight(app: app)
-            } catch {
-                print("Flight data error")
-            }
+//            do {
+//                try addAFlight(app: app)
+//            } catch {
+//                print("Flight data error")
+//            }
         } catch {
             print("Mission Data Failure")
         }
