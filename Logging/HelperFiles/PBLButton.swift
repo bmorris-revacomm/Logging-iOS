@@ -8,7 +8,7 @@
 
 import UIKit
 
-//12.9in iPad Pro has screen height of 1366
+//12.9in iPad Pro has screen height of 1366 and width of 1024
 
 class PBLButtonClear: UIButton {
     
@@ -16,12 +16,7 @@ class PBLButtonClear: UIButton {
         super.awakeFromNib()
         self.backgroundColor = .clear
         self.setTitleColor(.slate, for: .normal)
-        self.updateFont(to: FontNames.dmSansRegular, size: UIScreen.main.bounds.height/56.9)
-    }
-    
-    func updateFont(to font: String, size: CGFloat) {
-        //guard let size = self.titleLabel?.font.pointSize else { return }
-        self.titleLabel?.font = UIFont(name: font, size: size)
+        self.titleLabel?.font = UIFont(name: FontNames.dmSansRegular, size: UIScreen.main.bounds.height/56.9)
     }
 }
 
@@ -29,18 +24,19 @@ class PBLButton: PBLButtonClear {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("Screen height: \(UIScreen.main.bounds.height)")
-        print("Button height: \(UIScreen.main.bounds.height/21.3)")
-        print("Button font size: \(UIScreen.main.bounds.height/68.3)")
+//        print("Screen height: \(UIScreen.main.bounds.height)")
+//        print("Screen width: \(UIScreen.main.bounds.width)")
+//        print("Button height: \(UIScreen.main.bounds.height/21.3)")
+//        print("Button font size: \(UIScreen.main.bounds.height/68.3)")
         
-        ///Divided by 21.3 because that is aproximately 64px in height for the largest ipad screen
+        ///Divided by 21.3 because that is aproximately 64px in height for the 12.9in ipad
         self.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/21.3).isActive = true
         self.frame.size.height = UIScreen.main.bounds.height/21.3
-        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 25)
+        self.contentEdgeInsets = UIEdgeInsets(top: 0, left: UIScreen.main.bounds.width/41, bottom: 0, right: UIScreen.main.bounds.width/41)
         self.addCornerRadius(self.frame.size.height/2)
         self.backgroundColor = .fog
         self.tintColor = .clear
-        self.updateFont(to: FontNames.dmSansBold, size: UIScreen.main.bounds.height/68.3)
+        self.titleLabel?.font = UIFont(name: FontNames.dmSansBold, size: UIScreen.main.bounds.height/68.3)
     }
 }
 
@@ -71,7 +67,7 @@ class PBLOverviewButton: PBLButtonClear {
         self.tintColor = .slate
         self.contentHorizontalAlignment = .left
         self.contentEdgeInsets = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 0)
-        
+
         self.layer.shadowColor = UIColor.fog.cgColor
         self.layer.shadowOpacity = 1
         self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
@@ -83,6 +79,6 @@ class PBLPrintButton: PBLButtonClear {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.updateFont(to: FontNames.dmSansBold, size: UIScreen.main.bounds.height/97.6)
+        self.titleLabel?.font = UIFont(name: FontNames.dmSansBold, size: UIScreen.main.bounds.height/97.6)
     }
 }
