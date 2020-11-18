@@ -67,9 +67,6 @@ class LoggingUITests: XCTestCase {
     
     func runMissionData(app: XCUIApplication) throws {
     
-        let element = app.keyboards.children(matching: .other).element.children(matching: .other).element
-        let moreKey = element/*@START_MENU_TOKEN@*/.children(matching: .key).matching(identifier: "more").element(boundBy: 0)/*[[".children(matching: .key).matching(identifier: \"letters\").element(boundBy: 0)",".children(matching: .key).matching(identifier: \"more\").element(boundBy: 0)"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-
         app/*@START_MENU_TOKEN@*/.staticTexts["YES"]/*[[".buttons[\"YES\"].staticTexts[\"YES\"]",".staticTexts[\"YES\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         // Date auto-populated
         app.textFields["DD MMM YYY"].tap()
@@ -87,35 +84,34 @@ class LoggingUITests: XCTestCase {
         //Serial Number
         app.textFields["00-0000"].tap()
 
-        moreKey.tap()
-        app.keys["9"].tap()
-        app.keys["9"].tap()
-        app.keys["-"].tap()
-        app.keys["0"].tap()
-        app.keys["0"].tap()
-        app.keys["8"].tap()
-        app.keys["2"].tap()
+        app.keys["O"].swipeDown()
+        app.keys["O"].swipeDown()
+        app.keys["X"].swipeDown()
+        app.keys["P"].swipeDown()
+        app.keys["P"].swipeDown()
+        app.keys["I"].swipeDown()
+        app.keys["W"].swipeDown()
 
 
         //Unit Charged
         app.textFields["00 AB CDE FG"].tap()
-        moreKey.tap()
-        app.keys["4"].tap()
-        app.keys["3"].tap()
-        app.keys["7"].tap()
+    
+        app.keys["R"].swipeDown()
+        app.keys["E"].swipeDown()
+        app.keys["U"].swipeDown()
         app.keys["space"].tap()
         app.keys["A"].tap()
         app.keys["W"].tap()
-        moreKey.tap()
-        app.keys["("].tap()
-        moreKey.tap()
+        
+        app.keys["H"].swipeDown()
+        
         app.keys["A"].tap()
         app.keys["M"].tap()
         app.keys["C"].tap()
-        moreKey.tap()
-        app.keys[")"].tap()
-        app.keys["/"].tap()
-        moreKey.tap()
+        
+        app.keys["J"].swipeDown()
+        app.keys["B"].swipeDown()
+        
         app.keys["D"].tap()
         app.keys["K"].tap()
         app.keys["F"].tap()
@@ -140,30 +136,30 @@ class LoggingUITests: XCTestCase {
         app.keys["S"].tap()
         app.keys["C"].tap()
         app.keys["space"].tap()
-        moreKey.tap()
-        app.keys["2"].tap()
-        app.keys["9"].tap()
-        app.keys["4"].tap()
-        app.keys["0"].tap()
-        app.keys["4"].tap()
+        
+        app.keys["W"].swipeDown()
+        app.keys["O"].swipeDown()
+        app.keys["R"].swipeDown()
+        app.keys["P"].swipeDown()
+        app.keys["R"].swipeDown()
         //Flight Auth #
         app.textFields["00-XXXX"].tap()
-        moreKey.tap()
-        app.keys["2"].tap()
-        app.keys["0"].tap()
-        app.keys["-"].tap()
-        app.keys["0"].tap()
-        app.keys["4"].tap()
-        app.keys["4"].tap()
-        app.keys["2"].tap()
+        
+        app.keys["W"].swipeDown()
+        app.keys["P"].swipeDown()
+        app.keys["X"].swipeDown()
+        app.keys["P"].swipeDown()
+        app.keys["R"].swipeDown()
+        app.keys["R"].swipeDown()
+        app.keys["W"].swipeDown()
         //Issuing Unit
 
         app.textFields["00 AA"].tap()
-        moreKey.tap()
-        app.keys["0"].tap()
-        app.keys["0"].tap()
-        app.keys["1"].tap()
-        app.keys["6"].tap()
+        
+        app.keys["P"].swipeDown()
+        app.keys["P"].swipeDown()
+        app.keys["Q"].swipeDown()
+        app.keys["Y"].swipeDown()
 
         
         app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 4).buttons["SAVE & CONTINUE"].tap()
