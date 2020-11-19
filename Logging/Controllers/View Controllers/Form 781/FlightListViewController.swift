@@ -11,7 +11,13 @@ import UIKit
 class FlightListViewController: UIViewController {
     
     // MARK: - Outlets
-
+    
+    @IBOutlet weak var missionDateLabel: UILabel!
+    @IBOutlet weak var formSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var missionDataView: UIView!
+    @IBOutlet weak var aircrewListView: UIView!
+    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mdsLabel: UILabel!
     @IBOutlet weak var serialNumberLabel: UILabel!
@@ -259,6 +265,9 @@ class FlightListViewController: UIViewController {
     }
 
     // MARK: - Actions
+    
+    @IBAction func formSegmentedControlChanged(_ sender: UISegmentedControl) {
+    }
     
     @IBAction func editMissionButtonTapped(_ sender: UIButton) {
         unhighlightMissionData()
