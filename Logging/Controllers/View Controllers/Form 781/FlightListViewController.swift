@@ -267,6 +267,20 @@ class FlightListViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func formSegmentedControlChanged(_ sender: UISegmentedControl) {
+        switch formSegmentedControl.selectedSegmentIndex {
+        case 0:
+            aircrewListView.isHidden = false
+            missionDataView.isHidden = true
+        case 1:
+            missionDataView.isHidden = false
+            aircrewListView.isHidden = true
+        case 2:
+            missionDataView.isHidden = false
+            aircrewListView.isHidden = true
+        default:
+            missionDataView.isHidden = false
+            aircrewListView.isHidden = true
+        }
     }
     
     @IBAction func editMissionButtonTapped(_ sender: UIButton) {
