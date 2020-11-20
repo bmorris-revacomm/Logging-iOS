@@ -16,6 +16,14 @@ class PBLView: UIView {
     }
 }
 
+class PBLViewWhite: UIView {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = .white
+    }
+}
+
 class popUpView: UIView {
     
     override func awakeFromNib() {

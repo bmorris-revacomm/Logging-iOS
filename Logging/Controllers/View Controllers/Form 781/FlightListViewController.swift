@@ -109,6 +109,7 @@ class FlightListViewController: UIViewController {
     func updateLabels() {
         guard let form = Form781Controller.shared.forms.last else { return }
 
+        missionDateLabel.text = "MISSION \(form.date)"
         dateLabel.text = form.date
         mdsLabel.text = form.mds
         serialNumberLabel.text = form.serialNumber
