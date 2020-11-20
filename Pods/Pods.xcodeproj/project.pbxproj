@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		09001E9A13C7642648C3AF429D739C82 /* Pods-Logging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Logging.release.xcconfig"; sourceTree = "<group>"; };
 		16D99C2E79245E4CF831D039E0150C36 /* Pods-Logging-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Logging-Info.plist"; sourceTree = "<group>"; };
-		178290AC5636F71625D9690A9888797C /* Pods_Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Logging.framework; path = "Pods-Logging.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		178290AC5636F71625D9690A9888797C /* Pods_Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F8D46DA0663C051FE78C36BE6F1207 /* Pods-Logging-LoggingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Logging-LoggingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		29B4C858B69969DB8C662DFAC9548DE5 /* Pods-Logging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Logging.debug.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -39,7 +39,7 @@
 		463CC1FC080C24B239AA82AFA41145B0 /* Pods-LoggingTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LoggingTests-umbrella.h"; sourceTree = "<group>"; };
 		517A7F8189BFC2FBFD0B428569D6450C /* Pods-Logging-LoggingUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Logging-LoggingUITests-umbrella.h"; sourceTree = "<group>"; };
 		545DBE4A18DBA7E3A8BC68C67BCCAB97 /* Pods-Logging-LoggingUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Logging-LoggingUITests-dummy.m"; sourceTree = "<group>"; };
-		5A5792D1F5E369010B9E71AD9DBC52BD /* Pods_LoggingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LoggingTests.framework; path = "Pods-LoggingTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A5792D1F5E369010B9E71AD9DBC52BD /* Pods_LoggingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoggingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C32A68296F768B3D4A07B7C900F42B7 /* Pods-Logging.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Logging.modulemap"; sourceTree = "<group>"; };
 		68768762BB4DFF4E53D364AA4142A62D /* Pods-LoggingTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LoggingTests-Info.plist"; sourceTree = "<group>"; };
 		7282DBB69122AF34BF31289631E9D40C /* Pods-LoggingTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LoggingTests.modulemap"; sourceTree = "<group>"; };
@@ -47,10 +47,10 @@
 		7C49AF9C14D644674FC9721F7DA0125A /* Pods-Logging-LoggingUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Logging-LoggingUITests-Info.plist"; sourceTree = "<group>"; };
 		8CC6D8B8BFDB4D2B3BBD4DB3A344C1B3 /* Pods-Logging-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Logging-dummy.m"; sourceTree = "<group>"; };
 		919BAD43B29F37144568B35E3A88ECAF /* Pods-Logging-LoggingUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Logging-LoggingUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB65A8F58096EF09FFF7848B2B1E5A19 /* Pods-Logging-LoggingUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Logging-LoggingUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B4DF913B76AEBDB493430EA05E4EEE29 /* Pods-Logging-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Logging-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B5AF07CAD606BA910E0672908F12BA2A /* Pods_Logging_LoggingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Logging_LoggingUITests.framework; path = "Pods-Logging-LoggingUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AF07CAD606BA910E0672908F12BA2A /* Pods_Logging_LoggingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Logging_LoggingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F1B2B3B18E989D9F23251F31541A1D /* Pods-Logging-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Logging-acknowledgements.plist"; sourceTree = "<group>"; };
 		C4C8CBFC7AA4C1DFADF0B74946275B6D /* Pods-LoggingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LoggingTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4E4856E35BEDE2C9CDF3B82279FC7BA /* Pods-LoggingTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LoggingTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1220;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -383,6 +383,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -601,6 +602,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

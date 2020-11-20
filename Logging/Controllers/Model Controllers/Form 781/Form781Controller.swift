@@ -29,7 +29,7 @@ class Form781Controller {
         formCreated = true
         populateFlights()
         populateCrewMembers()
-        print("Created form")
+        NSLog("Created form")
         save()
     }
     
@@ -39,7 +39,7 @@ class Form781Controller {
         if numberOfForms > 1 {
             let flightsArray = forms[numberOfForms - 2].flights
             forms.last?.flights = flightsArray
-            print("Populated flights")
+            NSLog("Populated flights")
         }
     }
     
@@ -49,7 +49,7 @@ class Form781Controller {
         if numberOfForms > 1 {
             let crewMemberArray = forms[numberOfForms - 2].crewMembers
             forms.last?.crewMembers = crewMemberArray
-            print("Populated crew members")
+            NSLog("Populated crew members")
         }
     }
     
@@ -65,13 +65,13 @@ class Form781Controller {
         form.harmLocation = harmLocation
         form.flightAuthNum = flightAuthNum
         form.issuingUnit = issuingUnit
-        print("Updated mission data")
+        NSLog("Updated mission data")
         save()
     }
     
     func updateFormWith(flight: Flight, form: Form781) {
         form.flights.append(flight)
-        print("Added flight")
+        NSLog("Added flight")
         save()
     }
     
@@ -81,13 +81,13 @@ class Form781Controller {
         form.grandTotalFullStop = grandFullStop
         form.grandTotalLandings = grandTotalLandings
         form.grandTotalSorties = grandTotalSorties
-        print("Updated grand totals")
+        NSLog("Updated grand totals")
         save()
     }
     
     func updateFormwith(crewMember: CrewMember, form: Form781) {
         form.crewMembers.append(crewMember)
-        print("Added crew member")
+        NSLog("Added crew member")
         save()
     }
     
@@ -115,7 +115,7 @@ class Form781Controller {
         crewMember.combatSptSrty = combatSptSrty
         crewMember.resvStatus = resvStatus
                 
-        print("Updated crew member")
+        NSLog("Updated crew member")
         save()
     }
     
@@ -125,7 +125,7 @@ class Form781Controller {
         guard let index = form.flights.firstIndex(of: flight) else { return }
         form.flights.remove(at: index)
         updateFlightSeqLetters()
-        print("Removed flight")
+        NSLog("Removed flight")
         save()
     }
     
@@ -155,7 +155,7 @@ class Form781Controller {
     func remove(crewMember: CrewMember, from form: Form781) {
         guard let index = form.crewMembers.firstIndex(of: crewMember) else { return }
         form.crewMembers.remove(at: index)
-        print("Removed crew member")
+        NSLog("Removed crew member")
         save()
     }
     
@@ -179,7 +179,7 @@ class Form781Controller {
             let data = try encoder.encode(forms)
             try data.write(to: fileURL())
         } catch {
-            print("There was an error encoding the data: \(error.localizedDescription)")
+            NSLog("There was an error encoding the data: \(error.localizedDescription)")
         }
     }
     

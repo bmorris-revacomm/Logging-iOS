@@ -33,7 +33,7 @@ class LoggingUITests: XCTestCase {
 //                print("Flight data error")
 //            }
         } catch {
-            print("Mission Data Failure")
+            NSLog("Mission Data Failure")
         }
         
     }

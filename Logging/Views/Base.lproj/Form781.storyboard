@@ -1581,6 +1581,9 @@
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits"/>
+                                                                        <connections>
+                                                                            <action selector="checkTime:" destination="gFV-3G-E5E" eventType="editingDidEnd" id="M33-pZ-X64"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -1602,6 +1605,7 @@
                                                                         <textInputTraits key="textInputTraits"/>
                                                                         <connections>
                                                                             <action selector="calculateTotalTime:" destination="gFV-3G-E5E" eventType="editingDidEnd" id="1qh-yy-7lr"/>
+                                                                            <action selector="checkTime:" destination="gFV-3G-E5E" eventType="editingDidEnd" id="SVz-QL-90L"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class FlightListViewController: UIViewController {
     
@@ -85,7 +86,7 @@ class FlightListViewController: UIViewController {
         do {
             try Form781Controller.shared.loadForms()
         } catch {
-            print(Form781Error.FileNotFound)
+            NSLog("\(Form781Error.FileNotFound)")
         }
         
         let form = Form781Controller.shared.forms.last
@@ -316,6 +317,26 @@ class FlightListViewController: UIViewController {
         flightSeqPopUp2.isHidden = true
     }
     
+    @IBAction func checkTime(_ sender: UITextField) {
+        do {
+            let _ = try Helper.validateTime(timeFromTextField: sender)
+            Helper.unhighlight(textField: sender)
+            NSLog("Time is valid")
+        } catch Form781Error.InvalidHours {
+            Alerts.showHoursError(on: self)
+            Helper.highlightRed(textField: sender)
+        } catch Form781Error.InvalidMins {
+            Alerts.showMinError(on: self)
+            Helper.highlightRed(textField: sender)
+//        } catch Form781Error.NoTimeFound {
+//            Helper.highlightRed(textField: sender)
+//            NSLog("No time found")
+        } catch {
+            NSLog("checkTakeOffTime function unknown Error")
+        }
+    }
+    
+    
     @IBAction func calculateTotalTime(_ sender: Any) {    
         if Helper().checkInput(time: takeOffTime.text!) {
             takeOffTimeString = takeOffTime.text!
@@ -353,7 +374,18 @@ class FlightListViewController: UIViewController {
         
     @IBAction func calculateTotalLandings(_sender: Any) {
         //Here's where we do the math for filling in the total field
-        totalLandings.text = Helper().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
+        if Helper.validateNumericalInput(input: touchAndGo){
+            if Helper.validateNumericalInput(input: fullStop){
+                Helper.unhighlight(textField: touchAndGo)
+                Helper.unhighlight(textField: fullStop)
+                totalLandings.text = Helper().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
+            } else {
+                Helper.unhighlight(textField: touchAndGo)
+                Helper.highlightRed(textField: fullStop)
+            }
+        } else {
+            Helper.highlightRed(textField: touchAndGo)
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {

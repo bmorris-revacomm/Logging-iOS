@@ -31,6 +31,8 @@
 		130D721D255AD7DB0025C589 /* afto781.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 131239A22518EFCF00F3B636 /* afto781.pdf */; };
 		131239A32518EFCF00F3B636 /* afto781.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 131239A22518EFCF00F3B636 /* afto781.pdf */; };
 		131239A82518F98100F3B636 /* afto781.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 131239A72518F98000F3B636 /* afto781.jpg */; };
+		138809FE25683876005B93FF /* (null) in Sources */ = {isa = PBXBuildFile; };
+		13C38BF4256858C300E8D919 /* Form781Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C38BF3256858C300E8D919 /* Form781Error.swift */; };
 		13F08EA125221F7D00CDAEE4 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 13F08EA025221F7D00CDAEE4 /* header.png */; };
 		13F08EAE252222A800CDAEE4 /* separator line.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13F08EAD252222A800CDAEE4 /* separator line.jpg */; };
 		7C3790BDC466879F81B1B28B /* Pods_Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2B17BC9BB310463EA2A32E /* Pods_Logging.framework */; };
@@ -134,14 +136,9 @@
 		7FE48BB8255088D600F26760 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BB7255088D600F26760 /* HelperFunctions.swift */; };
 		7FE48BB9255088D600F26760 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BB7255088D600F26760 /* HelperFunctions.swift */; };
 		7FE48BBA255088D600F26760 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BB7255088D600F26760 /* HelperFunctions.swift */; };
-		7FE48BC22550898A00F26760 /* Form781Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BC12550898A00F26760 /* Form781Error.swift */; };
-		7FE48BC32550898A00F26760 /* Form781Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BC12550898A00F26760 /* Form781Error.swift */; };
-		7FE48BC42550898A00F26760 /* Form781Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE48BC12550898A00F26760 /* Form781Error.swift */; };
 		7FEE987C2554588D00971F60 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FEE987B2554588D00971F60 /* DMSans-Regular.ttf */; };
 		7FEE987D2554588D00971F60 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FEE987B2554588D00971F60 /* DMSans-Regular.ttf */; };
 		7FEE987E2554588D00971F60 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FEE987B2554588D00971F60 /* DMSans-Regular.ttf */; };
-		7FEE9894255DDD1600971F60 /* Form781.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D8408224D3402A00F336E3 /* Form781.storyboard */; };
-		7FEE9898255DDD1700971F60 /* Form781.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D8408224D3402A00F336E3 /* Form781.storyboard */; };
 		83D8407B24D3402A00F336E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407A24D3402A00F336E3 /* AppDelegate.swift */; };
 		83D8407D24D3402A00F336E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D8407C24D3402A00F336E3 /* SceneDelegate.swift */; };
 		83D8408424D3402A00F336E3 /* Form781.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D8408224D3402A00F336E3 /* Form781.storyboard */; };
@@ -175,6 +172,7 @@
 		131239A72518F98000F3B636 /* afto781.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = afto781.jpg; sourceTree = "<group>"; };
 		135CFC4B255098D7008D1F1E /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		13965D85DFCED656F8ABF8B0 /* Pods-Logging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logging.debug.xcconfig"; path = "Target Support Files/Pods-Logging/Pods-Logging.debug.xcconfig"; sourceTree = "<group>"; };
+		13C38BF3256858C300E8D919 /* Form781Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form781Error.swift; sourceTree = "<group>"; };
 		13F08EA025221F7D00CDAEE4 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		13F08EAD252222A800CDAEE4 /* separator line.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "separator line.jpg"; sourceTree = "<group>"; };
 		261E04EA491F9077DD955A76 /* Pods-Logging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Logging.release.xcconfig"; path = "Target Support Files/Pods-Logging/Pods-Logging.release.xcconfig"; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 		7FAB8C8C25434E2300868215 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		7FAB8CA3254363F600868215 /* CrewMemberController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMemberController.swift; sourceTree = "<group>"; };
 		7FE48BB7255088D600F26760 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
-		7FE48BC12550898A00F26760 /* Form781Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Form781Error.swift; sourceTree = "<group>"; };
 		7FEE987B2554588D00971F60 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		83D8407724D3402A00F336E3 /* Logging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Logging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D8407A24D3402A00F336E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -363,8 +360,8 @@
 		7F7E0DD925310EC50041C4E9 /* HelperFiles */ = {
 			isa = PBXGroup;
 			children = (
+				13C38BF3256858C300E8D919 /* Form781Error.swift */,
 				7F1EC577255207C5006A644D /* Alerts.swift */,
-				7FE48BC12550898A00F26760 /* Form781Error.swift */,
 				7FE48BB7255088D600F26760 /* HelperFunctions.swift */,
 				7F7E0DDA25310ED80041C4E9 /* StyleGuide.swift */,
 				7F7E0E3C2538B4560041C4E9 /* PBLView.swift */,
@@ -527,6 +524,7 @@
 				3BABCE22232CA017CE915EAA /* [CP] Check Pods Manifest.lock */,
 				83D8407324D3402A00F336E3 /* Sources */,
 				83D8407424D3402A00F336E3 /* Frameworks */,
+				13673C822566B63C00733936 /* ShellScript */,
 				83D8407524D3402A00F336E3 /* Resources */,
 				834F999F25638EA800CB9D07 /* ShellScript */,
 			);
@@ -584,7 +582,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Christian Brechbuhl";
 				TargetAttributes = {
 					83D8407624D3402A00F336E3 = {
@@ -654,7 +652,6 @@
 				7F1EC5622551F0C4006A644D /* DMSans-Medium.ttf in Resources */,
 				130D7204255AD7A00025C589 /* Form781.storyboard in Resources */,
 				7F1EC55F2551F0C4006A644D /* DMSans-Bold.ttf in Resources */,
-				7FEE9894255DDD1600971F60 /* Form781.storyboard in Resources */,
 				7FEE987D2554588D00971F60 /* DMSans-Regular.ttf in Resources */,
 				7FAB8C7D25434D5800868215 /* Error.storyboard in Resources */,
 				7F97DFEA253F94E9005B0892 /* Welcome.storyboard in Resources */,
@@ -673,7 +670,6 @@
 				7F1EC5632551F0C4006A644D /* DMSans-Medium.ttf in Resources */,
 				130D7208255AD7A10025C589 /* Form781.storyboard in Resources */,
 				7F1EC5602551F0C4006A644D /* DMSans-Bold.ttf in Resources */,
-				7FEE9898255DDD1700971F60 /* Form781.storyboard in Resources */,
 				7FEE987E2554588D00971F60 /* DMSans-Regular.ttf in Resources */,
 				7FAB8C7E25434D5800868215 /* Error.storyboard in Resources */,
 				7F97DFEB253F94E9005B0892 /* Welcome.storyboard in Resources */,
@@ -685,6 +681,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		13673C822566B63C00733936 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ngit=`sh /etc/profile; which git`\nbundleVersion=`\"$git\" log --oneline | wc -l`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bundleVersion\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"    \n";
+		};
 		3BABCE22232CA017CE915EAA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -775,12 +788,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				138809FE25683876005B93FF /* (null) in Sources */,
 				7F7E0E422538BCCC0041C4E9 /* PBLTextField.swift in Sources */,
 				7F5453D0254CA22800968BFA /* FlightTimeTableViewCell.swift in Sources */,
 				7F680C6B25476A0A00625ECC /* FlightController.swift in Sources */,
 				7F680CED2548C46900625ECC /* FlightListViewController.swift in Sources */,
+				13C38BF4256858C300E8D919 /* Form781Error.swift in Sources */,
 				7FAB8C502541FDA000868215 /* AircrewListViewController.swift in Sources */,
-				7FE48BC22550898A00F26760 /* Form781Error.swift in Sources */,
 				7F5453D7254CA47300968BFA /* FlightConditionsTableViewCell.swift in Sources */,
 				7F2D11942549DDA00062AC7A /* CrewMember.swift in Sources */,
 				7FAB8CA4254363F600868215 /* CrewMemberController.swift in Sources */,
@@ -845,7 +859,6 @@
 				130D71F4255AD75B0025C589 /* PBLButton.swift in Sources */,
 				7F680CEE2548C46900625ECC /* FlightListViewController.swift in Sources */,
 				7FAB8CA5254363F600868215 /* CrewMemberController.swift in Sources */,
-				7FE48BC32550898A00F26760 /* Form781Error.swift in Sources */,
 				7F97DFF7253F9A80005B0892 /* WelcomeViewController.swift in Sources */,
 				130D7209255AD7C70025C589 /* AppDelegate.swift in Sources */,
 				7F680C6C25476A0A00625ECC /* FlightController.swift in Sources */,
@@ -886,7 +899,6 @@
 				130D71F8255AD75B0025C589 /* PBLButton.swift in Sources */,
 				7F680CEF2548C46900625ECC /* FlightListViewController.swift in Sources */,
 				7FAB8CA6254363F600868215 /* CrewMemberController.swift in Sources */,
-				7FE48BC42550898A00F26760 /* Form781Error.swift in Sources */,
 				7F97DFF8253F9A80005B0892 /* WelcomeViewController.swift in Sources */,
 				130D720D255AD7C80025C589 /* AppDelegate.swift in Sources */,
 				7F680C6D25476A0A00625ECC /* FlightController.swift in Sources */,
@@ -1051,7 +1063,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = RQ9T47YT3S;
 				INFOPLIST_FILE = Logging/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1075,7 +1087,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = RQ9T47YT3S;
 				INFOPLIST_FILE = Logging/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

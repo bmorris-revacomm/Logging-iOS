@@ -39,10 +39,24 @@ struct Alerts {
         
         let alert = UIAlertController(title: "Invalid Time", message: "Please enter your time in the 4 digit manner, ie 0400", preferredStyle: .alert)
         
-        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
-        alert.addAction(okayAction)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
         
         vc.present(alert, animated: true, completion: nil)
     }
     
+    static func showHoursError(on vc: UIViewController) {
+        let alert = UIAlertController(title: "Invalid Hours", message: "Please review your hours.  Range is 00 - 23", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        vc.present(alert, animated: true, completion: nil)
+    }
+    static func showMinError(on vc: UIViewController) {
+        let alert = UIAlertController(title: "Invalid Minutes", message: "Please review your minutes.  Range is 00 - 59", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        
+        vc.present(alert, animated: true, completion: nil)
+    }
 } //End

@@ -32,7 +32,7 @@ class PBLButton: PBLButtonClear {
         super.awakeFromNib()
         //self.heightAnchor.constraint(equalToConstant: 64.0).isActive = true
         //self.frame.size.height = 64
-        print(UIScreen.main.bounds)
+        NSLog("\(UIScreen.main.bounds)")
         self.heightAnchor.constraint(equalToConstant: 64.0).isActive = true
         self.frame.size.height = 64
         self.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
