@@ -1923,7 +1923,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready to add mission data?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUs-fS-5Wd" customClass="PBLLabelLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="309" y="496" width="406.5" height="125"/>
+                                <rect key="frame" x="309" y="502.5" width="406.5" height="112"/>
                                 <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="48"/>
                                 <color key="textColor" name="fog"/>
                                 <nil key="highlightedColor"/>
@@ -1981,6 +1981,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g5G-hh-T9B"/>
+                    <connections>
+                        <outlet property="topBar" destination="evp-Iz-1XA" id="kI5-ta-Pol"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Bl-5J-Cd9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

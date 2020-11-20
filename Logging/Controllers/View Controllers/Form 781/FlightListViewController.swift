@@ -63,6 +63,9 @@ class FlightListViewController: UIViewController {
     var takeOffTimeString: String = " "
     var landTimeString: String = " "
     
+    // MARK: - Local variables
+    private var saveddateTextFieldText: String = ""
+
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -80,6 +83,7 @@ class FlightListViewController: UIViewController {
         guard let form = Form781Controller.shared.forms.last else { return }
         updateLabels()
         updateGrandTotals(form: form)
+        dateTextField.delegate = self
     }
     
     func loadFromData(){
@@ -99,7 +103,7 @@ class FlightListViewController: UIViewController {
             flightAuthTextField.text = form?.flightAuthNum
             issuingUnitTextField.text = form?.issuingUnit
         } else {
-            dateTextField.text = Helper().populateDateField()
+            dateTextField.text = Helper.getTodaysDate()
         }
     }
     
@@ -505,4 +509,31 @@ extension FlightListViewController: FlightTableViewCellDelegate {
         updateGrandTotals(form: form)
     }
     
+} //End
+
+// MARK: - UITextField Delegate
+
+extension FlightListViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == self.dateTextField {
+            self.saveddateTextFieldText = self.dateTextField.text ?? ""
+        }
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == self.dateTextField {
+            guard let dateString = textField.text else {
+                textField.text = self.saveddateTextFieldText
+                return
+            }
+            let date = Helper.dateFromString(dateString)
+
+            if let date = date {
+                textField.text = Helper.stdFormattedDate(with: date)
+            } else {
+                textField.text = self.saveddateTextFieldText
+            }
+        }
+    }
+
 } //End

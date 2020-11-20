@@ -13,10 +13,10 @@ class LoggingTests: XCTestCase {
     
     
     func testHelperFunction() {
-        let date = Helper().populateDateField()
+        let date = Helper.getTodaysDate()
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
+        dateFormatter.dateFormat = Helper.DATE_FORMAT
         let testDate = dateFormatter.string(from: Date())
         
         XCTAssertEqual(date, testDate)

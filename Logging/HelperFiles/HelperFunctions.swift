@@ -10,18 +10,23 @@ import Foundation
 
 class Helper {
     
-    let WIDTH: Int = 3300
-    let HEIGHT: Int = 2550
+    static let WIDTH: Int = 3300
+    static let HEIGHT: Int = 2550
 
-    
-    func populateDateField() -> String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
-        let date = dateFormatter.string(from: Date())
-        
-        return date
+    static let DATE_FORMAT = "dd MMM yyyy"
+
+    static func getTodaysDate() -> String {
+        return stdFormattedDate(with: Date())
     }
-    
+
+    static func stdFormattedDate(with date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Helper.DATE_FORMAT
+        let dateStr = dateFormatter.string(from: date)
+        
+        return dateStr
+    }
+
     func checkForFile(filePath: URL) -> Bool {
         NSLog("\(filePath.absoluteString)")
         var strPath = filePath.absoluteString
@@ -271,7 +276,7 @@ class Helper {
         let formImage = UIImage(named: "afto781.jpg")
         let dataImage = generateImage()
         
-        let size = CGSize(width: WIDTH, height: HEIGHT)
+        let size = CGSize(width: Helper.WIDTH, height: Helper.HEIGHT)
         UIGraphicsBeginImageContext(size)
         
         let areaSize = CGRect(x: 0, y: 0, width: size.width, height: size.height)
@@ -309,7 +314,7 @@ class Helper {
      */
 
     func generateImage() -> UIImage? {
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: WIDTH, height: HEIGHT))
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: Helper.WIDTH, height: Helper.HEIGHT))
         
         let img = renderer.image { ctx in
             let attrs: [NSAttributedString.Key: Any] = [
@@ -475,4 +480,19 @@ class Helper {
 //        let fileURL = filepath!.appendingPathComponent("test.json")
 //    }
 //
+    // Try to turn the Sring contents into a Date object.
+    // If we can not, return nil.
+    static func dateFromString(_ dateStr: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        let formats = ["d/M/y", "d-M-y", "d.M.y", "d M y", "M/d/y", "M-d-y", "M.d.y", "M d y"]
+
+        for format in formats {
+            dateFormatter.dateFormat = format
+            if let date = dateFormatter.date(from: dateStr) {
+                return date
+            }
+        }
+
+        return nil
+    }
 } //End
