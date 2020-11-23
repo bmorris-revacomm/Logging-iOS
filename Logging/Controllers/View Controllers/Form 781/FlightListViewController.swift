@@ -358,8 +358,8 @@ class FlightListViewController: UIViewController {
         missionDataPopUp.isHidden = true
         flightSeqPopUp.isHidden = true
         aircrewPopUpView.isHidden = true
-        popUp2View.isHidden = true
-        popUp3View.isHidden = true
+        //popUp2View.isHidden = true
+        //popUp3View.isHidden = true
         enableButtons()
     }
     
@@ -483,22 +483,6 @@ class FlightListViewController: UIViewController {
         ssn.resignFirstResponder()
         flyingOrigin.resignFirstResponder()
         flightAuthDutyCode.resignFirstResponder()
-        primary.resignFirstResponder()
-        secondary.resignFirstResponder()
-        instructor.resignFirstResponder()
-        evaluator.resignFirstResponder()
-        other.resignFirstResponder()
-        time.resignFirstResponder()
-        srty.resignFirstResponder()
-        nightPSIE.resignFirstResponder()
-        insPIE.resignFirstResponder()
-        simIns.resignFirstResponder()
-        nvg.resignFirstResponder()
-        combatTime.resignFirstResponder()
-        combatSrty.resignFirstResponder()
-        combatSptTime.resignFirstResponder()
-        combatSptSrty.resignFirstResponder()
-        resvStatus.resignFirstResponder()
     }
     
 } //End
@@ -541,7 +525,7 @@ extension FlightListViewController {
             CrewMemberController.create(form: form, lastName: lastName, firstName: firstName, ssnLast4: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin)
             
             self.aircrewTableView.reloadData()
-            self.popUp3View.isHidden = true
+            self.aircrewPopUpView.isHidden = true
             self.enableButtons()
         }
     }
@@ -552,22 +536,6 @@ extension FlightListViewController {
         ssn.text == "" ? Helper.highlightRed(textField: ssn) : Helper.unhighlight(textField: ssn)
         flightAuthDutyCode.text == "" ? Helper.highlightRed(textField: flightAuthDutyCode) : Helper.unhighlight(textField: flightAuthDutyCode)
         flyingOrigin.text == "" ? Helper.highlightRed(textField: flyingOrigin) : Helper.unhighlight(textField: flyingOrigin)
-        primary.text == "" ? Helper.highlightRed(textField: primary) : Helper.unhighlight(textField: primary)
-        secondary.text == "" ? Helper.highlightRed(textField: secondary) : Helper.unhighlight(textField: secondary)
-        instructor.text == "" ? Helper.highlightRed(textField: instructor) : Helper.unhighlight(textField: instructor)
-        evaluator.text == "" ? Helper.highlightRed(textField: evaluator) : Helper.unhighlight(textField: evaluator)
-        other.text == "" ? Helper.highlightRed(textField: other) : Helper.unhighlight(textField: other)
-        time.text == "" ? Helper.highlightRed(textField: time) : Helper.unhighlight(textField: time)
-        srty.text == "" ? Helper.highlightRed(textField: srty) : Helper.unhighlight(textField: srty)
-        nightPSIE.text == "" ? Helper.highlightRed(textField: nightPSIE) : Helper.unhighlight(textField: nightPSIE)
-        insPIE.text == "" ? Helper.highlightRed(textField: insPIE) : Helper.unhighlight(textField: insPIE)
-        simIns.text == "" ? Helper.highlightRed(textField: simIns) : Helper.unhighlight(textField: simIns)
-        nvg.text == "" ? Helper.highlightRed(textField: nvg) : Helper.unhighlight(textField: nvg)
-        combatTime.text == "" ? Helper.highlightRed(textField: combatTime) : Helper.unhighlight(textField: combatTime)
-        combatSrty.text == "" ? Helper.highlightRed(textField: combatSrty) : Helper.unhighlight(textField: combatSrty)
-        combatSptTime.text == "" ? Helper.highlightRed(textField: combatSptTime) : Helper.unhighlight(textField: combatSptTime)
-        combatSptSrty.text == "" ? Helper.highlightRed(textField: combatSptSrty) : Helper.unhighlight(textField: combatSptSrty)
-        resvStatus.text == "" ? Helper.highlightRed(textField: resvStatus) : Helper.unhighlight(textField: resvStatus)
     }
     
     func unhighlightAircrew() {
@@ -576,22 +544,6 @@ extension FlightListViewController {
         Helper.unhighlight(textField: ssn)
         Helper.unhighlight(textField: flightAuthDutyCode)
         Helper.unhighlight(textField: flyingOrigin)
-        Helper.unhighlight(textField: primary)
-        Helper.unhighlight(textField: secondary)
-        Helper.unhighlight(textField: instructor)
-        Helper.unhighlight(textField: evaluator)
-        Helper.unhighlight(textField: other)
-        Helper.unhighlight(textField: time)
-        Helper.unhighlight(textField: srty)
-        Helper.unhighlight(textField: nightPSIE)
-        Helper.unhighlight(textField: insPIE)
-        Helper.unhighlight(textField: simIns)
-        Helper.unhighlight(textField: nvg)
-        Helper.unhighlight(textField: combatTime)
-        Helper.unhighlight(textField: combatSrty)
-        Helper.unhighlight(textField: combatSptTime)
-        Helper.unhighlight(textField: combatSptSrty)
-        Helper.unhighlight(textField: resvStatus)
     }
     
     // MARK: - Actions
@@ -600,26 +552,6 @@ extension FlightListViewController {
         unhighlightAircrew()
         aircrewPopUpView.isHidden = false
         disableButtons()
-    }
-    
-    @IBAction func back2ButtonTapped(_ sender: UIButton) {
-        popUp2View.isHidden = true
-        aircrewPopUpView.isHidden = false
-    }
-    
-    @IBAction func back3ButtonTapped(_ sender: UIButton) {
-        popUp3View.isHidden = true
-        popUp2View.isHidden = false
-    }
-    
-    @IBAction func next1ButtonTapped(_ sender: UIButton) {
-        aircrewPopUpView.isHidden = true
-        popUp2View.isHidden = false
-    }
-    
-    @IBAction func next2ButtonTapped(_ sender: UIButton) {
-        popUp2View.isHidden = true
-        popUp3View.isHidden = false
     }
     
     @IBAction func addNewAircrewButtonTapped(_ sender: UIButton) {
@@ -635,7 +567,7 @@ extension FlightListViewController {
         CrewMemberController.create(form: form, lastName: lastName, firstName: firstName, ssnLast4: ssn, flightAuthDutyCode: flightAuthDutyCode, flyingOrigin: flyingOrigin)
         
         aircrewTableView.reloadData()
-        popUp3View.isHidden = true
+        aircrewPopUpView.isHidden = true
         enableButtons()
     }
     
@@ -657,7 +589,7 @@ extension FlightListViewController {
 extension FlightListViewController: AircrewTableViewCellDelegate {
     
     func editButtonTapped(cell: AircrewTableViewCell) {
-        self.performSegue(withIdentifier: "ToAircrewDetailVC", sender: self)
+        //self.performSegue(withIdentifier: "ToAircrewDetailVC", sender: self)
     }
 
     func deleteButtonTapped(cell: AircrewTableViewCell) {
