@@ -2078,7 +2078,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="60" id="LQE-M4-Yaw"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
@@ -2119,7 +2119,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YGF-TL-gMe" customClass="PBLTextField" customModule="Logging" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="27" width="645" height="60"/>
+                                                        <rect key="frame" x="0.0" y="27" width="312.5" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="h49-Mf-e7I"/>
                                                         </constraints>
@@ -2128,11 +2128,13 @@
                                                     </textField>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="YGF-TL-gMe" firstAttribute="width" secondItem="Ji1-Qe-unY" secondAttribute="width" id="Ubm-FV-iuJ"/>
                                                     <constraint firstItem="Fkl-pq-xnH" firstAttribute="width" secondItem="Ji1-Qe-unY" secondAttribute="width" multiplier="0.156589" id="cPg-Io-hsX"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="YGF-TL-gMe" firstAttribute="trailing" secondItem="ke6-yC-VOs" secondAttribute="trailing" id="jRB-BV-R6d"/>
+                                        </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpX-B1-5Un" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
                                         <rect key="frame" x="534" y="755.5" width="153" height="34"/>
