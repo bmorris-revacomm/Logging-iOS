@@ -13,9 +13,6 @@
         <array key="DMSans-Bold.ttf">
             <string>DMSans-Bold</string>
         </array>
-        <array key="DMSans-Regular.ttf">
-            <string>DMSans-Regular</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Welcome View Controller-->
@@ -36,110 +33,12 @@
                                 <color key="textColor" name="slate"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What forms do you need for this mission?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asn-d0-gOc" customClass="PBLLabelLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="233" y="432.5" width="558.5" height="112"/>
-                                <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="48"/>
-                                <color key="textColor" name="fog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select all that apply." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGJ-1F-7OX" customClass="PBLLabel" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="398" y="614" width="228.5" height="28"/>
-                                <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="24"/>
-                                <color key="textColor" name="slate"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MDT-ar-LJq" userLabel="Buttons">
-                                <rect key="frame" x="274.5" y="728.5" width="475" height="148"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Ax-tz-MFZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="154" height="148"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRU-Ug-X5v" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="154" height="36"/>
-                                                <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="20"/>
-                                                <state key="normal" title="AFTO FORM 781"/>
-                                                <connections>
-                                                    <action selector="form781Tapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="oRd-Hj-b0h"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjx-Ub-5jy" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="8.5" y="56" width="137" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <state key="normal" title="DD FORM 2131"/>
-                                                <connections>
-                                                    <action selector="form2131Tapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="056-6v-Z9W"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAx-t8-qbk" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="10.5" y="112" width="133" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <state key="normal" title="ORM MISSION"/>
-                                                <connections>
-                                                    <action selector="ormMissionTapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="egm-TD-pvt"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="w6U-gt-8gM">
-                                        <rect key="frame" x="174" y="0.0" width="143" height="148"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4L-Dl-X9N" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="143" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <state key="normal" title="FUEL TRACKER"/>
-                                                <connections>
-                                                    <action selector="fuelTrackerTapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="R3u-Vc-ss1"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1l-Lp-d3p" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="4.5" y="56" width="134" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <state key="normal" title="AMC FORM 97"/>
-                                                <connections>
-                                                    <action selector="form97Tapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="B1C-My-FP0"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4K-T8-sGu" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="14.5" y="112" width="114" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <state key="normal" title="ORM LOCAL"/>
-                                                <connections>
-                                                    <action selector="ormLocalTapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="eIK-sH-ahx"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6ir-It-kQl">
-                                        <rect key="frame" x="337" y="0.0" width="138" height="92"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibn-ed-Bxw" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="1.5" y="0.0" width="135" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <state key="normal" title="AF FORM 1881"/>
-                                                <connections>
-                                                    <action selector="form1881Tapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="63J-Fh-Mg3"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Dm-ou-b4M" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="56" width="138" height="36"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <state key="normal" title="DD FORM 1081"/>
-                                                <connections>
-                                                    <action selector="form1081Tapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="Pxp-qt-LJz"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSG-7K-hXG" customClass="PBLButtonClear" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="415.5" y="956.5" width="193" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="View more forms +">
-                                    <color key="titleColor" name="slate"/>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRU-Ug-X5v" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
+                                <rect key="frame" x="435" y="540.5" width="154" height="36"/>
+                                <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="20"/>
+                                <state key="normal" title="AFTO FORM 781"/>
                                 <connections>
-                                    <action selector="moreFormsButtonTapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="wib-wV-tDv"/>
+                                    <action selector="form781Tapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="oRd-Hj-b0h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgb-C1-VgZ" customClass="PBLButtonDark" customModule="Logging" customModuleProvider="target">
@@ -151,36 +50,20 @@
                                     <action selector="continueButtonTapped:" destination="MHR-m1-9at" eventType="touchUpInside" id="R5R-PE-kBR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvG-xM-D2m" customClass="PBLButtonLight" customModule="Logging" customModuleProvider="target">
-                                <rect key="frame" x="50" y="1260" width="53" height="36"/>
-                                <color key="backgroundColor" name="haze"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="BACK"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UvH-Cn-V9j"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xY7-yD-dtb" firstAttribute="centerX" secondItem="UvH-Cn-V9j" secondAttribute="centerX" id="1kH-KQ-VJM"/>
-                            <constraint firstItem="uGJ-1F-7OX" firstAttribute="centerX" secondItem="UvH-Cn-V9j" secondAttribute="centerX" id="1vH-7N-u3M"/>
                             <constraint firstItem="xY7-yD-dtb" firstAttribute="width" secondItem="U06-mG-9Cx" secondAttribute="width" multiplier="0.316406" id="4CX-xG-Gty"/>
-                            <constraint firstItem="NSG-7K-hXG" firstAttribute="centerX" secondItem="UvH-Cn-V9j" secondAttribute="centerX" id="9qC-I3-HzV"/>
                             <constraint firstItem="1Xd-JZ-crL" firstAttribute="top" secondItem="UvH-Cn-V9j" secondAttribute="top" id="FWc-83-g2C"/>
-                            <constraint firstItem="VvG-xM-D2m" firstAttribute="leading" secondItem="UvH-Cn-V9j" secondAttribute="leading" constant="50" id="Fc2-0U-fdk"/>
-                            <constraint firstItem="MDT-ar-LJq" firstAttribute="centerY" secondItem="UvH-Cn-V9j" secondAttribute="centerY" multiplier="1.15" id="HEo-NC-SLv"/>
                             <constraint firstItem="UvH-Cn-V9j" firstAttribute="trailing" secondItem="1Xd-JZ-crL" secondAttribute="trailing" id="IIA-iA-wh6"/>
-                            <constraint firstItem="Asn-d0-gOc" firstAttribute="centerY" secondItem="UvH-Cn-V9j" secondAttribute="centerY" multiplier="0.7" id="KvR-uK-CSm"/>
-                            <constraint firstItem="UvH-Cn-V9j" firstAttribute="bottom" secondItem="VvG-xM-D2m" secondAttribute="bottom" constant="50" id="NVY-eT-DnR"/>
-                            <constraint firstItem="NSG-7K-hXG" firstAttribute="centerY" secondItem="UvH-Cn-V9j" secondAttribute="centerY" multiplier="1.4" id="Npn-w9-EWe"/>
                             <constraint firstItem="UvH-Cn-V9j" firstAttribute="bottom" secondItem="vgb-C1-VgZ" secondAttribute="bottom" constant="50" id="REQ-F8-yl2"/>
-                            <constraint firstItem="uGJ-1F-7OX" firstAttribute="centerY" secondItem="UvH-Cn-V9j" secondAttribute="centerY" multiplier="0.9" id="Ye8-NQ-2aX"/>
                             <constraint firstItem="1Xd-JZ-crL" firstAttribute="leading" secondItem="UvH-Cn-V9j" secondAttribute="leading" id="Yl2-v1-uDe"/>
+                            <constraint firstItem="dRU-Ug-X5v" firstAttribute="centerX" secondItem="UvH-Cn-V9j" secondAttribute="centerX" id="Z5e-iy-6ci"/>
                             <constraint firstItem="UvH-Cn-V9j" firstAttribute="trailing" secondItem="vgb-C1-VgZ" secondAttribute="trailing" constant="50" id="aZT-4g-G7l"/>
-                            <constraint firstItem="uGJ-1F-7OX" firstAttribute="width" secondItem="U06-mG-9Cx" secondAttribute="width" multiplier="0.223145" id="apL-Wy-W7M"/>
-                            <constraint firstItem="Asn-d0-gOc" firstAttribute="width" secondItem="U06-mG-9Cx" secondAttribute="width" multiplier="0.54541" id="fw5-cm-NiT"/>
                             <constraint firstItem="1Xd-JZ-crL" firstAttribute="height" secondItem="U06-mG-9Cx" secondAttribute="height" multiplier="0.04" id="k5N-lT-D4b"/>
-                            <constraint firstItem="Asn-d0-gOc" firstAttribute="centerX" secondItem="UvH-Cn-V9j" secondAttribute="centerX" id="tlV-uq-2xs"/>
-                            <constraint firstItem="MDT-ar-LJq" firstAttribute="centerX" secondItem="UvH-Cn-V9j" secondAttribute="centerX" id="u4u-Rh-BRn"/>
+                            <constraint firstItem="dRU-Ug-X5v" firstAttribute="centerY" secondItem="UvH-Cn-V9j" secondAttribute="centerY" multiplier="0.8" id="r1p-lr-spC"/>
                             <constraint firstItem="xY7-yD-dtb" firstAttribute="centerY" secondItem="UvH-Cn-V9j" secondAttribute="centerY" multiplier="0.5" id="xtX-BQ-K2R"/>
                         </constraints>
                     </view>
@@ -210,12 +93,6 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="fog">
-            <color red="0.71764705882352942" green="0.73333333333333328" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="haze">
-            <color red="0.83529411764705885" green="0.84705882352941175" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="slate">
             <color red="0.28235294117647058" green="0.29411764705882354" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -23,7 +23,7 @@ class PBLTextField: UITextField {
         self.autocorrectionType = .no
     }
     
-    #warning("set up placeholder font")
+    #warning("set up placeholder font?")
     
     let padding = UIEdgeInsets(top: UIScreen.main.bounds.height/55.8, left: UIScreen.main.bounds.width/41, bottom: UIScreen.main.bounds.height/55.8, right: UIScreen.main.bounds.width/41)
     
