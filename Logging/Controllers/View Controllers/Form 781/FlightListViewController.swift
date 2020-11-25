@@ -14,9 +14,14 @@ class FlightListViewController: UIViewController {
     
     @IBOutlet weak var missionDateLabel: UILabel!
     @IBOutlet weak var formSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var printButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
     
-    @IBOutlet weak var missionDataView: UIView!
     @IBOutlet weak var aircrewListView: UIView!
+    @IBOutlet weak var missionDataView: UIView!
+    @IBOutlet weak var aircrewDataView: UIView!
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mdsLabel: UILabel!
@@ -35,6 +40,7 @@ class FlightListViewController: UIViewController {
     @IBOutlet weak var flightAuthTextField: UITextField!
     @IBOutlet weak var issuingUnitTextField: UITextField!
     
+    @IBOutlet weak var flightSeqTableView: UITableView!
     @IBOutlet weak var flightSeqPopUp: UIView!
     @IBOutlet weak var missionNumber: UITextField!
     @IBOutlet weak var missionSymbol: UITextField!
@@ -48,13 +54,7 @@ class FlightListViewController: UIViewController {
     @IBOutlet weak var fullStop: UITextField!
     @IBOutlet weak var totalLandings: UITextField!
     @IBOutlet weak var sorties: UITextField!
-
-    @IBOutlet weak var flightTableView: UITableView!
-    @IBOutlet weak var printButton: UIButton!
-    @IBOutlet weak var editButton: UIButton!
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var continueButton: UIButton!
-        
+    
     @IBOutlet weak var grandTotalTime: UILabel!
     @IBOutlet weak var grandTouchGo: UILabel!
     @IBOutlet weak var grandFullStop: UILabel!
@@ -63,8 +63,8 @@ class FlightListViewController: UIViewController {
     
     @IBOutlet weak var aircrewTableView: UITableView!
     @IBOutlet weak var aircrewPopUpView: UIView!
-    @IBOutlet weak var popUp2View: UIView!
-    @IBOutlet weak var popUp3View: UIView!
+    //@IBOutlet weak var popUp2View: UIView!
+    //@IBOutlet weak var popUp3View: UIView!
     
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var firstName: UITextField!
@@ -72,6 +72,7 @@ class FlightListViewController: UIViewController {
     @IBOutlet weak var flightAuthDutyCode: UITextField!
     @IBOutlet weak var flyingOrigin: UITextField!
     
+    @IBOutlet weak var flightTimeTableView: UITableView!
     @IBOutlet weak var primary: UITextField!
     @IBOutlet weak var secondary: UITextField!
     @IBOutlet weak var instructor: UITextField!
@@ -106,10 +107,12 @@ class FlightListViewController: UIViewController {
     
     func setUpViews() {
         loadFromData()
-        flightTableView.delegate = self
-        flightTableView.dataSource = self
+        flightSeqTableView.delegate = self
+        flightSeqTableView.dataSource = self
         aircrewTableView.delegate = self
         aircrewTableView.dataSource = self
+        flightTimeTableView.delegate = self
+        flightTimeTableView.dataSource = self
         disableButtons()
         guard let form = Form781Controller.shared.forms.last else { return }
         updateLabels()
@@ -224,7 +227,7 @@ class FlightListViewController: UIViewController {
             
             FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: self.takeOffTimeString, landTime: self.landTimeString, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
             
-            self.flightTableView.reloadData()
+            self.flightSeqTableView.reloadData()
             self.updateGrandTotals(form: form)
             self.flightSeqPopUp.isHidden = true
             self.enableButtons()
@@ -281,7 +284,7 @@ class FlightListViewController: UIViewController {
     }
     
     func disableButtons() {
-        flightTableView.isUserInteractionEnabled = false
+        flightSeqTableView.isUserInteractionEnabled = false
         printButton.isUserInteractionEnabled = false
         editButton.isUserInteractionEnabled = false
         backButton.isUserInteractionEnabled = false
@@ -290,7 +293,7 @@ class FlightListViewController: UIViewController {
     }
     
     func enableButtons() {
-        flightTableView.isUserInteractionEnabled = true
+        flightSeqTableView.isUserInteractionEnabled = true
         printButton.isUserInteractionEnabled = true
         editButton.isUserInteractionEnabled = true
         backButton.isUserInteractionEnabled = true
@@ -305,15 +308,19 @@ class FlightListViewController: UIViewController {
         case 0:
             aircrewListView.isHidden = false
             missionDataView.isHidden = true
+            aircrewDataView.isHidden = true
         case 1:
-            missionDataView.isHidden = false
             aircrewListView.isHidden = true
+            missionDataView.isHidden = false
+            aircrewDataView.isHidden = true
         case 2:
-            missionDataView.isHidden = false
             aircrewListView.isHidden = true
+            missionDataView.isHidden = true
+            aircrewDataView.isHidden = false
         default:
-            missionDataView.isHidden = false
-            aircrewListView.isHidden = true
+            aircrewListView.isHidden = false
+            missionDataView.isHidden = true
+            aircrewDataView.isHidden = true
         }
     }
     
@@ -441,7 +448,7 @@ class FlightListViewController: UIViewController {
         
         FlightController.create(form: form, flightSeq: flightSeq, missionNumber: missionNumber, missionSymbol: missionSymbol, fromICAO: fromICAO, toICAO: toICAO, takeOffTime: takeOffTimeString, landTime: landTimeString, totalTime: totalTime, touchAndGo: touchAndGo, fullStop: fullStop, totalLandings: totalLandings, sorties: sorties, specialUse: specialUse)
         
-        flightTableView.reloadData()
+        flightSeqTableView.reloadData()
         updateGrandTotals(form: form)
         flightSeqPopUp.isHidden = true
         enableButtons()
@@ -497,10 +504,10 @@ extension FlightListViewController: FlightTableViewCellDelegate {
     
     func deleteButtonTapped(cell: FlightTableViewCell) {
         guard let form = Form781Controller.shared.forms.last,
-              let indexPath = flightTableView.indexPath(for: cell) else { return }
+              let indexPath = flightSeqTableView.indexPath(for: cell) else { return }
         let flight = form.flights[indexPath.row]
         Form781Controller.shared.remove(flight: flight, from: form)
-        flightTableView.reloadData()
+        flightSeqTableView.reloadData()
         
         updateGrandTotals(form: form)
     }
@@ -625,7 +632,7 @@ extension FlightListViewController: AircrewDetailViewControllerDelegate {
 extension FlightListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if tableView == self.flightTableView {
+        if tableView == self.flightSeqTableView {
             return Form781Controller.shared.forms.last?.flights.count ?? 0
         }
         if tableView == self.aircrewTableView {
@@ -636,8 +643,8 @@ extension FlightListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if tableView == self.flightTableView {
-            guard let cell = self.flightTableView.dequeueReusableCell(withIdentifier: "FlightCell", for: indexPath) as? FlightTableViewCell else { return UITableViewCell() }
+        if tableView == self.flightSeqTableView {
+            guard let cell = self.flightSeqTableView.dequeueReusableCell(withIdentifier: "FlightCell", for: indexPath) as? FlightTableViewCell else { return UITableViewCell() }
             
             cell.delegate = self
             if let flight = Form781Controller.shared.forms.last?.flights[indexPath.row] {
