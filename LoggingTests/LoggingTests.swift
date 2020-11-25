@@ -13,10 +13,10 @@ class LoggingTests: XCTestCase {
     
     
     func testHelperFunction() {
-        let date = Helper().populateDateField()
+        let date = Helper.getTodaysDate()
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
+        dateFormatter.dateFormat = Helper.DATE_FORMAT
         let testDate = dateFormatter.string(from: Date())
         
         XCTAssertEqual(date, testDate)
@@ -26,7 +26,11 @@ class LoggingTests: XCTestCase {
        
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last
         let url = path?.appendingPathComponent("Logging.json", isDirectory: false)
-        let result = Helper().checkForFile(filePath: url!)
+        var result = Helper.checkForFile(filePath: url!)
+        if !result {
+            Form781Controller.shared.create(date: Helper.getTodaysDate(), mds: "C017A", serialNumber: "90-0534", unitCharged: "437 AW (AMC) /DKFX", harmLocation: "JB CHARLESTON SC 29404", flightAuthNum: "20-0772", issuingUnit: "0016AS")
+            result = Helper.checkForFile(filePath: url!)
+        }
         XCTAssertTrue(result)
     }
     

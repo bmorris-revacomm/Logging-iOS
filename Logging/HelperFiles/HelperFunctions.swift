@@ -6,25 +6,29 @@
 //  Copyright © 2020 Christian Brechbuhl. All rights reserved.
 //
 import UIKit
+import Foundation
 
 class Helper {
     
-    let WIDTH: Int = 3300
-    let HEIGHT: Int = 2550
-    
-    #warning("Can we delete this?")
-    let formController = Form781Controller()
-    
-    func populateDateField() -> String{
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM yyyy"
-        let date = dateFormatter.string(from: Date())
-        
-        return date
+    static let WIDTH: Int = 3300
+    static let HEIGHT: Int = 2550
+
+    static let DATE_FORMAT = "dd MMM yyyy"
+
+    static func getTodaysDate() -> String {
+        return stdFormattedDate(with: Date())
     }
-    
-    func checkForFile(filePath: URL) -> Bool {
-        print("\(filePath.absoluteString)")
+
+    static func stdFormattedDate(with date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = Helper.DATE_FORMAT
+        let dateStr = dateFormatter.string(from: date)
+        
+        return dateStr
+    }
+
+    static func checkForFile(filePath: URL) -> Bool {
+        NSLog("\(filePath.absoluteString)")
         var strPath = filePath.absoluteString
         strPath = strPath.replacingOccurrences(of: "file://", with: "")
         if FileManager.default.fileExists(atPath: strPath) {
@@ -41,6 +45,17 @@ class Helper {
             return false
         }
         
+    }
+    /**
+        Function used to validate the input in to the field is a number
+        - Parameters -  input: UITextField - input given
+        - Throws - Form781Error.NotANumber
+        - Returns - None
+     */
+    static func validateNumericalInput(input: UITextField) -> Bool {
+       
+            guard let _ = Int(input.text!) else { return false}
+        return true
     }
     
     func separateHoursAndMins(strInput: String, pointer: String) -> String {
@@ -74,6 +89,44 @@ class Helper {
         
         let total = intTouchAndGo + intFullStop
         return "\(total)"
+    }
+    /**
+        Validate time function is used to ensure the time entered lies within the 0000 - 2359 time frame.  The fuction breaks down the UITextField in to the 4 digits, converts it to an Int and then ensures it lies within the parameters of miltary time.
+
+     - Parameter timeFromTextField: UITextField - Represents the time to test
+
+     - Throws: Form781Error.InvalidHours, Form781Error.InvalidMins
+
+     - Returns: None
+     
+        Just a simple function to validate the hours and minutes
+     */
+    
+    static func validateTime(timeFromTextField: UITextField) throws {
+        
+        
+        let timeString: String = timeFromTextField.text!
+        NSLog("Time: \(timeString)")
+        if timeString.count > 0 {
+            let hours: Int = Int("\(timeString[timeString.index(timeString.startIndex, offsetBy: 0)])\(timeString[timeString.index(timeString.startIndex, offsetBy: 1)])")!
+            NSLog("Hours: \(hours)")
+            if 0...23 ~= hours {
+                NSLog("Valid hour")
+            }
+            
+            else {
+                NSLog("ERROR: Form781Error.InvalidHours")
+                throw Form781Error.InvalidHours
+            }
+            let mins: Int = Int("\(timeString[timeString.index(timeString.startIndex, offsetBy: 2)])\(timeString[timeString.index(timeString.startIndex, offsetBy: 3)])")!
+            NSLog("Minutes: \(mins)")
+            if 0...59 ~= mins {
+                NSLog("Valid mins")
+            } else {
+                NSLog("ERROR: Form781Error.InvalidMins")
+                throw Form781Error.InvalidMins
+            }
+        }
     }
 
     func vmCalculateTotalTime(takeOffTime: UITextField, landTime: UITextField) -> String{
@@ -194,7 +247,7 @@ class Helper {
                         decMin = 9
                     }
                     
-                    // print("\(diffHrs)\(diffMin)")
+                    // NSLog("\(diffHrs)\(diffMin)")
                     
                     // return statement here
                 
@@ -223,7 +276,7 @@ class Helper {
         let formImage = UIImage(named: "afto781.jpg")
         let dataImage = generateImage()
         
-        let size = CGSize(width: WIDTH, height: HEIGHT)
+        let size = CGSize(width: Helper.WIDTH, height: Helper.HEIGHT)
         UIGraphicsBeginImageContext(size)
         
         let areaSize = CGRect(x: 0, y: 0, width: size.width, height: size.height)
@@ -247,9 +300,21 @@ class Helper {
 
     }
 
+    
+    /**
+     - The generateImage function is used to pull the data written in our JSON file and overlay it on an image of the AFTO Form 781.
+
+     - Parameter none: All data is being retrieved from the stored JSON.
+
+     - Throws: none
+
+     - Returns: An image that can be rendered with the printController.
+     
+        throughout the function, any hard coded numbers represent pixels on the underlay image.  We use an NSAttributedString which gives the ability to control the font size.  Then we use the draw function to position it on the page.
+     */
 
     func generateImage() -> UIImage? {
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: WIDTH, height: HEIGHT))
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: Helper.WIDTH, height: Helper.HEIGHT))
         
         let img = renderer.image { ctx in
             let attrs: [NSAttributedString.Key: Any] = [
@@ -415,4 +480,19 @@ class Helper {
 //        let fileURL = filepath!.appendingPathComponent("test.json")
 //    }
 //
+    // Try to turn the Sring contents into a Date object.
+    // If we can not, return nil.
+    static func dateFromString(_ dateStr: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        let formats = ["d/M/y", "d-M-y", "d.M.y", "d M y", "M/d/y", "M-d-y", "M.d.y", "M d y"]
+
+        for format in formats {
+            dateFormatter.dateFormat = format
+            if let date = dateFormatter.date(from: dateStr) {
+                return date
+            }
+        }
+
+        return nil
+    }
 } //End

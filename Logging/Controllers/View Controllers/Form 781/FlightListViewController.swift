@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class FlightListViewController: UIViewController {
     
@@ -96,6 +97,9 @@ class FlightListViewController: UIViewController {
     var takeOffTimeString: String = " "
     var landTimeString: String = " "
     
+    // MARK: - Local variables
+    private var saveddateTextFieldText: String = ""
+
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -117,17 +121,18 @@ class FlightListViewController: UIViewController {
         guard let form = Form781Controller.shared.forms.last else { return }
         updateLabels()
         updateGrandTotals(form: form)
+        dateTextField.delegate = self
     }
     
     func loadFromData(){
         do {
             try Form781Controller.shared.loadForms()
         } catch {
-            print(Form781Error.FileNotFound)
+            NSLog("\(Form781Error.FileNotFound)")
         }
         
         let form = Form781Controller.shared.forms.last
-        if Helper().checkForFile(filePath: Form781Controller.shared.fileURL()){
+        if Helper.checkForFile(filePath: Form781Controller.shared.fileURL()){
             dateTextField.text = form?.date
             mdsTextField.text = form?.mds
             serialNumTextField.text = form?.serialNumber
@@ -136,7 +141,7 @@ class FlightListViewController: UIViewController {
             flightAuthTextField.text = form?.flightAuthNum
             issuingUnitTextField.text = form?.issuingUnit
         } else {
-            dateTextField.text = Helper().populateDateField()
+            dateTextField.text = Helper.getTodaysDate()
         }
     }
     
@@ -370,6 +375,26 @@ class FlightListViewController: UIViewController {
         enableButtons()
     }
     
+    @IBAction func checkTime(_ sender: UITextField) {
+        do {
+            let _ = try Helper.validateTime(timeFromTextField: sender)
+            Helper.unhighlight(textField: sender)
+            NSLog("Time is valid")
+        } catch Form781Error.InvalidHours {
+            Alerts.showHoursError(on: self)
+            Helper.highlightRed(textField: sender)
+        } catch Form781Error.InvalidMins {
+            Alerts.showMinError(on: self)
+            Helper.highlightRed(textField: sender)
+//        } catch Form781Error.NoTimeFound {
+//            Helper.highlightRed(textField: sender)
+//            NSLog("No time found")
+        } catch {
+            NSLog("checkTakeOffTime function unknown Error")
+        }
+    }
+    
+    
     @IBAction func calculateTotalTime(_ sender: Any) {    
         if Helper().checkInput(time: takeOffTime.text!) {
             takeOffTimeString = takeOffTime.text!
@@ -407,7 +432,18 @@ class FlightListViewController: UIViewController {
         
     @IBAction func calculateTotalLandings(_sender: Any) {
         //Here's where we do the math for filling in the total field
-        totalLandings.text = Helper().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
+        if Helper.validateNumericalInput(input: touchAndGo){
+            if Helper.validateNumericalInput(input: fullStop){
+                Helper.unhighlight(textField: touchAndGo)
+                Helper.unhighlight(textField: fullStop)
+                totalLandings.text = Helper().vmCalculateLandings(touchAndGo: touchAndGo, fullStop: fullStop)
+            } else {
+                Helper.unhighlight(textField: touchAndGo)
+                Helper.highlightRed(textField: fullStop)
+            }
+        } else {
+            Helper.highlightRed(textField: touchAndGo)
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
@@ -666,4 +702,31 @@ extension FlightListViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
+} //End
+
+// MARK: - UITextField Delegate
+
+extension FlightListViewController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == self.dateTextField {
+            self.saveddateTextFieldText = self.dateTextField.text ?? ""
+        }
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == self.dateTextField {
+            guard let dateString = textField.text else {
+                textField.text = self.saveddateTextFieldText
+                return
+            }
+            let date = Helper.dateFromString(dateString)
+
+            if let date = date {
+                textField.text = Helper.stdFormattedDate(with: date)
+            } else {
+                textField.text = self.saveddateTextFieldText
+            }
+        }
+    }
+
 } //End
